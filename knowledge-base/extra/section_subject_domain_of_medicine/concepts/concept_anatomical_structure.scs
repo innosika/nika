@@ -1,0 +1,24 @@
+concept_anatomical_structure
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[анатомическая структура] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[anatomical structure] (* <- lang_en;; *);
+=> nrel_inclusion:
+	concept_organ_system;
+=> nrel_inclusion:
+	concept_organ;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение анатомических структур по уровню организации] (* <- lang_ru;; *);;
+		-> concept_organ;;
+		-> concept_organ_system;;
+	*);
+=> nrel_definition:
+	[обособленная часть организма, имеющая определённое строение, положение и функцию] (* <- lang_ru;; *);
+=> nrel_note:
+	[в данном фрагменте базы знаний анатомические структуры рассматриваются на уровне органов и систем органов] (* <- lang_ru;; *);;

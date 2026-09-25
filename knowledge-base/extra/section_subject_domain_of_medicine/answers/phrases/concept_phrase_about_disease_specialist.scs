@@ -1,0 +1,157 @@
+/* Класс ответных фраз «фраза о профильном враче» (автор — Рублевская Е.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_disease_specialist
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о профильном враче] (* <- lang_ru;; *);
+	[phrase about a specialist physician] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_medical_care;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о профильном враче] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_disease_specialist; автор — Рублевская Е.] (* <- lang_ru;; *);;
+
+concept_phrase_about_disease_specialist_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о профильном враче: извинение] (* <- lang_ru;; *);
+	[phrase about a specialist physician: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_specialist;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_disease_specialist_apology_1 = [Простите за задержку! Подскажу, к какому врачу обратиться.];;
+@phrase_disease_specialist_apology_1
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_apology;;
+
+@phrase_disease_specialist_apology_2 = [Извините, что пришлось ждать. Вот к кому стоит обратиться.];;
+@phrase_disease_specialist_apology_2
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_apology;;
+
+concept_phrase_about_disease_specialist_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о профильном враче: сведения есть] (* <- lang_ru;; *);
+	[phrase about a specialist physician: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_specialist;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_disease_specialist_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_specialist:: _specialist;;
+*];;
+@phrase_disease_specialist_found_1 = [При заболевании «${_entity_name}» обращаются к специалисту: $list{_specialist}.];;
+@phrase_disease_specialist_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_found;
+=> nrel_phrase_template: @template_disease_specialist_found_1;;
+
+@template_disease_specialist_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_specialist:: _specialist;;
+*];;
+@phrase_disease_specialist_found_2 = [Профильные врачи при заболевании «${_entity_name}»: $list{_specialist}.];;
+@phrase_disease_specialist_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_found;
+=> nrel_phrase_template: @template_disease_specialist_found_2;;
+
+@template_disease_specialist_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_specialist:: _specialist;;
+	_specialist _=> nrel_workplace:: _workplace;;
+*];;
+@phrase_disease_specialist_found_3 = [С заболеванием «${_entity_name}» стоит обратиться к специалисту ($list{_specialist}). Такие врачи принимают в учреждениях: $list{_workplace}.];;
+@phrase_disease_specialist_found_3
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_found;
+=> nrel_phrase_template: @template_disease_specialist_found_3;;
+
+concept_phrase_about_disease_specialist_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о профильном враче: ответ о группе] (* <- lang_ru;; *);
+	[phrase about a specialist physician: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_specialist;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_disease_specialist_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_specialist:: _specialist;;
+*];;
+@phrase_disease_specialist_for_group_1 = [При заболеваниях группы «${_entity_name}» ($list{_instance}) помогают специалисты: $list{_specialist}.];;
+@phrase_disease_specialist_for_group_1
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_for_group;
+=> nrel_phrase_template: @template_disease_specialist_for_group_1;;
+
+@template_disease_specialist_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_specialist:: _specialist;;
+*];;
+@phrase_disease_specialist_for_group_2 = [Врач зависит от конкретного заболевания группы «${_entity_name}»; обычно это: $list{_specialist}. Уточните заболевание: $list{_instance}.];;
+@phrase_disease_specialist_for_group_2
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_for_group;
+=> nrel_phrase_template: @template_disease_specialist_for_group_2;;
+
+concept_phrase_about_disease_specialist_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о профильном враче: сведений нет] (* <- lang_ru;; *);
+	[phrase about a specialist physician: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_specialist;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_disease_specialist_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_specialist_not_found_1 = [Не знаю, к какому врачу обращаться с «${_entity_name}», — в базе знаний это не указано.];;
+@phrase_disease_specialist_not_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_not_found;
+=> nrel_phrase_template: @template_disease_specialist_not_found_1;;
+
+@template_disease_specialist_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_specialist_not_found_2 = [Профильный врач для «${_entity_name}» в базе знаний не указан.];;
+@phrase_disease_specialist_not_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_specialist_not_found;
+=> nrel_phrase_template: @template_disease_specialist_not_found_2;;

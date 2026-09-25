@@ -1,0 +1,24 @@
+concept_clinical_manifestation
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[клиническое проявление заболевания] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[clinical manifestation] (* <- lang_en;; *);
+=> nrel_inclusion:
+	concept_symptom;
+=> nrel_inclusion:
+	concept_syndrome;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение клинических проявлений по структуре] (* <- lang_ru;; *);;
+		-> concept_symptom;;
+		-> concept_syndrome;;
+	*);
+=> nrel_definition:
+	[внешний признак или совокупность признаков, по которым заболевание обнаруживается при обследовании пациента] (* <- lang_ru;; *);
+=> nrel_note:
+	[клинические проявления делятся на элементарные (симптомы) и составные (синдромы)] (* <- lang_ru;; *);;

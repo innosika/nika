@@ -1,0 +1,13 @@
+concept_etiotropic_therapy
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[этиотропная терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[etiotropic therapy] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_pharmacotherapy;
+=> nrel_definition:
+	[медикаментозная терапия, направленная на устранение причины заболевания - возбудителя или другого этиологического фактора] (* <- lang_ru;; *);
+=> nrel_note:
+	[примеры этиотропной терапии - антибиотикотерапия и противовирусная терапия] (* <- lang_ru;; *);;

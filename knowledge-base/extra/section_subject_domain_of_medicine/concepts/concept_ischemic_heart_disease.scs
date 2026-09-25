@@ -1,0 +1,15 @@
+concept_ischemic_heart_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[ишемическая болезнь сердца] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[ischemic heart disease] (* <- lang_en;; *);
+=> nrel_idtf:
+	[ИБС] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_cardiovascular_disease;
+=> nrel_definition:
+	[сердечно-сосудистое заболевание, при котором кровоснабжение миокарда недостаточно из-за поражения коронарных артерий, чаще всего атеросклеротического] (* <- lang_ru;; *);
+=> nrel_note:
+	[ИБС включает стабильную и нестабильную стенокардию, инфаркт миокарда, постинфарктный кардиосклероз и внезапную коронарную смерть] (* <- lang_ru;; *);;

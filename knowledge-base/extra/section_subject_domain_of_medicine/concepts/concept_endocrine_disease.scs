@@ -1,0 +1,15 @@
+concept_endocrine_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[эндокринное заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[endocrine disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_non_infectious_disease;
+=> nrel_inclusion:
+	concept_diabetes_mellitus;
+=> nrel_definition:
+	[неинфекционное заболевание, связанное с нарушением функции желёз внутренней секреции и обмена гормонов] (* <- lang_ru;; *);
+=> nrel_note:
+	[в МКБ-10 болезни эндокринной системы, расстройства питания и нарушения обмена веществ объединены в класс E00-E90] (* <- lang_ru;; *);;

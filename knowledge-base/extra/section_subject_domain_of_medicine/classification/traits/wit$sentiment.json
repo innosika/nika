@@ -1,0 +1,14 @@
+{
+  "name": "wit$sentiment",
+  "values": [
+    {
+      "value": "positive"
+    },
+    {
+      "value": "neutral"
+    },
+    {
+      "value": "negative"
+    }
+  ]
+}

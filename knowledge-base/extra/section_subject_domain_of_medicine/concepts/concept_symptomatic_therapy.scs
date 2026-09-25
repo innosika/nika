@@ -1,0 +1,13 @@
+concept_symptomatic_therapy
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[симптоматическая терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[symptomatic therapy] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_pharmacotherapy;
+=> nrel_definition:
+	[медикаментозная терапия, направленная на устранение отдельных симптомов заболевания без влияния на его причину] (* <- lang_ru;; *);
+=> nrel_note:
+	[примеры симптоматической терапии - жаропонижающая и обезболивающая терапия] (* <- lang_ru;; *);;

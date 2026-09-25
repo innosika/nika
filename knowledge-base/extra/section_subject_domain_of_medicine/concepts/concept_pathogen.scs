@@ -1,0 +1,28 @@
+concept_pathogen
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[возбудитель заболевания] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[pathogen] (* <- lang_en;; *);
+=> nrel_idtf:
+	[патоген] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[патогенный микроорганизм] (* <- lang_ru;; *);
+=> nrel_inclusion:
+	concept_virus;
+=> nrel_inclusion:
+	concept_bacterium;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение возбудителей по биологической природе] (* <- lang_ru;; *);;
+		-> concept_virus;;
+		-> concept_bacterium;;
+	*);
+=> nrel_definition:
+	[микроорганизм, способный вызывать инфекционное заболевание] (* <- lang_ru;; *);
+=> nrel_note:
+	[патогенность - видовой признак микроорганизма, вирулентность - степень патогенности конкретного штамма] (* <- lang_ru;; *);;

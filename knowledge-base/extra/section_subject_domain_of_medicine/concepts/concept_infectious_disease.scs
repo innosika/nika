@@ -1,0 +1,26 @@
+concept_infectious_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[инфекционное заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[infectious disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_disease;
+=> nrel_inclusion:
+	concept_viral_disease;
+=> nrel_inclusion:
+	concept_bacterial_disease;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение инфекционных заболеваний по типу возбудителя] (* <- lang_ru;; *);;
+		-> concept_viral_disease;;
+		-> concept_bacterial_disease;;
+	*);
+=> nrel_definition:
+	[заболевание, вызываемое проникновением в организм патогенных микроорганизмов (вирусов, бактерий, грибов, простейших) и способное передаваться от заражённого организма к здоровому] (* <- lang_ru;; *);
+=> nrel_note:
+	[для инфекционных заболеваний характерны инкубационный период, контагиозность и формирование иммунитета после перенесённой инфекции; в данном фрагменте базы знаний рассматриваются вирусные и бактериальные инфекции] (* <- lang_ru;; *);;

@@ -1,0 +1,38 @@
+concept_message_about_disease_manifestation
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о проявлениях и распространении заболевания] (* <- lang_ru;; *);
+	[message about disease manifestation and spread] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_message;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение класса «сообщение о проявлениях и распространении заболевания» по запрашиваемому свойству] (* <- lang_ru;; *);;
+		-> concept_message_about_disease_symptoms;;
+		-> concept_message_about_disease_pathogen;;
+		-> concept_message_about_disease_transmission;;
+	*);
+=> nrel_definition:
+	[сообщение на медицинскую тему, в котором спрашивается о том, как заболевание проявляется, чем вызывается и как передаётся] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы сообщений этой группы спроектировала Сергиевич Д.] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о проявлениях и распространении заболевания)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о проявлениях и распространении заболевания - сообщение на медицинскую тему, в котором спрашивается о том, как заболевание проявляется, чем вызывается и как передаётся.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_medical_message
+		};;
+	*);;

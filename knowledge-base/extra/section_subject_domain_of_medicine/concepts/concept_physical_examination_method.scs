@@ -1,0 +1,13 @@
+concept_physical_examination_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[физикальный метод диагностики] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[physical examination method] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_diagnostic_method;
+=> nrel_definition:
+	[метод диагностики, основанный на непосредственном обследовании пациента органами чувств врача без применения сложной аппаратуры] (* <- lang_ru;; *);
+=> nrel_note:
+	[к физикальным методам относятся осмотр, пальпация, перкуссия и аускультация] (* <- lang_ru;; *);;

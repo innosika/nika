@@ -1,0 +1,177 @@
+/* Класс ответных фраз «фраза о применимости лекарственного средства при заболевании» (автор — Банкевич Я.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_drug_for_disease
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о применимости лекарственного средства при заболевании] (* <- lang_ru;; *);
+	[phrase about applicability of a drug for a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о применимости лекарственного средства при заболевании] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_drug_for_disease; автор — Банкевич Я.] (* <- lang_ru;; *);;
+
+concept_phrase_about_drug_for_disease_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о применимости лекарственного средства при заболевании: извинение] (* <- lang_ru;; *);
+	[phrase about applicability of a drug for a disease: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_for_disease;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_drug_for_disease_apology_1 = [Простите за задержку! Отвечаю, поможет ли препарат.];;
+@phrase_drug_for_disease_apology_1
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_apology;;
+
+@phrase_drug_for_disease_apology_2 = [Извините, что пришлось подождать. Вот что я знаю о применении этого препарата.];;
+@phrase_drug_for_disease_apology_2
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_apology;;
+
+concept_phrase_about_drug_for_disease_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о применимости лекарственного средства при заболевании: сведения есть] (* <- lang_ru;; *);
+	[phrase about applicability of a drug for a disease: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_for_disease;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_drug_for_disease_found_1 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_drug _=> nrel_indication:: _disease;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_found_1 = [Да, препарат «$list{_drug}» показан при заболевании «$list{_disease}».];;
+@phrase_drug_for_disease_found_1
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_found;
+=> nrel_phrase_template: @template_drug_for_disease_found_1;;
+
+@template_drug_for_disease_found_2 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_drug _=> nrel_indication:: _disease;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_found_2 = [Да: заболевание «$list{_disease}» входит в показания к применению препарата «$list{_drug}».];;
+@phrase_drug_for_disease_found_2
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_found;
+=> nrel_phrase_template: @template_drug_for_disease_found_2;;
+
+@template_drug_for_disease_found_3 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_disease _=> nrel_treatment_method:: _treatment;;
+	_treatment _=> nrel_used_drug:: _drug;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_found_3 = [Да. Препарат «$list{_drug}» применяют при заболевании «$list{_disease}», метод лечения: $list{_treatment}.];;
+@phrase_drug_for_disease_found_3
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_found;
+=> nrel_phrase_template: @template_drug_for_disease_found_3;;
+
+concept_phrase_about_drug_for_disease_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о применимости лекарственного средства при заболевании: ответ о группе] (* <- lang_ru;; *);
+	[phrase about applicability of a drug for a disease: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_for_disease;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_drug_for_disease_for_group_1 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_drug _-> _drug_instance;;
+	_drug_instance _=> nrel_indication:: _disease;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_for_group_1 = [Да, при заболевании «$list{_disease}» помогают препараты группы «$list{_drug}»: $list{_drug_instance}.];;
+@phrase_drug_for_disease_for_group_1
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_for_group;
+=> nrel_phrase_template: @template_drug_for_disease_for_group_1;;
+
+@template_drug_for_disease_for_group_2 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_drug _-> _drug_instance;;
+	_drug_instance _=> nrel_indication:: _disease;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_for_group_2 = [Из группы «$list{_drug}» при заболевании «$list{_disease}» применяют: $list{_drug_instance}.];;
+@phrase_drug_for_disease_for_group_2
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_for_group;
+=> nrel_phrase_template: @template_drug_for_disease_for_group_2;;
+
+@template_drug_for_disease_for_group_3 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_drug _-> _drug_instance;;
+	_disease _=> nrel_treatment_method:: _treatment;;
+	_treatment _=> nrel_used_drug:: _drug_instance;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_for_group_3 = [Да. Метод лечения заболевания «$list{_disease}» — $list{_treatment}; из группы «$list{_drug}» в нём используются: $list{_drug_instance}.];;
+@phrase_drug_for_disease_for_group_3
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_for_group;
+=> nrel_phrase_template: @template_drug_for_disease_for_group_3;;
+
+concept_phrase_about_drug_for_disease_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о применимости лекарственного средства при заболевании: сведений нет] (* <- lang_ru;; *);
+	[phrase about applicability of a drug for a disease: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_for_disease;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_drug_for_disease_not_found_1 = [*
+	_message _-> rrel_entity:: _disease;;
+	_disease _=> nrel_treatment_method:: _treatment;;
+	_treatment _=> nrel_used_drug:: _used_drug;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_not_found_1 = [Нет. При заболевании «$list{_disease}» в моей базе знаний указаны другие препараты: $list{_used_drug}.];;
+@phrase_drug_for_disease_not_found_1
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_not_found;
+=> nrel_phrase_template: @template_drug_for_disease_not_found_1;;
+
+@template_drug_for_disease_not_found_2 = [*
+	_message _-> rrel_entity:: _drug;;
+	_drug _=> nrel_indication:: _drug_indication;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_not_found_2 = [Нет, сведений о таком применении в базе знаний нет. Препарат «$list{_drug}» показан при: $list{_drug_indication}.];;
+@phrase_drug_for_disease_not_found_2
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_not_found;
+=> nrel_phrase_template: @template_drug_for_disease_not_found_2;;
+
+@template_drug_for_disease_not_found_3 = [*
+	_message _-> rrel_entity:: _drug;;
+	_drug _-> _drug_instance;;
+	_drug_instance _=> nrel_indication:: _drug_indication;;
+	concept_message _-> _message;;
+*];;
+@phrase_drug_for_disease_not_found_3 = [Нет, препараты группы «$list{_drug}» ($list{_drug_instance}) при этом заболевании в базе знаний не указаны.];;
+@phrase_drug_for_disease_not_found_3
+<- lang_ru;
+<- concept_phrase_about_drug_for_disease_not_found;
+=> nrel_phrase_template: @template_drug_for_disease_not_found_3;;

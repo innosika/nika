@@ -1,0 +1,15 @@
+concept_hormonal_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[гормональное средство] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[hormonal drug] (* <- lang_en;; *);
+=> nrel_idtf:
+	[гормональный препарат] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_drug;
+=> nrel_definition:
+	[лекарственное средство, содержащее гормоны или их синтетические аналоги] (* <- lang_ru;; *);
+=> nrel_note:
+	[гормональные средства применяются для заместительной терапии при недостаточности желёз и как противовоспалительные препараты] (* <- lang_ru;; *);;

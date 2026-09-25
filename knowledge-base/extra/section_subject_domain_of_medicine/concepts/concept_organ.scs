@@ -1,0 +1,26 @@
+concept_organ
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[орган] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[organ] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_anatomical_structure;
+=> nrel_inclusion:
+	concept_hollow_organ;
+=> nrel_inclusion:
+	concept_parenchymal_organ;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение органов по строению] (* <- lang_ru;; *);;
+		-> concept_hollow_organ;;
+		-> concept_parenchymal_organ;;
+	*);
+=> nrel_definition:
+	[часть организма, имеющая определённое строение и положение и выполняющая одну или несколько функций] (* <- lang_ru;; *);
+=> nrel_note:
+	[органы объединяются в системы органов] (* <- lang_ru;; *);;

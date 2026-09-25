@@ -1,0 +1,13 @@
+concept_functional_diagnostic_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[функциональный метод диагностики] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[functional diagnostic method] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_instrumental_diagnostic_method;
+=> nrel_definition:
+	[инструментальный метод диагностики, регистрирующий показатели работы органов и систем - электрическую активность, объёмы, давление] (* <- lang_ru;; *);
+=> nrel_note:
+	[к функциональным методам относятся электрокардиография, спирометрия, электроэнцефалография] (* <- lang_ru;; *);;

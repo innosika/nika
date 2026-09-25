@@ -1,0 +1,206 @@
+/* Класс ответных фраз «фраза о передаче заболевания» (автор — Сергиевич Д.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_disease_transmission
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о передаче заболевания] (* <- lang_ru;; *);
+	[phrase about transmission of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_manifestation;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о передаче заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_disease_transmission; автор — Сергиевич Д.] (* <- lang_ru;; *);;
+
+concept_phrase_about_disease_transmission_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о передаче заболевания: извинение] (* <- lang_ru;; *);
+	[phrase about transmission of a disease: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_transmission;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_disease_transmission_apology_1 = [Простите за задержку! Рассказываю, как передаётся заболевание.];;
+@phrase_disease_transmission_apology_1
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_apology;;
+
+@phrase_disease_transmission_apology_2 = [Извините, что заставила ждать. Вот сведения о передаче заболевания.];;
+@phrase_disease_transmission_apology_2
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_apology;;
+
+concept_phrase_about_disease_transmission_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о передаче заболевания: сведения есть] (* <- lang_ru;; *);
+	[phrase about transmission of a disease: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_transmission;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_disease_transmission_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_transmission_route:: _route;;
+*];;
+@phrase_disease_transmission_found_1 = [Путь передачи заболевания «${_entity_name}»: ${_route}.];;
+@phrase_disease_transmission_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_found;
+=> nrel_phrase_template: @template_disease_transmission_found_1;;
+
+@template_disease_transmission_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_transmission_route:: _route;;
+	_entity _=> nrel_incubation_period:: _incubation;;
+*];;
+@phrase_disease_transmission_found_2 = [Заболевание «${_entity_name}» передаётся так: ${_route}. Инкубационный период — ${_incubation}.];;
+@phrase_disease_transmission_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_found;
+=> nrel_phrase_template: @template_disease_transmission_found_2;;
+
+@template_disease_transmission_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_transmission_route:: _route;;
+	_entity _=> nrel_incubation_period:: _incubation;;
+*];;
+@phrase_disease_transmission_found_3 = [Инкубационный период заболевания «${_entity_name}» — ${_incubation}; путь передачи: ${_route}.];;
+@phrase_disease_transmission_found_3
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_found;
+=> nrel_phrase_template: @template_disease_transmission_found_3;;
+
+@template_disease_transmission_found_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_transmission_route:: _route;;
+	_entity _=> nrel_prevention_vaccine:: _vaccine;;
+*];;
+@phrase_disease_transmission_found_4 = [Путь передачи заболевания «${_entity_name}»: ${_route}. Для профилактики есть вакцина: $list{_vaccine}.];;
+@phrase_disease_transmission_found_4
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_found;
+=> nrel_phrase_template: @template_disease_transmission_found_4;;
+
+concept_phrase_about_disease_transmission_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о передаче заболевания: ответ о группе] (* <- lang_ru;; *);
+	[phrase about transmission of a disease: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_transmission;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_disease_transmission_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_transmission_route:: _route;;
+*];;
+@phrase_disease_transmission_for_group_1 = [Пути передачи заболеваний группы «${_entity_name}»: $list{_route}. Уточните заболевание: $list{_instance}.];;
+@phrase_disease_transmission_for_group_1
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_for_group;
+=> nrel_phrase_template: @template_disease_transmission_for_group_1;;
+
+@template_disease_transmission_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_transmission_route:: _route;;
+*];;
+@phrase_disease_transmission_for_group_2 = [Заболевания группы «${_entity_name}» ($list{_instance}) передаются так: $list{_route}.];;
+@phrase_disease_transmission_for_group_2
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_for_group;
+=> nrel_phrase_template: @template_disease_transmission_for_group_2;;
+
+concept_phrase_about_disease_transmission_non_infectious
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о передаче заболевания: неинфекционное заболевание] (* <- lang_ru;; *);
+	[phrase about transmission of a disease: non-infectious disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_transmission;
+=> nrel_definition:
+	[фраза для неинфекционного заболевания, у которого нет возбудителя и пути передачи] (* <- lang_ru;; *);;
+
+@template_disease_transmission_non_infectious_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_transmission_non_infectious_1 = [Заболевание «${_entity_name}» не передаётся от человека к человеку: оно неинфекционное.];;
+@phrase_disease_transmission_non_infectious_1
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_non_infectious;
+=> nrel_phrase_template: @template_disease_transmission_non_infectious_1;;
+
+@template_disease_transmission_non_infectious_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_transmission_non_infectious_2 = [Заразиться заболеванием «${_entity_name}» нельзя — это неинфекционное заболевание, оно развивается под действием внутренних и внешних факторов, а не инфекции.];;
+@phrase_disease_transmission_non_infectious_2
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_non_infectious;
+=> nrel_phrase_template: @template_disease_transmission_non_infectious_2;;
+
+concept_phrase_about_disease_transmission_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о передаче заболевания: сведений нет] (* <- lang_ru;; *);
+	[phrase about transmission of a disease: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_transmission;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_disease_transmission_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_transmission_not_found_1 = [Сведений о том, как передаётся «${_entity_name}», в базе знаний нет.];;
+@phrase_disease_transmission_not_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_not_found;
+=> nrel_phrase_template: @template_disease_transmission_not_found_1;;
+
+@template_disease_transmission_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_transmission_not_found_2 = [Путь передачи для «${_entity_name}» в моей базе знаний не указан.];;
+@phrase_disease_transmission_not_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_transmission_not_found;
+=> nrel_phrase_template: @template_disease_transmission_not_found_2;;

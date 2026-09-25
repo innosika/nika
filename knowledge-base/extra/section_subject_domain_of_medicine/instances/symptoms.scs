@@ -1,0 +1,186 @@
+/* Экземпляры понятий: symptoms */
+
+fever
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[лихорадка] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[fever] (* <- lang_en;; *);
+=> nrel_idtf:
+	[повышение температуры тела] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[жар] (* <- lang_ru;; *);
+=> nrel_definition:
+	[повышение температуры тела выше 37 °C в результате перестройки терморегуляции под действием пирогенов] (* <- lang_ru;; *);
+=> nrel_note:
+	[субфебрильная лихорадка - 37,1-38 °C, фебрильная - 38,1-39 °C, пиретическая - 39,1-41 °C] (* <- lang_ru;; *);;
+
+cough
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[кашель] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[cough] (* <- lang_en;; *);
+=> nrel_definition:
+	[рефлекторный форсированный выдох через рот, вызванный раздражением рецепторов дыхательных путей и направленный на их очищение] (* <- lang_ru;; *);
+=> nrel_note:
+	[различают сухой (непродуктивный) и влажный (продуктивный, с отделением мокроты) кашель] (* <- lang_ru;; *);;
+
+wheezing
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[свистящие хрипы] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[wheezing] (* <- lang_en;; *);
+=> nrel_definition:
+	[высокие музыкальные дыхательные шумы, выслушиваемые при аускультации лёгких при сужении просвета бронхов] (* <- lang_ru;; *);
+=> nrel_note:
+	[свистящие хрипы - характерный признак бронхиальной астмы] (* <- lang_ru;; *);;
+
+headache
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[головная боль] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[headache] (* <- lang_en;; *);
+=> nrel_definition:
+	[болевые ощущения в области головы, одна из самых частых жалоб при инфекционных и неинфекционных заболеваниях] (* <- lang_ru;; *);;
+
+chest_pain
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[боль за грудиной] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[chest pain] (* <- lang_en;; *);
+=> nrel_idtf:
+	[загрудинная боль] (* <- lang_ru;; *);
+=> nrel_definition:
+	[болевые ощущения в центральной части грудной клетки, типичный признак ишемии миокарда] (* <- lang_ru;; *);
+=> nrel_note:
+	[при стенокардии боль обычно давящая или сжимающая и длится до 15 минут] (* <- lang_ru;; *);;
+
+dyspnea
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[одышка] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[dyspnea] (* <- lang_en;; *);
+=> nrel_definition:
+	[субъективное ощущение нехватки воздуха, сопровождающееся изменением частоты и глубины дыхания] (* <- lang_ru;; *);
+=> nrel_note:
+	[одышка бывает инспираторной (затруднён вдох), экспираторной (затруднён выдох) и смешанной] (* <- lang_ru;; *);;
+
+weakness
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[общая слабость] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[general weakness] (* <- lang_en;; *);
+=> nrel_idtf:
+	[слабость] (* <- lang_ru;; *);
+=> nrel_definition:
+	[ощущение упадка сил и снижения работоспособности, характерное для интоксикации и многих хронических заболеваний] (* <- lang_ru;; *);;
+
+nausea
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[тошнота] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[nausea] (* <- lang_en;; *);
+=> nrel_definition:
+	[тягостное ощущение в подложечной области и глотке, часто предшествующее рвоте] (* <- lang_ru;; *);
+=> nrel_note:
+	[тошнота - частый побочный эффект лекарственных средств, принимаемых внутрь] (* <- lang_ru;; *);;
+
+hyperglycemia
+<- concept_laboratory_instrumental_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[гипергликемия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[hyperglycemia] (* <- lang_en;; *);
+=> nrel_definition:
+	[повышение концентрации глюкозы в крови выше 5,5 ммоль/л натощак] (* <- lang_ru;; *);
+=> nrel_note:
+	[длительная гипергликемия повреждает сосуды, нервы, почки и сетчатку глаза] (* <- lang_ru;; *);;
+
+leukocytosis
+<- concept_laboratory_instrumental_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[лейкоцитоз] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[leukocytosis] (* <- lang_en;; *);
+=> nrel_definition:
+	[увеличение числа лейкоцитов в периферической крови более 9 тысяч в микролитре, характерное для бактериальных инфекций и воспаления] (* <- lang_ru;; *);;
+
+st_elevation
+<- concept_laboratory_instrumental_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[подъём сегмента ST] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[ST segment elevation] (* <- lang_en;; *);
+=> nrel_idtf:
+	[элевация сегмента ST] (* <- lang_ru;; *);
+=> nrel_definition:
+	[электрокардиографический признак трансмуральной ишемии миокарда, при котором сегмент ST смещён выше изолинии] (* <- lang_ru;; *);;
+
+intoxication_syndrome
+<- concept_syndrome;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[интоксикационный синдром] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[intoxication syndrome] (* <- lang_en;; *);
+=> nrel_definition:
+	[совокупность симптомов, вызванных действием токсинов возбудителя на организм - лихорадка, общая слабость, головная боль, боли в мышцах] (* <- lang_ru;; *);
+=> nrel_component_symptom:
+	fever;
+=> nrel_component_symptom:
+	weakness;
+=> nrel_component_symptom:
+	headache;;
+
+acute_coronary_syndrome
+<- concept_syndrome;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[острый коронарный синдром] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[acute coronary syndrome] (* <- lang_en;; *);
+=> nrel_idtf:
+	[ОКС] (* <- lang_ru;; *);
+=> nrel_definition:
+	[совокупность клинических признаков, позволяющих подозревать инфаркт миокарда или нестабильную стенокардию - боль за грудиной, одышка, изменения на электрокардиограмме] (* <- lang_ru;; *);
+=> nrel_component_symptom:
+	chest_pain;
+=> nrel_component_symptom:
+	dyspnea;
+=> nrel_component_symptom:
+	st_elevation;;
+
+bronchial_obstruction_syndrome
+<- concept_syndrome;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[бронхообструктивный синдром] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[bronchial obstruction syndrome] (* <- lang_en;; *);
+=> nrel_definition:
+	[совокупность симптомов нарушения проходимости бронхов - экспираторная одышка, свистящие хрипы, приступообразный кашель] (* <- lang_ru;; *);
+=> nrel_component_symptom:
+	dyspnea;
+=> nrel_component_symptom:
+	wheezing;
+=> nrel_component_symptom:
+	cough;;
+

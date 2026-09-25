@@ -1,0 +1,43 @@
+nrel_complication
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+=> nrel_main_idtf:
+	[осложнение*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[complication*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_disease;
+=> nrel_second_domain:
+	concept_disease;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_disease;
+			concept_disease
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее заболевание с другим заболеванием, которое может развиться как его следствие] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (осложнение*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Осложнение* - бинарное ориентированное отношение, связывающее заболевание с другим заболеванием, которое может развиться как его следствие.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_disease
+		};;
+	*);;

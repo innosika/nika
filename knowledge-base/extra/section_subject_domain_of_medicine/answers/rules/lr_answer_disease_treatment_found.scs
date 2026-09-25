@@ -1,0 +1,32 @@
+/* Правило ответа на сообщение о лечении заболевания: сведения есть в базе знаний.
+   Если: сообщение о лечении заболевания, выделена сущность, и в базе знаний есть связь «метод лечения*».
+   Автор: Рублевская Е. */
+
+@if_lr_answer_disease_treatment_found = [*
+	concept_message _-> _message;;
+	concept_message_about_disease_treatment _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_treatment_method:: _treatment;;
+*];;
+@then_lr_answer_disease_treatment_found = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_disease_treatment _-> _reply_message;;
+*];;
+@if_lr_answer_disease_treatment_found <- atomic_logical_formula;;
+@then_lr_answer_disease_treatment_found <- atomic_logical_formula;;
+@impl_lr_answer_disease_treatment_found = (@if_lr_answer_disease_treatment_found => @then_lr_answer_disease_treatment_found);;
+@impl_lr_answer_disease_treatment_found <- nrel_implication;;
+answer_pattern_lr_answer_disease_treatment_found
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_disease_treatment_found;;
+lr_answer_disease_treatment_found
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о лечении заболевания: сведения есть в базе знаний] (* <- lang_ru;; *);
+	[rule of reply to a message about treatment of a disease: the data is in the knowledge base] (* <- lang_en;; *);
+=> nrel_note:
+	[если сообщение о лечении заболевания, выделена сущность, и в базе знаний есть связь «метод лечения*»; фразы ответа — из класса concept_phrase_about_disease_treatment_found] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_disease_treatment_found;
+-> rrel_main_key_sc_element: @impl_lr_answer_disease_treatment_found;;

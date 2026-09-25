@@ -1,0 +1,13 @@
+concept_specialized_hospital
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[специализированная больница] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[specialized hospital] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_inpatient_institution;
+=> nrel_definition:
+	[стационарное учреждение, оказывающее помощь пациентам с заболеваниями определённого профиля] (* <- lang_ru;; *);
+=> nrel_note:
+	[в Беларуси высокоспециализированную помощь оказывают республиканские научно-практические центры (РНПЦ)] (* <- lang_ru;; *);;

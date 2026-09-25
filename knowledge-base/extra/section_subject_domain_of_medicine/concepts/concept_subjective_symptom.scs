@@ -1,0 +1,15 @@
+concept_subjective_symptom
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[субъективный симптом] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[subjective symptom] (* <- lang_en;; *);
+=> nrel_idtf:
+	[жалоба] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_symptom;
+=> nrel_definition:
+	[симптом, ощущаемый самим пациентом и описываемый им в виде жалоб] (* <- lang_ru;; *);
+=> nrel_note:
+	[субъективные симптомы выявляются при сборе анамнеза и не могут быть непосредственно измерены] (* <- lang_ru;; *);;

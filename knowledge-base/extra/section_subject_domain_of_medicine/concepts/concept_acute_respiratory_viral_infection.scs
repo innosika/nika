@@ -1,0 +1,17 @@
+concept_acute_respiratory_viral_infection
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[острая респираторная вирусная инфекция] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[acute respiratory viral infection] (* <- lang_en;; *);
+=> nrel_idtf:
+	[ОРВИ] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_viral_disease;
+=> nrel_inclusion:
+	concept_influenza;
+=> nrel_definition:
+	[вирусное заболевание дыхательных путей с острым началом, передающееся преимущественно воздушно-капельным путём и проявляющееся катаральными явлениями и интоксикацией] (* <- lang_ru;; *);
+=> nrel_note:
+	[группа ОРВИ объединяет более 200 респираторных вирусов; в МКБ-10 острые инфекции верхних дыхательных путей кодируются рубриками J00-J06] (* <- lang_ru;; *);;

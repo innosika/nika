@@ -1,0 +1,24 @@
+concept_medical_worker
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[медицинский работник] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[medical worker] (* <- lang_en;; *);
+=> nrel_inclusion:
+	concept_physician;
+=> nrel_inclusion:
+	concept_nursing_staff;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение медицинских работников по уровню образования] (* <- lang_ru;; *);;
+		-> concept_physician;;
+		-> concept_nursing_staff;;
+	*);
+=> nrel_definition:
+	[лицо, имеющее медицинское образование и осуществляющее профессиональную медицинскую деятельность] (* <- lang_ru;; *);
+=> nrel_note:
+	[правовой статус медицинских работников в Республике Беларусь определён Законом «О здравоохранении»] (* <- lang_ru;; *);;

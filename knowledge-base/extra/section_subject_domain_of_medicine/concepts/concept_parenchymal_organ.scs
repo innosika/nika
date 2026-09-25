@@ -1,0 +1,15 @@
+concept_parenchymal_organ
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[паренхиматозный орган] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[parenchymal organ] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_organ;
+=> nrel_inclusion:
+	concept_gland;
+=> nrel_definition:
+	[орган, построенный из рабочей ткани (паренхимы) и соединительнотканного остова (стромы) и не имеющий полости] (* <- lang_ru;; *);
+=> nrel_note:
+	[к паренхиматозным органам относятся лёгкие, печень, почки, головной мозг, железы] (* <- lang_ru;; *);;

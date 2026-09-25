@@ -1,0 +1,33 @@
+concept_message_about_drug_for_disease
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о применимости лекарственного средства при заболевании] (* <- lang_ru;; *);
+	[message about drug applicability for a disease] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_drug_for_disease];
+<= nrel_inclusion:
+	concept_message_about_drug;
+=> nrel_definition:
+	[сообщение о лекарственном средстве, в котором спрашивается, применяется ли указанное лекарственное средство при указанном заболевании; в сообщении выделяются две сущности] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Помогает ли осельтамивир при гриппе A(H1N1)?»; выделяемые сущности (роль rrel_entity): лекарственное средство, заболевание] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о применимости лекарственного средства при заболевании)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о применимости лекарственного средства при заболевании - сообщение о лекарственном средстве, в котором спрашивается, применяется ли указанное лекарственное средство при указанном заболевании; в сообщении выделяются две сущности.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_drug;
+			nrel_indication;
+			nrel_used_drug;
+			rrel_entity
+		};;
+	*);;

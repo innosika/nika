@@ -1,0 +1,38 @@
+concept_medical_message
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение на медицинскую тему] (* <- lang_ru;; *);
+	[message on a medical topic] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_atomic_message;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение сообщений на медицинскую тему по предмету вопроса] (* <- lang_ru;; *);;
+		-> concept_message_about_disease_manifestation;;
+		-> concept_message_about_medical_care;;
+		-> concept_message_about_drug;;
+	*);
+=> nrel_definition:
+	[атомарное сообщение, в котором пользователь спрашивает о заболеваниях, их диагностике и лечении или о лекарственных средствах из предметной области медицины] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы сообщений распределены между участницами бригады: сообщение о проявлениях и распространении заболевания - Сергиевич Д.; сообщение о диагностике и лечении заболевания - Рублевская Е.; сообщение о лекарственном средстве - Банкевич Я.] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение на медицинскую тему)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение на медицинскую тему - атомарное сообщение, в котором пользователь спрашивает о заболеваниях, их диагностике и лечении или о лекарственных средствах из предметной области медицины.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_atomic_message
+		};;
+	*);;

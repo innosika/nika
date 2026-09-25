@@ -1,0 +1,38 @@
+concept_message_about_medical_care
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о диагностике и лечении заболевания] (* <- lang_ru;; *);
+	[message about diagnostics and treatment of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_message;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение класса «сообщение о диагностике и лечении заболевания» по запрашиваемому свойству] (* <- lang_ru;; *);;
+		-> concept_message_about_disease_diagnostics;;
+		-> concept_message_about_disease_treatment;;
+		-> concept_message_about_disease_specialist;;
+	*);
+=> nrel_definition:
+	[сообщение на медицинскую тему, в котором спрашивается о том, как заболевание выявляют и лечат и к какому врачу обращаться] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы сообщений этой группы спроектировала Рублевская Е.] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о диагностике и лечении заболевания)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о диагностике и лечении заболевания - сообщение на медицинскую тему, в котором спрашивается о том, как заболевание выявляют и лечат и к какому врачу обращаться.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_medical_message
+		};;
+	*);;

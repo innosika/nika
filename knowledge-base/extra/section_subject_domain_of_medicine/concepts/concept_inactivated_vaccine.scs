@@ -1,0 +1,13 @@
+concept_inactivated_vaccine
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[инактивированная вакцина] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[inactivated vaccine] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_vaccine;
+=> nrel_definition:
+	[вакцина, содержащая убитые физическим или химическим способом микроорганизмы или их фрагменты] (* <- lang_ru;; *);
+=> nrel_note:
+	[инактивированные вакцины безопаснее живых, но обычно требуют повторных введений] (* <- lang_ru;; *);;

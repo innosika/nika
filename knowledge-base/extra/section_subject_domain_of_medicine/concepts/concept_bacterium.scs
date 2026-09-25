@@ -1,0 +1,26 @@
+concept_bacterium
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[бактерия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[bacterium] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_pathogen;
+=> nrel_inclusion:
+	concept_gram_positive_bacterium;
+=> nrel_inclusion:
+	concept_gram_negative_bacterium;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение бактерий по окраске по Граму] (* <- lang_ru;; *);;
+		-> concept_gram_positive_bacterium;;
+		-> concept_gram_negative_bacterium;;
+	*);
+=> nrel_definition:
+	[одноклеточный прокариотический микроорганизм, не имеющий оформленного ядра] (* <- lang_ru;; *);
+=> nrel_note:
+	[по форме различают кокки, палочки (бациллы), спирохеты и вибрионы] (* <- lang_ru;; *);;

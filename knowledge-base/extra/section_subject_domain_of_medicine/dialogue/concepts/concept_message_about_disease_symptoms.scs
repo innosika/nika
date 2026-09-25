@@ -1,0 +1,33 @@
+concept_message_about_disease_symptoms
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о симптомах заболевания] (* <- lang_ru;; *);
+	[message about disease symptoms] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_disease_symptoms];
+<= nrel_inclusion:
+	concept_message_about_disease_manifestation;
+=> nrel_definition:
+	[сообщение о проявлениях и распространении заболевания, в котором запрашиваются симптомы и синдромы указанного заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Какие симптомы у гриппа A(H1N1)?»; выделяемые сущности (роль rrel_entity): заболевание] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о симптомах заболевания)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о симптомах заболевания - сообщение о проявлениях и распространении заболевания, в котором запрашиваются симптомы и синдромы указанного заболевания.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_disease_manifestation;
+			nrel_symptom;
+			nrel_syndrome;
+			rrel_entity
+		};;
+	*);;

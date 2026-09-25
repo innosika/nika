@@ -1,0 +1,156 @@
+/* Класс ответных фраз «фраза о побочных эффектах лекарственного средства» (автор — Банкевич Я.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_drug_side_effects
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о побочных эффектах лекарственного средства] (* <- lang_ru;; *);
+	[phrase about side effects of a drug] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о побочных эффектах лекарственного средства] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_drug_side_effects; автор — Банкевич Я.] (* <- lang_ru;; *);;
+
+concept_phrase_about_drug_side_effects_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о побочных эффектах лекарственного средства: извинение] (* <- lang_ru;; *);
+	[phrase about side effects of a drug: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_side_effects;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_drug_side_effects_apology_1 = [Простите, что заставила ждать! Вот сведения о побочных эффектах.];;
+@phrase_drug_side_effects_apology_1
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_apology;;
+
+@phrase_drug_side_effects_apology_2 = [Извините за ожидание, рассказываю о побочных эффектах препарата.];;
+@phrase_drug_side_effects_apology_2
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_apology;;
+
+concept_phrase_about_drug_side_effects_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о побочных эффектах лекарственного средства: сведения есть] (* <- lang_ru;; *);
+	[phrase about side effects of a drug: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_side_effects;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_drug_side_effects_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_side_effect:: _side_effect;;
+*];;
+@phrase_drug_side_effects_found_1 = [Возможные побочные эффекты препарата «${_entity_name}»: $list{_side_effect}.];;
+@phrase_drug_side_effects_found_1
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_found;
+=> nrel_phrase_template: @template_drug_side_effects_found_1;;
+
+@template_drug_side_effects_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_side_effect:: _side_effect;;
+*];;
+@phrase_drug_side_effects_found_2 = [При приёме препарата «${_entity_name}» возможны побочные эффекты: $list{_side_effect}.];;
+@phrase_drug_side_effects_found_2
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_found;
+=> nrel_phrase_template: @template_drug_side_effects_found_2;;
+
+@template_drug_side_effects_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_side_effect:: _side_effect;;
+*];;
+@phrase_drug_side_effects_found_3 = [Среди побочных эффектов препарата «${_entity_name}» — $list{_side_effect}.];;
+@phrase_drug_side_effects_found_3
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_found;
+=> nrel_phrase_template: @template_drug_side_effects_found_3;;
+
+concept_phrase_about_drug_side_effects_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о побочных эффектах лекарственного средства: ответ о группе] (* <- lang_ru;; *);
+	[phrase about side effects of a drug: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_side_effects;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_drug_side_effects_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_side_effect:: _side_effect;;
+*];;
+@phrase_drug_side_effects_for_group_1 = [У препаратов группы «${_entity_name}» ($list{_instance}) отмечены побочные эффекты: $list{_side_effect}.];;
+@phrase_drug_side_effects_for_group_1
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_for_group;
+=> nrel_phrase_template: @template_drug_side_effects_for_group_1;;
+
+@template_drug_side_effects_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_side_effect:: _side_effect;;
+*];;
+@phrase_drug_side_effects_for_group_2 = [Побочные эффекты зависят от конкретного препарата группы «${_entity_name}»; в целом возможны: $list{_side_effect}.];;
+@phrase_drug_side_effects_for_group_2
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_for_group;
+=> nrel_phrase_template: @template_drug_side_effects_for_group_2;;
+
+concept_phrase_about_drug_side_effects_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о побочных эффектах лекарственного средства: сведений нет] (* <- lang_ru;; *);
+	[phrase about side effects of a drug: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_side_effects;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_drug_side_effects_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_drug_side_effects_not_found_1 = [В моей базе знаний нет сведений о побочных эффектах препарата «${_entity_name}». Уточните их у врача или в инструкции.];;
+@phrase_drug_side_effects_not_found_1
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_not_found;
+=> nrel_phrase_template: @template_drug_side_effects_not_found_1;;
+
+@template_drug_side_effects_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_drug_side_effects_not_found_2 = [Побочные эффекты для «${_entity_name}» в базе знаний не указаны — это не значит, что их нет.];;
+@phrase_drug_side_effects_not_found_2
+<- lang_ru;
+<- concept_phrase_about_drug_side_effects_not_found;
+=> nrel_phrase_template: @template_drug_side_effects_not_found_2;;

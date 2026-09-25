@@ -1,0 +1,15 @@
+concept_dna_virus
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[ДНК-содержащий вирус] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[DNA virus] (* <- lang_en;; *);
+=> nrel_idtf:
+	[ДНК-вирус] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_virus;
+=> nrel_definition:
+	[вирус, геном которого представлен дезоксирибонуклеиновой кислотой] (* <- lang_ru;; *);
+=> nrel_note:
+	[к ДНК-вирусам относятся вирусы герпеса, гепатита B, папилломы человека, аденовирусы] (* <- lang_ru;; *);;

@@ -1,0 +1,28 @@
+concept_inpatient_institution
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[стационарное учреждение] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[inpatient institution] (* <- lang_en;; *);
+=> nrel_idtf:
+	[больница] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_medical_institution;
+=> nrel_inclusion:
+	concept_multidisciplinary_hospital;
+=> nrel_inclusion:
+	concept_specialized_hospital;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение стационарных учреждений по профилю] (* <- lang_ru;; *);;
+		-> concept_multidisciplinary_hospital;;
+		-> concept_specialized_hospital;;
+	*);
+=> nrel_definition:
+	[медицинское учреждение, оказывающее помощь пациентам в условиях круглосуточного пребывания] (* <- lang_ru;; *);
+=> nrel_note:
+	[основной тип стационарного учреждения - больница] (* <- lang_ru;; *);;

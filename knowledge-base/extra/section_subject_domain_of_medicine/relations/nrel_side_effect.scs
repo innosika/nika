@@ -1,0 +1,45 @@
+nrel_side_effect
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[побочный эффект*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[side effect*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_drug;
+=> nrel_second_domain:
+	concept_symptom;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_drug;
+			concept_symptom
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее лекарственное средство с нежелательным симптомом, который оно может вызывать] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (побочный эффект*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Побочный эффект* - бинарное ориентированное отношение, связывающее лекарственное средство с нежелательным симптомом, который оно может вызывать.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_drug;
+			concept_symptom
+		};;
+	*);;

@@ -1,0 +1,172 @@
+/* Экземпляры понятий: treatment */
+
+antibiotic_therapy
+<- concept_etiotropic_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[антибиотикотерапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antibiotic therapy] (* <- lang_en;; *);
+=> nrel_idtf:
+	[антибактериальная терапия] (* <- lang_ru;; *);
+=> nrel_definition:
+	[этиотропная терапия бактериальных заболеваний с применением антибиотиков] (* <- lang_ru;; *);
+=> nrel_note:
+	[антибиотик подбирают с учётом чувствительности возбудителя, определяемой при бактериологическом посеве] (* <- lang_ru;; *);
+=> nrel_used_drug:
+	amoxicillin;
+=> nrel_used_drug:
+	azithromycin;;
+
+antiviral_therapy
+<- concept_etiotropic_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[противовирусная терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antiviral therapy] (* <- lang_en;; *);
+=> nrel_definition:
+	[этиотропная терапия вирусных заболеваний препаратами, подавляющими размножение вируса] (* <- lang_ru;; *);
+=> nrel_note:
+	[противовирусная терапия гриппа наиболее эффективна в первые 48 часов от начала болезни] (* <- lang_ru;; *);
+=> nrel_used_drug:
+	oseltamivir;
+=> nrel_used_drug:
+	remdesivir;;
+
+insulin_therapy
+<- concept_pathogenetic_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[инсулинотерапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[insulin therapy] (* <- lang_en;; *);
+=> nrel_definition:
+	[патогенетическая терапия сахарного диабета, основанная на введении препаратов инсулина для замещения его дефицита] (* <- lang_ru;; *);
+=> nrel_used_drug:
+	insulin;;
+
+glucocorticoid_therapy
+<- concept_pathogenetic_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[глюкокортикоидная терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[glucocorticoid therapy] (* <- lang_en;; *);
+=> nrel_definition:
+	[патогенетическая терапия воспалительных и аллергических заболеваний препаратами глюкокортикоидных гормонов] (* <- lang_ru;; *);
+=> nrel_note:
+	[при бронхиальной астме глюкокортикоиды применяют ингаляционно, что снижает системные побочные эффекты] (* <- lang_ru;; *);
+=> nrel_used_drug:
+	budesonide;;
+
+antipyretic_therapy
+<- concept_symptomatic_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[жаропонижающая терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antipyretic therapy] (* <- lang_en;; *);
+=> nrel_definition:
+	[симптоматическая терапия, направленная на снижение повышенной температуры тела] (* <- lang_ru;; *);
+=> nrel_note:
+	[жаропонижающие средства обычно назначают при температуре выше 38,5 °C] (* <- lang_ru;; *);
+=> nrel_used_drug:
+	ibuprofen;
+=> nrel_used_drug:
+	paracetamol;;
+
+analgesic_therapy
+<- concept_symptomatic_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[обезболивающая терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[analgesic therapy] (* <- lang_en;; *);
+=> nrel_idtf:
+	[анальгезия] (* <- lang_ru;; *);
+=> nrel_definition:
+	[симптоматическая терапия, направленная на устранение боли] (* <- lang_ru;; *);
+=> nrel_used_drug:
+	ibuprofen;
+=> nrel_used_drug:
+	morphine;;
+
+physiotherapy
+<- concept_non_drug_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[физиотерапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[physiotherapy] (* <- lang_en;; *);
+=> nrel_definition:
+	[немедикаментозная терапия с использованием физических факторов - электрического тока, ультразвука, тепла, магнитного поля] (* <- lang_ru;; *);;
+
+diet_therapy
+<- concept_non_drug_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[диетотерапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[diet therapy] (* <- lang_en;; *);
+=> nrel_definition:
+	[немедикаментозная терапия, основанная на специально подобранном рационе питания] (* <- lang_ru;; *);
+=> nrel_note:
+	[при сахарном диабете диетотерапия направлена на ограничение легкоусвояемых углеводов] (* <- lang_ru;; *);;
+
+mechanical_ventilation
+<- concept_non_drug_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[искусственная вентиляция лёгких] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[mechanical ventilation] (* <- lang_en;; *);
+=> nrel_idtf:
+	[ИВЛ] (* <- lang_ru;; *);
+=> nrel_definition:
+	[немедикаментозная терапия, при которой аппарат принудительно подаёт дыхательную смесь в лёгкие пациента при дыхательной недостаточности] (* <- lang_ru;; *);
+=> nrel_treatment_equipment:
+	ventilator;;
+
+defibrillation
+<- concept_non_drug_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[электрическая дефибрилляция] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[defibrillation] (* <- lang_en;; *);
+=> nrel_idtf:
+	[дефибрилляция] (* <- lang_ru;; *);
+=> nrel_definition:
+	[немедикаментозная терапия, при которой фибрилляцию желудочков сердца устраняют кратковременным электрическим разрядом] (* <- lang_ru;; *);
+=> nrel_treatment_equipment:
+	defibrillator;;
+
+coronary_stenting
+<- concept_surgical_treatment;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[коронарное стентирование] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[coronary stenting] (* <- lang_en;; *);
+=> nrel_idtf:
+	[стентирование] (* <- lang_ru;; *);
+=> nrel_definition:
+	[хирургическое лечение ишемической болезни сердца, при котором в суженную коронарную артерию через катетер устанавливают стент, восстанавливающий кровоток] (* <- lang_ru;; *);
+=> nrel_note:
+	[относится к малоинвазивным чрескожным коронарным вмешательствам и выполняется под рентгеновским контролем] (* <- lang_ru;; *);;
+
+coronary_bypass_surgery
+<- concept_surgical_treatment;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[аортокоронарное шунтирование] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[coronary artery bypass grafting] (* <- lang_en;; *);
+=> nrel_idtf:
+	[АКШ] (* <- lang_ru;; *);
+=> nrel_definition:
+	[хирургическое лечение ишемической болезни сердца, при котором создают обходной путь кровотока вокруг суженного участка коронарной артерии с помощью сосудистого шунта] (* <- lang_ru;; *);
+=> nrel_note:
+	[первая успешная операция аортокоронарного шунтирования выполнена Рене Фавалоро в 1967 году] (* <- lang_ru;; *);;
+

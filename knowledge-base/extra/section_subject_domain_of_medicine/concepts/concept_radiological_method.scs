@@ -1,0 +1,13 @@
+concept_radiological_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[рентгенологический метод диагностики] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[radiological method] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_imaging_method;
+=> nrel_definition:
+	[визуализирующий метод диагностики, основанный на способности рентгеновского излучения по-разному поглощаться тканями различной плотности] (* <- lang_ru;; *);
+=> nrel_note:
+	[рентгеновское излучение открыто Вильгельмом Рентгеном в 1895 году] (* <- lang_ru;; *);;

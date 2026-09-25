@@ -1,0 +1,45 @@
+nrel_reference_value
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[референсное значение*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[reference value*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_laboratory_diagnostic_method;
+=> nrel_second_domain:
+	file;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_laboratory_diagnostic_method;
+			file
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее лабораторный метод диагностики с диапазоном значений показателя, характерным для здоровых людей] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (референсное значение*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Референсное значение* - бинарное ориентированное отношение, связывающее лабораторный метод диагностики с диапазоном значений показателя, характерным для здоровых людей.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_laboratory_diagnostic_method;
+			file
+		};;
+	*);;

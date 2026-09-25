@@ -1,0 +1,45 @@
+nrel_treatment_equipment
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[используемое лечебное оборудование*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[used treatment equipment*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_treatment_method;
+=> nrel_second_domain:
+	concept_medical_equipment;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_treatment_method;
+			concept_medical_equipment
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее метод лечения с медицинским оборудованием, с помощью которого он выполняется] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (используемое лечебное оборудование*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Используемое лечебное оборудование* - бинарное ориентированное отношение, связывающее метод лечения с медицинским оборудованием, с помощью которого он выполняется.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_treatment_method;
+			concept_medical_equipment
+		};;
+	*);;

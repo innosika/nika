@@ -1,0 +1,26 @@
+concept_medical_institution
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[медицинское учреждение] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[medical institution] (* <- lang_en;; *);
+=> nrel_idtf:
+	[организация здравоохранения] (* <- lang_ru;; *);
+=> nrel_inclusion:
+	concept_outpatient_institution;
+=> nrel_inclusion:
+	concept_inpatient_institution;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение медицинских учреждений по форме оказания помощи] (* <- lang_ru;; *);;
+		-> concept_outpatient_institution;;
+		-> concept_inpatient_institution;;
+	*);
+=> nrel_definition:
+	[организация, осуществляющая медицинскую деятельность по оказанию медицинской помощи населению] (* <- lang_ru;; *);
+=> nrel_note:
+	[в законодательстве Республики Беларусь используется термин «организация здравоохранения»] (* <- lang_ru;; *);;

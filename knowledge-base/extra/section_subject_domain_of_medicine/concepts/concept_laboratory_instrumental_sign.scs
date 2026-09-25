@@ -1,0 +1,13 @@
+concept_laboratory_instrumental_sign
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[лабораторно-инструментальный симптом] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[laboratory or instrumental sign] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_objective_symptom;
+=> nrel_definition:
+	[объективный симптом, выявляемый с помощью лабораторных анализов или инструментальных методов исследования] (* <- lang_ru;; *);
+=> nrel_note:
+	[к таким симптомам относятся отклонения показателей крови, изменения на электрокардиограмме, рентгенограмме и т. п.] (* <- lang_ru;; *);;

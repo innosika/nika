@@ -1,0 +1,13 @@
+concept_pathogenetic_therapy
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[патогенетическая терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[pathogenetic therapy] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_pharmacotherapy;
+=> nrel_definition:
+	[медикаментозная терапия, воздействующая на механизмы развития заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[к патогенетической терапии относится заместительная гормональная терапия, например инсулинотерапия при сахарном диабете] (* <- lang_ru;; *);;

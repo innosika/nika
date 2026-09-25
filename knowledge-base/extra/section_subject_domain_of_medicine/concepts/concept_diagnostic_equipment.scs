@@ -1,0 +1,15 @@
+concept_diagnostic_equipment
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[диагностическое оборудование] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[diagnostic equipment] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_equipment;
+=> nrel_inclusion:
+	concept_imaging_equipment;
+=> nrel_definition:
+	[медицинское оборудование, предназначенное для выявления заболеваний и оценки состояния организма] (* <- lang_ru;; *);
+=> nrel_note:
+	[к диагностическому оборудованию относятся как простые инструменты (стетоскоп), так и сложные аппараты (томограф)] (* <- lang_ru;; *);;

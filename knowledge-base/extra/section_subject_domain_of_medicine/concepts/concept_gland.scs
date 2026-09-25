@@ -1,0 +1,29 @@
+concept_gland
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[железа] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[gland] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_parenchymal_organ;
+=> nrel_inclusion:
+	concept_endocrine_gland;
+=> nrel_inclusion:
+	concept_exocrine_gland;
+=> nrel_inclusion:
+	concept_mixed_secretion_gland;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение желёз по способу секреции] (* <- lang_ru;; *);;
+		-> concept_endocrine_gland;;
+		-> concept_exocrine_gland;;
+		-> concept_mixed_secretion_gland;;
+	*);
+=> nrel_definition:
+	[паренхиматозный орган, клетки которого вырабатывают и выделяют специфические вещества - секреты или гормоны] (* <- lang_ru;; *);
+=> nrel_note:
+	[по способу выделения секрета железы делят на экзокринные, эндокринные и железы смешанной секреции] (* <- lang_ru;; *);;

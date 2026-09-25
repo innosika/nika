@@ -1,0 +1,38 @@
+concept_message_about_drug
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о лекарственном средстве] (* <- lang_ru;; *);
+	[message about a drug] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_message;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение класса «сообщение о лекарственном средстве» по запрашиваемому свойству] (* <- lang_ru;; *);;
+		-> concept_message_about_drug_indications;;
+		-> concept_message_about_drug_side_effects;;
+		-> concept_message_about_drug_for_disease;;
+	*);
+=> nrel_definition:
+	[сообщение на медицинскую тему, в котором спрашивается о применении лекарственного средства] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы сообщений этой группы спроектировала Банкевич Я.] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о лекарственном средстве)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о лекарственном средстве - сообщение на медицинскую тему, в котором спрашивается о применении лекарственного средства.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_medical_message
+		};;
+	*);;

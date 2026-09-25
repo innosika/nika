@@ -1,0 +1,47 @@
+/* Корневой класс ответных фраз на медицинскую тему и три группы — по участницам бригады. */
+
+concept_medical_phrase
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза ответа на медицинскую тему] (* <- lang_ru;; *);
+	[phrase of reply on a medical topic] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase;
+=> nrel_definition:
+	[фраза, которую система использует для ответа на сообщение на медицинскую тему; классы таких фраз соответствуют классам сообщений на медицинскую тему] (* <- lang_ru;; *);;
+
+concept_phrase_about_disease_manifestation
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о проявлениях и распространении заболевания] (* <- lang_ru;; *);
+	[phrase about manifestations and spread of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_phrase;
+=> nrel_definition:
+	[фраза ответа на сообщение класса concept_message_about_disease_manifestation] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы фраз этой группы и правила ответа спроектировала Сергиевич Д.] (* <- lang_ru;; *);;
+
+concept_phrase_about_medical_care
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о диагностике и лечении заболевания] (* <- lang_ru;; *);
+	[phrase about diagnostics and treatment of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_phrase;
+=> nrel_definition:
+	[фраза ответа на сообщение класса concept_message_about_medical_care] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы фраз этой группы и правила ответа спроектировала Рублевская Е.] (* <- lang_ru;; *);;
+
+concept_phrase_about_drug
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о лекарственном средстве] (* <- lang_ru;; *);
+	[phrase about a drug] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_phrase;
+=> nrel_definition:
+	[фраза ответа на сообщение класса concept_message_about_drug] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы фраз этой группы и правила ответа спроектировала Банкевич Я.] (* <- lang_ru;; *);;

@@ -1,0 +1,44 @@
+/* «Какие лекарства ты знаешь?» — вопрос о разбиении класса лекарственное средство.
+   Точные формулировки: «Какие лекарства ты знаешь?»; «Какие бывают лекарства?»; «Какие лекарства бывают?». */
+
+@if_lr_classify_known_drugs_message_1 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_known_drugs_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_known_drugs_message _-> _text_lr_classify_known_drugs_message_1;;
+	_text_lr_classify_known_drugs_message_1 = _[Какие лекарства ты знаешь?];;
+*];;
+
+@if_lr_classify_known_drugs_message_2 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_known_drugs_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_known_drugs_message _-> _text_lr_classify_known_drugs_message_2;;
+	_text_lr_classify_known_drugs_message_2 = _[Какие бывают лекарства?];;
+*];;
+
+@if_lr_classify_known_drugs_message_3 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_known_drugs_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_known_drugs_message _-> _text_lr_classify_known_drugs_message_3;;
+	_text_lr_classify_known_drugs_message_3 = _[Какие лекарства бывают?];;
+*];;
+
+@then_lr_classify_known_drugs_message = [*
+	concept_message_about_subdividing _-> _message;;
+	_message _-> rrel_entity:: concept_drug;;
+*];;
+
+@if_lr_classify_known_drugs_message_1 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_known_drugs_message_2 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_known_drugs_message_3 <- atomic_logical_formula; <- concept_template_with_links;;
+@then_lr_classify_known_drugs_message <- atomic_logical_formula;;
+
+@or_lr_classify_known_drugs_message = { @if_lr_classify_known_drugs_message_1; @if_lr_classify_known_drugs_message_2; @if_lr_classify_known_drugs_message_3 };;
+@or_lr_classify_known_drugs_message <- nrel_disjunction;;
+@impl_lr_classify_known_drugs_message = (@or_lr_classify_known_drugs_message => @then_lr_classify_known_drugs_message);;
+@impl_lr_classify_known_drugs_message <- nrel_implication;;
+
+lr_classify_known_drugs_message
+<- concept_classify_message_rule_priority_1;
+=> nrel_main_idtf:
+	[правило классификации: Какие лекарства ты знаешь?] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_classify_known_drugs_message;;

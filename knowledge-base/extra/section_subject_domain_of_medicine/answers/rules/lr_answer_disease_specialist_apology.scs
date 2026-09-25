@@ -1,0 +1,46 @@
+/* Правило ответа на сообщение о профильном враче: извинение перед ответом на грубое сообщение.
+   Если: то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями.
+   Автор: Рублевская Е. */
+
+@if_lr_answer_disease_specialist_apology = [*
+	concept_message _-> _message;;
+	concept_message_about_disease_specialist _-> _message;;
+	concept_message_with_negative_emotion_coloring _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_specialist:: _specialist;;
+*];;
+@then_lr_answer_disease_specialist_apology = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_non_atomic_message _-> _reply_message;;
+	concept_message_about_disease_specialist _-> _reply_message;;
+	_reply_decomposition _=> nrel_message_decomposition:: _reply_message;;
+	@reply_part_arc_1_lr_answer_disease_specialist_apology = (_reply_decomposition _-> _reply_part_1);;
+	rrel_1 _-> @reply_part_arc_1_lr_answer_disease_specialist_apology;;
+	@reply_part_arc_2_lr_answer_disease_specialist_apology = (_reply_decomposition _-> _reply_part_2);;
+	@reply_parts_order_lr_answer_disease_specialist_apology = (@reply_part_arc_1_lr_answer_disease_specialist_apology _=> @reply_part_arc_2_lr_answer_disease_specialist_apology);;
+	nrel_message_sequence _-> @reply_parts_order_lr_answer_disease_specialist_apology;;
+	concept_atomic_message _-> _reply_part_1;;
+	concept_atomic_message _-> _reply_part_2;;
+*];;
+@if_lr_answer_disease_specialist_apology <- atomic_logical_formula;;
+@then_lr_answer_disease_specialist_apology <- atomic_logical_formula;;
+_reply_decomposition <- sc_node_tuple;;
+@impl_lr_answer_disease_specialist_apology = (@if_lr_answer_disease_specialist_apology => @then_lr_answer_disease_specialist_apology);;
+@impl_lr_answer_disease_specialist_apology <- nrel_implication;;
+answer_pattern_lr_answer_disease_specialist_apology
+<- sc_node_tuple;;
+@pattern_arc_1_lr_answer_disease_specialist_apology = (answer_pattern_lr_answer_disease_specialist_apology -> concept_phrase_about_disease_specialist_apology);;
+rrel_1 -> @pattern_arc_1_lr_answer_disease_specialist_apology;;
+@pattern_arc_2_lr_answer_disease_specialist_apology = (answer_pattern_lr_answer_disease_specialist_apology -> concept_phrase_about_disease_specialist_found);;
+@pattern_order_lr_answer_disease_specialist_apology = (@pattern_arc_1_lr_answer_disease_specialist_apology => @pattern_arc_2_lr_answer_disease_specialist_apology);;
+nrel_basic_sequence -> @pattern_order_lr_answer_disease_specialist_apology;;
+lr_answer_disease_specialist_apology
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_1;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о профильном враче: извинение перед ответом на грубое сообщение] (* <- lang_ru;; *);
+	[rule of reply to a message about a specialist physician: apology before a reply to a rude message] (* <- lang_en;; *);
+=> nrel_note:
+	[если то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями; фразы ответа — из классов concept_phrase_about_disease_specialist_apology, concept_phrase_about_disease_specialist_found] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_disease_specialist_apology;
+-> rrel_main_key_sc_element: @impl_lr_answer_disease_specialist_apology;;

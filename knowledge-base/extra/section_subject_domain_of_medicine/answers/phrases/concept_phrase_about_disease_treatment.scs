@@ -1,0 +1,157 @@
+/* Класс ответных фраз «фраза о лечении заболевания» (автор — Рублевская Е.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_disease_treatment
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о лечении заболевания] (* <- lang_ru;; *);
+	[phrase about treatment of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_medical_care;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о лечении заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_disease_treatment; автор — Рублевская Е.] (* <- lang_ru;; *);;
+
+concept_phrase_about_disease_treatment_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о лечении заболевания: извинение] (* <- lang_ru;; *);
+	[phrase about treatment of a disease: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_treatment;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_disease_treatment_apology_1 = [Простите, что заставила ждать! Вот как лечат это заболевание.];;
+@phrase_disease_treatment_apology_1
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_apology;;
+
+@phrase_disease_treatment_apology_2 = [Извините за ожидание — рассказываю о лечении.];;
+@phrase_disease_treatment_apology_2
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_apology;;
+
+concept_phrase_about_disease_treatment_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о лечении заболевания: сведения есть] (* <- lang_ru;; *);
+	[phrase about treatment of a disease: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_treatment;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_disease_treatment_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_treatment_method:: _treatment;;
+*];;
+@phrase_disease_treatment_found_1 = [Методы лечения заболевания «${_entity_name}»: $list{_treatment}.];;
+@phrase_disease_treatment_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_found;
+=> nrel_phrase_template: @template_disease_treatment_found_1;;
+
+@template_disease_treatment_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_treatment_method:: _treatment;;
+*];;
+@phrase_disease_treatment_found_2 = [Заболевание «${_entity_name}» лечат так: $list{_treatment}.];;
+@phrase_disease_treatment_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_found;
+=> nrel_phrase_template: @template_disease_treatment_found_2;;
+
+@template_disease_treatment_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_treatment_method:: _treatment;;
+	_treatment _=> nrel_used_drug:: _used_drug;;
+*];;
+@phrase_disease_treatment_found_3 = [Лекарственная терапия заболевания «${_entity_name}»: $list{_treatment}; препараты: $list{_used_drug}.];;
+@phrase_disease_treatment_found_3
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_found;
+=> nrel_phrase_template: @template_disease_treatment_found_3;;
+
+concept_phrase_about_disease_treatment_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о лечении заболевания: ответ о группе] (* <- lang_ru;; *);
+	[phrase about treatment of a disease: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_treatment;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_disease_treatment_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_treatment_method:: _treatment;;
+*];;
+@phrase_disease_treatment_for_group_1 = [Для заболеваний группы «${_entity_name}» ($list{_instance}) применяют методы лечения: $list{_treatment}.];;
+@phrase_disease_treatment_for_group_1
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_for_group;
+=> nrel_phrase_template: @template_disease_treatment_for_group_1;;
+
+@template_disease_treatment_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_treatment_method:: _treatment;;
+*];;
+@phrase_disease_treatment_for_group_2 = [Лечение зависит от конкретного заболевания группы «${_entity_name}». Используемые методы: $list{_treatment}. Уточните заболевание: $list{_instance}.];;
+@phrase_disease_treatment_for_group_2
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_for_group;
+=> nrel_phrase_template: @template_disease_treatment_for_group_2;;
+
+concept_phrase_about_disease_treatment_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о лечении заболевания: сведений нет] (* <- lang_ru;; *);
+	[phrase about treatment of a disease: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_treatment;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_disease_treatment_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_treatment_not_found_1 = [Сведений о лечении для «${_entity_name}» в базе знаний нет.];;
+@phrase_disease_treatment_not_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_not_found;
+=> nrel_phrase_template: @template_disease_treatment_not_found_1;;
+
+@template_disease_treatment_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_treatment_not_found_2 = [Не могу подсказать, как лечат «${_entity_name}», — методы лечения в базе знаний не указаны.];;
+@phrase_disease_treatment_not_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_treatment_not_found;
+=> nrel_phrase_template: @template_disease_treatment_not_found_2;;

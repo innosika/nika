@@ -1,0 +1,171 @@
+/* Класс ответных фраз «фраза о диагностике заболевания» (автор — Рублевская Е.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_disease_diagnostics
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о диагностике заболевания] (* <- lang_ru;; *);
+	[phrase about diagnostics of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_medical_care;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о диагностике заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_disease_diagnostics; автор — Рублевская Е.] (* <- lang_ru;; *);;
+
+concept_phrase_about_disease_diagnostics_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о диагностике заболевания: извинение] (* <- lang_ru;; *);
+	[phrase about diagnostics of a disease: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_diagnostics;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_disease_diagnostics_apology_1 = [Простите за ожидание! Вот как ставят диагноз.];;
+@phrase_disease_diagnostics_apology_1
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_apology;;
+
+@phrase_disease_diagnostics_apology_2 = [Извините за задержку, рассказываю о диагностике.];;
+@phrase_disease_diagnostics_apology_2
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_apology;;
+
+concept_phrase_about_disease_diagnostics_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о диагностике заболевания: сведения есть] (* <- lang_ru;; *);
+	[phrase about diagnostics of a disease: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_diagnostics;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_disease_diagnostics_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_diagnostic_method:: _diagnostic_method;;
+*];;
+@phrase_disease_diagnostics_found_1 = [Для диагностики заболевания «${_entity_name}» применяют: $list{_diagnostic_method}.];;
+@phrase_disease_diagnostics_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_found;
+=> nrel_phrase_template: @template_disease_diagnostics_found_1;;
+
+@template_disease_diagnostics_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_diagnostic_method:: _diagnostic_method;;
+*];;
+@phrase_disease_diagnostics_found_2 = [Заболевание «${_entity_name}» выявляют с помощью методов: $list{_diagnostic_method}.];;
+@phrase_disease_diagnostics_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_found;
+=> nrel_phrase_template: @template_disease_diagnostics_found_2;;
+
+@template_disease_diagnostics_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_diagnostic_method:: _diagnostic_method;;
+	_diagnostic_method _=> nrel_biomaterial:: _biomaterial;;
+*];;
+@phrase_disease_diagnostics_found_3 = [Для лабораторной диагностики заболевания «${_entity_name}» исследуют: $list{_biomaterial} (методы: $list{_diagnostic_method}).];;
+@phrase_disease_diagnostics_found_3
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_found;
+=> nrel_phrase_template: @template_disease_diagnostics_found_3;;
+
+@template_disease_diagnostics_found_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_diagnostic_method:: _diagnostic_method;;
+	_diagnostic_method _=> nrel_diagnostic_equipment:: _equipment;;
+*];;
+@phrase_disease_diagnostics_found_4 = [При диагностике заболевания «${_entity_name}» используют оборудование: $list{_equipment} (для методов: $list{_diagnostic_method}).];;
+@phrase_disease_diagnostics_found_4
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_found;
+=> nrel_phrase_template: @template_disease_diagnostics_found_4;;
+
+concept_phrase_about_disease_diagnostics_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о диагностике заболевания: ответ о группе] (* <- lang_ru;; *);
+	[phrase about diagnostics of a disease: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_diagnostics;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_disease_diagnostics_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_diagnostic_method:: _diagnostic_method;;
+*];;
+@phrase_disease_diagnostics_for_group_1 = [Для заболеваний группы «${_entity_name}» ($list{_instance}) применяют методы диагностики: $list{_diagnostic_method}.];;
+@phrase_disease_diagnostics_for_group_1
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_for_group;
+=> nrel_phrase_template: @template_disease_diagnostics_for_group_1;;
+
+@template_disease_diagnostics_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_diagnostic_method:: _diagnostic_method;;
+*];;
+@phrase_disease_diagnostics_for_group_2 = [Методы диагностики зависят от заболевания группы «${_entity_name}»; в целом используют: $list{_diagnostic_method}. Уточните заболевание: $list{_instance}.];;
+@phrase_disease_diagnostics_for_group_2
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_for_group;
+=> nrel_phrase_template: @template_disease_diagnostics_for_group_2;;
+
+concept_phrase_about_disease_diagnostics_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о диагностике заболевания: сведений нет] (* <- lang_ru;; *);
+	[phrase about diagnostics of a disease: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_diagnostics;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_disease_diagnostics_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_diagnostics_not_found_1 = [Методы диагностики для «${_entity_name}» в базе знаний не указаны.];;
+@phrase_disease_diagnostics_not_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_not_found;
+=> nrel_phrase_template: @template_disease_diagnostics_not_found_1;;
+
+@template_disease_diagnostics_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_diagnostics_not_found_2 = [Не знаю, как диагностируют «${_entity_name}»: сведений об этом в базе знаний нет.];;
+@phrase_disease_diagnostics_not_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_diagnostics_not_found;
+=> nrel_phrase_template: @template_disease_diagnostics_not_found_2;;

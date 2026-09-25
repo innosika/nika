@@ -1,0 +1,33 @@
+concept_message_about_disease_treatment
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о лечении заболевания] (* <- lang_ru;; *);
+	[message about disease treatment] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_disease_treatment];
+<= nrel_inclusion:
+	concept_message_about_medical_care;
+=> nrel_definition:
+	[сообщение о диагностике и лечении заболевания, в котором запрашиваются методы лечения указанного заболевания и применяемые лекарственные средства] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Чем лечат бронхиальную астму?»; выделяемые сущности (роль rrel_entity): заболевание] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о лечении заболевания)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о лечении заболевания - сообщение о диагностике и лечении заболевания, в котором запрашиваются методы лечения указанного заболевания и применяемые лекарственные средства.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_medical_care;
+			nrel_treatment_method;
+			nrel_used_drug;
+			rrel_entity
+		};;
+	*);;

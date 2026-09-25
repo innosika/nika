@@ -1,0 +1,140 @@
+/* Экземпляры понятий: workers */
+
+therapist
+<- concept_therapeutic_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[врач-терапевт] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[general physician] (* <- lang_en;; *);
+=> nrel_idtf:
+	[терапевт] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач терапевтического профиля, оказывающий первичную медицинскую помощь взрослым при внутренних болезнях] (* <- lang_ru;; *);
+=> nrel_workplace:
+	polyclinic_34;;
+
+cardiologist
+<- concept_therapeutic_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[кардиолог] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[cardiologist] (* <- lang_en;; *);
+=> nrel_idtf:
+	[врач-кардиолог] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач терапевтического профиля, специализирующийся на диагностике и лечении заболеваний сердечно-сосудистой системы] (* <- lang_ru;; *);
+=> nrel_workplace:
+	rnpc_cardiology;;
+
+endocrinologist
+<- concept_therapeutic_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[эндокринолог] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[endocrinologist] (* <- lang_en;; *);
+=> nrel_idtf:
+	[врач-эндокринолог] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач терапевтического профиля, специализирующийся на диагностике и лечении заболеваний желёз внутренней секреции] (* <- lang_ru;; *);
+=> nrel_workplace:
+	polyclinic_34;;
+
+infectious_disease_physician
+<- concept_therapeutic_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[врач-инфекционист] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[infectious disease physician] (* <- lang_en;; *);
+=> nrel_idtf:
+	[инфекционист] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач терапевтического профиля, специализирующийся на диагностике, лечении и профилактике инфекционных заболеваний] (* <- lang_ru;; *);
+=> nrel_workplace:
+	infectious_hospital;;
+
+phthisiatrician
+<- concept_therapeutic_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[фтизиатр] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phthisiatrician] (* <- lang_en;; *);
+=> nrel_idtf:
+	[врач-фтизиатр] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач терапевтического профиля, специализирующийся на диагностике, лечении и профилактике туберкулёза] (* <- lang_ru;; *);
+=> nrel_workplace:
+	rnpc_pulmonology;;
+
+pulmonologist
+<- concept_therapeutic_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[пульмонолог] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[pulmonologist] (* <- lang_en;; *);
+=> nrel_idtf:
+	[врач-пульмонолог] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач терапевтического профиля, специализирующийся на заболеваниях органов дыхания] (* <- lang_ru;; *);
+=> nrel_workplace:
+	rnpc_pulmonology;;
+
+surgeon
+<- concept_surgical_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[хирург] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[surgeon] (* <- lang_en;; *);
+=> nrel_idtf:
+	[врач-хирург] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач хирургического профиля, выполняющий оперативные вмешательства при заболеваниях и травмах] (* <- lang_ru;; *);
+=> nrel_workplace:
+	hospital_3;;
+
+cardiac_surgeon
+<- concept_surgical_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[кардиохирург] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[cardiac surgeon] (* <- lang_en;; *);
+=> nrel_idtf:
+	[врач-кардиохирург] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач хирургического профиля, выполняющий операции на сердце и крупных сосудах] (* <- lang_ru;; *);
+=> nrel_workplace:
+	rnpc_cardiology;;
+
+nurse
+<- concept_nursing_staff;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[медицинская сестра] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[nurse] (* <- lang_en;; *);
+=> nrel_idtf:
+	[медсестра] (* <- lang_ru;; *);
+=> nrel_definition:
+	[средний медицинский работник, выполняющий назначения врача и осуществляющий уход за пациентами] (* <- lang_ru;; *);
+=> nrel_workplace:
+	hospital_3;;
+
+paramedic
+<- concept_nursing_staff;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[фельдшер] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[paramedic] (* <- lang_en;; *);
+=> nrel_definition:
+	[средний медицинский работник, имеющий право самостоятельно оказывать доврачебную помощь, в том числе в составе бригады скорой помощи и в сельских амбулаториях] (* <- lang_ru;; *);
+=> nrel_workplace:
+	polyclinic_34;;
+

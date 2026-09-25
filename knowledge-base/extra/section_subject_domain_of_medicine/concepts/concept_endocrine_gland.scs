@@ -1,0 +1,15 @@
+concept_endocrine_gland
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[эндокринная железа] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[endocrine gland] (* <- lang_en;; *);
+=> nrel_idtf:
+	[железа внутренней секреции] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_gland;
+=> nrel_definition:
+	[железа, не имеющая выводных протоков и выделяющая гормоны непосредственно в кровь] (* <- lang_ru;; *);
+=> nrel_note:
+	[к эндокринным железам относятся щитовидная железа, надпочечники, гипофиз, паращитовидные железы] (* <- lang_ru;; *);;

@@ -1,0 +1,29 @@
+concept_non_infectious_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[неинфекционное заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[non-communicable disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_disease;
+=> nrel_inclusion:
+	concept_cardiovascular_disease;
+=> nrel_inclusion:
+	concept_endocrine_disease;
+=> nrel_inclusion:
+	concept_chronic_respiratory_disease;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение неинфекционных заболеваний по поражаемой системе органов] (* <- lang_ru;; *);;
+		-> concept_cardiovascular_disease;;
+		-> concept_endocrine_disease;;
+		-> concept_chronic_respiratory_disease;;
+	*);
+=> nrel_definition:
+	[заболевание, не вызываемое инфекционным агентом и не передающееся от человека к человеку, развивающееся под действием наследственных факторов, образа жизни и окружающей среды] (* <- lang_ru;; *);
+=> nrel_note:
+	[по данным ВОЗ, неинфекционные заболевания являются причиной около 74 % смертей в мире; ведущие группы - сердечно-сосудистые, онкологические, хронические респираторные заболевания и диабет] (* <- lang_ru;; *);;

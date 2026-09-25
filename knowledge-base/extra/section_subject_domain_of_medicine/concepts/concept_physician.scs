@@ -1,0 +1,26 @@
+concept_physician
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[врач] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[physician] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_worker;
+=> nrel_inclusion:
+	concept_therapeutic_physician;
+=> nrel_inclusion:
+	concept_surgical_physician;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение врачей по профилю] (* <- lang_ru;; *);;
+		-> concept_therapeutic_physician;;
+		-> concept_surgical_physician;;
+	*);
+=> nrel_definition:
+	[медицинский работник с высшим медицинским образованием, осуществляющий диагностику, лечение и профилактику заболеваний] (* <- lang_ru;; *);
+=> nrel_note:
+	[подготовка врачей в Беларуси ведётся в медицинских университетах и продолжается в интернатуре и клинической ординатуре] (* <- lang_ru;; *);;

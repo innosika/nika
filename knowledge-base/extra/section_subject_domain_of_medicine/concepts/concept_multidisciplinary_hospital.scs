@@ -1,0 +1,13 @@
+concept_multidisciplinary_hospital
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[многопрофильная больница] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[multidisciplinary hospital] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_inpatient_institution;
+=> nrel_definition:
+	[стационарное учреждение, имеющее отделения различного профиля для лечения широкого круга заболеваний] (* <- lang_ru;; *);
+=> nrel_note:
+	[многопрофильные больницы обычно включают терапевтические, хирургические, реанимационные и диагностические отделения] (* <- lang_ru;; *);;

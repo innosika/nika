@@ -1,0 +1,13 @@
+concept_outpatient_institution
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[амбулаторно-поликлиническое учреждение] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[outpatient institution] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_institution;
+=> nrel_definition:
+	[медицинское учреждение, оказывающее помощь пациентам, не нуждающимся в круглосуточном наблюдении и лечении в стационаре] (* <- lang_ru;; *);
+=> nrel_note:
+	[к амбулаторно-поликлиническим учреждениям относятся поликлиники, амбулатории, фельдшерско-акушерские пункты] (* <- lang_ru;; *);;

@@ -1,0 +1,15 @@
+concept_exocrine_gland
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[экзокринная железа] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[exocrine gland] (* <- lang_en;; *);
+=> nrel_idtf:
+	[железа внешней секреции] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_gland;
+=> nrel_definition:
+	[железа, выделяющая секрет через выводные протоки на поверхность тела или в полости органов] (* <- lang_ru;; *);
+=> nrel_note:
+	[к экзокринным железам относятся печень, слюнные, потовые и сальные железы] (* <- lang_ru;; *);;

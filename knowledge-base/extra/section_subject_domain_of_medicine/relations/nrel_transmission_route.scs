@@ -1,0 +1,45 @@
+nrel_transmission_route
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[путь передачи*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[transmission route*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_infectious_disease;
+=> nrel_second_domain:
+	file;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_infectious_disease;
+			file
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее инфекционное заболевание с описанием механизма передачи возбудителя от источника инфекции к восприимчивому организму] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (путь передачи*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Путь передачи* - бинарное ориентированное отношение, связывающее инфекционное заболевание с описанием механизма передачи возбудителя от источника инфекции к восприимчивому организму.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_infectious_disease;
+			file
+		};;
+	*);;

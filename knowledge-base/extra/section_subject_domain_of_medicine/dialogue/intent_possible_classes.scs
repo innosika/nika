@@ -1,0 +1,12 @@
+/* Классы сообщений, которые может вернуть классификатор (идентификатор Wit.ai → класс). */
+
+concept_intent_possible_class
+-> concept_message_about_disease_symptoms;
+-> concept_message_about_disease_pathogen;
+-> concept_message_about_disease_transmission;
+-> concept_message_about_disease_diagnostics;
+-> concept_message_about_disease_treatment;
+-> concept_message_about_disease_specialist;
+-> concept_message_about_drug_indications;
+-> concept_message_about_drug_side_effects;
+-> concept_message_about_drug_for_disease;;

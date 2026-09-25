@@ -1,0 +1,22 @@
+/* Отношения, которыми агент ответа NIKA (MessageSearcher) разбирает составное сообщение:
+   декомпозиция на части и порядок частей. Используются в правилах ответа на грубые сообщения. */
+
+nrel_message_decomposition
+<- sc_node_non_role_relation;
+=> nrel_main_idtf:
+	[декомпозиция сообщения*] (* <- lang_ru;; *);
+	[message decomposition*] (* <- lang_en;; *);;
+
+nrel_message_sequence
+<- sc_node_non_role_relation;
+=> nrel_main_idtf:
+	[следование частей сообщения*] (* <- lang_ru;; *);
+	[message sequence*] (* <- lang_en;; *);;
+
+/* Переменные-ссылки шаблонов фраз: подставляется их содержимое. */
+_entity_name <- sc_node_link;;
+_route <- sc_node_link;;
+_incubation <- sc_node_link;;
+_discovery <- sc_node_link;;
+_biomaterial <- sc_node_link;;
+_manufacturer <- sc_node_link;;

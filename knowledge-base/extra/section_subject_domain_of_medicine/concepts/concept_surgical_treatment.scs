@@ -1,0 +1,15 @@
+concept_surgical_treatment
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[хирургическое лечение] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[surgical treatment] (* <- lang_en;; *);
+=> nrel_idtf:
+	[оперативное лечение] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_treatment_method;
+=> nrel_definition:
+	[метод лечения, основанный на оперативном вмешательстве с нарушением целостности тканей организма] (* <- lang_ru;; *);
+=> nrel_note:
+	[современная хирургия стремится к малоинвазивным вмешательствам - эндоскопическим и эндоваскулярным] (* <- lang_ru;; *);;

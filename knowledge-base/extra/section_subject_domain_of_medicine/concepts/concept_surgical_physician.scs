@@ -1,0 +1,13 @@
+concept_surgical_physician
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[врач хирургического профиля] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[physician of surgical profile] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_physician;
+=> nrel_definition:
+	[врач, применяющий оперативные методы лечения] (* <- lang_ru;; *);
+=> nrel_note:
+	[к хирургическому профилю относятся хирург, кардиохирург, травматолог, нейрохирург] (* <- lang_ru;; *);;

@@ -1,0 +1,28 @@
+concept_imaging_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[визуализирующий метод диагностики] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[medical imaging method] (* <- lang_en;; *);
+=> nrel_idtf:
+	[метод медицинской визуализации] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_instrumental_diagnostic_method;
+=> nrel_inclusion:
+	concept_radiological_method;
+=> nrel_inclusion:
+	concept_ultrasound_method;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение визуализирующих методов по физическому принципу] (* <- lang_ru;; *);;
+		-> concept_radiological_method;;
+		-> concept_ultrasound_method;;
+	*);
+=> nrel_definition:
+	[инструментальный метод диагностики, позволяющий получить изображение внутренних органов и структур тела] (* <- lang_ru;; *);
+=> nrel_note:
+	[к визуализирующим методам относятся рентгенография, компьютерная и магнитно-резонансная томография, ультразвуковое исследование] (* <- lang_ru;; *);;

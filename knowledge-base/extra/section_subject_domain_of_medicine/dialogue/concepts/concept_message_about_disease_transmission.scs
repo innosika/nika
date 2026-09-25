@@ -1,0 +1,33 @@
+concept_message_about_disease_transmission
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о передаче заболевания] (* <- lang_ru;; *);
+	[message about disease transmission] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_disease_transmission];
+<= nrel_inclusion:
+	concept_message_about_disease_manifestation;
+=> nrel_definition:
+	[сообщение о проявлениях и распространении заболевания, в котором запрашиваются пути передачи и инкубационный период указанного заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Как передаётся вирусный гепатит B?»; выделяемые сущности (роль rrel_entity): заболевание] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о передаче заболевания)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о передаче заболевания - сообщение о проявлениях и распространении заболевания, в котором запрашиваются пути передачи и инкубационный период указанного заболевания.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_disease_manifestation;
+			nrel_transmission_route;
+			nrel_incubation_period;
+			rrel_entity
+		};;
+	*);;

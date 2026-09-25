@@ -1,0 +1,26 @@
+concept_symptom
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[симптом] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[symptom] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_clinical_manifestation;
+=> nrel_inclusion:
+	concept_subjective_symptom;
+=> nrel_inclusion:
+	concept_objective_symptom;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение симптомов по способу выявления] (* <- lang_ru;; *);;
+		-> concept_subjective_symptom;;
+		-> concept_objective_symptom;;
+	*);
+=> nrel_definition:
+	[отдельный признак заболевания или патологического состояния, выявляемый при опросе, осмотре или обследовании пациента] (* <- lang_ru;; *);
+=> nrel_note:
+	[совокупность симптомов, объединённых общим механизмом развития, называется синдромом] (* <- lang_ru;; *);;

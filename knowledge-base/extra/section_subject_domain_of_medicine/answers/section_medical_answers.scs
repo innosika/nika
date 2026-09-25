@@ -1,0 +1,60 @@
+/* Раздел базы знаний ЛР3 (вариант «Медицина»): классы ответных фраз и логические правила ответа
+   на сообщения на медицинскую тему. */
+
+section_medical_answers
+=> nrel_main_idtf:
+	[Раздел. Ответы на сообщения на медицинскую тему] (* <- lang_ru;; *);
+	[Section. Replies to messages on a medical topic] (* <- lang_en;; *);
+<- atomic_section;
+-> rrel_key_sc_element:
+	concept_medical_phrase;
+	concept_phrase_about_disease_manifestation;
+	concept_phrase_about_medical_care;
+	concept_phrase_about_drug;
+	concept_phrase_about_disease_symptoms;
+	concept_phrase_about_disease_pathogen;
+	concept_phrase_about_disease_transmission;
+	concept_phrase_about_disease_diagnostics;
+	concept_phrase_about_disease_treatment;
+	concept_phrase_about_disease_specialist;
+	concept_phrase_about_drug_indications;
+	concept_phrase_about_drug_side_effects;
+	concept_phrase_about_drug_for_disease;
+	lr_answer_disease_symptoms_apology;
+	lr_answer_disease_symptoms_found;
+	lr_answer_disease_symptoms_for_group;
+	lr_answer_disease_symptoms_not_found;
+	lr_answer_disease_pathogen_apology;
+	lr_answer_disease_pathogen_found;
+	lr_answer_disease_pathogen_for_group;
+	lr_answer_disease_pathogen_non_infectious;
+	lr_answer_disease_pathogen_not_found;
+	lr_answer_disease_transmission_apology;
+	lr_answer_disease_transmission_found;
+	lr_answer_disease_transmission_for_group;
+	lr_answer_disease_transmission_non_infectious;
+	lr_answer_disease_transmission_not_found;
+	lr_answer_disease_diagnostics_apology;
+	lr_answer_disease_diagnostics_found;
+	lr_answer_disease_diagnostics_for_group;
+	lr_answer_disease_diagnostics_not_found;
+	lr_answer_disease_treatment_apology;
+	lr_answer_disease_treatment_found;
+	lr_answer_disease_treatment_for_group;
+	lr_answer_disease_treatment_not_found;
+	lr_answer_disease_specialist_apology;
+	lr_answer_disease_specialist_found;
+	lr_answer_disease_specialist_for_group;
+	lr_answer_disease_specialist_not_found;
+	lr_answer_drug_indications_apology;
+	lr_answer_drug_indications_found;
+	lr_answer_drug_indications_for_group;
+	lr_answer_drug_indications_not_found;
+	lr_answer_drug_side_effects_apology;
+	lr_answer_drug_side_effects_found;
+	lr_answer_drug_side_effects_for_group;
+	lr_answer_drug_side_effects_not_found;
+	lr_answer_drug_for_disease_apology;
+	lr_answer_drug_for_disease_found;
+	lr_answer_drug_for_disease_for_group;
+	lr_answer_drug_for_disease_not_found;;

@@ -1,0 +1,32 @@
+concept_message_about_disease_diagnostics
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о диагностике заболевания] (* <- lang_ru;; *);
+	[message about disease diagnostics] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_disease_diagnostics];
+<= nrel_inclusion:
+	concept_message_about_medical_care;
+=> nrel_definition:
+	[сообщение о диагностике и лечении заболевания, в котором запрашиваются методы диагностики указанного заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Как диагностируют инфаркт миокарда?»; выделяемые сущности (роль rrel_entity): заболевание] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о диагностике заболевания)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о диагностике заболевания - сообщение о диагностике и лечении заболевания, в котором запрашиваются методы диагностики указанного заболевания.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_medical_care;
+			nrel_diagnostic_method;
+			rrel_entity
+		};;
+	*);;
