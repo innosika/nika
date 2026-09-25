@@ -1,0 +1,15 @@
+concept_natural_satellite
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [естественный спутник]
+    (* <- lang_ru;; *);
+    [natural satellite]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [небесное тело естественного происхождения, обращающееся вокруг
+    планеты, карликовой планеты или малого тела под действием их притяжения]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_natural_space_object;;

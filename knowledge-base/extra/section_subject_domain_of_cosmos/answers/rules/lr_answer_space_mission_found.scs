@@ -1,0 +1,41 @@
+/* Правило ответа на сообщение о космической миссии: сведения есть в базе знаний.
+   Если: у объекта есть дата старта* (миссия) ИЛИ дата запуска* (космический аппарат) — дизъюнкция.
+   Автор: Переверзев М. */
+
+@if_lr_answer_space_mission_found_1 = [*
+	concept_message _-> _message;;
+	concept_message_about_space_mission _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_start_date:: _space_start_date;;
+*];;
+@if_lr_answer_space_mission_found_2 = [*
+	concept_message _-> _message;;
+	concept_message_about_space_mission _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_launch_date:: _space_launch_date;;
+*];;
+@or_lr_answer_space_mission_found = { @if_lr_answer_space_mission_found_1; @if_lr_answer_space_mission_found_2 };;
+@or_lr_answer_space_mission_found <- nrel_disjunction;;
+@then_lr_answer_space_mission_found = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_space_mission _-> _reply_message;;
+*];;
+@if_lr_answer_space_mission_found_1 <- atomic_logical_formula;;
+@if_lr_answer_space_mission_found_2 <- atomic_logical_formula;;
+@then_lr_answer_space_mission_found <- atomic_logical_formula;;
+@impl_lr_answer_space_mission_found = (@or_lr_answer_space_mission_found => @then_lr_answer_space_mission_found);;
+@impl_lr_answer_space_mission_found <- nrel_implication;;
+answer_pattern_lr_answer_space_mission_found
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_space_mission_found;;
+lr_answer_space_mission_found
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о космической миссии: сведения есть в базе знаний] (* <- lang_ru;; *);
+	[rule of reply to a message about a space mission: the data is in the knowledge base] (* <- lang_en;; *);
+=> nrel_note:
+	[если у объекта есть дата старта* (миссия) ИЛИ дата запуска* (космический аппарат) — дизъюнкция; фразы ответа — из класса concept_phrase_about_space_mission_found] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_space_mission_found;
+-> rrel_main_key_sc_element: @impl_lr_answer_space_mission_found;;

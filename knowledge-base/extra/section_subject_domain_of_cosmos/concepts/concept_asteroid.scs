@@ -1,0 +1,16 @@
+concept_asteroid
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [астероид]
+    (* <- lang_ru;; *);
+    [asteroid]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [относительно небольшое каменистое или металлическое тело Солнечной системы,
+    обращающееся вокруг Солнца. Большинство астероидов сосредоточено в главном поясе
+    между орбитами Марса и Юпитера]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_small_solar_system_body;;

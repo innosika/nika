@@ -1,0 +1,43 @@
+nrel_spectral_class
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+    [спектральный класс*]
+    (* <- lang_ru;; *);
+    [spectral class*]
+    (* <- lang_en;; *);
+=> nrel_first_domain: concept_star;
+=> nrel_second_domain: sc_node_link;
+=> nrel_definitional_domain:
+    ...
+    (*
+        <= nrel_combination:
+            {
+            concept_star;
+            sc_node_link
+            };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (спектральный класс*)]
+        (* <- lang_ru;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Спектральный класс* - бинарное ориентированное отношение, связывающее звезду с обозначением её класса в спектральной классификации, определяемого температурой её поверхности.]
+            (* <- lang_ru;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_star
+        };;
+    *);;

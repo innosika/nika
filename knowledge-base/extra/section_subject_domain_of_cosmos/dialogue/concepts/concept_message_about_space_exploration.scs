@@ -1,0 +1,38 @@
+concept_message_about_space_exploration
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение об изучении и освоении космоса] (* <- lang_ru;; *);
+	[message about space exploration] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_space_message;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение класса «сообщение об изучении и освоении космоса» по запрашиваемому свойству] (* <- lang_ru;; *);;
+		-> concept_message_about_discovery;;
+		-> concept_message_about_constellation;;
+		-> concept_message_about_space_mission;;
+	*);
+=> nrel_definition:
+	[сообщение о космосе, в котором спрашивается об открытии космического объекта, его положении на небе или о космических миссиях] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы сообщений этой группы спроектировал Переверзев М.] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение об изучении и освоении космоса)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение об изучении и освоении космоса - сообщение о космосе, в котором спрашивается об открытии космического объекта, его положении на небе или о космических миссиях.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_space_message
+		};;
+	*);;

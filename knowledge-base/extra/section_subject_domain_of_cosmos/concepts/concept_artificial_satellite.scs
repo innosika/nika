@@ -1,0 +1,15 @@
+concept_artificial_satellite
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [искусственный спутник]
+    (* <- lang_ru;; *);
+    [artificial satellite]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [космический аппарат, выведенный на орбиту вокруг небесного тела
+    и совершающий вокруг него хотя бы один полный оборот]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_spacecraft;;

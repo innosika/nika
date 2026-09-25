@@ -1,0 +1,31 @@
+/* Правило ответа на сообщение о физических характеристиках космического объекта: сведений нет в базе знаний.
+   Если: сообщение о физических характеристиках с выделенной сущностью, для которой не сработали правила с более высоким приоритетом.
+   Автор: Пикта И. */
+
+@if_lr_answer_physical_parameters_not_found = [*
+	concept_message _-> _message;;
+	concept_message_about_physical_parameters _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+*];;
+@then_lr_answer_physical_parameters_not_found = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_physical_parameters _-> _reply_message;;
+*];;
+@if_lr_answer_physical_parameters_not_found <- atomic_logical_formula;;
+@then_lr_answer_physical_parameters_not_found <- atomic_logical_formula;;
+@impl_lr_answer_physical_parameters_not_found = (@if_lr_answer_physical_parameters_not_found => @then_lr_answer_physical_parameters_not_found);;
+@impl_lr_answer_physical_parameters_not_found <- nrel_implication;;
+answer_pattern_lr_answer_physical_parameters_not_found
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_physical_parameters_not_found;;
+lr_answer_physical_parameters_not_found
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_3;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о физических характеристиках космического объекта: сведений нет в базе знаний] (* <- lang_ru;; *);
+	[rule of reply to a message about physical parameters of a space object: no data in the knowledge base] (* <- lang_en;; *);
+=> nrel_note:
+	[если сообщение о физических характеристиках с выделенной сущностью, для которой не сработали правила с более высоким приоритетом; фразы ответа — из класса concept_phrase_about_physical_parameters_not_found] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_physical_parameters_not_found;
+-> rrel_main_key_sc_element: @impl_lr_answer_physical_parameters_not_found;;

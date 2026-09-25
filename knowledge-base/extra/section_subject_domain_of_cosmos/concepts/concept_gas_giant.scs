@@ -1,0 +1,15 @@
+concept_gas_giant
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [газовый гигант]
+    (* <- lang_ru;; *);
+    [gas giant]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [планета, состоящая преимущественно из водорода и гелия и не имеющая
+    чёткой твёрдой поверхности. В Солнечной системе газовыми гигантами являются Юпитер и Сатурн]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_planet;;

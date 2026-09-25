@@ -1,0 +1,275 @@
+/* Класс ответных фраз «фраза о космической миссии» (автор — Переверзев М.) и его подклассы по состоянию базы знаний.
+   ${_x} — содержимое ссылки _x, $list{_x} — все различные значения _x через запятую. */
+
+concept_phrase_about_space_mission
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о космической миссии] (* <- lang_ru;; *);
+	[phrase about a space mission] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_exploration;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о космической миссии] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_space_mission; автор — Переверзев М.] (* <- lang_ru;; *);;
+
+concept_phrase_about_space_mission_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о космической миссии: извинение перед ответом на грубое сообщение] (* <- lang_ru;; *);
+	[phrase about a space mission: apology before a reply to a rude message] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_mission;
+=> nrel_definition:
+	[фраза для ответа, когда то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями] (* <- lang_ru;; *);;
+
+@phrase_space_mission_apology_1 = [Простите за задержку! Рассказываю о полёте.];;
+@phrase_space_mission_apology_1
+<- lang_ru;
+<- concept_phrase_about_space_mission_apology;;
+
+@phrase_space_mission_apology_2 = [Извините, что заставила ждать. Вот сведения о миссии.];;
+@phrase_space_mission_apology_2
+<- lang_ru;
+<- concept_phrase_about_space_mission_apology;;
+
+concept_phrase_about_space_mission_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о космической миссии: сведения есть в базе знаний] (* <- lang_ru;; *);
+	[phrase about a space mission: the data is in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_mission;
+=> nrel_definition:
+	[фраза для ответа, когда у объекта есть дата старта* (миссия) ИЛИ дата запуска* (космический аппарат) — дизъюнкция] (* <- lang_ru;; *);;
+
+@template_space_mission_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_start_date:: _space_start_date;;
+	_entity _=> nrel_launch_site:: _space_launch_site;;
+	_entity _=> nrel_used_launch_vehicle:: _space_launch_vehicle;;
+*];;
+@phrase_space_mission_found_1 = [Миссия «${_entity_name}» стартовала ${_space_start_date} с космодрома «$list{_space_launch_site}» на ракете-носителе «$list{_space_launch_vehicle}».];;
+@phrase_space_mission_found_1
+<- lang_ru;
+<- concept_phrase_about_space_mission_found;
+=> nrel_phrase_template: @template_space_mission_found_1;;
+
+@template_space_mission_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_start_date:: _space_start_date;;
+	_entity _=> nrel_mission_target:: _space_target;;
+*];;
+@phrase_space_mission_found_2 = [Миссия «${_entity_name}» стартовала ${_space_start_date}. Её цель — ${_space_target}];;
+@phrase_space_mission_found_2
+<- lang_ru;
+<- concept_phrase_about_space_mission_found;
+=> nrel_phrase_template: @template_space_mission_found_2;;
+
+@template_space_mission_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_mission_crew:: _space_crew;;
+	_entity _-> rrel_crew_commander:: _space_commander;;
+	_entity _=> nrel_start_date:: _space_start_date;;
+*];;
+@phrase_space_mission_found_3 = [Экипаж миссии «${_entity_name}»: $list{_space_crew}; командир — $list{_space_commander}. Старт — ${_space_start_date}.];;
+@phrase_space_mission_found_3
+<- lang_ru;
+<- concept_phrase_about_space_mission_found;
+=> nrel_phrase_template: @template_space_mission_found_3;;
+
+@template_space_mission_found_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_launch_date:: _space_launch_date;;
+*];;
+@phrase_space_mission_found_4 = [Аппарат «${_entity_name}» запущен ${_space_launch_date}.];;
+@phrase_space_mission_found_4
+<- lang_ru;
+<- concept_phrase_about_space_mission_found;
+=> nrel_phrase_template: @template_space_mission_found_4;;
+
+@template_space_mission_found_5 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_operator:: _space_operator;;
+*];;
+@phrase_space_mission_found_5 = [Аппаратом «${_entity_name}» управляют: $list{_space_operator}.];;
+@phrase_space_mission_found_5
+<- lang_ru;
+<- concept_phrase_about_space_mission_found;
+=> nrel_phrase_template: @template_space_mission_found_5;;
+
+concept_phrase_about_space_mission_launch_vehicle
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о космической миссии: ракета-носитель] (* <- lang_ru;; *);
+	[phrase about a space mission: launch vehicle] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_mission;
+=> nrel_definition:
+	[фраза для ответа, когда выделенная сущность — ракета-носитель, использованная в миссиях] (* <- lang_ru;; *);;
+
+@template_space_mission_launch_vehicle_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_space_mission _=> nrel_used_launch_vehicle:: _entity;;
+*];;
+@phrase_space_mission_launch_vehicle_1 = [Ракета-носитель «${_entity_name}» использовалась в миссиях: $list{_space_mission}.];;
+@phrase_space_mission_launch_vehicle_1
+<- lang_ru;
+<- concept_phrase_about_space_mission_launch_vehicle;
+=> nrel_phrase_template: @template_space_mission_launch_vehicle_1;;
+
+@template_space_mission_launch_vehicle_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_space_mission _=> nrel_used_launch_vehicle:: _entity;;
+	_space_mission _=> nrel_start_date:: _space_mission_date;;
+*];;
+@phrase_space_mission_launch_vehicle_2 = [На ракете-носителе «${_entity_name}» стартовали миссии: $list{_space_mission}; даты старта — $list{_space_mission_date}.];;
+@phrase_space_mission_launch_vehicle_2
+<- lang_ru;
+<- concept_phrase_about_space_mission_launch_vehicle;
+=> nrel_phrase_template: @template_space_mission_launch_vehicle_2;;
+
+concept_phrase_about_space_mission_cosmonaut
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о космической миссии: космонавт] (* <- lang_ru;; *);
+	[phrase about a space mission: cosmonaut] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_mission;
+=> nrel_definition:
+	[фраза для ответа, когда выделенная сущность — космонавт, входивший в экипаж миссии] (* <- lang_ru;; *);;
+
+@template_space_mission_cosmonaut_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_space_mission _=> nrel_mission_crew:: _entity;;
+	_space_mission _=> nrel_start_date:: _space_mission_date;;
+*];;
+@phrase_space_mission_cosmonaut_1 = [В экипаже миссии «$list{_space_mission}» — ${_entity_name}; старт миссии — $list{_space_mission_date}.];;
+@phrase_space_mission_cosmonaut_1
+<- lang_ru;
+<- concept_phrase_about_space_mission_cosmonaut;
+=> nrel_phrase_template: @template_space_mission_cosmonaut_1;;
+
+@template_space_mission_cosmonaut_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_space_mission _=> nrel_mission_crew:: _entity;;
+	_space_mission _-> rrel_crew_commander:: _entity;;
+*];;
+@phrase_space_mission_cosmonaut_2 = [Командир миссии «$list{_space_mission}» — ${_entity_name}.];;
+@phrase_space_mission_cosmonaut_2
+<- lang_ru;
+<- concept_phrase_about_space_mission_cosmonaut;
+=> nrel_phrase_template: @template_space_mission_cosmonaut_2;;
+
+concept_phrase_about_space_mission_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о космической миссии: вопрос о классе объектов] (* <- lang_ru;; *);
+	[phrase about a space mission: question about a class of objects] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_mission;
+=> nrel_definition:
+	[фраза для ответа, когда выделенная сущность — класс, экземпляр которого имеет дату старта ИЛИ дату запуска] (* <- lang_ru;; *);;
+
+@template_space_mission_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_start_date:: _space_start_date;;
+*];;
+@phrase_space_mission_for_group_1 = [В базе знаний есть миссии класса «${_entity_name}»: $list{_instance}. Назовите миссию — расскажу подробнее.];;
+@phrase_space_mission_for_group_1
+<- lang_ru;
+<- concept_phrase_about_space_mission_for_group;
+=> nrel_phrase_template: @template_space_mission_for_group_1;;
+
+@template_space_mission_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_start_date:: _space_start_date;;
+*];;
+@phrase_space_mission_for_group_2 = [Миссии класса «${_entity_name}» ($list{_instance}) стартовали: $list{_space_start_date}.];;
+@phrase_space_mission_for_group_2
+<- lang_ru;
+<- concept_phrase_about_space_mission_for_group;
+=> nrel_phrase_template: @template_space_mission_for_group_2;;
+
+@template_space_mission_for_group_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_launch_date:: _space_launch_date;;
+*];;
+@phrase_space_mission_for_group_3 = [Аппараты класса «${_entity_name}» ($list{_instance}) запущены: $list{_space_launch_date}.];;
+@phrase_space_mission_for_group_3
+<- lang_ru;
+<- concept_phrase_about_space_mission_for_group;
+=> nrel_phrase_template: @template_space_mission_for_group_3;;
+
+concept_phrase_about_space_mission_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о космической миссии: сведений нет в базе знаний] (* <- lang_ru;; *);
+	[phrase about a space mission: no data in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_mission;
+=> nrel_definition:
+	[фраза для ответа, когда сообщение о космической миссии с выделенной сущностью, для которой не сработали правила с более высоким приоритетом] (* <- lang_ru;; *);;
+
+@template_space_mission_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_space_mission_not_found_1 = [Сведений о запуске или миссии для «${_entity_name}» в базе знаний нет.];;
+@phrase_space_mission_not_found_1
+<- lang_ru;
+<- concept_phrase_about_space_mission_not_found;
+=> nrel_phrase_template: @template_space_mission_not_found_1;;
+
+@template_space_mission_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_space_mission_not_found_2 = [В базе знаний нет данных о полёте, связанном с «${_entity_name}».];;
+@phrase_space_mission_not_found_2
+<- lang_ru;
+<- concept_phrase_about_space_mission_not_found;
+=> nrel_phrase_template: @template_space_mission_not_found_2;;

@@ -1,0 +1,22 @@
+/* Переменные-ссылки шаблонов фраз (их содержимое подставляется в ${…}). */
+
+_entity_name <- sc_node_link;;
+_space_period <- sc_node_link;;
+_space_distance <- sc_node_link;;
+_space_launch_date <- sc_node_link;;
+_space_mass <- sc_node_link;;
+_space_radius <- sc_node_link;;
+_space_spectral_class <- sc_node_link;;
+_space_discoverer <- sc_node_link;;
+_space_discovery_date <- sc_node_link;;
+_space_start_date <- sc_node_link;;
+_space_target <- sc_node_link;;
+_space_constellation_definition <- sc_node_link;;
+
+/* Отношение, которым агент ответа NIKA разбирает составное сообщение (ответ на грубое сообщение).
+   Отношение nrel_message_sequence уже описано в базе знаний NIKA. */
+nrel_message_decomposition
+<- sc_node_non_role_relation;
+=> nrel_main_idtf:
+	[декомпозиция сообщения*] (* <- lang_ru;; *);
+	[message decomposition*] (* <- lang_en;; *);;

@@ -1,0 +1,16 @@
+concept_comet
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [комета]
+    (* <- lang_ru;; *);
+    [comet]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [малое тело Солнечной системы, состоящее изо льда и пыли, которое при
+    приближении к Солнцу образует газопылевую оболочку (кому) и хвост, направленный
+    от Солнца]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_small_solar_system_body;;

@@ -1,0 +1,183 @@
+/* Класс ответных фраз «фраза о физических характеристиках космического объекта» (автор — Пикта И.) и его подклассы по состоянию базы знаний.
+   ${_x} — содержимое ссылки _x, $list{_x} — все различные значения _x через запятую. */
+
+concept_phrase_about_physical_parameters
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о физических характеристиках космического объекта] (* <- lang_ru;; *);
+	[phrase about physical parameters of a space object] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_celestial_body_properties;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о физических характеристиках объекта] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_physical_parameters; автор — Пикта И.] (* <- lang_ru;; *);;
+
+concept_phrase_about_physical_parameters_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о физических характеристиках космического объекта: извинение перед ответом на грубое сообщение] (* <- lang_ru;; *);
+	[phrase about physical parameters of a space object: apology before a reply to a rude message] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_physical_parameters;
+=> nrel_definition:
+	[фраза для ответа, когда то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями] (* <- lang_ru;; *);;
+
+@phrase_physical_parameters_apology_1 = [Простите за задержку! Вот физические характеристики.];;
+@phrase_physical_parameters_apology_1
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_apology;;
+
+@phrase_physical_parameters_apology_2 = [Извините, что пришлось ждать. Рассказываю о характеристиках объекта.];;
+@phrase_physical_parameters_apology_2
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_apology;;
+
+concept_phrase_about_physical_parameters_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о физических характеристиках космического объекта: сведения есть в базе знаний] (* <- lang_ru;; *);
+	[phrase about physical parameters of a space object: the data is in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_physical_parameters;
+=> nrel_definition:
+	[фраза для ответа, когда у объекта есть масса* ИЛИ экваториальный радиус* ИЛИ спектральный класс* (дизъюнкция)] (* <- lang_ru;; *);;
+
+@template_physical_parameters_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_mass:: _space_mass;;
+*];;
+@phrase_physical_parameters_found_1 = [Масса объекта «${_entity_name}» — ${_space_mass}.];;
+@phrase_physical_parameters_found_1
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_found;
+=> nrel_phrase_template: @template_physical_parameters_found_1;;
+
+@template_physical_parameters_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_equatorial_radius:: _space_radius;;
+*];;
+@phrase_physical_parameters_found_2 = [Экваториальный радиус объекта «${_entity_name}» — ${_space_radius}.];;
+@phrase_physical_parameters_found_2
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_found;
+=> nrel_phrase_template: @template_physical_parameters_found_2;;
+
+@template_physical_parameters_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_mass:: _space_mass;;
+	_entity _=> nrel_equatorial_radius:: _space_radius;;
+*];;
+@phrase_physical_parameters_found_3 = [Физические характеристики объекта «${_entity_name}»: масса — ${_space_mass}, экваториальный радиус — ${_space_radius}.];;
+@phrase_physical_parameters_found_3
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_found;
+=> nrel_phrase_template: @template_physical_parameters_found_3;;
+
+@template_physical_parameters_found_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_spectral_class:: _space_spectral_class;;
+*];;
+@phrase_physical_parameters_found_4 = [Спектральный класс звезды «${_entity_name}» — ${_space_spectral_class}.];;
+@phrase_physical_parameters_found_4
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_found;
+=> nrel_phrase_template: @template_physical_parameters_found_4;;
+
+@template_physical_parameters_found_5 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_spectral_class:: _space_spectral_class;;
+	_entity _=> nrel_mass:: _space_mass;;
+*];;
+@phrase_physical_parameters_found_5 = [Звезда «${_entity_name}»: спектральный класс ${_space_spectral_class}, масса — ${_space_mass}.];;
+@phrase_physical_parameters_found_5
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_found;
+=> nrel_phrase_template: @template_physical_parameters_found_5;;
+
+concept_phrase_about_physical_parameters_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о физических характеристиках космического объекта: вопрос о классе объектов] (* <- lang_ru;; *);
+	[phrase about physical parameters of a space object: question about a class of objects] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_physical_parameters;
+=> nrel_definition:
+	[фраза для ответа, когда выделенная сущность — класс, у экземпляра которого указана масса] (* <- lang_ru;; *);;
+
+@template_physical_parameters_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_mass:: _space_mass;;
+*];;
+@phrase_physical_parameters_for_group_1 = [В классе «${_entity_name}» масса указана для объектов: $list{_instance}. Назовите конкретный объект — я приведу его характеристики.];;
+@phrase_physical_parameters_for_group_1
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_for_group;
+=> nrel_phrase_template: @template_physical_parameters_for_group_1;;
+
+@template_physical_parameters_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_mass:: _space_mass;;
+*];;
+@phrase_physical_parameters_for_group_2 = [Характеристики зависят от конкретного объекта класса «${_entity_name}»; в базе знаний есть данные о массе объектов: $list{_instance}.];;
+@phrase_physical_parameters_for_group_2
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_for_group;
+=> nrel_phrase_template: @template_physical_parameters_for_group_2;;
+
+concept_phrase_about_physical_parameters_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о физических характеристиках космического объекта: сведений нет в базе знаний] (* <- lang_ru;; *);
+	[phrase about physical parameters of a space object: no data in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_physical_parameters;
+=> nrel_definition:
+	[фраза для ответа, когда сообщение о физических характеристиках с выделенной сущностью, для которой не сработали правила с более высоким приоритетом] (* <- lang_ru;; *);;
+
+@template_physical_parameters_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_physical_parameters_not_found_1 = [Физические характеристики объекта «${_entity_name}» в базе знаний не указаны.];;
+@phrase_physical_parameters_not_found_1
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_not_found;
+=> nrel_phrase_template: @template_physical_parameters_not_found_1;;
+
+@template_physical_parameters_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_physical_parameters_not_found_2 = [Масса и размеры объекта «${_entity_name}» в моей базе знаний не указаны.];;
+@phrase_physical_parameters_not_found_2
+<- lang_ru;
+<- concept_phrase_about_physical_parameters_not_found;
+=> nrel_phrase_template: @template_physical_parameters_not_found_2;;

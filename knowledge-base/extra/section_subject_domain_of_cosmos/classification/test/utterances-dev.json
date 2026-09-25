@@ -1,0 +1,782 @@
+{
+  "utterances": [
+    {
+      "text": "Вокруг какой звезды крутится Марс?",
+      "intent": "about_orbit",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 33,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "а Фобос вокруг чего летает",
+      "intent": "about_orbit",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 2,
+          "end": 7,
+          "body": "Фобос",
+          "value": "Фобос",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько суток длится оборот Луны?",
+      "intent": "about_orbit",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 32,
+          "body": "Луны",
+          "value": "Луна",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как далеко от Солнца Сатурн?",
+      "intent": "about_orbit",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 20,
+          "body": "Солнца",
+          "value": "Солнце",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 27,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, пожалуйста, вокруг чего вращается МКС?",
+      "intent": "about_orbit",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 46,
+          "end": 49,
+          "body": "МКС",
+          "value": "Международная космическая станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Сколько лун у Юпитера?",
+      "intent": "about_satellites",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 21,
+          "body": "Юпитера",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Есть у Марса свои спутники?",
+      "intent": "about_satellites",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 12,
+          "body": "Марса",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "какие спутники вращаются вокруг Земли",
+      "intent": "about_satellites",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 32,
+          "end": 37,
+          "body": "Земли",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назовите естественные спутники Сатурна",
+      "intent": "about_satellites",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 38,
+          "body": "Сатурна",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Ну и какие спутники у Юпитера, долго ещё ждать?",
+      "intent": "about_satellites",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 29,
+          "body": "Юпитера",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Сколько весит Луна?",
+      "intent": "about_physical_parameters",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 18,
+          "body": "Луна",
+          "value": "Луна",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой радиус у Солнца?",
+      "intent": "about_physical_parameters",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 21,
+          "body": "Солнца",
+          "value": "Солнце",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "насколько тяжёлый Юпитер",
+      "intent": "about_physical_parameters",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 24,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой спектральный класс у Сириуса?",
+      "intent": "about_physical_parameters",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 34,
+          "body": "Сириуса",
+          "value": "Сириус",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая масса у чёрной дыры Стрелец A*?",
+      "intent": "about_physical_parameters",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 36,
+          "body": "Стрелец A*",
+          "value": "Стрелец A*",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто открыл Цереру?",
+      "intent": "about_discovery",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 17,
+          "body": "Цереру",
+          "value": "Церера",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "В каком году нашли Плутон?",
+      "intent": "about_discovery",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 25,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "кем открыта комета Галлея",
+      "intent": "about_discovery",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 12,
+          "end": 25,
+          "body": "комета Галлея",
+          "value": "комета Галлея",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто обнаружил Фобос?",
+      "intent": "about_discovery",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 19,
+          "body": "Фобос",
+          "value": "Фобос",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажите, пожалуйста, когда открыли Европу?",
+      "intent": "about_discovery",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 41,
+          "body": "Европу",
+          "value": "Европа",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "В каком созвездии туманность Ориона?",
+      "intent": "about_constellation",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 35,
+          "body": "туманность Ориона",
+          "value": "туманность Ориона",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Где искать на небе Сириус?",
+      "intent": "about_constellation",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 25,
+          "body": "Сириус",
+          "value": "Сириус",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что интересного есть в созвездии Лира?",
+      "intent": "about_constellation",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 37,
+          "body": "Лира",
+          "value": "Лира",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "в каком созвездии галактика Андромеды",
+      "intent": "about_constellation",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 37,
+          "body": "галактика Андромеды",
+          "value": "галактика Андромеды",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты можно найти в созвездии Стрелец?",
+      "intent": "about_constellation",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 38,
+          "end": 45,
+          "body": "Стрелец",
+          "value": "Стрелец",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто полетел на Восток-1?",
+      "intent": "about_space_mission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 23,
+          "body": "Восток-1",
+          "value": "Восток-1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какую цель преследовала миссия Аполлон-11?",
+      "intent": "about_space_mission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 41,
+          "body": "Аполлон-11",
+          "value": "Аполлон-11",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "С какого космодрома улетел Восток-6?",
+      "intent": "about_space_mission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 35,
+          "body": "Восток-6",
+          "value": "Восток-6",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "когда запустили телескоп Хаббл",
+      "intent": "about_space_mission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 30,
+          "body": "телескоп Хаббл",
+          "value": "телескоп Хаббл",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто управляет станцией Мир?",
+      "intent": "about_space_mission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 26,
+          "body": "станцией Мир",
+          "value": "станция Мир",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что такое комета?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 16,
+          "body": "комета",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто такой Юрий Гагарин?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 22,
+          "body": "Юрий Гагарин",
+          "value": "Юрий Гагарин",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи про Байконур",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 21,
+          "body": "Байконур",
+          "value": "Байконур",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "что такое Вояджер-1",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 19,
+          "body": "Вояджер-1",
+          "value": "Вояджер-1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что означает отношение масса?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 28,
+          "body": "отношение масса",
+          "value": "масса*",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что за объект Млечный Путь?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 26,
+          "body": "Млечный Путь",
+          "value": "Млечный Путь",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие бывают планеты?",
+      "intent": "subdividing",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 20,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "На какие виды делятся космические аппараты?",
+      "intent": "subdividing",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 42,
+          "body": "космические аппараты",
+          "value": "космический аппарат",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько стоит билет в планетарий?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    }
+  ]
+}

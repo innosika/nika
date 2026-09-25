@@ -1,0 +1,220 @@
+/* Класс ответных фраз «фраза об орбите космического объекта» (автор — Пикта И.) и его подклассы по состоянию базы знаний.
+   ${_x} — содержимое ссылки _x, $list{_x} — все различные значения _x через запятую. */
+
+concept_phrase_about_orbit
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об орбите космического объекта] (* <- lang_ru;; *);
+	[phrase about an orbit of a space object] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_celestial_body_properties;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение об орбите космического объекта] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_orbit; автор — Пикта И.] (* <- lang_ru;; *);;
+
+concept_phrase_about_orbit_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об орбите космического объекта: извинение перед ответом на грубое сообщение] (* <- lang_ru;; *);
+	[phrase about an orbit of a space object: apology before a reply to a rude message] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_orbit;
+=> nrel_definition:
+	[фраза для ответа, когда то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями] (* <- lang_ru;; *);;
+
+@phrase_orbit_apology_1 = [Простите за ожидание! Отвечаю об орбите.];;
+@phrase_orbit_apology_1
+<- lang_ru;
+<- concept_phrase_about_orbit_apology;;
+
+@phrase_orbit_apology_2 = [Извините, что заставила ждать. Вот что известно об орбите.];;
+@phrase_orbit_apology_2
+<- lang_ru;
+<- concept_phrase_about_orbit_apology;;
+
+concept_phrase_about_orbit_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об орбите космического объекта: сведения есть в базе знаний] (* <- lang_ru;; *);
+	[phrase about an orbit of a space object: the data is in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_orbit;
+=> nrel_definition:
+	[фраза для ответа, когда у объекта есть связь «обращается вокруг*»] (* <- lang_ru;; *);;
+
+@template_orbit_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_orbit:: _space_center;;
+*];;
+@phrase_orbit_found_1 = [Объект «${_entity_name}» обращается вокруг объекта «$list{_space_center}».];;
+@phrase_orbit_found_1
+<- lang_ru;
+<- concept_phrase_about_orbit_found;
+=> nrel_phrase_template: @template_orbit_found_1;;
+
+@template_orbit_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_orbit:: _space_center;;
+*];;
+@phrase_orbit_found_2 = [Центр обращения объекта «${_entity_name}» — $list{_space_center}.];;
+@phrase_orbit_found_2
+<- lang_ru;
+<- concept_phrase_about_orbit_found;
+=> nrel_phrase_template: @template_orbit_found_2;;
+
+@template_orbit_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_orbit:: _space_center;;
+	_entity _=> nrel_orbital_period:: _space_period;;
+*];;
+@phrase_orbit_found_3 = [Объект «${_entity_name}» обращается вокруг объекта «$list{_space_center}»; период обращения — ${_space_period}.];;
+@phrase_orbit_found_3
+<- lang_ru;
+<- concept_phrase_about_orbit_found;
+=> nrel_phrase_template: @template_orbit_found_3;;
+
+@template_orbit_found_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_orbit:: _space_center;;
+	_entity _=> nrel_distance_from_sun:: _space_distance;;
+*];;
+@phrase_orbit_found_4 = [Объект «${_entity_name}» обращается вокруг объекта «$list{_space_center}»; среднее расстояние от Солнца — ${_space_distance}.];;
+@phrase_orbit_found_4
+<- lang_ru;
+<- concept_phrase_about_orbit_found;
+=> nrel_phrase_template: @template_orbit_found_4;;
+
+@template_orbit_found_5 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_orbit:: _space_center;;
+	_space_co_orbiting _=> nrel_orbit:: _space_center;;
+*];;
+@phrase_orbit_found_5 = [Центр обращения объекта «${_entity_name}» — «$list{_space_center}»; кроме него, вокруг объекта «$list{_space_center}» в базе знаний обращаются: $list{_space_co_orbiting}.];;
+@phrase_orbit_found_5
+<- lang_ru;
+<- concept_phrase_about_orbit_found;
+=> nrel_phrase_template: @template_orbit_found_5;;
+
+concept_phrase_about_orbit_probe
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об орбите космического объекта: межпланетная станция] (* <- lang_ru;; *);
+	[phrase about an orbit of a space object: interplanetary probe] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_orbit;
+=> nrel_definition:
+	[фраза для ответа, когда объект — межпланетная станция (у неё нет орбиты вокруг тела: она уходит в дальний космос)] (* <- lang_ru;; *);;
+
+@template_orbit_probe_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_launch_date:: _space_launch_date;;
+*];;
+@phrase_orbit_probe_1 = [«${_entity_name}» — межпланетная станция: она не обращается вокруг планеты или Солнца, а движется по траектории к внешним границам Солнечной системы. Запуск — ${_space_launch_date}.];;
+@phrase_orbit_probe_1
+<- lang_ru;
+<- concept_phrase_about_orbit_probe;
+=> nrel_phrase_template: @template_orbit_probe_1;;
+
+@template_orbit_probe_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_operator:: _space_operator;;
+*];;
+@phrase_orbit_probe_2 = [Межпланетная станция «${_entity_name}» не находится на орбите вокруг небесного тела: её траектория уводит аппарат в дальний космос. Оператор — $list{_space_operator}.];;
+@phrase_orbit_probe_2
+<- lang_ru;
+<- concept_phrase_about_orbit_probe;
+=> nrel_phrase_template: @template_orbit_probe_2;;
+
+concept_phrase_about_orbit_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об орбите космического объекта: вопрос о классе объектов] (* <- lang_ru;; *);
+	[phrase about an orbit of a space object: question about a class of objects] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_orbit;
+=> nrel_definition:
+	[фраза для ответа, когда выделенная сущность — класс, у экземпляра которого есть связь «обращается вокруг*»] (* <- lang_ru;; *);;
+
+@template_orbit_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_orbit:: _space_center;;
+*];;
+@phrase_orbit_for_group_1 = [Объекты класса «${_entity_name}» ($list{_instance}) обращаются вокруг: $list{_space_center}.];;
+@phrase_orbit_for_group_1
+<- lang_ru;
+<- concept_phrase_about_orbit_for_group;
+=> nrel_phrase_template: @template_orbit_for_group_1;;
+
+@template_orbit_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_orbit:: _space_center;;
+*];;
+@phrase_orbit_for_group_2 = [Центр обращения зависит от объекта класса «${_entity_name}»: $list{_space_center}. Уточните объект: $list{_instance}.];;
+@phrase_orbit_for_group_2
+<- lang_ru;
+<- concept_phrase_about_orbit_for_group;
+=> nrel_phrase_template: @template_orbit_for_group_2;;
+
+concept_phrase_about_orbit_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об орбите космического объекта: сведений нет в базе знаний] (* <- lang_ru;; *);
+	[phrase about an orbit of a space object: no data in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_orbit;
+=> nrel_definition:
+	[фраза для ответа, когда сообщение об орбите с выделенной сущностью, для которой не сработали правила с более высоким приоритетом] (* <- lang_ru;; *);;
+
+@template_orbit_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_orbit_not_found_1 = [В базе знаний не указано, вокруг чего обращается «${_entity_name}».];;
+@phrase_orbit_not_found_1
+<- lang_ru;
+<- concept_phrase_about_orbit_not_found;
+=> nrel_phrase_template: @template_orbit_not_found_1;;
+
+@template_orbit_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_orbit_not_found_2 = [Сведений об орбите объекта «${_entity_name}» в базе знаний нет.];;
+@phrase_orbit_not_found_2
+<- lang_ru;
+<- concept_phrase_about_orbit_not_found;
+=> nrel_phrase_template: @template_orbit_not_found_2;;

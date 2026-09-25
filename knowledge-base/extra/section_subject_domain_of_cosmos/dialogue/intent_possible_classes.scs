@@ -1,0 +1,9 @@
+/* Классы сообщений о космосе, которые может вернуть классификатор. */
+
+concept_intent_possible_class
+-> concept_message_about_orbit;
+-> concept_message_about_satellites;
+-> concept_message_about_physical_parameters;
+-> concept_message_about_discovery;
+-> concept_message_about_constellation;
+-> concept_message_about_space_mission;;

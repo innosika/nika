@@ -1,0 +1,96 @@
+/* Экземпляры класса "космическая миссия".
+   Здесь используется и ролевое отношение rrel_crew_commander:
+   оно выделяет в составе экипажа того космонавта, который им командовал. */
+vostok_1
+<- concept_space_mission;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Восток-1]
+    (* <- lang_ru;; *);
+    [Vostok 1]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [первый в истории пилотируемый космический полёт, выполненный 12 апреля
+    1961 года. Юрий Гагарин совершил один виток вокруг Земли и благополучно вернулся]
+    (* <- lang_ru;; *);
+=> nrel_start_date:
+    [12 апреля 1961 года]
+    (* <- lang_ru;; *);
+=> nrel_mission_target:
+    [выполнить первый в истории пилотируемый орбитальный полёт вокруг Земли и доказать
+    возможность пребывания человека в космическом пространстве.]
+    (* <- lang_ru;; *);
+=> nrel_mission_crew: yuri_gagarin;
+=> nrel_launch_site: baikonur;
+=> nrel_used_launch_vehicle: vostok_launch_vehicle;
+-> rrel_crew_commander: yuri_gagarin;;
+
+vostok_6
+<- concept_space_mission;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Восток-6]
+    (* <- lang_ru;; *);
+    [Vostok 6]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [космический полёт, в ходе которого 16 июня 1963 года Валентина Терешкова
+    стала первой женщиной, побывавшей в космосе]
+    (* <- lang_ru;; *);
+=> nrel_start_date:
+    [16 июня 1963 года]
+    (* <- lang_ru;; *);
+=> nrel_mission_target:
+    [исследовать влияние космического полёта на организм женщины и продолжить изучение
+    работоспособности человека в условиях невесомости.]
+    (* <- lang_ru;; *);
+=> nrel_mission_crew: valentina_tereshkova;
+=> nrel_launch_site: baikonur;
+=> nrel_used_launch_vehicle: vostok_launch_vehicle;
+-> rrel_crew_commander: valentina_tereshkova;;
+
+apollo_11
+<- concept_space_mission;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Аполлон-11]
+    (* <- lang_ru;; *);
+    [Apollo 11]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [космическая миссия, в ходе которой 20 июля 1969 года человек впервые
+    совершил посадку на поверхность Луны]
+    (* <- lang_ru;; *);
+=> nrel_start_date:
+    [16 июля 1969 года]
+    (* <- lang_ru;; *);
+=> nrel_mission_target:
+    [осуществить высадку человека на поверхность Луны и обеспечить его благополучное
+    возвращение на Землю.]
+    (* <- lang_ru;; *);
+=> nrel_mission_crew: neil_armstrong;
+=> nrel_launch_site: cape_canaveral;
+=> nrel_used_launch_vehicle: saturn_5;
+-> rrel_crew_commander: neil_armstrong;;
+
+sputnik_1_mission
+<- concept_space_mission;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [запуск Спутника-1]
+    (* <- lang_ru;; *);
+    [Sputnik 1 mission]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [первая в истории космическая миссия, в ходе которой 4 октября
+    1957 года на околоземную орбиту был выведен первый искусственный спутник Земли]
+    (* <- lang_ru;; *);
+=> nrel_start_date:
+    [4 октября 1957 года]
+    (* <- lang_ru;; *);
+=> nrel_mission_target:
+    [вывести на околоземную орбиту первый искусственный спутник Земли и подтвердить
+    возможность запуска космических аппаратов ракетой-носителем.]
+    (* <- lang_ru;; *);
+=> nrel_launch_site: baikonur;
+=> nrel_used_launch_vehicle: sputnik_launch_vehicle;;

@@ -1,0 +1,16 @@
+concept_terrestrial_planet
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [планета земной группы]
+    (* <- lang_ru;; *);
+    [terrestrial planet]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [планета, состоящая преимущественно из силикатов и металлов,
+    обладающая твёрдой поверхностью и высокой средней плотностью. В Солнечной системе к ним
+    относятся Меркурий, Венера, Земля и Марс]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_planet;;

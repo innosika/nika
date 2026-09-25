@@ -1,0 +1,36 @@
+/* Вопрос о разбиении класса планета.
+   Точные формулировки: «Какие планеты ты знаешь?»; «Какие планеты бывают?». */
+
+@if_lr_classify_known_planets_message_1 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_known_planets_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_known_planets_message _-> _text_lr_classify_known_planets_message_1;;
+	_text_lr_classify_known_planets_message_1 = _[Какие планеты ты знаешь?];;
+*];;
+
+@if_lr_classify_known_planets_message_2 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_known_planets_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_known_planets_message _-> _text_lr_classify_known_planets_message_2;;
+	_text_lr_classify_known_planets_message_2 = _[Какие планеты бывают?];;
+*];;
+
+@then_lr_classify_known_planets_message = [*
+	concept_message_about_subdividing _-> _message;;
+	_message _-> rrel_entity:: concept_planet;;
+*];;
+
+@if_lr_classify_known_planets_message_1 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_known_planets_message_2 <- atomic_logical_formula; <- concept_template_with_links;;
+@then_lr_classify_known_planets_message <- atomic_logical_formula;;
+
+@or_lr_classify_known_planets_message = { @if_lr_classify_known_planets_message_1; @if_lr_classify_known_planets_message_2 };;
+@or_lr_classify_known_planets_message <- nrel_disjunction;;
+@impl_lr_classify_known_planets_message = (@or_lr_classify_known_planets_message => @then_lr_classify_known_planets_message);;
+@impl_lr_classify_known_planets_message <- nrel_implication;;
+
+lr_classify_known_planets_message
+<- concept_classify_message_rule_priority_1;
+=> nrel_main_idtf:
+	[правило классификации: «Какие планеты ты знаешь?»] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_classify_known_planets_message;;

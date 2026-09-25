@@ -1,0 +1,39 @@
+concept_natural_space_object
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [естественный космический объект]
+    (* <- lang_ru;; *);
+    [natural space object]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [космический объект, возникший без участия человека:
+    звезда, планета, спутник, малое тело, туманность, галактика и т.п. Синонимом часто выступает
+    термин "небесное тело"]
+    (* <- lang_ru;; *);
+/* Теоретико-множественное отношение: данный класс включён в класс космических объектов */
+=> nrel_inclusion:
+    concept_star;
+    concept_planet;
+    concept_dwarf_planet;
+    concept_natural_satellite;
+    concept_small_solar_system_body;
+    concept_galaxy;
+    concept_nebula;
+    concept_black_hole;
+<= nrel_inclusion:
+    concept_space_object;
+<= nrel_subdividing:
+    ...
+    (*
+        <- sc_node_tuple;;
+        -> concept_star;;
+        -> concept_planet;;
+        -> concept_dwarf_planet;;
+        -> concept_natural_satellite;;
+        -> concept_small_solar_system_body;;
+        -> concept_galaxy;;
+        -> concept_nebula;;
+        -> concept_black_hole;;
+    *);;

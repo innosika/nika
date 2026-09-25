@@ -1,0 +1,88 @@
+/* Экземпляры классов "карликовая планета", "астероид", "комета". */
+pluto
+<- concept_dwarf_planet;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Плутон]
+    (* <- lang_ru;; *);
+    [Pluto]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [карликовая планета Солнечной системы, крупнейший известный объект пояса Койпера.
+    С 1930 по 2006 год считался девятой планетой Солнечной системы]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_discoverer:
+    [Клайд Томбо]
+    (* <- lang_ru;; *);
+=> nrel_discovery_date:
+    [18 февраля 1930 года]
+    (* <- lang_ru;; *);
+=> nrel_distance_from_sun:
+    [39,5 а.е.]
+    (* <- lang_ru;; *);;
+
+ceres
+<- concept_dwarf_planet;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Церера]
+    (* <- lang_ru;; *);
+    [Ceres]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [карликовая планета и самый крупный объект главного пояса астероидов
+    между орбитами Марса и Юпитера]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_discoverer:
+    [Джузеппе Пиацци]
+    (* <- lang_ru;; *);
+=> nrel_discovery_date:
+    [1 января 1801 года]
+    (* <- lang_ru;; *);
+=> nrel_distance_from_sun:
+    [2,77 а.е.]
+    (* <- lang_ru;; *);;
+
+vesta
+<- concept_asteroid;
+<- concept_small_solar_system_body;   /* экземпляр надкласса - явно */
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Веста]
+    (* <- lang_ru;; *);
+    [Vesta]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [один из крупнейших астероидов главного пояса и самый яркий астероид
+    на земном небе]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_discoverer:
+    [Генрих Ольберс]
+    (* <- lang_ru;; *);
+=> nrel_discovery_date:
+    [29 марта 1807 года]
+    (* <- lang_ru;; *);;
+
+halley_comet
+<- concept_comet;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [комета Галлея]
+    (* <- lang_ru;; *);
+    [Halley's Comet]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [яркая короткопериодическая комета, возвращающаяся к Солнце примерно
+    каждые 75-76 лет. Названа в честь Эдмунда Галлея, который первым рассчитал её орбиту
+    и предсказал возвращение]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_orbital_period:
+    [около 75-76 лет]
+    (* <- lang_ru;; *);
+=> nrel_discoverer:
+    [Эдмунд Галлей]
+    (* <- lang_ru;; *);;

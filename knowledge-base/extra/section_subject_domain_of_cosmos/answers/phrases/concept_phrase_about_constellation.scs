@@ -1,0 +1,229 @@
+/* Класс ответных фраз «фраза о созвездии космического объекта» (автор — Переверзев М.) и его подклассы по состоянию базы знаний.
+   ${_x} — содержимое ссылки _x, $list{_x} — все различные значения _x через запятую. */
+
+concept_phrase_about_constellation
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о созвездии космического объекта] (* <- lang_ru;; *);
+	[phrase about a constellation of a space object] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_exploration;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о созвездии космического объекта] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_constellation; автор — Переверзев М.] (* <- lang_ru;; *);;
+
+concept_phrase_about_constellation_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о созвездии космического объекта: извинение перед ответом на грубое сообщение] (* <- lang_ru;; *);
+	[phrase about a constellation of a space object: apology before a reply to a rude message] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_constellation;
+=> nrel_definition:
+	[фраза для ответа, когда то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями] (* <- lang_ru;; *);;
+
+@phrase_constellation_apology_1 = [Простите, что заставила ждать! Отвечаю о созвездии.];;
+@phrase_constellation_apology_1
+<- lang_ru;
+<- concept_phrase_about_constellation_apology;;
+
+@phrase_constellation_apology_2 = [Извините за ожидание, вот сведения о созвездии.];;
+@phrase_constellation_apology_2
+<- lang_ru;
+<- concept_phrase_about_constellation_apology;;
+
+concept_phrase_about_constellation_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о созвездии космического объекта: сведения есть в базе знаний] (* <- lang_ru;; *);
+	[phrase about a constellation of a space object: the data is in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_constellation;
+=> nrel_definition:
+	[фраза для ответа, когда у объекта есть связь «находится в созвездии*»] (* <- lang_ru;; *);;
+
+@template_constellation_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_located_in_constellation:: _space_constellation;;
+*];;
+@phrase_constellation_found_1 = [Объект «${_entity_name}» находится в созвездии «$list{_space_constellation}».];;
+@phrase_constellation_found_1
+<- lang_ru;
+<- concept_phrase_about_constellation_found;
+=> nrel_phrase_template: @template_constellation_found_1;;
+
+@template_constellation_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_located_in_constellation:: _space_constellation;;
+*];;
+@phrase_constellation_found_2 = [Созвездие, в котором находится объект «${_entity_name}», — «$list{_space_constellation}».];;
+@phrase_constellation_found_2
+<- lang_ru;
+<- concept_phrase_about_constellation_found;
+=> nrel_phrase_template: @template_constellation_found_2;;
+
+@template_constellation_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_located_in_constellation:: _space_constellation;;
+	_space_constellation _=> nrel_definition:: _space_constellation_definition;;
+	lang_ru _-> _space_constellation_definition;;
+*];;
+@phrase_constellation_found_3 = [Объект «${_entity_name}» находится в созвездии «$list{_space_constellation}»; о созвездии: ${_space_constellation_definition}.];;
+@phrase_constellation_found_3
+<- lang_ru;
+<- concept_phrase_about_constellation_found;
+=> nrel_phrase_template: @template_constellation_found_3;;
+
+concept_phrase_about_constellation_is_constellation
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о созвездии космического объекта: объект — созвездие] (* <- lang_ru;; *);
+	[phrase about a constellation of a space object: the object is a constellation] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_constellation;
+=> nrel_definition:
+	[фраза для ответа, когда в выделенном созвездии находятся другие объекты (сущность сама является созвездием)] (* <- lang_ru;; *);;
+
+@template_constellation_is_constellation_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_space_object _=> nrel_located_in_constellation:: _entity;;
+*];;
+@phrase_constellation_is_constellation_1 = [«${_entity_name}» — само созвездие; в нём находятся: $list{_space_object}.];;
+@phrase_constellation_is_constellation_1
+<- lang_ru;
+<- concept_phrase_about_constellation_is_constellation;
+=> nrel_phrase_template: @template_constellation_is_constellation_1;;
+
+@template_constellation_is_constellation_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_space_object _=> nrel_located_in_constellation:: _entity;;
+*];;
+@phrase_constellation_is_constellation_2 = [В созвездии «${_entity_name}» в базе знаний указаны объекты: $list{_space_object}.];;
+@phrase_constellation_is_constellation_2
+<- lang_ru;
+<- concept_phrase_about_constellation_is_constellation;
+=> nrel_phrase_template: @template_constellation_is_constellation_2;;
+
+concept_phrase_about_constellation_solar_system_body
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о созвездии космического объекта: тело Солнечной системы] (* <- lang_ru;; *);
+	[phrase about a constellation of a space object: Solar System body] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_constellation;
+=> nrel_definition:
+	[фраза для ответа, когда объект обращается вокруг другого тела (тело Солнечной системы не принадлежит одному созвездию)] (* <- lang_ru;; *);;
+
+@template_constellation_solar_system_body_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_orbit:: _space_center;;
+*];;
+@phrase_constellation_solar_system_body_1 = [Объект «${_entity_name}» обращается вокруг объекта «$list{_space_center}» внутри Солнечной системы, поэтому постоянного места среди созвездий у него нет.];;
+@phrase_constellation_solar_system_body_1
+<- lang_ru;
+<- concept_phrase_about_constellation_solar_system_body;
+=> nrel_phrase_template: @template_constellation_solar_system_body_1;;
+
+@template_constellation_solar_system_body_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_orbit:: _space_center;;
+*];;
+@phrase_constellation_solar_system_body_2 = [Тела Солнечной системы не принадлежат одному созвездию: объект «${_entity_name}» обращается вокруг объекта «$list{_space_center}», и его видимое положение на фоне звёзд со временем меняется.];;
+@phrase_constellation_solar_system_body_2
+<- lang_ru;
+<- concept_phrase_about_constellation_solar_system_body;
+=> nrel_phrase_template: @template_constellation_solar_system_body_2;;
+
+concept_phrase_about_constellation_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о созвездии космического объекта: вопрос о классе объектов] (* <- lang_ru;; *);
+	[phrase about a constellation of a space object: question about a class of objects] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_constellation;
+=> nrel_definition:
+	[фраза для ответа, когда выделенная сущность — класс, экземпляр которого находится в созвездии] (* <- lang_ru;; *);;
+
+@template_constellation_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_located_in_constellation:: _space_constellation;;
+*];;
+@phrase_constellation_for_group_1 = [Объекты класса «${_entity_name}» ($list{_instance}) находятся в созвездиях: $list{_space_constellation}.];;
+@phrase_constellation_for_group_1
+<- lang_ru;
+<- concept_phrase_about_constellation_for_group;
+=> nrel_phrase_template: @template_constellation_for_group_1;;
+
+@template_constellation_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_located_in_constellation:: _space_constellation;;
+*];;
+@phrase_constellation_for_group_2 = [Созвездие зависит от объекта класса «${_entity_name}»: в базе знаний указаны $list{_space_constellation}. Уточните объект: $list{_instance}.];;
+@phrase_constellation_for_group_2
+<- lang_ru;
+<- concept_phrase_about_constellation_for_group;
+=> nrel_phrase_template: @template_constellation_for_group_2;;
+
+concept_phrase_about_constellation_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о созвездии космического объекта: сведений нет в базе знаний] (* <- lang_ru;; *);
+	[phrase about a constellation of a space object: no data in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_constellation;
+=> nrel_definition:
+	[фраза для ответа, когда сообщение о созвездии с выделенной сущностью, для которой не сработали правила с более высоким приоритетом] (* <- lang_ru;; *);;
+
+@template_constellation_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_constellation_not_found_1 = [В базе знаний не указано, в каком созвездии находится «${_entity_name}».];;
+@phrase_constellation_not_found_1
+<- lang_ru;
+<- concept_phrase_about_constellation_not_found;
+=> nrel_phrase_template: @template_constellation_not_found_1;;
+
+@template_constellation_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_constellation_not_found_2 = [Сведений о созвездии для объекта «${_entity_name}» в базе знаний нет.];;
+@phrase_constellation_not_found_2
+<- lang_ru;
+<- concept_phrase_about_constellation_not_found;
+=> nrel_phrase_template: @template_constellation_not_found_2;;

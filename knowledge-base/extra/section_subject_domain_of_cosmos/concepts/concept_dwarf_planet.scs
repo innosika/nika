@@ -1,0 +1,16 @@
+concept_dwarf_planet
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [карликовая планета]
+    (* <- lang_ru;; *);
+    [dwarf planet]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [небесное тело, обращающееся вокруг Солнца и имеющее близкую к
+    шарообразной форму, но, в отличие от планеты, не очистившее окрестности своей орбиты
+    от других тел и не являющееся спутником планеты]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_natural_space_object;;

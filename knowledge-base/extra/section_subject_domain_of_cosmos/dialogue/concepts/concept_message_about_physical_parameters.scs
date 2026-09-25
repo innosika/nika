@@ -1,0 +1,34 @@
+concept_message_about_physical_parameters
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о физических характеристиках космического объекта] (* <- lang_ru;; *);
+	[message about physical parameters of a space object] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_physical_parameters];
+<= nrel_inclusion:
+	concept_message_about_celestial_body_properties;
+=> nrel_definition:
+	[сообщение о свойствах небесного тела, в котором запрашиваются масса, экваториальный радиус или спектральный класс указанного космического объекта] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Какая масса у Юпитера?»; выделяемая сущность (роль rrel_entity): космический объект] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о физических характеристиках космического объекта)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о физических характеристиках космического объекта - сообщение о свойствах небесного тела, в котором запрашиваются масса, экваториальный радиус или спектральный класс указанного космического объекта.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_celestial_body_properties;
+			nrel_mass;
+			nrel_equatorial_radius;
+			nrel_spectral_class;
+			rrel_entity
+		};;
+	*);;

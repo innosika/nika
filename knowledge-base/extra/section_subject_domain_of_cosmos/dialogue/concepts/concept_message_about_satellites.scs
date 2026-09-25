@@ -1,0 +1,33 @@
+concept_message_about_satellites
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о спутниках небесного тела] (* <- lang_ru;; *);
+	[message about satellites of a celestial body] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_satellites];
+<= nrel_inclusion:
+	concept_message_about_celestial_body_properties;
+=> nrel_definition:
+	[сообщение о свойствах небесного тела, в котором запрашиваются естественные спутники указанного небесного тела или объекты, обращающиеся вокруг него] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Какие спутники есть у Юпитера?»; выделяемая сущность (роль rrel_entity): космический объект] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о спутниках небесного тела)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о спутниках небесного тела - сообщение о свойствах небесного тела, в котором запрашиваются естественные спутники указанного небесного тела или объекты, обращающиеся вокруг него.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_celestial_body_properties;
+			nrel_natural_satellite;
+			nrel_orbit;
+			rrel_entity
+		};;
+	*);;

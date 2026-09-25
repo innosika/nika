@@ -1,0 +1,43 @@
+/* Фраза Ю. А. Гагарина при старте «Востока-1» — приветствие; ответ даёт стандартное правило NIKA.
+   Точные формулировки: «Поехали!»; «Поехали»; «Поехали, Ника!». */
+
+@if_lr_classify_poekhali_message_1 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_poekhali_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_poekhali_message _-> _text_lr_classify_poekhali_message_1;;
+	_text_lr_classify_poekhali_message_1 = _[Поехали!];;
+*];;
+
+@if_lr_classify_poekhali_message_2 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_poekhali_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_poekhali_message _-> _text_lr_classify_poekhali_message_2;;
+	_text_lr_classify_poekhali_message_2 = _[Поехали];;
+*];;
+
+@if_lr_classify_poekhali_message_3 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_poekhali_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_poekhali_message _-> _text_lr_classify_poekhali_message_3;;
+	_text_lr_classify_poekhali_message_3 = _[Поехали, Ника!];;
+*];;
+
+@then_lr_classify_poekhali_message = [*
+	concept_greeting_message _-> _message;;
+*];;
+
+@if_lr_classify_poekhali_message_1 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_poekhali_message_2 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_poekhali_message_3 <- atomic_logical_formula; <- concept_template_with_links;;
+@then_lr_classify_poekhali_message <- atomic_logical_formula;;
+
+@or_lr_classify_poekhali_message = { @if_lr_classify_poekhali_message_1; @if_lr_classify_poekhali_message_2; @if_lr_classify_poekhali_message_3 };;
+@or_lr_classify_poekhali_message <- nrel_disjunction;;
+@impl_lr_classify_poekhali_message = (@or_lr_classify_poekhali_message => @then_lr_classify_poekhali_message);;
+@impl_lr_classify_poekhali_message <- nrel_implication;;
+
+lr_classify_poekhali_message
+<- concept_classify_message_rule_priority_1;
+=> nrel_main_idtf:
+	[правило классификации: «Поехали!» как приветствие] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_classify_poekhali_message;;

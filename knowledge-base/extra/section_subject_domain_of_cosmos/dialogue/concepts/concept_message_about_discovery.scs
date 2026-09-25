@@ -1,0 +1,33 @@
+concept_message_about_discovery
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение об открытии космического объекта] (* <- lang_ru;; *);
+	[message about the discovery of a space object] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_discovery];
+<= nrel_inclusion:
+	concept_message_about_space_exploration;
+=> nrel_definition:
+	[сообщение об изучении и освоении космоса, в котором запрашивается, кто и когда открыл указанный космический объект] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Кто открыл Плутон?»; выделяемая сущность (роль rrel_entity): космический объект] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение об открытии космического объекта)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение об открытии космического объекта - сообщение об изучении и освоении космоса, в котором запрашивается, кто и когда открыл указанный космический объект.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_space_exploration;
+			nrel_discoverer;
+			nrel_discovery_date;
+			rrel_entity
+		};;
+	*);;

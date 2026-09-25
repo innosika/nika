@@ -1,0 +1,24 @@
+concept_planet
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [планета]
+    (* <- lang_ru;; *);
+    [planet]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [небесное тело, обращающееся вокруг звезды, обладающее достаточной массой для
+    того, чтобы под действием собственной гравитации принять форму, близкую к шарообразной,
+    и очистившее окрестности своей орбиты от других тел]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_natural_space_object;
+/* Разбиение планет по физическому строению */
+<= nrel_subdividing:
+    ...
+    (*
+        <- sc_node_tuple;;
+        -> concept_terrestrial_planet;;
+        -> concept_gas_giant;;
+    *);;

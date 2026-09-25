@@ -1,0 +1,75 @@
+/* Экземпляры классов "галактика", "туманность", "чёрная дыра". */
+milky_way
+<- concept_galaxy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Млечный Путь]
+    (* <- lang_ru;; *);
+    [Milky Way]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [спиральная галактика с перемычкой, в которой находится Солнечная система.
+    Содержит порядка 200-400 миллиардов звёзд]
+    (* <- lang_ru;; *);;
+
+
+andromeda_galaxy
+<- concept_galaxy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [галактика Андромеды]
+    (* <- lang_ru;; *);
+    [Andromeda Galaxy]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [ближайшая к Млечному Пути крупная спиральная галактика,
+    находящаяся на расстоянии около 2,5 миллиона световых лет]
+    (* <- lang_ru;; *);
+=> nrel_located_in_constellation: andromeda_constellation;;
+
+orion_nebula
+<- concept_nebula;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [туманность Ориона]
+    (* <- lang_ru;; *);
+    [Orion Nebula]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [яркая эмиссионная туманность и ближайшая к Земле область
+    активного звездообразования, видимая невооружённым глазом]
+    (* <- lang_ru;; *);
+=> nrel_located_in_constellation: orion_constellation;;
+
+ring_nebula
+<- concept_nebula;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Кольцевая туманность]
+    (* <- lang_ru;; *);
+    [Ring Nebula]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [планетарная туманность в созвездии Лиры, образовавшаяся
+    из сброшенной оболочки умирающей звезды. Её угловой диаметр составляет около 83 секунд
+    дуги, а расстояние до неё - порядка 660 парсек]
+    (* <- lang_ru;; *);
+=> nrel_located_in_constellation: lyra_constellation;;
+
+sagittarius_a_star
+<- concept_black_hole;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Стрелец A*]
+    (* <- lang_ru;; *);
+    [Sagittarius A*]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [сверхмассивная чёрная дыра в центре галактики Млечный Путь массой около
+    4,3 миллиона масс Солнца. Её изображение было получено коллаборацией Event Horizon
+    Telescope в 2022 году]
+    (* <- lang_ru;; *);
+=> nrel_mass:
+    [около 4,3·10^6 масс Солнца]
+    (* <- lang_ru;; *);
+=> nrel_located_in_constellation: sagittarius_constellation;;

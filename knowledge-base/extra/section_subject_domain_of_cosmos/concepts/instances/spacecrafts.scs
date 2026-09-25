@@ -1,0 +1,166 @@
+/* Экземпляры классов "искусственный спутник", "орбитальная станция",
+   "межпланетная станция", "ракета-носитель". */
+sputnik_1
+<- concept_artificial_satellite;
+<- concept_spacecraft;
+<- concept_artificial_space_object;   /* экземпляр надкласса - явно */
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Спутник-1]
+    (* <- lang_ru;; *);
+    [Sputnik 1]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [первый в истории искусственный спутник Земли, запущенный Советским Союзом
+    4 октября 1957 года и открывший космическую эру человечества]
+    (* <- lang_ru;; *);
+=> nrel_orbit: earth;
+=> nrel_launch_date:
+    [4 октября 1957 года]
+    (* <- lang_ru;; *);
+=> nrel_operator: roscosmos;;
+
+hubble_telescope
+<- concept_artificial_satellite;
+<- concept_spacecraft;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [телескоп Хаббл]
+    (* <- lang_ru;; *);
+    [Hubble Space Telescope]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [автоматическая обсерватория на околоземной орбите, работающая
+    вне земной атмосферы, что позволяет ей получать изображения высокого разрешения
+    в видимом, ультрафиолетовом и инфракрасном диапазонах]
+    (* <- lang_ru;; *);
+=> nrel_orbit: earth;
+=> nrel_launch_date:
+    [24 апреля 1990 года]
+    (* <- lang_ru;; *);
+=> nrel_operator: nasa;;
+
+iss
+<- concept_space_station;
+<- concept_spacecraft;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Международная космическая станция]
+    (* <- lang_ru;; *);
+    [International Space Station]
+    (* <- lang_en;; *);
+=> nrel_idtf:
+    [МКС]
+    (* <- lang_ru;; *);
+=> nrel_definition:
+    [пилотируемая орбитальная станция, используемая
+    как многоцелевой космический исследовательский комплекс. Совместный проект нескольких
+    космических агентств, эксплуатируемый с 1998 года]
+    (* <- lang_ru;; *);
+=> nrel_orbit: earth;
+=> nrel_launch_date:
+    [20 ноября 1998 года]
+    (* <- lang_ru;; *);
+=> nrel_operator: roscosmos;
+=> nrel_operator: nasa;
+=> nrel_operator: esa;;
+
+mir_station
+<- concept_space_station;
+<- concept_spacecraft;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [станция Мир]
+    (* <- lang_ru;; *);
+    [Mir]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [советская, а затем российская пилотируемая орбитальная станция, работавшая
+    на околоземной орбите с 1986 по 2001 год; первая модульная станция, собранная
+    непосредственно на орбите]
+    (* <- lang_ru;; *);
+=> nrel_orbit: earth;
+=> nrel_launch_date:
+    [20 февраля 1986 года]
+    (* <- lang_ru;; *);
+=> nrel_operator: roscosmos;;
+
+voyager_1
+<- concept_interplanetary_probe;
+<- concept_spacecraft;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Вояджер-1]
+    (* <- lang_ru;; *);
+    [Voyager 1]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [автоматическая межпланетная станция, исследовавшая Юпитер и Сатурн,
+    а в 2012 году ставшая первым созданным человеком объектом, покинувшим гелиосферу
+    и вышедшим в межзвёздное пространство]
+    (* <- lang_ru;; *);
+=> nrel_launch_date:
+    [5 сентября 1977 года]
+    (* <- lang_ru;; *);
+=> nrel_operator: nasa;;
+
+new_horizons
+<- concept_interplanetary_probe;
+<- concept_spacecraft;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Новые горизонты]
+    (* <- lang_ru;; *);
+    [New Horizons]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [автоматическая межпланетная станция, совершившая в июле 2015 года
+    первый в истории пролёт вблизи Плутона и передавшая его детальные снимки]
+    (* <- lang_ru;; *);
+=> nrel_launch_date:
+    [19 января 2006 года]
+    (* <- lang_ru;; *);
+=> nrel_operator: nasa;;
+
+sputnik_launch_vehicle
+<- concept_launch_vehicle;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [ракета-носитель Спутник]
+    (* <- lang_ru;; *);
+    [Sputnik launch vehicle]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [советская ракета-носитель, созданная на базе межконтинентальной
+    баллистической ракеты Р-7 и выведшая на орбиту первый искусственный спутник Земли]
+    (* <- lang_ru;; *);
+=> nrel_operator: roscosmos;;
+
+vostok_launch_vehicle
+<- concept_launch_vehicle;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [ракета-носитель Восток]
+    (* <- lang_ru;; *);
+    [Vostok launch vehicle]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [семейство советских трёхступенчатых ракет-носителей, с помощью которых были
+    выведены на орбиту первые пилотируемые космические корабли]
+    (* <- lang_ru;; *);
+=> nrel_operator: roscosmos;;
+
+saturn_5
+<- concept_launch_vehicle;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Сатурн-5]
+    (* <- lang_ru;; *);
+    [Saturn V]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [американская сверхтяжёлая ракета-носитель, использовавшаяся в программе
+    "Аполлон" для доставки экипажей к Луне; самая грузоподъёмная из применявшихся ракет
+    своего времени]
+    (* <- lang_ru;; *);
+=> nrel_operator: nasa;;

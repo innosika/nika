@@ -1,0 +1,15 @@
+concept_launch_vehicle
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [ракета-носитель]
+    (* <- lang_ru;; *);
+    [launch vehicle]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [многоступенчатая ракета, предназначенная для выведения полезной
+    нагрузки (космических аппаратов) в космическое пространство]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_artificial_space_object;;
