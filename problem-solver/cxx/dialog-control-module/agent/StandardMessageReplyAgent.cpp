@@ -3,7 +3,10 @@
 #include "keynodes/DialogKeynodes.hpp"
 #include "keynodes/MessageKeynodes.hpp"
 #include <common/utils/ActionUtils.hpp>
+#include <sc-agents-common/utils/CommonUtils.hpp>
 #include <sc-agents-common/utils/IteratorUtils.hpp>
+
+#include <algorithm>
 
 using namespace utils;
 
@@ -30,19 +33,52 @@ ScResult StandardMessageReplyAgent::DoProgram(ScActionInitiatedEvent const & eve
     m_logger.Warning(
         "The reply message isn't generated because reply construction wasn't found through direct inference agent. "
         "Trying to generate default reply message");
+    // Прежняя версия заменяла байт replyText[length - 2] на '.', разрезая двухбайтовую букву «в»
+    // в UTF-8: sc-server падал при сериализации такой ссылки в JSON, а собранные классы в текст
+    // не попадали. Теперь в ответ выводятся основные идентификаторы классов сообщения и
+    // выделенные в нём сущности.
     std::stringstream setElementsTextStream;
-    ScAddrVector messageClasses;
-    setElementsTextStream
-        << "Извините, я не нашла ответа на Ваш вопрос. Я определила, что данное сообщение является элементом классов:";
-    ScIterator3Ptr it3 = m_context.CreateIterator3(ScType::NodeConst, ScType::EdgeAccessConstPosPerm, messageNode);
+    setElementsTextStream << "Извините, я не нашла ответа на Ваш вопрос.";
+    auto const & nameOf = [this](ScAddr const & element) -> std::string
+    {
+      std::string name = utils::CommonUtils::getMainIdtf(&m_context, element, {ScKeynodes::lang_ru});
+      return name.empty() ? m_context.GetElementSystemIdentifier(element) : name;
+    };
+    auto const & joinNames = [](std::vector<std::string> const & names) -> std::string
+    {
+      std::string joined;
+      for (std::string const & name : names)
+        joined += (joined.empty() ? "" : ", ") + name;
+      return joined;
+    };
+    std::vector<std::string> messageClasses;
+    ScIterator3Ptr it3 = m_context.CreateIterator3(ScType::ConstNodeClass, ScType::ConstPermPosArc, messageNode);
     while (it3->Next())
     {
-      messageClasses.push_back(it3->Get(0));
+      if (it3->Get(0) == MessageKeynodes::concept_message)
+        continue;
+      std::string const name = nameOf(it3->Get(0));
+      if (!name.empty())
+        messageClasses.push_back(name);
     }
+    std::sort(messageClasses.begin(), messageClasses.end());
+    if (!messageClasses.empty())
+      setElementsTextStream << " Я определила, что данное сообщение является элементом классов: "
+                            << joinNames(messageClasses) << ".";
+    std::vector<std::string> messageEntities;
+    ScIterator5Ptr it5 = m_context.CreateIterator5(
+        messageNode, ScType::ConstPermPosArc, ScType::Unknown, ScType::ConstPermPosArc, MessageKeynodes::rrel_entity);
+    while (it5->Next())
+    {
+      std::string const name = nameOf(it5->Get(2));
+      if (!name.empty())
+        messageEntities.push_back(name);
+    }
+    if (!messageEntities.empty())
+      setElementsTextStream << " Выделенные сущности: " << joinNames(messageEntities) << ".";
     ScAddr const & defaultReplyMessage = m_context.GenerateNode(ScType::NodeConst);
     ScAddr const & defaultReplyLink = m_context.GenerateLink(ScType::LinkConst);
-    std::string replyText = setElementsTextStream.str();
-    replyText[replyText.length() - 2] = '.';
+    std::string const replyText = setElementsTextStream.str();
     m_context.SetLinkContent(defaultReplyLink, replyText);
     ScTemplate templ;
     templ.Triple(ScKeynodes::lang_ru, ScType::VarPermPosArc, defaultReplyLink);

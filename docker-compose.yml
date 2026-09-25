@@ -19,10 +19,18 @@ services:
         condition: service_healthy
 
   problem-solver:
+    # This image is not published on Docker Hub (ostis/nika has no 0.2.x tags),
+    # so it is always built locally. `docker compose pull` skips it.
     image: ostis/nika:0.2.2
     build:
       context: ./
       dockerfile: ./Dockerfile
+      args:
+        # release (default): sc-machine/scl-machine from GitHub releases, no conan.ostis.net.
+        # conan: the upstream way via the ostis-ai Conan remote (see Dockerfile).
+        OSTIS_DEPS: ${OSTIS_DEPS:-release}
+        CONAN_INSECURE_REMOTE: ${CONAN_INSECURE_REMOTE:-0}
+    pull_policy: build
     container_name: nika-problem-solver
     restart: unless-stopped
     volumes:
@@ -71,6 +79,25 @@ services:
     depends_on:
       - web
 
+  # Локальный Wit.ai-совместимый классификатор сообщений (замена облачного wit.ai).
+  # nika.ini: [wit-ai] url = http://wit-local:8095/message. Тестовая страница — http://localhost:8095
+  wit-local:
+    image: nika-wit-local:1.0
+    build:
+      context: ./wit-local
+    container_name: nika-wit-local
+    restart: unless-stopped
+    ports:
+      - "8095:8095"
+    volumes:
+      - ./knowledge-base:/kb:ro
+      - wit-local-data:/data
+    environment:
+      - "SC_SERVER_URL=ws://problem-solver:8090"
+      - "REFRESH_SECONDS=120"
+    networks:
+      - nika
+
   py-sc-server:
     image: ostis/nika-py-agents:0.2.2
     build:
@@ -88,6 +115,7 @@ services:
 
 volumes:
   kb-binary: {}
+  wit-local-data: {}
 
 networks:
   nika: {}

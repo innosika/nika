@@ -1,0 +1,249 @@
+{
+  "utterances": [
+    {
+      "text": "Приветик!",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Доброго вечера, Ника",
+      "intent": "greeting",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 20,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте, уважаемая система",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какими навыками ты обладаешь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты умеешь, Ника?",
+      "intent": "about_skill",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 19,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажи, какие есть у тебя способности",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько сейчас градусов в Москве?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 32,
+          "body": "Москве",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Будет ли дождь в Минске?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 23,
+          "body": "Минске",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда сдавать лабораторную работу №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "лабораторную работу №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что надо сделать в лабораторной работе №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 41,
+          "body": "лабораторной работе №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто ты, Ника?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 12,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Посоветуй хорошую книгу",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько километров до Луны пешком?",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 26,
+          "body": "Луны",
+          "value": "Луна",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Спасибо тебе огромное!",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, пожалуйста, что вы умеете?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Ну и что ты вообще умеешь, а?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    }
+  ]
+}

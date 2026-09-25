@@ -1,0 +1,3609 @@
+{
+  "utterances": [
+    {
+      "text": "Привет",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Привет!",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуй",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте, Ника",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добрый день",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добрый вечер",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Доброе утро",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хай",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Приветствую",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Приветствую тебя, Ника",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Салют",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Привет, Ника!",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здорово",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Доброго дня",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хэй, привет",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Приветики",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добрый день, Ника!",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Ника, привет",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуй, Ника",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Всем привет",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Привет, как дела?",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хеллоу",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Доброй ночи",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Приветствую вас",
+      "intent": "greeting",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты умеешь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты можешь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие у тебя навыки, буду благодарна?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Чем ты можешь помочь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты умеешь делать?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи, что ты умеешь, долго ещё ждать?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "На что ты способна?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Извините, а какие вопросы тебе можно задавать?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "С чем ты можешь помочь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие у тебя возможности?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты знаешь и умеешь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Чем ты полезна?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие функции у тебя есть?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "О чём тебя можно спросить?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Твои умения?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты вообще умеешь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие у тебя умения?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Для чего ты нужна?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Чем ты занимаешься?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие задачи ты решаешь?",
+      "intent": "about_skill",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какое условие Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какое условие Лабораторная работа №2, пожалуйста?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какое условие Лабораторная работа №3, ну же",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Какое условие Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какое задание у Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Ну давай, говори, какое задание у Лабораторная работа №2?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 56,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Какое задание у Лабораторная работа №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какое задание у Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что нужно сделать в Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что нужно сделать в Лабораторная работа №2?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что нужно сделать в Лабораторная работа №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что нужно сделать в Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи условие Лабораторная работа №1",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 39,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Извините, а расскажи условие Лабораторная работа №2",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 51,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи условие Лабораторная работа №3",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 39,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи условие Лабораторная работа №4",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 39,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "В чём заключается Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "В чём заключается Лабораторная работа №2?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "В чём заключается Лабораторная работа №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "В чём заключается Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая цель у Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 35,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая цель у Лабораторная работа №2?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 35,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая цель у Лабораторная работа №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 35,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая цель у Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 35,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что требуется в Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что требуется в Лабораторная работа №2?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что требуется в Лабораторная работа №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что требуется в Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Отвечай уже, какое задание в Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 51,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Какое задание в Лабораторная работа №2?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какое задание в Лабораторная работа №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какое задание в Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Условие Лабораторная работа №1",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 30,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Условие Лабораторная работа №2",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 30,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько можно ждать, условие Лабораторная работа №3",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 51,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Условие Лабораторная работа №4",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 30,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что надо сделать по Лабораторная работа №1?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что надо сделать по Лабораторная работа №2?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что надо сделать по Лабораторная работа №3?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что надо сделать по Лабораторная работа №4?",
+      "intent": "about_lab_work_condition",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда дедлайн Лабораторная работа №1?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда дедлайн Лабораторная работа №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда дедлайн Лабораторная работа №3?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда дедлайн Лабораторная работа №4?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 36,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "До какого числа сдать Лабораторная работа №1?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 44,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Ну и до какого числа сдать Лабораторная работа №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 49,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "До какого числа сдать Лабораторная работа №3, долго ещё ждать?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 44,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Слушай, быстро: до какого числа сдать Лабораторная работа №4?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 38,
+          "end": 60,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Какой срок сдачи у Лабораторная работа №1?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 41,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой срок сдачи у Лабораторная работа №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 41,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой срок сдачи у Лабораторная работа №3, буду благодарна?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 41,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какой срок сдачи у Лабораторная работа №4?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 41,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте! Подскажите, когда нужно сдать Лабораторная работа №1?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 66,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Когда нужно сдать Лабораторная работа №2, пожалуйста?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Когда нужно сдать Лабораторная работа №3, пожалуйста?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Когда нужно сдать Лабораторная работа №4?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажите, пожалуйста, какой дедлайн у Лабораторная работа №1?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 37,
+          "end": 59,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какой дедлайн у Лабораторная работа №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой дедлайн у Лабораторная работа №3, буду благодарна?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какой дедлайн у Лабораторная работа №4, пожалуйста?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "До какого срока сдаётся Лабораторная работа №1?! Не тормози",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 24,
+          "end": 46,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "До какого срока сдаётся Лабораторная работа №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 24,
+          "end": 46,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "До какого срока сдаётся Лабораторная работа №3?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 24,
+          "end": 46,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Будьте добры, подскажите, до какого срока сдаётся Лабораторная работа №4?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 50,
+          "end": 72,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Когда последний день сдачи Лабораторная работа №1?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 49,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда последний день сдачи Лабораторная работа №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 49,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда последний день сдачи Лабораторная работа №3?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 49,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько можно ждать, когда последний день сдачи Лабораторная работа №4?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 48,
+          "end": 70,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Срок сдачи Лабораторная работа №1",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 33,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажите, пожалуйста, срок сдачи Лабораторная работа №2",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 32,
+          "end": 54,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Срок сдачи Лабораторная работа №3",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 33,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Срок сдачи Лабораторная работа №4",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 33,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "К какому числу сдать Лабораторная работа №1?! Не тормози",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 43,
+          "body": "Лабораторная работа №1",
+          "value": "Лабораторная работа №1",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "К какому числу сдать Лабораторная работа №2?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 43,
+          "body": "Лабораторная работа №2",
+          "value": "Лабораторная работа №2",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "К какому числу сдать Лабораторная работа №3?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 43,
+          "body": "Лабораторная работа №3",
+          "value": "Лабораторная работа №3",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "К какому числу сдать Лабораторная работа №4?",
+      "intent": "about_lab_work_deadline",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 43,
+          "body": "Лабораторная работа №4",
+          "value": "Лабораторная работа №4",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая погода в Минск?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 20,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая погода в Брест, долго ещё ждать?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 20,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Какая погода в Москва?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 21,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько можно ждать, какая сейчас погода в Минск?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 43,
+          "end": 48,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Какая сейчас погода в Брест?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 27,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая сейчас погода в Москва, долго ещё ждать?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 28,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Погода в Минск",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 9,
+          "end": 14,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Погода в Брест",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 9,
+          "end": 14,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Погода в Москва",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 9,
+          "end": 15,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько градусов в Минск?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 24,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько градусов в Брест, долго ещё ждать?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 24,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Извините, а сколько градусов в Москва?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 37,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Холодно ли сейчас в Минск, пожалуйста?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 25,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Скажите, пожалуйста, холодно ли сейчас в Брест?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 41,
+          "end": 46,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, пожалуйста, холодно ли сейчас в Москва?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 50,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какая температура в Минск?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 25,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая температура в Брест, отвечай быстрее",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 25,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Какая температура в Москва?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 26,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажи погоду в Минск",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 20,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажи погоду в Брест",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 20,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажи погоду в Москва",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 21,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Извините, а идёт ли дождь в Минск?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 33,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Идёт ли дождь в Брест?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 21,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Идёт ли дождь в Москва?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 22,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как там погода в Минск?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 22,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как там погода в Брест?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 22,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, пожалуйста, как там погода в Москва?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 41,
+          "end": 47,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Что с погодой в Минск?! Не тормози",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 21,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Что с погодой в Брест, пожалуйста?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 21,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Что с погодой в Москва?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 22,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте! Подскажите, тепло ли в Минск?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 37,
+          "end": 42,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Эй, тепло ли в Брест?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 20,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Тепло ли в Москва, пожалуйста?",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 17,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Прогноз погоды для Минск, ну же",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 24,
+          "body": "Минск",
+          "value": "Минск",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Прогноз погоды для Брест",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 24,
+          "body": "Брест",
+          "value": "Брест",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Прогноз погоды для Москва",
+      "intent": "about_weather",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 25,
+          "body": "Москва",
+          "value": "Москва",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что в Пример начинается на букву А?",
+      "intent": "about_letter_search",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "Пример",
+          "value": "Пример",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие слова в Пример начинаются на букву М?",
+      "intent": "about_letter_search",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 20,
+          "body": "Пример",
+          "value": "Пример",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Найди в Пример слово на букву А, заранее спасибо?",
+      "intent": "about_letter_search",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 14,
+          "body": "Пример",
+          "value": "Пример",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Что в Пример на букву М?",
+      "intent": "about_letter_search",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "Пример",
+          "value": "Пример",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие слова на букву А есть в Пример?",
+      "intent": "about_letter_search",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 30,
+          "end": 36,
+          "body": "Пример",
+          "value": "Пример",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что начинается на букву М в Пример?",
+      "intent": "about_letter_search",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 34,
+          "body": "Пример",
+          "value": "Пример",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте! Подскажите, что такое Ника?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 36,
+          "end": 40,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Здравствуйте! Подскажите, кто такая Ника?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 36,
+          "end": 40,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи о Ника",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 15,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты знаешь о Ника?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 20,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто ты такая, Ника?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 18,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Эй, что представляет собой Ника?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 31,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Опиши Ника",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 10,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто такая Ника? Расскажи",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 14,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что за система Ника?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 19,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Дай определение Ника",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 20,
+          "body": "Ника",
+          "value": "Ника",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько будет два плюс два?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи анекдот",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Я люблю пиццу",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Который час?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой сегодня день недели?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Спой песню",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Ты умеешь танцевать?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как пройти в библиотеку?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько стоит билет в кино?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Мне скучно",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Включи музыку",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Поставь будильник на семь утра",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто выиграл вчерашний матч?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Купи мне хлеба",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой курс доллара?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Переведи на английский слово кошка",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Я пошёл спать",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "ааааа",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "фывапролд",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "123456",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "ну и ладно",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "ок",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "понятно",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "ясно",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как зовут президента Франции?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Посоветуй фильм",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Закажи такси",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Напиши стихотворение",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько тебе лет?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какого цвета небо?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Где купить машину?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что приготовить на ужин?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Мой кот спит на диване",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хорошая сегодня погода, правда",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу в отпуск",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Спасибо большое!",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Спасибо, ты очень помогла",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Благодарю за помощь",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Ты молодец, спасибо",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Огромное спасибо!",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Спасибо, всё понятно",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Благодарю!",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Ты лучшая, спасибо!",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Большое спасибо за ответ",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Спасибо, очень полезно",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Ты ничего не понимаешь",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Ужасный ответ",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Опять ерунду говоришь",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Бесполезная система",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Отвечаешь невпопад",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Это полный бред",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Ты тупая",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Надоело, ничего не работает",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Что за чушь ты несёшь",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Хватит тормозить",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    }
+  ]
+}

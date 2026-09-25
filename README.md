@@ -38,7 +38,11 @@ git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-
 cd nika
 git submodule update --init --recursive
 docker compose pull
+docker compose build problem-solver
 ```
+
+The `problem-solver` image is not published on Docker Hub, so `docker compose pull`
+skips it and it has to be built locally once (this takes a while — it is a C++ build).
 
 ## 🚀 Usage
 - Launch
@@ -80,9 +84,25 @@ Windows-specific problems:
   git config --local core.longpaths true
   ```
 Common issues:
+- `docker compose pull` fails with `failed to resolve reference "docker.io/ostis/nika:0.2.2": not found`
+
+  **Solution**: this image is not published on Docker Hub — it is built from this repository. Build it once with `docker compose build problem-solver`, then launch as usual. The `problem-solver` service is marked `pull_policy: build`, so an up-to-date checkout skips it during `docker compose pull` instead of failing.
+
+- The `problem-solver` build fails with `ERROR: Package 'sc-machine/0.10.4' not resolved: ...` (`certificate has expired` or `Connection to conan.ostis.net timed out`)
+
+  The `sc-machine` and `scl-machine` Conan packages are only hosted on `conan.ostis.net` (they are not on conancenter). Its TLS certificate expired on 2026-08-08, and since September 2026 the server does not accept connections at all.
+
+  **Solution**: by default the Docker build no longer uses that server (`OSTIS_DEPS=release`): sc-machine and scl-machine are taken from their GitHub release archives, and the modules are compiled against the same binaries they later run with. Only conancenter is needed. If you see this error, your checkout predates that change. To go back to the upstream Conan way once the server works again:
+  ```sh
+  OSTIS_DEPS=conan docker compose build problem-solver
+  # while the certificate is expired:
+  OSTIS_DEPS=conan CONAN_INSECURE_REMOTE=1 docker compose build problem-solver
+  ```
+  Note the trade-off: with `CONAN_INSECURE_REMOTE=1` the dependencies are downloaded over a TLS connection that is not verified, so a man-in-the-middle could substitute the packages your image is built from. Use it only if you accept that risk, and drop it once the certificate is valid again.
+
 - Docker images cannot be built locally. Error: `status: the --mount option requires BuildKit` 
   
-  **Solution**: Please note that you'd only need it for custom images, you can launch our system without building images yourself. Use the [Docker Docs BuildKit reference](https://docs.docker.com/go/buildkit) to enable Docker BuildKit on your computer. **In case you're using Windows**, you could use `$env:DOCKER_BUILDKIT = 1` while building in PowerShell.
+  **Solution**: Building `problem-solver` requires BuildKit (the Dockerfile uses a cache mount). Use the [Docker Docs BuildKit reference](https://docs.docker.com/go/buildkit) to enable Docker BuildKit on your computer. **In case you're using Windows**, you could use `$env:DOCKER_BUILDKIT = 1` while building in PowerShell.
 
 - Help! My problem-solver container is `unhealthy`
   
