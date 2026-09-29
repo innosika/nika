@@ -1,0 +1,17 @@
+nrel_relieved_symptom
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+=> nrel_main_idtf:
+	[устраняемый симптом*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[relieved symptom*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_drug;
+=> nrel_second_domain:
+	concept_symptom;
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее лекарственное средство с симптомом, который оно устраняет] (* <- lang_ru;; *);;

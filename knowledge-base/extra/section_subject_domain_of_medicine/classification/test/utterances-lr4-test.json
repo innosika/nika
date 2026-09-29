@@ -1,0 +1,615 @@
+{
+  "utterances": [
+    {
+      "text": "Залей в базу знаний антигистаминные средства из openFDA",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 44,
+          "body": "антигистаминные средства",
+          "value": "антигистаминное средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний сахароснижающие средства из openFDA",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 44,
+          "body": "сахароснижающие средства",
+          "value": "сахароснижающее средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний антиангинальные средства из openFDA",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 44,
+          "body": "антиангинальные средства",
+          "value": "антиангинальное средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний противотуберкулёзные средства из openFDA",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 49,
+          "body": "противотуберкулёзные средства",
+          "value": "противотуберкулёзное средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний глюкокортикостероиды из openFDA",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 40,
+          "body": "глюкокортикостероиды",
+          "value": "глюкокортикостероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были лекарства от аллергии",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 40,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 52,
+          "body": "аллергии",
+          "value": "аллергическое заболевание",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были лекарства от аллергического ринита",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 40,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 65,
+          "body": "аллергического ринита",
+          "value": "аллергический ринит",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были лекарства от крапивницы",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 40,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 54,
+          "body": "крапивницы",
+          "value": "крапивница",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были лекарства от аллергического конъюнктивита",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 40,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 72,
+          "body": "аллергического конъюнктивита",
+          "value": "аллергический конъюнктивит",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были лекарства от атопического дерматита",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 40,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 66,
+          "body": "атопического дерматита",
+          "value": "атопический дерматит",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие медикаменты назначает аллерголог?",
+      "intent": "about_doctor_prescribed_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 38,
+          "body": "аллерголог",
+          "value": "врач аллерголог-иммунолог",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие медикаменты назначает терапевт?",
+      "intent": "about_doctor_prescribed_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 36,
+          "body": "терапевт",
+          "value": "врач-терапевт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие медикаменты назначает кардиолог?",
+      "intent": "about_doctor_prescribed_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 37,
+          "body": "кардиолог",
+          "value": "кардиолог",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие медикаменты назначает эндокринолог?",
+      "intent": "about_doctor_prescribed_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 40,
+          "body": "эндокринолог",
+          "value": "эндокринолог",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие медикаменты назначает инфекционист?",
+      "intent": "about_doctor_prescribed_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 40,
+          "body": "инфекционист",
+          "value": "врач-инфекционист",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие лекарства облегчают симптомы аллергии?",
+      "intent": "about_disease_symptomatic_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 43,
+          "body": "аллергии",
+          "value": "аллергическое заболевание",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие лекарства облегчают симптомы аллергического ринита?",
+      "intent": "about_disease_symptomatic_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 56,
+          "body": "аллергического ринита",
+          "value": "аллергический ринит",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие лекарства облегчают симптомы крапивницы?",
+      "intent": "about_disease_symptomatic_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 45,
+          "body": "крапивницы",
+          "value": "крапивница",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие лекарства облегчают симптомы аллергического конъюнктивита?",
+      "intent": "about_disease_symptomatic_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 63,
+          "body": "аллергического конъюнктивита",
+          "value": "аллергический конъюнктивит",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие лекарства облегчают симптомы атопического дерматита?",
+      "intent": "about_disease_symptomatic_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 57,
+          "body": "атопического дерматита",
+          "value": "атопический дерматит",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь антигистаминные средства?",
+      "intent": "about_drug_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 40,
+          "body": "антигистаминные средства",
+          "value": "антигистаминное средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь сахароснижающие средства?",
+      "intent": "about_drug_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 40,
+          "body": "сахароснижающие средства",
+          "value": "сахароснижающее средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь антиангинальные средства?",
+      "intent": "about_drug_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 40,
+          "body": "антиангинальные средства",
+          "value": "антиангинальное средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь противотуберкулёзные средства?",
+      "intent": "about_drug_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 45,
+          "body": "противотуберкулёзные средства",
+          "value": "противотуберкулёзное средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь глюкокортикостероиды?",
+      "intent": "about_drug_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 36,
+          "body": "глюкокортикостероиды",
+          "value": "глюкокортикостероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний медикаментами из внешнего источника",
+      "intent": "fill_kb_with_drugs",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи в базу знаний лекарства из RxNav",
+      "intent": "fill_kb_with_drugs",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 31,
+          "body": "лекарства",
+          "value": "лекарственное средство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    }
+  ]
+}

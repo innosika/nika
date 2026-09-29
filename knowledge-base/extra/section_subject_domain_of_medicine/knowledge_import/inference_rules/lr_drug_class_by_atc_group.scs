@@ -1,0 +1,21 @@
+/* Правило: класс лекарственного средства по группе ATC.
+   Если препарат входит в группу ATC, а группе соответствует класс лекарственных средств базы знаний, то препарат — экземпляр этого класса. */
+
+@if_lr_drug_class_by_atc_group = [*
+	_drug _=> nrel_atc_group:: _atc_group;;
+	_atc_group _=> nrel_corresponding_drug_class:: _drug_class;;
+*];;
+@if_lr_drug_class_by_atc_group <- atomic_logical_formula;;
+@then_lr_drug_class_by_atc_group = [*
+	_drug_class _-> _drug;;
+*];;
+@then_lr_drug_class_by_atc_group <- atomic_logical_formula;;
+@impl_lr_drug_class_by_atc_group = (@if_lr_drug_class_by_atc_group => @then_lr_drug_class_by_atc_group);;
+@impl_lr_drug_class_by_atc_group <- nrel_implication;;
+lr_drug_class_by_atc_group
+<- concept_drug_knowledge_rule_priority_1;
+=> nrel_main_idtf:
+	[правило: класс лекарственного средства по группе ATC] (* <- lang_ru;; *);
+=> nrel_note:
+	[если препарат входит в группу ATC, а группе соответствует класс лекарственных средств базы знаний, то препарат — экземпляр этого класса] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_drug_class_by_atc_group;;

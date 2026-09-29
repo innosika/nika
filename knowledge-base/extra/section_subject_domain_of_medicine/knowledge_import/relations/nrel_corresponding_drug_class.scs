@@ -1,0 +1,17 @@
+nrel_corresponding_drug_class
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+=> nrel_main_idtf:
+	[соответствующий класс лекарственных средств*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[corresponding drug class*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_atc_group;
+=> nrel_second_domain:
+	concept_drug;
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее группу ATC с классом лекарственных средств базы знаний] (* <- lang_ru;; *);;

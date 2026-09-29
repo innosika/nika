@@ -1,0 +1,15 @@
+concept_antituberculosis_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[противотуберкулёзное средство] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antituberculosis drug] (* <- lang_en;; *);
+=> nrel_idtf:
+	[противотуберкулёзный препарат] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_antimicrobial_drug;
+=> nrel_definition:
+	[противомикробное средство, подавляющее микобактерии туберкулёза] (* <- lang_ru;; *);
+=> nrel_note:
+	[класс добавлен в ЛР4 для сведений, загружаемых из внешних источников] (* <- lang_ru;; *);;

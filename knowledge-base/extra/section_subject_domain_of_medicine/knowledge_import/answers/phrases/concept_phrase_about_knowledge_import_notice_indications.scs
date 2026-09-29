@@ -1,0 +1,18 @@
+concept_phrase_about_knowledge_import_notice_indications
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза-уведомление о загрузке сведений (показания)] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase notifying about knowledge import (indications)] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_knowledge_import_notice;;
+
+@phrase_about_knowledge_import_notice_indications_1 = [Раньше в базе знаний не было этих сведений — я только что загрузила их из openFDA и RxNav.];;
+@phrase_about_knowledge_import_notice_indications_1
+<- lang_ru;
+<- concept_phrase_about_knowledge_import_notice_indications;;
+
+@phrase_about_knowledge_import_notice_indications_2 = [Этого я не знала, поэтому нашла сведения в openFDA и RxNav и добавила их в базу знаний.];;
+@phrase_about_knowledge_import_notice_indications_2
+<- lang_ru;
+<- concept_phrase_about_knowledge_import_notice_indications;;

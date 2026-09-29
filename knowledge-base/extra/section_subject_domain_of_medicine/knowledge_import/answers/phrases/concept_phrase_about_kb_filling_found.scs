@@ -1,0 +1,28 @@
+concept_phrase_about_kb_filling_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о наполнении базы знаний: препараты загружены] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about KB filling: drugs imported] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_knowledge;;
+
+@template_phrase_about_kb_filling_found_1 = [*
+	concept_message _-> _message;;
+	_message _=> nrel_imported_drug:: _drug;;
+*];;
+@phrase_about_kb_filling_found_1 = [В базе знаний появились сведения о препаратах: $list{_drug}.];;
+@phrase_about_kb_filling_found_1
+<- lang_ru;
+<- concept_phrase_about_kb_filling_found;
+=> nrel_phrase_template: @template_phrase_about_kb_filling_found_1;;
+
+@template_phrase_about_kb_filling_found_2 = [*
+	concept_message _-> _message;;
+	_message _=> nrel_imported_drug:: _drug;;
+*];;
+@phrase_about_kb_filling_found_2 = [Загружены препараты: $list{_drug}.];;
+@phrase_about_kb_filling_found_2
+<- lang_ru;
+<- concept_phrase_about_kb_filling_found;
+=> nrel_phrase_template: @template_phrase_about_kb_filling_found_2;;

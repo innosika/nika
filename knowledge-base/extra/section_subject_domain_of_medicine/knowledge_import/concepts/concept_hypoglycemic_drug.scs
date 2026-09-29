@@ -1,0 +1,17 @@
+concept_hypoglycemic_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[сахароснижающее средство] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[blood glucose lowering drug] (* <- lang_en;; *);
+=> nrel_idtf:
+	[противодиабетическое средство] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[лекарство от диабета] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_drug;
+=> nrel_definition:
+	[лекарственное средство, снижающее уровень глюкозы в крови (кроме инсулинов); применяется при сахарном диабете 2 типа] (* <- lang_ru;; *);
+=> nrel_note:
+	[класс добавлен в ЛР4 для сведений, загружаемых из внешних источников] (* <- lang_ru;; *);;

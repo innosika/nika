@@ -1,0 +1,14 @@
+concept_message_about_disease_symptomatic_drugs
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о препаратах для симптоматического лечения заболевания] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about drugs for symptomatic treatment of a disease] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_disease_symptomatic_drugs];
+<= nrel_inclusion:
+	concept_message_about_drug_knowledge;
+=> nrel_definition:
+	[сообщение, в котором запрашиваются лекарственные средства, устраняющие симптомы заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Чем снять симптомы гриппа A(H1N1)?»] (* <- lang_ru;; *);;

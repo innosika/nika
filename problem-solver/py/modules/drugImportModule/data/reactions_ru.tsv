@@ -1,0 +1,81 @@
+# Нежелательные реакции FAERS (MedDRA Preferred Term) → симптом базы знаний.
+# Реакция погружается как побочный эффект*, только если она есть в этом словаре (иначе — нет русского названия).
+# Столбцы: термин MedDRA | русское название | системный идентификатор | класс симптома
+# Существующие симптомы ЛР1 указаны своими идентификаторами — новые узлы для них не создаются.
+NAUSEA	тошнота	nausea	concept_subjective_symptom
+HEADACHE	головная боль	headache	concept_subjective_symptom
+DYSPNOEA	одышка	dyspnea	concept_subjective_symptom
+PYREXIA	лихорадка	fever	concept_physical_sign
+COUGH	кашель	cough	concept_physical_sign
+ASTHENIA	общая слабость	weakness	concept_subjective_symptom
+WHEEZING	свистящие хрипы	wheezing	concept_physical_sign
+CHEST PAIN	боль за грудиной	chest_pain	concept_subjective_symptom
+BLOOD GLUCOSE INCREASED	гипергликемия	hyperglycemia	concept_laboratory_instrumental_sign
+HYPERGLYCAEMIA	гипергликемия	hyperglycemia	concept_laboratory_instrumental_sign
+DIARRHOEA	диарея	diarrhea	concept_physical_sign
+FATIGUE	повышенная утомляемость	fatigue	concept_subjective_symptom
+VOMITING	рвота	vomiting	concept_physical_sign
+PAIN	боль	pain	concept_subjective_symptom
+DIZZINESS	головокружение	dizziness	concept_subjective_symptom
+RASH	кожная сыпь	skin_rash	concept_physical_sign
+ARTHRALGIA	боль в суставах	arthralgia	concept_subjective_symptom
+WEIGHT DECREASED	снижение массы тела	weight_loss	concept_physical_sign
+PRURITUS	кожный зуд	itching	concept_subjective_symptom
+HYPOGLYCAEMIA	гипогликемия	hypoglycemia	concept_laboratory_instrumental_sign
+BLOOD GLUCOSE DECREASED	гипогликемия	hypoglycemia	concept_laboratory_instrumental_sign
+ANXIETY	тревожность	anxiety	concept_subjective_symptom
+ANAEMIA	анемия	anemia	concept_laboratory_instrumental_sign
+DECREASED APPETITE	снижение аппетита	decreased_appetite	concept_subjective_symptom
+HYPOTENSION	артериальная гипотензия	hypotension	concept_physical_sign
+THROMBOCYTOPENIA	тромбоцитопения	thrombocytopenia	concept_laboratory_instrumental_sign
+PLATELET COUNT DECREASED	тромбоцитопения	thrombocytopenia	concept_laboratory_instrumental_sign
+SOMNOLENCE	сонливость	somnolence	concept_subjective_symptom
+ABDOMINAL DISCOMFORT	дискомфорт в животе	abdominal_discomfort	concept_subjective_symptom
+ABDOMINAL PAIN	боль в животе	abdominal_pain	concept_subjective_symptom
+CONSTIPATION	запор	constipation	concept_physical_sign
+EYE PAIN	боль в глазах	eye_pain	concept_subjective_symptom
+EYE IRRITATION	раздражение глаз	eye_irritation	concept_subjective_symptom
+VISUAL IMPAIRMENT	нарушение зрения	visual_impairment	concept_subjective_symptom
+BRADYCARDIA	брадикардия	bradycardia	concept_physical_sign
+NEUTROPENIA	нейтропения	neutropenia	concept_laboratory_instrumental_sign
+ALANINE AMINOTRANSFERASE INCREASED	повышение активности АЛТ	alt_increased	concept_laboratory_instrumental_sign
+ASPARTATE AMINOTRANSFERASE INCREASED	повышение активности АСТ	ast_increased	concept_laboratory_instrumental_sign
+LIVER FUNCTION TEST INCREASED	отклонение печёночных проб	liver_tests_abnormal	concept_laboratory_instrumental_sign
+HYPERSENSITIVITY	реакция гиперчувствительности	hypersensitivity_reaction	concept_physical_sign
+LETHARGY	вялость	lethargy	concept_subjective_symptom
+HALLUCINATION	галлюцинации	hallucination	concept_subjective_symptom
+DELIRIUM	делирий	delirium	concept_physical_sign
+LOSS OF CONSCIOUSNESS	потеря сознания	loss_of_consciousness	concept_physical_sign
+CONVULSION	судороги	convulsions	concept_physical_sign
+HYPERHIDROSIS	повышенная потливость	hyperhidrosis	concept_physical_sign
+HYPERKALAEMIA	гиперкалиемия	hyperkalemia	concept_laboratory_instrumental_sign
+INSOMNIA	бессонница	insomnia	concept_subjective_symptom
+DEPRESSION	депрессивное настроение	depressed_mood	concept_subjective_symptom
+ERYTHEMA	эритема	erythema	concept_physical_sign
+OCULAR HYPERAEMIA	покраснение глаз	eye_redness	concept_physical_sign
+EYE PRURITUS	зуд в глазах	eye_itching	concept_subjective_symptom
+DEHYDRATION	обезвоживание	dehydration	concept_physical_sign
+JOINT SWELLING	отёк суставов	joint_swelling	concept_physical_sign
+DYSPHONIA	осиплость голоса	dysphonia	concept_physical_sign
+APNOEA	апноэ	apnea	concept_physical_sign
+ACUTE KIDNEY INJURY	острое повреждение почек	acute_kidney_injury	concept_laboratory_instrumental_sign
+RENAL FAILURE	почечная недостаточность	renal_failure	concept_laboratory_instrumental_sign
+LACTIC ACIDOSIS	лактатацидоз	lactic_acidosis	concept_laboratory_instrumental_sign
+METABOLIC ACIDOSIS	метаболический ацидоз	metabolic_acidosis	concept_laboratory_instrumental_sign
+DRY MOUTH	сухость во рту	dry_mouth	concept_subjective_symptom
+TREMOR	тремор	tremor	concept_physical_sign
+URTICARIA	крапивница	urticaria_reaction	concept_physical_sign
+OEDEMA PERIPHERAL	периферические отёки	peripheral_edema	concept_physical_sign
+PALPITATIONS	сердцебиение	palpitations	concept_subjective_symptom
+DYSPEPSIA	диспепсия	dyspepsia	concept_subjective_symptom
+MYALGIA	боль в мышцах	myalgia	concept_subjective_symptom
+BACK PAIN	боль в спине	back_pain	concept_subjective_symptom
+PAIN IN EXTREMITY	боль в конечностях	limb_pain	concept_subjective_symptom
+FEELING ABNORMAL	необычное самочувствие	feeling_abnormal	concept_subjective_symptom
+HYPERTENSION	артериальная гипертензия	hypertension_sign	concept_physical_sign
+TACHYCARDIA	тахикардия	tachycardia	concept_physical_sign
+GASTROINTESTINAL HAEMORRHAGE	желудочно-кишечное кровотечение	gi_bleeding	concept_physical_sign
+BLOOD PRESSURE INCREASED	повышение артериального давления	hypertension_sign	concept_physical_sign
+FLUSHING	приливы	flushing	concept_physical_sign
+SNEEZING	чихание	sneezing	concept_physical_sign
+RHINORRHOEA	насморк	rhinorrhea	concept_physical_sign

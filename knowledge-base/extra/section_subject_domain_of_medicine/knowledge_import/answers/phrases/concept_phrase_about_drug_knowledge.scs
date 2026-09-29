@@ -1,0 +1,8 @@
+concept_phrase_about_drug_knowledge
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о знаниях о лекарствах из внешних источников] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about drug knowledge from external sources] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_phrase;;

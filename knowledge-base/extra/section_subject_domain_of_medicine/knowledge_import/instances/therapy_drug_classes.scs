@@ -1,0 +1,32 @@
+/* Вид медикаментозной терапии → класс применяемых в нём средств (используется правилом
+   lr_drug_used_in_therapy). */
+
+antibiotic_therapy
+=> nrel_therapy_drug_class:
+	concept_antibiotic;
+=> nrel_therapy_drug_class:
+	concept_antituberculosis_drug;;
+
+antiviral_therapy
+=> nrel_therapy_drug_class:
+	concept_antiviral_drug;;
+
+insulin_therapy
+=> nrel_therapy_drug_class:
+	concept_insulin_drug;;
+
+glucocorticoid_therapy
+=> nrel_therapy_drug_class:
+	concept_glucocorticoid;;
+
+antipyretic_therapy
+=> nrel_therapy_drug_class:
+	concept_analgesic;;
+
+analgesic_therapy
+=> nrel_therapy_drug_class:
+	concept_analgesic;;
+
+antihistamine_therapy
+=> nrel_therapy_drug_class:
+	concept_antihistamine_drug;;

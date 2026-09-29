@@ -1,0 +1,14 @@
+concept_message_about_kb_filling_with_drugs
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о наполнении базы знаний лекарственными средствами] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about filling the knowledge base with drugs] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[fill_kb_with_drugs];
+<= nrel_inclusion:
+	concept_message_about_drug_knowledge;
+=> nrel_definition:
+	[сообщение, в котором пользователь просит загрузить лекарственные средства из внешнего источника] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Наполни базу знаний лекарствами из openFDA»] (* <- lang_ru;; *);;

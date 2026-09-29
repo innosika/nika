@@ -1,0 +1,20 @@
+concept_phrase_about_disease_symptomatic_drugs_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о симптоматическом лечении заболевания: сведений нет] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about symptomatic drugs: not found] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_knowledge;;
+
+@template_phrase_about_disease_symptomatic_drugs_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_about_disease_symptomatic_drugs_not_found_1 = [В базе знаний пока нет препаратов, устраняющих симптомы заболевания «${_entity_name}». Попросите меня наполнить базу знаний лекарствами — сведения появятся.];;
+@phrase_about_disease_symptomatic_drugs_not_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_symptomatic_drugs_not_found;
+=> nrel_phrase_template: @template_phrase_about_disease_symptomatic_drugs_not_found_1;;

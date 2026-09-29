@@ -53,6 +53,9 @@ class State:
         self.metrics: dict = {}
         self.metrics_status = "не считались"
         self.history: collections.deque = collections.deque(maxlen=100)
+        # сущности, переданные агентами через /api/entities: добавляются в любой словарь, построенный позже
+        # (фоновое переобучение на словаре, прочитанном раньше, не должно их терять)
+        self.pushed: dict = {}
 
 
 state = State()
@@ -62,12 +65,21 @@ def _signature(g: Gazetteer) -> tuple:
     return tuple(sorted((e.value, e.top, len(e.names)) for e in g.entities))
 
 
+def with_pushed(g: Gazetteer) -> Gazetteer:
+    """Словарь g плюс сущности, переданные агентами и ещё отсутствующие в нём."""
+    known = {e.addr for e in g.entities}
+    extra = [e for a, e in list(state.pushed.items()) if a not in known]
+    return Gazetteer(g.entities + extra, g.source, g.loaded_at) if extra else g
+
+
 def retrain(gazetteer: Gazetteer, reason: str) -> None:
+    gazetteer = with_pushed(gazetteer)
     ds = dataset_mod.load(KB_DIR)
     nlu = NLU(THRESHOLD)
     t = time.time()
     nlu.fit(ds, gazetteer)
     with state.lock:
+        nlu.gazetteer = with_pushed(nlu.gazetteer)      # за время обучения агенты могли передать ещё сущности
         state.nlu = nlu
     log.info("обучено (%s): %d фраз, %d намерений, %d сущностей словаря, %.2f с",
              reason, len(ds.train), len(ds.intents), len(gazetteer.entities), time.time() - t)
@@ -101,12 +113,23 @@ def compute_metrics(nlu: NLU) -> None:
         state.metrics_status = f"ошибка: {exc}"
 
 
+# Обновления словаря не должны идти одновременно: клиент sc-server один на процесс.
+_refresh_lock = threading.Lock()
+
+
+def _load_gazetteer() -> Gazetteer | None:
+    with _refresh_lock:
+        try:
+            return load_from_sc_memory(SC_SERVER_URL)
+        except Exception as exc:
+            state.sc_status = f"недоступен ({type(exc).__name__}: {exc})"
+            log.warning("словарь из sc-memory не загружен: %s", exc)
+            return None
+
+
 def refresh_from_kb(force: bool = False) -> bool:
-    try:
-        g = load_from_sc_memory(SC_SERVER_URL)
-    except Exception as exc:
-        state.sc_status = f"недоступен ({type(exc).__name__}: {exc})"
-        log.warning("словарь из sc-memory не загружен: %s", exc)
+    g = _load_gazetteer()
+    if g is None:
         return False
     state.sc_status = f"загружено {len(g.entities)} сущностей в {time.strftime('%H:%M:%S')}"
     if force or _signature(g) != _signature(state.nlu.gazetteer) or state.nlu.gazetteer.source == "cache":
@@ -210,11 +233,58 @@ def history():
 
 
 @app.post("/api/reload")
-def reload():
+def reload(entities_only: bool = False):
+    """Перечитать словарь из sc-памяти и переобучить модели.
+    entities_only=true — быстрый режим для агентов, которые только что добавили сущности в базу знаний:
+    если новых типов сущностей нет, модели намерений не зависят от изменения, поэтому словарь подменяется
+    сразу, а полное переобучение идёт в фоне."""
+    if entities_only:
+        g = _load_gazetteer()
+        if g is not None:
+            old_types = {e.type_token for e in state.nlu.gazetteer.entities}
+            if {e.type_token for e in g.entities} <= old_types:
+                g = with_pushed(g)
+                with state.lock:
+                    state.nlu.gazetteer = g
+                g.save(CACHE)
+                state.sc_status = f"загружено {len(g.entities)} сущностей в {time.strftime('%H:%M:%S')} (словарь подменён)"
+                threading.Thread(target=retrain, args=(g, "словарь из базы знаний, фоновое переобучение"),
+                                 daemon=True).start()
+                return {"sc_server": state.sc_status, "entities": len(g.entities)}
     ok = refresh_from_kb(force=True)
     if not ok:
         retrain(state.nlu.gazetteer, "повторное обучение без обновления словаря")
     return {"sc_server": state.sc_status, "entities": len(state.nlu.gazetteer.entities)}
+
+
+@app.post("/api/entities")
+def add_entities(payload: dict):
+    """Добавить в словарь сущности, которые агент только что создал в базе знаний (ЛР4: импорт лекарств).
+    Формат элемента — как у Entity: addr, value, sys_idtf, kind, classes, top, top_name, names=[[текст, язык, вид]].
+    Если тип (top) не указан, он берётся у уже известной сущности того же класса. Модели не переобучаются:
+    тип сущности уже встречался в обучающих фразах, поэтому новые названия распознаются сразу."""
+    from .gazetteer import Entity
+    with state.lock:
+        old = state.nlu.gazetteer
+        by_addr = {e.addr: e for e in old.entities}
+        top_of_class: dict[str, tuple[str, str]] = {}
+        for e in old.entities:
+            for c in e.classes:
+                top_of_class.setdefault(c, (e.top, e.top_name))
+            if e.kind == "class" and e.sys_idtf:
+                top_of_class.setdefault(e.sys_idtf, (e.top, e.top_name))
+        added = 0
+        for raw in payload.get("entities", []):
+            e = Entity(**raw)
+            if not e.top:
+                e.top, e.top_name = next((top_of_class[c] for c in e.classes if c in top_of_class), ("", ""))
+            added += e.addr not in by_addr
+            by_addr[e.addr] = e
+            state.pushed[e.addr] = e
+        g = Gazetteer(list(by_addr.values()), "база знаний + сущности от агентов", time.time())
+        state.nlu.gazetteer = g
+    g.save(CACHE)
+    return {"added": added, "entities": len(g.entities)}
 
 
 @app.get("/")

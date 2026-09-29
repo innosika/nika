@@ -1,0 +1,8 @@
+concept_information_source
+<- sc_node_class;
+=> nrel_main_idtf:
+	[внешний источник сведений] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[external information source] (* <- lang_en;; *);
+=> nrel_definition:
+	[внешний сервис, из которого агенты адаптации знаний получают сведения и погружают их в базу знаний] (* <- lang_ru;; *);;

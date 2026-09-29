@@ -1,0 +1,103 @@
+# Показания MED-RT (рубрики MeSH) → заболевание или симптом базы знаний.
+# disease: связь «показание к применению*» (лекарство → заболевание);
+# symptom: связь «устраняемый симптом*» (лекарство → симптом).
+# Существующие элементы ЛР1 указаны своими идентификаторами. Рубрики вне словаря не погружаются.
+# Столбцы: рубрика MeSH | вид | русское название | системный идентификатор | класс
+# --- заболевания ЛР1
+Influenza, Human	disease	грипп A(H1N1)	influenza_a_h1n1	concept_influenza
+COVID-19	disease	COVID-19	covid_19	concept_acute_respiratory_viral_infection
+Coronavirus Infections	disease	COVID-19	covid_19	concept_acute_respiratory_viral_infection
+Hepatitis B	disease	вирусный гепатит B	hepatitis_b	concept_viral_disease
+Hepatitis B, Chronic	disease	вирусный гепатит B	hepatitis_b	concept_viral_disease
+Tuberculosis	disease	туберкулёз	tuberculosis	concept_bacterial_disease
+Tuberculosis, Pulmonary	disease	туберкулёз	tuberculosis	concept_bacterial_disease
+Pneumonia, Pneumococcal	disease	пневмококковая пневмония	pneumococcal_pneumonia	concept_bacterial_disease
+Pneumococcal Infections	disease	пневмококковая пневмония	pneumococcal_pneumonia	concept_bacterial_disease
+Myocardial Infarction	disease	инфаркт миокарда	myocardial_infarction	concept_ischemic_heart_disease
+Angina Pectoris	disease	стенокардия	angina_pectoris	concept_ischemic_heart_disease
+Angina, Stable	disease	стенокардия	angina_pectoris	concept_ischemic_heart_disease
+Angina, Unstable	disease	стенокардия	angina_pectoris	concept_ischemic_heart_disease
+Coronary Disease	disease	стенокардия	angina_pectoris	concept_ischemic_heart_disease
+Diabetes Mellitus, Type 1	disease	сахарный диабет 1 типа	type_1_diabetes	concept_diabetes_mellitus
+Diabetes Mellitus, Type 2	disease	сахарный диабет 2 типа	type_2_diabetes	concept_diabetes_mellitus
+Asthma	disease	бронхиальная астма	bronchial_asthma	concept_chronic_respiratory_disease
+Status Asthmaticus	disease	бронхиальная астма	bronchial_asthma	concept_chronic_respiratory_disease
+# --- аллергические заболевания (ЛР4, описаны в knowledge_import/instances)
+Rhinitis, Allergic	disease	аллергический ринит	allergic_rhinitis	concept_allergic_disease
+Rhinitis, Allergic, Perennial	disease	аллергический ринит	allergic_rhinitis	concept_allergic_disease
+Rhinitis, Allergic, Seasonal	disease	аллергический ринит	allergic_rhinitis	concept_allergic_disease
+Urticaria	disease	крапивница	urticaria	concept_allergic_disease
+Conjunctivitis, Allergic	disease	аллергический конъюнктивит	allergic_conjunctivitis	concept_allergic_disease
+Dermatitis, Atopic	disease	атопический дерматит	atopic_dermatitis	concept_allergic_disease
+Angioedema	disease	ангионевротический отёк	angioedema	concept_allergic_disease
+Anaphylaxis	disease	анафилаксия	anaphylaxis	concept_allergic_disease
+Serum Sickness	disease	сывороточная болезнь	serum_sickness	concept_allergic_disease
+# --- другие заболевания (создаются при импорте)
+Urinary Tract Infections	disease	инфекция мочевыводящих путей	urinary_tract_infection	concept_bacterial_disease
+Staphylococcal Infections	disease	стафилококковая инфекция	staphylococcal_infection	concept_bacterial_disease
+Streptococcal Infections	disease	стрептококковая инфекция	streptococcal_infection	concept_bacterial_disease
+Pneumonia, Bacterial	disease	бактериальная пневмония	bacterial_pneumonia	concept_bacterial_disease
+Otitis Media	disease	средний отит	otitis_media	concept_bacterial_disease
+Sinusitis	disease	синусит	sinusitis	concept_bacterial_disease
+Bronchitis	disease	бронхит	bronchitis	concept_bacterial_disease
+Pharyngitis	disease	фарингит	pharyngitis	concept_bacterial_disease
+Tonsillitis	disease	тонзиллит	tonsillitis	concept_bacterial_disease
+Gonorrhea	disease	гонорея	gonorrhea	concept_bacterial_disease
+Chlamydia Infections	disease	хламидийная инфекция	chlamydia_infection	concept_bacterial_disease
+Syphilis	disease	сифилис	syphilis	concept_bacterial_disease
+Helicobacter Infections	disease	хеликобактерная инфекция	helicobacter_infection	concept_bacterial_disease
+Lyme Disease	disease	болезнь Лайма	lyme_disease	concept_bacterial_disease
+Sepsis	disease	сепсис	sepsis	concept_bacterial_disease
+Meningitis, Bacterial	disease	бактериальный менингит	bacterial_meningitis	concept_bacterial_disease
+Pyelonephritis	disease	пиелонефрит	pyelonephritis	concept_bacterial_disease
+Cystitis	disease	цистит	cystitis	concept_bacterial_disease
+Soft Tissue Infections	disease	инфекция мягких тканей	soft_tissue_infection	concept_bacterial_disease
+Skin Diseases, Bacterial	disease	бактериальная инфекция кожи	bacterial_skin_infection	concept_bacterial_disease
+Endocarditis, Bacterial	disease	бактериальный эндокардит	bacterial_endocarditis	concept_bacterial_disease
+Whooping Cough	disease	коклюш	whooping_cough	concept_bacterial_disease
+Herpes Labialis	disease	лабиальный герпес	herpes_labialis	concept_viral_disease
+Herpes Genitalis	disease	генитальный герпес	herpes_genitalis	concept_viral_disease
+Herpes Zoster	disease	опоясывающий лишай	herpes_zoster	concept_viral_disease
+Chickenpox	disease	ветряная оспа	chickenpox	concept_viral_disease
+Acquired Immunodeficiency Syndrome	disease	ВИЧ-инфекция	hiv_infection	concept_viral_disease
+Hepatitis C, Chronic	disease	хронический гепатит C	hepatitis_c	concept_viral_disease
+Cytomegalovirus Retinitis	disease	цитомегаловирусный ретинит	cmv_retinitis	concept_viral_disease
+Common Cold	disease	простуда	common_cold	concept_acute_respiratory_viral_infection
+Arthritis, Rheumatoid	disease	ревматоидный артрит	rheumatoid_arthritis	concept_non_infectious_disease
+Osteoarthritis	disease	остеоартрит	osteoarthritis	concept_non_infectious_disease
+Spondylitis, Ankylosing	disease	анкилозирующий спондилит	ankylosing_spondylitis	concept_non_infectious_disease
+Gout	disease	подагра	gout	concept_non_infectious_disease
+Dysmenorrhea	disease	дисменорея	dysmenorrhea	concept_non_infectious_disease
+Migraine Disorders	disease	мигрень	migraine	concept_non_infectious_disease
+Cluster Headache	disease	кластерная головная боль	cluster_headache	concept_non_infectious_disease
+Bursitis	disease	бурсит	bursitis	concept_non_infectious_disease
+Lupus Erythematosus, Systemic	disease	системная красная волчанка	systemic_lupus	concept_non_infectious_disease
+Colitis, Ulcerative	disease	язвенный колит	ulcerative_colitis	concept_non_infectious_disease
+Multiple Sclerosis	disease	рассеянный склероз	multiple_sclerosis	concept_non_infectious_disease
+Adrenal Insufficiency	disease	надпочечниковая недостаточность	adrenal_insufficiency	concept_endocrine_disease
+Sarcoidosis	disease	саркоидоз	sarcoidosis	concept_non_infectious_disease
+Psoriasis	disease	псориаз	psoriasis	concept_non_infectious_disease
+Heart Failure	disease	сердечная недостаточность	heart_failure	concept_cardiovascular_disease
+Motion Sickness	disease	болезнь движения	motion_sickness	concept_non_infectious_disease
+Diabetic Ketoacidosis	disease	диабетический кетоацидоз	diabetic_ketoacidosis	concept_endocrine_disease
+# --- симптомы (связь «устраняемый симптом*»)
+Fever	symptom	лихорадка	fever	concept_physical_sign
+Pain	symptom	боль	pain	concept_subjective_symptom
+Postoperative Pain	symptom	боль	pain	concept_subjective_symptom
+Intractable Pain	symptom	боль	pain	concept_subjective_symptom
+Musculoskeletal Pain	symptom	боль	pain	concept_subjective_symptom
+Headache	symptom	головная боль	headache	concept_subjective_symptom
+Dyspnea	symptom	одышка	dyspnea	concept_subjective_symptom
+Nausea	symptom	тошнота	nausea	concept_subjective_symptom
+Vomiting	symptom	рвота	vomiting	concept_physical_sign
+Hyperglycemia	symptom	гипергликемия	hyperglycemia	concept_laboratory_instrumental_sign
+Cough	symptom	кашель	cough	concept_physical_sign
+Pruritus	symptom	кожный зуд	itching	concept_subjective_symptom
+Sneezing	symptom	чихание	sneezing	concept_physical_sign
+Inflammation	symptom	воспаление	inflammation	concept_physical_sign
+Toothache	symptom	зубная боль	toothache	concept_subjective_symptom
+Back Pain	symptom	боль в спине	back_pain	concept_subjective_symptom
+Edema	symptom	отёки	edema	concept_physical_sign
+Hyperkalemia	symptom	гиперкалиемия	hyperkalemia	concept_laboratory_instrumental_sign
+Diarrhea	symptom	диарея	diarrhea	concept_physical_sign
+Bronchial Spasm	symptom	бронхоспазм	bronchospasm	concept_physical_sign

@@ -110,12 +110,21 @@ services:
         condition: service_healthy
     command:
       - "--host=problem-solver"
+    volumes:
+      # ЛР4: кэш ответов openFDA / RxNav (повторные запросы идут без сети)
+      - drug-import-cache:/data
+    environment:
+      - "DRUG_IMPORT_CACHE_DIR=/data/drug-import-cache"
+      - "WIT_ENTITIES_URL=http://wit-local:8095/api/entities"
+      # режим 1 (дозагрузка по запросу) можно выключить: DRUG_IMPORT_ON_DEMAND=0 make up — для регрессии ЛР3
+      - "DRUG_IMPORT_ON_DEMAND=${DRUG_IMPORT_ON_DEMAND:-1}"
     networks:
       - nika
 
 volumes:
   kb-binary: {}
   wit-local-data: {}
+  drug-import-cache: {}
 
 networks:
   nika: {}

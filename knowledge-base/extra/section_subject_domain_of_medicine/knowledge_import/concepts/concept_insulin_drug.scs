@@ -1,0 +1,15 @@
+concept_insulin_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[препарат инсулина] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[insulin preparation] (* <- lang_en;; *);
+=> nrel_idtf:
+	[инсулины] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_hormonal_drug;
+=> nrel_definition:
+	[гормональное средство — инсулин или его аналог; применяется для заместительной терапии сахарного диабета] (* <- lang_ru;; *);
+=> nrel_note:
+	[класс добавлен в ЛР4 для сведений, загружаемых из внешних источников] (* <- lang_ru;; *);;

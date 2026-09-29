@@ -1,0 +1,23 @@
+/* Внешние источники сведений, из которых агенты ЛР4 загружают знания. */
+
+information_source_openfda
+<- concept_information_source;
+=> nrel_main_idtf:
+	[openFDA] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[openFDA] (* <- lang_en;; *);
+=> nrel_definition:
+	[открытый интерфейс Управления по санитарному надзору за качеством пищевых продуктов и медикаментов США; используются база сообщений о нежелательных реакциях FAERS (drug/event) и инструкции (drug/label)] (* <- lang_ru;; *);
+=> nrel_note:
+	[адрес: https://open.fda.gov/apis/] (* <- lang_ru;; *);;
+
+information_source_rxnav
+<- concept_information_source;
+=> nrel_main_idtf:
+	[RxNav] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[RxNav] (* <- lang_en;; *);
+=> nrel_definition:
+	[сервисы Национальной медицинской библиотеки США: RxNorm (нормализация названий), RxClass (классы ATC, показания MED-RT)] (* <- lang_ru;; *);
+=> nrel_note:
+	[адрес: https://rxnav.nlm.nih.gov] (* <- lang_ru;; *);;

@@ -1,0 +1,17 @@
+nrel_symptomatic_treatment
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+=> nrel_main_idtf:
+	[симптоматическое лечение*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[symptomatic treatment*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_drug;
+=> nrel_second_domain:
+	concept_disease;
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее лекарственное средство с заболеванием, симптомы которого оно устраняет (выводится правилом)] (* <- lang_ru;; *);;

@@ -1,0 +1,14 @@
+concept_message_about_drug_class_members
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о препаратах класса лекарственных средств] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about drugs of a drug class] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_drug_class_members];
+<= nrel_inclusion:
+	concept_message_about_drug_knowledge;
+=> nrel_definition:
+	[сообщение, в котором запрашиваются лекарственные средства указанного класса] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Какие препараты относятся к антигистаминным средствам?»] (* <- lang_ru;; *);;

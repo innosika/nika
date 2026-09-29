@@ -1,0 +1,28 @@
+/* Правило: препарат, применяемый в терапии заболевания.
+   Если препарат показан при заболевании, заболевание лечат видом терапии, в котором применяются средства класса препарата, то препарат применяется в этом виде терапии. */
+
+@if_lr_drug_used_in_therapy_1 = [*
+	_drug _=> nrel_indication:: _disease;;
+	_disease _=> nrel_treatment_method:: _therapy;;
+*];;
+@if_lr_drug_used_in_therapy_1 <- atomic_logical_formula;;
+@if_lr_drug_used_in_therapy_2 = [*
+	_therapy _=> nrel_therapy_drug_class:: _therapy_class;;
+	_therapy_class _-> _drug;;
+*];;
+@if_lr_drug_used_in_therapy_2 <- atomic_logical_formula;;
+@and_lr_drug_used_in_therapy = { @if_lr_drug_used_in_therapy_1; @if_lr_drug_used_in_therapy_2 };;
+@and_lr_drug_used_in_therapy <- nrel_conjunction;;
+@then_lr_drug_used_in_therapy = [*
+	_therapy _=> nrel_used_drug:: _drug;;
+*];;
+@then_lr_drug_used_in_therapy <- atomic_logical_formula;;
+@impl_lr_drug_used_in_therapy = (@and_lr_drug_used_in_therapy => @then_lr_drug_used_in_therapy);;
+@impl_lr_drug_used_in_therapy <- nrel_implication;;
+lr_drug_used_in_therapy
+<- concept_drug_knowledge_rule_priority_2;
+=> nrel_main_idtf:
+	[правило: препарат, применяемый в терапии заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[если препарат показан при заболевании, заболевание лечат видом терапии, в котором применяются средства класса препарата, то препарат применяется в этом виде терапии] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_drug_used_in_therapy;;

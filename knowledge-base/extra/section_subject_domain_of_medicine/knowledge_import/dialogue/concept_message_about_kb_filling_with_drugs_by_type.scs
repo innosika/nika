@@ -1,0 +1,12 @@
+concept_message_about_kb_filling_with_drugs_by_type
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о наполнении базы знаний лекарственными средствами заданного типа] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about filling the knowledge base with drugs of a given type] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_message_about_kb_filling_with_drugs;
+=> nrel_definition:
+	[сообщение о наполнении базы знаний, в котором указан класс лекарств или заболевание; класс присваивает агент режима 3] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Наполни базу знаний лекарствами от аллергии»] (* <- lang_ru;; *);;

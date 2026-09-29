@@ -1,0 +1,92 @@
+/* Группы анатомо-терапевтическо-химической классификации (ATC) ВОЗ и соответствующие им классы
+   лекарственных средств. По этим знаниям агенты выбирают, что загружать, и выводят класс препарата. */
+
+atc_group_j01
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[антибактериальные средства системного действия (J01)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[J01];
+=> nrel_corresponding_drug_class:
+	concept_antibiotic;;
+
+atc_group_j04a
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[противотуберкулёзные средства (J04A)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[J04A];
+=> nrel_corresponding_drug_class:
+	concept_antituberculosis_drug;;
+
+atc_group_j05
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[противовирусные средства системного действия (J05)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[J05];
+=> nrel_corresponding_drug_class:
+	concept_antiviral_drug;;
+
+atc_group_n02
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[анальгетики (N02)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[N02];
+=> nrel_corresponding_drug_class:
+	concept_analgesic;;
+
+atc_group_m01a
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[нестероидные противовоспалительные средства (M01A)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[M01A];
+=> nrel_corresponding_drug_class:
+	concept_analgesic;;
+
+atc_group_r06a
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[антигистаминные средства системного действия (R06A)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[R06A];
+=> nrel_corresponding_drug_class:
+	concept_antihistamine_drug;;
+
+atc_group_a10b
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[сахароснижающие средства, кроме инсулинов (A10B)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[A10B];
+=> nrel_corresponding_drug_class:
+	concept_hypoglycemic_drug;;
+
+atc_group_c01d
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[вазодилататоры для лечения заболеваний сердца (C01D)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[C01D];
+=> nrel_corresponding_drug_class:
+	concept_antianginal_drug;;
+
+atc_group_h02a
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[кортикостероиды системного действия (H02A)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[H02A];
+=> nrel_corresponding_drug_class:
+	concept_glucocorticoid;;
+
+atc_group_a10a
+<- concept_atc_group;
+=> nrel_main_idtf:
+	[инсулины и их аналоги (A10A)] (* <- lang_ru;; *);
+=> nrel_atc_code:
+	[A10A];
+=> nrel_corresponding_drug_class:
+	concept_insulin_drug;;

@@ -1,0 +1,17 @@
+concept_antianginal_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[антиангинальное средство] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antianginal drug] (* <- lang_en;; *);
+=> nrel_idtf:
+	[лекарство от стенокардии] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[коронарорасширяющее средство] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_drug;
+=> nrel_definition:
+	[лекарственное средство, устраняющее или предупреждающее приступы стенокардии за счёт расширения сосудов сердца] (* <- lang_ru;; *);
+=> nrel_note:
+	[класс добавлен в ЛР4 для сведений, загружаемых из внешних источников] (* <- lang_ru;; *);;

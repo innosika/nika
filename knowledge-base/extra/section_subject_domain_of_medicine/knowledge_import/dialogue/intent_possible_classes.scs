@@ -1,0 +1,7 @@
+/* Классы сообщений ЛР4, которые может вернуть классификатор. */
+
+concept_intent_possible_class
+-> concept_message_about_kb_filling_with_drugs;
+-> concept_message_about_doctor_prescribed_drugs;
+-> concept_message_about_disease_symptomatic_drugs;
+-> concept_message_about_drug_class_members;;

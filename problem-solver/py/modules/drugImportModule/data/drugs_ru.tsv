@@ -1,0 +1,147 @@
+# Русские названия лекарственных средств (МНН) для имён RxNorm.
+# Порядок строк внутри группы = приоритет при наполнении базы знаний (сначала самые распространённые).
+# Столбцы: имя RxNorm | русское основное название | синонимы и торговые названия через ; | системный идентификатор в БЗ
+# (если препарат уже описан) | имя в openFDA (если отличается от RxNorm)
+# --- уже описанные в БЗ (ЛР1)
+amoxicillin	амоксициллин		amoxicillin
+azithromycin	азитромицин	Сумамед	azithromycin
+oseltamivir	осельтамивир	Тамифлю	oseltamivir
+remdesivir	ремдесивир	Веклури	remdesivir
+ibuprofen	ибупрофен	Нурофен	ibuprofen
+acetaminophen	парацетамол	ацетаминофен;Панадол	paracetamol
+morphine	морфин		morphine
+insulin, regular, human	инсулин	инсулин человеческий	insulin	insulin human
+budesonide	будесонид	Пульмикорт	budesonide
+# --- J01 антибактериальные средства системного действия
+ceftriaxone	цефтриаксон
+clarithromycin	кларитромицин	Клацид
+ciprofloxacin	ципрофлоксацин	Ципролет
+levofloxacin	левофлоксацин
+doxycycline	доксициклин	Юнидокс
+cefuroxime	цефуроксим	Зиннат
+cephalexin	цефалексин
+ampicillin	ампициллин
+clindamycin	клиндамицин	Далацин
+gentamicin	гентамицин
+vancomycin	ванкомицин
+meropenem	меропенем
+moxifloxacin	моксифлоксацин	Авелокс
+erythromycin	эритромицин
+linezolid	линезолид
+nitrofurantoin	нитрофурантоин
+cefixime	цефиксим	Супракс
+tetracycline	тетрациклин
+amikacin	амикацин
+chloramphenicol	хлорамфеникол	левомицетин
+fosfomycin	фосфомицин	Монурал
+# --- J04A противотуберкулёзные средства
+isoniazid	изониазид
+rifampin	рифампицин	рифампин
+ethambutol	этамбутол
+pyrazinamide	пиразинамид
+rifapentine	рифапентин
+bedaquiline	бедаквилин	Сиртуро
+rifabutin	рифабутин
+# --- J05 противовирусные средства системного действия
+acyclovir	ацикловир	Зовиракс
+valacyclovir	валацикловир	Валтрекс
+zanamivir	занамивир	Реленза
+baloxavir marboxil	балоксавир марбоксил	Ксофлюза
+rimantadine	римантадин	Ремантадин
+famciclovir	фамцикловир
+ribavirin	рибавирин
+molnupiravir	молнупиравир
+ganciclovir	ганцикловир
+entecavir	энтекавир
+tenofovir disoproxil	тенофовира дизопроксил
+lamivudine	ламивудин
+sofosbuvir	софосбувир
+zidovudine	зидовудин
+peramivir	перамивир
+# --- N02 анальгетики
+aspirin	ацетилсалициловая кислота	аспирин
+tramadol	трамадол	Трамал
+sumatriptan	суматриптан	Имигран
+fentanyl	фентанил
+oxycodone	оксикодон
+buprenorphine	бупренорфин
+nalbuphine	налбуфин
+tapentadol	тапентадол
+zolmitriptan	золмитриптан
+rizatriptan	ризатриптан
+propyphenazone	пропифеназон
+# --- M01A нестероидные противовоспалительные средства
+diclofenac	диклофенак	Вольтарен
+naproxen	напроксен	Налгезин
+ketorolac	кеторолак	Кеторол
+meloxicam	мелоксикам	Мовалис
+nimesulide	нимесулид	Найз;Нимесил
+ketoprofen	кетопрофен	Кетонал
+celecoxib	целекоксиб	Целебрекс
+indomethacin	индометацин
+piroxicam	пироксикам
+etoricoxib	эторикоксиб	Аркоксиа
+dexketoprofen	декскетопрофен	Дексалгин
+aceclofenac	ацеклофенак	Аэртал
+lornoxicam	лорноксикам	Ксефокам
+# --- R06A антигистаминные средства системного действия
+cetirizine	цетиризин	Зиртек;Зодак
+loratadine	лоратадин	Кларитин
+desloratadine	дезлоратадин	Эриус
+fexofenadine	фексофенадин	Телфаст
+levocetirizine	левоцетиризин	Ксизал
+chloropyramine	хлоропирамин	Супрастин
+diphenhydramine	дифенгидрамин	Димедрол
+clemastine	клемастин	Тавегил
+ebastine	эбастин	Кестин
+dimethindene	диметинден	Фенистил
+chlorpheniramine	хлорфенамин
+ketotifen	кетотифен	Задитен
+promethazine	прометазин	Пипольфен
+mebhydroline	мебгидролин	Диазолин
+cyproheptadine	ципрогептадин	Перитол
+mizolastine	мизоластин	Мизолен
+azelastine	азеластин	Аллергодил
+# --- A10B сахароснижающие средства, кроме инсулинов
+metformin	метформин	Глюкофаж;Сиофор
+gliclazide	гликлазид	Диабетон
+glimepiride	глимепирид	Амарил
+sitagliptin	ситаглиптин	Янувия
+empagliflozin	эмпаглифлозин	Джардинс
+dapagliflozin	дапаглифлозин	Форсига
+vildagliptin	вилдаглиптин	Галвус
+glyburide	глибенкламид	Манинил
+linagliptin	линаглиптин	Тражента
+liraglutide	лираглутид	Виктоза
+semaglutide	семаглутид	Оземпик
+dulaglutide	дулаглутид	Трулисити
+pioglitazone	пиоглитазон
+acarbose	акарбоза	Глюкобай
+repaglinide	репаглинид	НовоНорм
+saxagliptin	саксаглиптин	Онглиза
+alogliptin	алоглиптин
+canagliflozin	канаглифлозин
+glipizide	глипизид
+exenatide	эксенатид	Баета
+# --- C01D вазодилататоры для лечения заболеваний сердца
+nitroglycerin	нитроглицерин
+isosorbide dinitrate	изосорбида динитрат	Кардикет;Изокет
+molsidomine	молсидомин	Корватон
+nicorandil	никорандил
+trapidil	трапидил
+# --- H02A кортикостероиды системного действия
+prednisolone	преднизолон
+dexamethasone	дексаметазон
+prednisone	преднизон
+methylprednisolone	метилпреднизолон	Метипред;Солу-Медрол
+hydrocortisone	гидрокортизон
+betamethasone	бетаметазон	Дипроспан
+triamcinolone	триамцинолон
+fludrocortisone	флудрокортизон
+# --- A10A инсулины и их аналоги
+insulin glargine	инсулин гларгин	Лантус
+insulin lispro	инсулин лизпро	Хумалог
+insulin aspart	инсулин аспарт	НовоРапид
+insulin detemir	инсулин детемир	Левемир
+insulin degludec	инсулин деглудек	Тресиба
+insulin glulisine	инсулин глулизин	Апидра

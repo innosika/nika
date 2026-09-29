@@ -1,0 +1,17 @@
+concept_glucocorticoid
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[глюкокортикостероид] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[glucocorticoid] (* <- lang_en;; *);
+=> nrel_idtf:
+	[глюкокортикоид] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[кортикостероид] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_hormonal_drug;
+=> nrel_definition:
+	[гормональное средство — аналог гормонов коры надпочечников с противовоспалительным и противоаллергическим действием] (* <- lang_ru;; *);
+=> nrel_note:
+	[класс добавлен в ЛР4 для сведений, загружаемых из внешних источников] (* <- lang_ru;; *);;

@@ -1,0 +1,19 @@
+concept_antihistamine_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[антигистаминное средство] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antihistamine drug] (* <- lang_en;; *);
+=> nrel_idtf:
+	[противоаллергическое средство] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[лекарство от аллергии] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[антигистаминный препарат] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_drug;
+=> nrel_definition:
+	[лекарственное средство, блокирующее гистаминовые H1-рецепторы и устраняющее проявления аллергических реакций] (* <- lang_ru;; *);
+=> nrel_note:
+	[класс добавлен в ЛР4 для сведений, загружаемых из внешних источников] (* <- lang_ru;; *);;

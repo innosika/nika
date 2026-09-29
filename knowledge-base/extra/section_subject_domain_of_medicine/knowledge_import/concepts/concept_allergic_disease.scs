@@ -1,0 +1,17 @@
+concept_allergic_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[аллергическое заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[allergic disease] (* <- lang_en;; *);
+=> nrel_idtf:
+	[аллергия] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[аллергическая болезнь] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_non_infectious_disease;
+=> nrel_definition:
+	[неинфекционное заболевание, в основе которого лежит повышенная чувствительность иммунной системы к аллергенам] (* <- lang_ru;; *);
+=> nrel_note:
+	[класс добавлен в ЛР4 для сведений, загружаемых из внешних источников] (* <- lang_ru;; *);;

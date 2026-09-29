@@ -1,0 +1,18 @@
+concept_phrase_about_kb_filling_report
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о наполнении базы знаний: отчёт без новых препаратов] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about KB filling: report] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_knowledge;;
+
+@template_phrase_about_kb_filling_report_1 = [*
+	concept_message _-> _message;;
+	_message _=> nrel_knowledge_import_report:: _report;;
+*];;
+@phrase_about_kb_filling_report_1 = [${_report}];;
+@phrase_about_kb_filling_report_1
+<- lang_ru;
+<- concept_phrase_about_kb_filling_report;
+=> nrel_phrase_template: @template_phrase_about_kb_filling_report_1;;

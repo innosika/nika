@@ -1,0 +1,4 @@
+/* Препараты ЛР1 — дополнительно экземпляры новых подклассов (прежнее членство сохраняется). */
+
+concept_insulin_drug -> insulin;;
+concept_glucocorticoid -> budesonide;;

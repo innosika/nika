@@ -1,0 +1,14 @@
+concept_message_about_doctor_prescribed_drugs
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о препаратах, которые назначает врач] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about drugs prescribed by a doctor] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_doctor_prescribed_drugs];
+<= nrel_inclusion:
+	concept_message_about_drug_knowledge;
+=> nrel_definition:
+	[сообщение, в котором запрашиваются лекарственные средства, назначаемые указанным врачом] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Какие препараты назначает аллерголог?»] (* <- lang_ru;; *);;

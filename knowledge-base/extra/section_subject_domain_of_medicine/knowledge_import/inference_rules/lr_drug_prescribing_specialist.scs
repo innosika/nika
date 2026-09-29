@@ -1,0 +1,21 @@
+/* Правило: врач, назначающий препарат.
+   Если препарат показан при заболевании, а заболеванием занимается профильный врач, то этот врач назначает препарат. */
+
+@if_lr_drug_prescribing_specialist = [*
+	_drug _=> nrel_indication:: _disease;;
+	_disease _=> nrel_specialist:: _doctor;;
+*];;
+@if_lr_drug_prescribing_specialist <- atomic_logical_formula;;
+@then_lr_drug_prescribing_specialist = [*
+	_doctor _=> nrel_prescribed_drug:: _drug;;
+*];;
+@then_lr_drug_prescribing_specialist <- atomic_logical_formula;;
+@impl_lr_drug_prescribing_specialist = (@if_lr_drug_prescribing_specialist => @then_lr_drug_prescribing_specialist);;
+@impl_lr_drug_prescribing_specialist <- nrel_implication;;
+lr_drug_prescribing_specialist
+<- concept_drug_knowledge_rule_priority_2;
+=> nrel_main_idtf:
+	[правило: врач, назначающий препарат] (* <- lang_ru;; *);
+=> nrel_note:
+	[если препарат показан при заболевании, а заболеванием занимается профильный врач, то этот врач назначает препарат] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_drug_prescribing_specialist;;

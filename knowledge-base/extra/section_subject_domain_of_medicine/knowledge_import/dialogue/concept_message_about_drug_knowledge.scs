@@ -1,0 +1,10 @@
+concept_message_about_drug_knowledge
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о знаниях о лекарствах из внешних источников] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about drug knowledge from external sources] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_message;
+=> nrel_definition:
+	[сообщение на медицинскую тему, связанное с загрузкой сведений о лекарствах из внешних источников или со знаниями, выведенными из них (ЛР4)] (* <- lang_ru;; *);;

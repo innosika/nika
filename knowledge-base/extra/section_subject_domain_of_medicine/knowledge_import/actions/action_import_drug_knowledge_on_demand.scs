@@ -1,0 +1,50 @@
+/* Класс действий агента DrugOnDemandImportAgent. */
+action_import_drug_knowledge_on_demand
+<- sc_node_class;
+<- actions_class;
+<- atomic_action_class;
+=> nrel_main_idtf:
+	[действие. дозагрузить сведения о лекарственном средстве по запросу пользователя] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. import drug knowledge on demand] (* <- lang_en;; *);
+<= nrel_inclusion:
+	information_action;
+=> nrel_definition:
+	[действие, в ходе которого агент загружает из внешних источников недостающие сведения о препарате, упомянутом в сообщении пользователя, и погружает их в базу знаний] (* <- lang_ru;; *);;
+
+/* Спецификация абстрактного sc-агента DrugOnDemandImportAgent (Python; автор — Банкевич Я.). */
+@agent_import_drug_knowledge_on_demand_condition = [*
+		action_import_drug_knowledge_on_demand _-> _action;;
+		action_initiated _-> _action;;
+		_action _-> rrel_1:: _message;;
+		concept_message_about_drug_side_effects _-> _message;;
+		_message _-> rrel_entity:: _drug;;
+		concept_drug _-> _drug;;
+*];;
+@agent_import_drug_knowledge_on_demand_result = [*
+		_drug _=> nrel_side_effect:: _side_effect;;
+		_drug _=> nrel_indication:: _disease;;
+		_drug _=> nrel_information_source:: information_source_openfda;;
+		_message _=> nrel_imported_drug:: _drug;;
+		_message _=> nrel_knowledge_import_report:: _report;;
+*];;
+@agent_import_drug_knowledge_on_demand_condition_and_result = (@agent_import_drug_knowledge_on_demand_condition => @agent_import_drug_knowledge_on_demand_result);;
+agent_import_drug_knowledge_on_demand
+<- abstract_sc_agent;
+=> nrel_main_idtf:
+	[агент дозагрузки сведений о лекарственном средстве по запросу пользователя] (* <- lang_ru;; *);
+	[DrugOnDemandImportAgent] (* <- lang_en;; *);
+=> nrel_primary_initiation_condition:
+	(sc_event_after_generate_outgoing_arc => action_initiated);
+=> nrel_sc_agent_action_class:
+	action_import_drug_knowledge_on_demand;
+=> nrel_initiation_condition_and_result:
+	@agent_import_drug_knowledge_on_demand_condition_and_result;
+=> nrel_note:
+	[реализация: problem-solver/py/modules/drugImportModule/DrugOnDemandImportAgent.py] (* <- lang_ru;; *);
+=> nrel_note:
+	[входы: rrel_1 — сообщение пользователя класса «о побочных эффектах», «о показаниях» или «о лекарстве при заболевании» с сущностью-препаратом, у которого нет запрошенных сведений] (* <- lang_ru;; *);
+=> nrel_note:
+	[выходы: в базе знаний — побочные эффекты, показания, устраняемые симптомы, коды и группы ATC препарата, источник сведений; в сообщении — загруженный препарат* и отчёт о загрузке знаний*; инициированное действие вывода новых знаний] (* <- lang_ru;; *);
+=> nrel_note:
+	[процедуры: проверка класса сообщения и сущностей; сопоставление препарата со словарём МНН; параллельные запросы RxNav (rxcui, ATC, MED-RT) и openFDA (FAERS, drug/label); фильтр искажения по показанию по симптомам заболеваний из базы знаний; погружение фактов; вызов агента вывода; отчёт] (* <- lang_ru;; *);;

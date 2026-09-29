@@ -1,0 +1,302 @@
+/* Аллергические заболевания, их симптомы, профильный врач и вид терапии (ЛР4).
+   К этим заболеваниям агент режима 3 подбирает лекарства «от аллергии». */
+
+sneezing
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[чихание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Sneezing] (* <- lang_en;; *);;
+
+rhinorrhea
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[насморк] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Rhinorrhoea] (* <- lang_en;; *);;
+
+nasal_congestion
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[заложенность носа] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Nasal congestion] (* <- lang_en;; *);;
+
+itching
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[кожный зуд] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Pruritus] (* <- lang_en;; *);;
+
+skin_rash
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[кожная сыпь] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Rash] (* <- lang_en;; *);;
+
+eye_redness
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[покраснение глаз] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Ocular hyperaemia] (* <- lang_en;; *);;
+
+eye_itching
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[зуд в глазах] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Eye pruritus] (* <- lang_en;; *);;
+
+lacrimation
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[слезотечение] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Lacrimation] (* <- lang_en;; *);;
+
+edema
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[отёки] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Oedema] (* <- lang_en;; *);;
+
+hypotension
+<- concept_physical_sign;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[артериальная гипотензия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Hypotension] (* <- lang_en;; *);;
+
+arthralgia
+<- concept_subjective_symptom;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[боль в суставах] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Arthralgia] (* <- lang_en;; *);;
+
+allergist
+<- concept_therapeutic_physician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[врач аллерголог-иммунолог] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[allergist] (* <- lang_en;; *);
+=> nrel_idtf:
+	[аллерголог] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[аллерголог-иммунолог] (* <- lang_ru;; *);
+=> nrel_definition:
+	[врач терапевтического профиля, занимающийся диагностикой и лечением аллергических заболеваний] (* <- lang_ru;; *);;
+
+antihistamine_therapy
+<- concept_pathogenetic_therapy;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[антигистаминная терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antihistamine therapy] (* <- lang_en;; *);
+=> nrel_idtf:
+	[противоаллергическая терапия] (* <- lang_ru;; *);
+=> nrel_definition:
+	[патогенетическая терапия аллергических заболеваний антигистаминными средствами] (* <- lang_ru;; *);;
+
+allergic_rhinitis
+<- concept_allergic_disease;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[аллергический ринит] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[allergic rhinitis] (* <- lang_en;; *);
+=> nrel_idtf:
+	[сенная лихорадка] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[поллиноз] (* <- lang_ru;; *);
+=> nrel_definition:
+	[аллергическое воспаление слизистой оболочки носа при контакте с аллергеном — пыльцой, пылью, шерстью животных] (* <- lang_ru;; *);
+=> nrel_icd_code:
+	[J30.4];
+=> nrel_symptom:
+	sneezing;
+=> nrel_symptom:
+	rhinorrhea;
+=> nrel_symptom:
+	nasal_congestion;
+=> nrel_symptom:
+	itching;
+=> nrel_treatment_method:
+	antihistamine_therapy;
+=> nrel_treatment_method:
+	glucocorticoid_therapy;
+=> nrel_specialist:
+	allergist;
+=> nrel_mesh_heading:
+	[Rhinitis, Allergic];
+=> nrel_mesh_heading:
+	[Rhinitis, Allergic, Perennial];
+=> nrel_mesh_heading:
+	[Rhinitis, Allergic, Seasonal];;
+
+urticaria
+<- concept_allergic_disease;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[крапивница] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[urticaria] (* <- lang_en;; *);
+=> nrel_definition:
+	[аллергическое заболевание кожи с появлением зудящих волдырей, похожих на ожог крапивой] (* <- lang_ru;; *);
+=> nrel_icd_code:
+	[L50];
+=> nrel_symptom:
+	skin_rash;
+=> nrel_symptom:
+	itching;
+=> nrel_treatment_method:
+	antihistamine_therapy;
+=> nrel_specialist:
+	allergist;
+=> nrel_mesh_heading:
+	[Urticaria];;
+
+allergic_conjunctivitis
+<- concept_allergic_disease;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[аллергический конъюнктивит] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[allergic conjunctivitis] (* <- lang_en;; *);
+=> nrel_definition:
+	[аллергическое воспаление слизистой оболочки глаз] (* <- lang_ru;; *);
+=> nrel_icd_code:
+	[H10.1];
+=> nrel_symptom:
+	eye_redness;
+=> nrel_symptom:
+	eye_itching;
+=> nrel_symptom:
+	lacrimation;
+=> nrel_treatment_method:
+	antihistamine_therapy;
+=> nrel_specialist:
+	allergist;
+=> nrel_mesh_heading:
+	[Conjunctivitis, Allergic];;
+
+atopic_dermatitis
+<- concept_allergic_disease;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[атопический дерматит] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[atopic dermatitis] (* <- lang_en;; *);
+=> nrel_idtf:
+	[атопическая экзема] (* <- lang_ru;; *);
+=> nrel_definition:
+	[хроническое аллергическое воспаление кожи с зудом, обычно начинающееся в детстве] (* <- lang_ru;; *);
+=> nrel_icd_code:
+	[L20];
+=> nrel_symptom:
+	itching;
+=> nrel_symptom:
+	skin_rash;
+=> nrel_treatment_method:
+	antihistamine_therapy;
+=> nrel_treatment_method:
+	glucocorticoid_therapy;
+=> nrel_specialist:
+	allergist;
+=> nrel_mesh_heading:
+	[Dermatitis, Atopic];;
+
+angioedema
+<- concept_allergic_disease;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[ангионевротический отёк] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[angioedema] (* <- lang_en;; *);
+=> nrel_idtf:
+	[отёк Квинке] (* <- lang_ru;; *);
+=> nrel_definition:
+	[острый аллергический отёк кожи, подкожной клетчатки и слизистых оболочек] (* <- lang_ru;; *);
+=> nrel_icd_code:
+	[T78.3];
+=> nrel_symptom:
+	edema;
+=> nrel_treatment_method:
+	antihistamine_therapy;
+=> nrel_treatment_method:
+	glucocorticoid_therapy;
+=> nrel_specialist:
+	allergist;
+=> nrel_mesh_heading:
+	[Angioedema];;
+
+anaphylaxis
+<- concept_allergic_disease;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[анафилаксия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[anaphylaxis] (* <- lang_en;; *);
+=> nrel_idtf:
+	[анафилактический шок] (* <- lang_ru;; *);
+=> nrel_definition:
+	[острая угрожающая жизни аллергическая реакция немедленного типа] (* <- lang_ru;; *);
+=> nrel_icd_code:
+	[T78.2];
+=> nrel_symptom:
+	hypotension;
+=> nrel_symptom:
+	dyspnea;
+=> nrel_symptom:
+	skin_rash;
+=> nrel_treatment_method:
+	glucocorticoid_therapy;
+=> nrel_treatment_method:
+	antihistamine_therapy;
+=> nrel_specialist:
+	allergist;
+=> nrel_mesh_heading:
+	[Anaphylaxis];;
+
+serum_sickness
+<- concept_allergic_disease;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[сывороточная болезнь] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[serum sickness] (* <- lang_en;; *);
+=> nrel_definition:
+	[аллергическая реакция на введение чужеродных белков — сывороток и некоторых лекарств] (* <- lang_ru;; *);
+=> nrel_icd_code:
+	[T80.6];
+=> nrel_symptom:
+	fever;
+=> nrel_symptom:
+	skin_rash;
+=> nrel_symptom:
+	arthralgia;
+=> nrel_treatment_method:
+	antihistamine_therapy;
+=> nrel_treatment_method:
+	glucocorticoid_therapy;
+=> nrel_specialist:
+	allergist;
+=> nrel_mesh_heading:
+	[Serum Sickness];;

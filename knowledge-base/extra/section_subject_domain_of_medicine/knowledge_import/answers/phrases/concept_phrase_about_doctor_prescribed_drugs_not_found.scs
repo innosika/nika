@@ -1,0 +1,20 @@
+concept_phrase_about_doctor_prescribed_drugs_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о препаратах, которые назначает врач: сведений нет] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about prescribed drugs: not found] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_drug_knowledge;;
+
+@template_phrase_about_doctor_prescribed_drugs_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_about_doctor_prescribed_drugs_not_found_1 = [Пока я не знаю, какие препараты назначает «${_entity_name}». Попросите меня наполнить базу знаний лекарствами — после загрузки из openFDA и RxNav я выведу это сама.];;
+@phrase_about_doctor_prescribed_drugs_not_found_1
+<- lang_ru;
+<- concept_phrase_about_doctor_prescribed_drugs_not_found;
+=> nrel_phrase_template: @template_phrase_about_doctor_prescribed_drugs_not_found_1;;

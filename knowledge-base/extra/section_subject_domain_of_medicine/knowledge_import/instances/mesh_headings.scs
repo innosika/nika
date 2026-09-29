@@ -1,0 +1,54 @@
+/* Рубрики тезауруса MeSH для заболеваний ЛР1: по ним агент режима 3 ищет лекарства,
+   которые по MED-RT применяются при заболевании. Прежние факты ЛР1 не изменяются. */
+
+influenza_a_h1n1
+=> nrel_mesh_heading:
+	[Influenza, Human];;
+
+covid_19
+=> nrel_mesh_heading:
+	[COVID-19];
+=> nrel_mesh_heading:
+	[Coronavirus Infections];;
+
+hepatitis_b
+=> nrel_mesh_heading:
+	[Hepatitis B];
+=> nrel_mesh_heading:
+	[Hepatitis B, Chronic];;
+
+tuberculosis
+=> nrel_mesh_heading:
+	[Tuberculosis];
+=> nrel_mesh_heading:
+	[Tuberculosis, Pulmonary];;
+
+pneumococcal_pneumonia
+=> nrel_mesh_heading:
+	[Pneumonia, Pneumococcal];
+=> nrel_mesh_heading:
+	[Pneumococcal Infections];;
+
+myocardial_infarction
+=> nrel_mesh_heading:
+	[Myocardial Infarction];;
+
+angina_pectoris
+=> nrel_mesh_heading:
+	[Angina Pectoris];
+=> nrel_mesh_heading:
+	[Angina, Stable];
+=> nrel_mesh_heading:
+	[Angina, Unstable];;
+
+type_1_diabetes
+=> nrel_mesh_heading:
+	[Diabetes Mellitus, Type 1];;
+
+type_2_diabetes
+=> nrel_mesh_heading:
+	[Diabetes Mellitus, Type 2];;
+
+bronchial_asthma
+=> nrel_mesh_heading:
+	[Asthma];;

@@ -1,0 +1,21 @@
+/* Правило: симптоматическое лечение заболевания.
+   Если препарат устраняет симптом, который есть у заболевания, то препарат применяется для симптоматического лечения этого заболевания. */
+
+@if_lr_drug_symptomatic_treatment = [*
+	_drug _=> nrel_relieved_symptom:: _symptom;;
+	_disease _=> nrel_symptom:: _symptom;;
+*];;
+@if_lr_drug_symptomatic_treatment <- atomic_logical_formula;;
+@then_lr_drug_symptomatic_treatment = [*
+	_drug _=> nrel_symptomatic_treatment:: _disease;;
+*];;
+@then_lr_drug_symptomatic_treatment <- atomic_logical_formula;;
+@impl_lr_drug_symptomatic_treatment = (@if_lr_drug_symptomatic_treatment => @then_lr_drug_symptomatic_treatment);;
+@impl_lr_drug_symptomatic_treatment <- nrel_implication;;
+lr_drug_symptomatic_treatment
+<- concept_drug_knowledge_rule_priority_2;
+=> nrel_main_idtf:
+	[правило: симптоматическое лечение заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[если препарат устраняет симптом, который есть у заболевания, то препарат применяется для симптоматического лечения этого заболевания] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_drug_symptomatic_treatment;;

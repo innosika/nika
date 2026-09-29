@@ -1,0 +1,48 @@
+/* Класс действий агента DrugKbFillAgent. */
+action_fill_kb_with_drugs
+<- sc_node_class;
+<- actions_class;
+<- atomic_action_class;
+=> nrel_main_idtf:
+	[действие. наполнить базу знаний лекарственными средствами из внешнего источника] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. fill knowledge base with drugs] (* <- lang_en;; *);
+<= nrel_inclusion:
+	information_action;
+=> nrel_definition:
+	[действие, в ходе которого агент загружает из внешних источников распространённые лекарственные средства для классов базы знаний (в первую очередь — классов без экземпляров)] (* <- lang_ru;; *);;
+
+/* Спецификация абстрактного sc-агента DrugKbFillAgent (Python; автор — Сергиевич Д.). */
+@agent_fill_kb_with_drugs_condition = [*
+		action_fill_kb_with_drugs _-> _action;;
+		action_initiated _-> _action;;
+		_action _-> rrel_1:: _message;;
+		concept_message_about_kb_filling_with_drugs _-> _message;;
+*];;
+@agent_fill_kb_with_drugs_result = [*
+		_atc_group _=> nrel_corresponding_drug_class:: _drug_class;;
+		_drug_class _-> _drug;;
+		_drug _=> nrel_atc_group:: _atc_group;;
+		_message _=> nrel_imported_drug:: _drug;;
+		_message _=> nrel_knowledge_import_report:: _report;;
+*];;
+@agent_fill_kb_with_drugs_condition_and_result = (@agent_fill_kb_with_drugs_condition => @agent_fill_kb_with_drugs_result);;
+agent_fill_kb_with_drugs
+<- abstract_sc_agent;
+=> nrel_main_idtf:
+	[агент стартового наполнения базы знаний лекарственными средствами] (* <- lang_ru;; *);
+	[DrugKbFillAgent] (* <- lang_en;; *);
+=> nrel_primary_initiation_condition:
+	(sc_event_after_generate_outgoing_arc => action_initiated);
+=> nrel_sc_agent_action_class:
+	action_fill_kb_with_drugs;
+=> nrel_initiation_condition_and_result:
+	@agent_fill_kb_with_drugs_condition_and_result;
+=> nrel_note:
+	[реализация: problem-solver/py/modules/drugImportModule/DrugKbFillAgent.py] (* <- lang_ru;; *);
+=> nrel_note:
+	[входы: rrel_1 — сообщение класса «о наполнении базы знаний лекарственными средствами» без указания типа] (* <- lang_ru;; *);
+=> nrel_note:
+	[выходы: новые экземпляры лекарственных средств со сведениями; загруженные препараты* и отчёт в сообщении] (* <- lang_ru;; *);
+=> nrel_note:
+	[процедуры: чтение групп ATC и соответствующих им классов из базы знаний; упорядочение классов по числу экземпляров; состав групп из RxClass; выбор распространённых препаратов по словарю; загрузка, погружение и вывод, как у агента режима 1] (* <- lang_ru;; *);;
