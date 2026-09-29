@@ -1,0 +1,15 @@
+concept_immunobiological_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[иммунобиологический препарат] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[immunobiological drug] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_drug;
+=> nrel_inclusion:
+	concept_vaccine;
+=> nrel_definition:
+	[лекарственное средство биологического происхождения, предназначенное для формирования иммунитета или иммунодиагностики - вакцины, сыворотки, иммуноглобулины] (* <- lang_ru;; *);
+=> nrel_note:
+	[иммунобиологические препараты требуют соблюдения «холодовой цепи» при хранении и транспортировке] (* <- lang_ru;; *);;

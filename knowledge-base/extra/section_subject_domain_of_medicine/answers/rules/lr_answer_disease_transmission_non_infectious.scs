@@ -1,0 +1,72 @@
+/* Правило ответа на сообщение о передаче заболевания: неинфекционное заболевание.
+   Если: сообщение о передаче заболевания с выделенной сущностью (конъюнкция) И сущность — неинфекционное заболевание: экземпляр подкласса класса «неинфекционное заболевание» на глубине 1–3 или сам такой подкласс на глубине 1–2 (дизъюнкция пяти цепочек включения).
+   Автор: Сергиевич Д. */
+
+@if_lr_answer_disease_transmission_non_infectious_class_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_disease_class _-> _entity;;
+	concept_non_infectious_disease _=> nrel_inclusion:: _disease_class;;
+*];;
+@if_lr_answer_disease_transmission_non_infectious_class_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_disease_class _-> _entity;;
+	_disease_superclass _=> nrel_inclusion:: _disease_class;;
+	concept_non_infectious_disease _=> nrel_inclusion:: _disease_superclass;;
+*];;
+@if_lr_answer_disease_transmission_non_infectious_class_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_disease_class _-> _entity;;
+	_disease_superclass _=> nrel_inclusion:: _disease_class;;
+	_disease_supersuperclass _=> nrel_inclusion:: _disease_superclass;;
+	concept_non_infectious_disease _=> nrel_inclusion:: _disease_supersuperclass;;
+*];;
+@if_lr_answer_disease_transmission_non_infectious_class_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	concept_non_infectious_disease _=> nrel_inclusion:: _entity;;
+*];;
+@if_lr_answer_disease_transmission_non_infectious_class_5 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	concept_non_infectious_disease _=> nrel_inclusion:: _disease_superclass;;
+	_disease_superclass _=> nrel_inclusion:: _entity;;
+*];;
+@or_lr_answer_disease_transmission_non_infectious = { @if_lr_answer_disease_transmission_non_infectious_class_1; @if_lr_answer_disease_transmission_non_infectious_class_2; @if_lr_answer_disease_transmission_non_infectious_class_3; @if_lr_answer_disease_transmission_non_infectious_class_4; @if_lr_answer_disease_transmission_non_infectious_class_5 };;
+@or_lr_answer_disease_transmission_non_infectious <- nrel_disjunction;;
+@if_lr_answer_disease_transmission_non_infectious_question = [*
+	concept_message _-> _message;;
+	concept_message_about_disease_transmission _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+*];;
+@and_lr_answer_disease_transmission_non_infectious = { @if_lr_answer_disease_transmission_non_infectious_question; @or_lr_answer_disease_transmission_non_infectious };;
+@and_lr_answer_disease_transmission_non_infectious <- nrel_conjunction;;
+@then_lr_answer_disease_transmission_non_infectious = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_disease_transmission _-> _reply_message;;
+*];;
+@if_lr_answer_disease_transmission_non_infectious_class_1 <- atomic_logical_formula;;
+@if_lr_answer_disease_transmission_non_infectious_class_2 <- atomic_logical_formula;;
+@if_lr_answer_disease_transmission_non_infectious_class_3 <- atomic_logical_formula;;
+@if_lr_answer_disease_transmission_non_infectious_class_4 <- atomic_logical_formula;;
+@if_lr_answer_disease_transmission_non_infectious_class_5 <- atomic_logical_formula;;
+@if_lr_answer_disease_transmission_non_infectious_question <- atomic_logical_formula;;
+@then_lr_answer_disease_transmission_non_infectious <- atomic_logical_formula;;
+@impl_lr_answer_disease_transmission_non_infectious = (@and_lr_answer_disease_transmission_non_infectious => @then_lr_answer_disease_transmission_non_infectious);;
+@impl_lr_answer_disease_transmission_non_infectious <- nrel_implication;;
+answer_pattern_lr_answer_disease_transmission_non_infectious
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_disease_transmission_non_infectious;;
+lr_answer_disease_transmission_non_infectious
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о передаче заболевания: неинфекционное заболевание] (* <- lang_ru;; *);
+	[rule of reply to a message about transmission of a disease: non-infectious disease] (* <- lang_en;; *);
+=> nrel_note:
+	[если сообщение о передаче заболевания с выделенной сущностью (конъюнкция) И сущность — неинфекционное заболевание: экземпляр подкласса класса «неинфекционное заболевание» на глубине 1–3 или сам такой подкласс на глубине 1–2 (дизъюнкция пяти цепочек включения); фразы ответа — из класса concept_phrase_about_disease_transmission_non_infectious] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_disease_transmission_non_infectious;
+-> rrel_main_key_sc_element: @impl_lr_answer_disease_transmission_non_infectious;;

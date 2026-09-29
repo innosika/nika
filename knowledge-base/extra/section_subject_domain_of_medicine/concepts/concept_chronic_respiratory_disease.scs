@@ -1,0 +1,13 @@
+concept_chronic_respiratory_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[хроническое заболевание дыхательной системы] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[chronic respiratory disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_non_infectious_disease;
+=> nrel_definition:
+	[неинфекционное заболевание, при котором длительно поражаются дыхательные пути и лёгкие] (* <- lang_ru;; *);
+=> nrel_note:
+	[к хроническим болезням органов дыхания ВОЗ относит бронхиальную астму, хроническую обструктивную болезнь лёгких и профессиональные заболевания лёгких] (* <- lang_ru;; *);;

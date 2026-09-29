@@ -1,0 +1,13 @@
+concept_mrna_vaccine
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[мРНК-вакцина] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[mRNA vaccine] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_vaccine;
+=> nrel_definition:
+	[вакцина, содержащая матричную РНК, кодирующую антиген возбудителя, который синтезируется в клетках вакцинированного] (* <- lang_ru;; *);
+=> nrel_note:
+	[за разработку технологии мРНК-вакцин Каталин Карико и Дрю Вайсман удостоены Нобелевской премии 2023 года] (* <- lang_ru;; *);;

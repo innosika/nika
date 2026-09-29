@@ -1,0 +1,37 @@
+/* Исследуемые отношения предметной области медицины — тоже сущности, о которых можно спросить
+   «Что такое отношение …?». Классы и экземпляры добавлены в concept_wit_entity в ЛР1. */
+
+concept_wit_entity
+-> nrel_symptom;
+-> nrel_syndrome;
+-> nrel_component_symptom;
+-> nrel_pathogen;
+-> nrel_affected_organ;
+-> nrel_complication;
+-> nrel_icd_code;
+-> nrel_incubation_period;
+-> nrel_transmission_route;
+-> nrel_diagnostic_method;
+-> nrel_treatment_method;
+-> nrel_specialist;
+-> nrel_prevention_vaccine;
+-> nrel_used_drug;
+-> nrel_indication;
+-> nrel_side_effect;
+-> nrel_target_pathogen;
+-> nrel_manufacturer;
+-> nrel_organ_system;
+-> nrel_function;
+-> nrel_examined_organ;
+-> nrel_diagnostic_equipment;
+-> nrel_treatment_equipment;
+-> nrel_biomaterial;
+-> nrel_reference_value;
+-> nrel_workplace;
+-> nrel_location;
+-> nrel_discoverer;;
+
+/* Примечание к отношению, общему для разделов «Медицина» и «Космос». */
+nrel_discoverer
+=> nrel_note:
+	[первооткрыватель указывается вместе с годом открытия; если открытие сделано несколькими учёными или коллективом, указываются все] (* <- lang_ru;; *);;

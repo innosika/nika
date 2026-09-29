@@ -1,5 +1,6 @@
 from conan import ConanFile, tools
 from conan.tools.cmake import cmake_layout, CMakeDeps, CMakeToolchain, CMake
+import os
 
 
 class nikaRecipe(ConanFile):
@@ -10,8 +11,12 @@ class nikaRecipe(ConanFile):
         return tools.get_env("CONAN_RUN_TESTS", False)
     
     def requirements(self):
-        self.requires("sc-machine/0.10.4")
-        self.requires("scl-machine/0.3.1")
+        # sc-machine/scl-machine live only on the ostis-ai remote (conan.ostis.net). With
+        # NIKA_OSTIS_DEPS=release they are taken from the GitHub release archives instead
+        # (see Dockerfile), so the build needs conancenter only.
+        if os.environ.get("NIKA_OSTIS_DEPS", "conan") == "conan":
+            self.requires("sc-machine/0.10.4")
+            self.requires("scl-machine/0.3.1")
         self.requires("nlohmann_json/3.11.3")
         self.requires("libcurl/8.11.1")
 

@@ -1,0 +1,15 @@
+concept_nursing_staff
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[средний медицинский работник] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[nursing staff] (* <- lang_en;; *);
+=> nrel_idtf:
+	[средний медицинский персонал] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_medical_worker;
+=> nrel_definition:
+	[медицинский работник со средним специальным медицинским образованием, работающий под руководством врача] (* <- lang_ru;; *);
+=> nrel_note:
+	[к среднему медицинскому персоналу относятся медицинские сёстры, фельдшеры, акушерки, лаборанты] (* <- lang_ru;; *);;

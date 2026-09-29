@@ -1,0 +1,170 @@
+/* Класс ответных фраз «фраза о симптомах заболевания» (автор — Сергиевич Д.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_disease_symptoms
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о симптомах заболевания] (* <- lang_ru;; *);
+	[phrase about symptoms of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_manifestation;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о симптомах заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_disease_symptoms; автор — Сергиевич Д.] (* <- lang_ru;; *);;
+
+concept_phrase_about_disease_symptoms_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о симптомах заболевания: извинение] (* <- lang_ru;; *);
+	[phrase about symptoms of a disease: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_symptoms;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_disease_symptoms_apology_1 = [Простите, что заставила ждать! Сейчас расскажу о симптомах.];;
+@phrase_disease_symptoms_apology_1
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_apology;;
+
+@phrase_disease_symptoms_apology_2 = [Извините за задержку — вот что известно о проявлениях заболевания.];;
+@phrase_disease_symptoms_apology_2
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_apology;;
+
+concept_phrase_about_disease_symptoms_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о симптомах заболевания: сведения есть] (* <- lang_ru;; *);
+	[phrase about symptoms of a disease: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_symptoms;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_disease_symptoms_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_symptom:: _symptom;;
+*];;
+@phrase_disease_symptoms_found_1 = [Симптомы заболевания «${_entity_name}»: $list{_symptom}.];;
+@phrase_disease_symptoms_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_found;
+=> nrel_phrase_template: @template_disease_symptoms_found_1;;
+
+@template_disease_symptoms_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_symptom:: _symptom;;
+*];;
+@phrase_disease_symptoms_found_2 = [При заболевании «${_entity_name}» обычно наблюдаются: $list{_symptom}.];;
+@phrase_disease_symptoms_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_found;
+=> nrel_phrase_template: @template_disease_symptoms_found_2;;
+
+@template_disease_symptoms_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_symptom:: _symptom;;
+*];;
+@phrase_disease_symptoms_found_3 = [Для заболевания «${_entity_name}» характерны такие симптомы: $list{_symptom}.];;
+@phrase_disease_symptoms_found_3
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_found;
+=> nrel_phrase_template: @template_disease_symptoms_found_3;;
+
+@template_disease_symptoms_found_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_syndrome:: _syndrome;;
+	_syndrome _=> nrel_component_symptom:: _component_symptom;;
+*];;
+@phrase_disease_symptoms_found_4 = [Для заболевания «${_entity_name}» характерен синдром: $list{_syndrome}; в него входят симптомы: $list{_component_symptom}.];;
+@phrase_disease_symptoms_found_4
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_found;
+=> nrel_phrase_template: @template_disease_symptoms_found_4;;
+
+concept_phrase_about_disease_symptoms_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о симптомах заболевания: ответ о группе] (* <- lang_ru;; *);
+	[phrase about symptoms of a disease: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_symptoms;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_disease_symptoms_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_symptom:: _symptom;;
+*];;
+@phrase_disease_symptoms_for_group_1 = [К группе «${_entity_name}» относятся заболевания: $list{_instance}. При них встречаются симптомы: $list{_symptom}. Назовите конкретное заболевание — отвечу точнее.];;
+@phrase_disease_symptoms_for_group_1
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_for_group;
+=> nrel_phrase_template: @template_disease_symptoms_for_group_1;;
+
+@template_disease_symptoms_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_symptom:: _symptom;;
+*];;
+@phrase_disease_symptoms_for_group_2 = [Симптомы зависят от конкретного заболевания группы «${_entity_name}» ($list{_instance}). В целом для этой группы характерны: $list{_symptom}.];;
+@phrase_disease_symptoms_for_group_2
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_for_group;
+=> nrel_phrase_template: @template_disease_symptoms_for_group_2;;
+
+concept_phrase_about_disease_symptoms_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о симптомах заболевания: сведений нет] (* <- lang_ru;; *);
+	[phrase about symptoms of a disease: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_symptoms;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_disease_symptoms_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_symptoms_not_found_1 = [В моей базе знаний нет сведений о симптомах для «${_entity_name}».];;
+@phrase_disease_symptoms_not_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_not_found;
+=> nrel_phrase_template: @template_disease_symptoms_not_found_1;;
+
+@template_disease_symptoms_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_symptoms_not_found_2 = [Не могу назвать симптомы для «${_entity_name}»: таких данных в базе знаний нет. Возможно, это не заболевание?];;
+@phrase_disease_symptoms_not_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_symptoms_not_found;
+=> nrel_phrase_template: @template_disease_symptoms_not_found_2;;

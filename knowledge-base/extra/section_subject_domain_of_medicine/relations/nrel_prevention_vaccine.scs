@@ -1,0 +1,45 @@
+nrel_prevention_vaccine
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[вакцина для профилактики*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[preventive vaccine*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_infectious_disease;
+=> nrel_second_domain:
+	concept_vaccine;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_infectious_disease;
+			concept_vaccine
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее инфекционное заболевание с вакциной, применяемой для его специфической профилактики] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (вакцина для профилактики*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Вакцина для профилактики* - бинарное ориентированное отношение, связывающее инфекционное заболевание с вакциной, применяемой для его специфической профилактики.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_infectious_disease;
+			concept_vaccine
+		};;
+	*);;

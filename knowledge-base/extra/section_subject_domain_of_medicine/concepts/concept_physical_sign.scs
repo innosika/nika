@@ -1,0 +1,13 @@
+concept_physical_sign
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[физикальный симптом] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[physical sign] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_objective_symptom;
+=> nrel_definition:
+	[объективный симптом, обнаруживаемый при непосредственном обследовании пациента - осмотре, пальпации, перкуссии, аускультации, термометрии] (* <- lang_ru;; *);
+=> nrel_note:
+	[физикальные симптомы выявляются без применения сложной аппаратуры] (* <- lang_ru;; *);;

@@ -1,0 +1,15 @@
+concept_laboratory_diagnostic_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[лабораторный метод диагностики] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[laboratory diagnostic method] (* <- lang_en;; *);
+=> nrel_idtf:
+	[лабораторный анализ] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_diagnostic_method;
+=> nrel_definition:
+	[метод диагностики, основанный на исследовании биологического материала пациента (крови, мочи, мокроты, мазков) в лабораторных условиях] (* <- lang_ru;; *);
+=> nrel_note:
+	[результат лабораторного исследования сравнивают с референсными значениями, установленными для здоровых людей] (* <- lang_ru;; *);;

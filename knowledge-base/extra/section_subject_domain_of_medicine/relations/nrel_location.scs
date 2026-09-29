@@ -1,0 +1,48 @@
+/* ЛР2: отношение nrel_location уже есть в ядре OSTIS (ims.ostis.kb/to_check/nrel_location.scs)
+   с основными идентификаторами «местоположение*» / «location*». Второй основной идентификатор
+   на русском языке мешал агенту классификации NIKA сопоставлять сущность (он сравнивает текст
+   только с одним основным идентификатором), поэтому «местонахождение*» оставлен как
+   дополнительный идентификатор, а повтор «location*» удалён. */
+nrel_location
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_idtf:
+	[местонахождение*] (* <- lang_ru;; *);
+=> nrel_first_domain:
+	concept_medical_institution;
+=> nrel_second_domain:
+	file;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_medical_institution;
+			file
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее медицинское учреждение с его адресом] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (местонахождение*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Местонахождение* - бинарное ориентированное отношение, связывающее медицинское учреждение с его адресом.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_medical_institution;
+			file
+		};;
+	*);;

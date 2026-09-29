@@ -1,0 +1,17 @@
+concept_ultrasound_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[ультразвуковой метод диагностики] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[ultrasound method] (* <- lang_en;; *);
+=> nrel_idtf:
+	[УЗИ] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[ультразвуковое исследование] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_imaging_method;
+=> nrel_definition:
+	[визуализирующий метод диагностики, основанный на отражении ультразвуковых волн от границ тканей с разной акустической плотностью] (* <- lang_ru;; *);
+=> nrel_note:
+	[ультразвуковое исследование не использует ионизирующее излучение и безопасно для беременных и детей] (* <- lang_ru;; *);;

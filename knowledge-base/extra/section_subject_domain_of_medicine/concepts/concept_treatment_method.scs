@@ -1,0 +1,24 @@
+concept_treatment_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[метод лечения] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[treatment method] (* <- lang_en;; *);
+=> nrel_inclusion:
+	concept_conservative_treatment;
+=> nrel_inclusion:
+	concept_surgical_treatment;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение методов лечения по характеру воздействия] (* <- lang_ru;; *);;
+		-> concept_conservative_treatment;;
+		-> concept_surgical_treatment;;
+	*);
+=> nrel_definition:
+	[способ воздействия на организм пациента с целью устранения заболевания, облегчения его течения или предупреждения осложнений] (* <- lang_ru;; *);
+=> nrel_note:
+	[выбор метода лечения определяется диагнозом, тяжестью состояния пациента и клиническими протоколами] (* <- lang_ru;; *);;

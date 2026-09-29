@@ -1,0 +1,13 @@
+concept_gram_positive_bacterium
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[грамположительная бактерия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[gram-positive bacterium] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_bacterium;
+=> nrel_definition:
+	[бактерия с толстой клеточной стенкой из пептидогликана, окрашивающаяся по методу Грама в сине-фиолетовый цвет] (* <- lang_ru;; *);
+=> nrel_note:
+	[метод дифференциальной окраски бактерий предложен датским учёным Хансом Кристианом Грамом в 1884 году] (* <- lang_ru;; *);;

@@ -1,0 +1,13 @@
+concept_recombinant_vaccine
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[рекомбинантная вакцина] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[recombinant vaccine] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_vaccine;
+=> nrel_definition:
+	[вакцина, антиген которой получен генно-инженерным способом в клетках-продуцентах - дрожжах или бактериях] (* <- lang_ru;; *);
+=> nrel_note:
+	[первой рекомбинантной вакциной стала вакцина против гепатита B (1986 год)] (* <- lang_ru;; *);;

@@ -1,0 +1,13 @@
+concept_non_drug_therapy
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[немедикаментозная терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[non-drug therapy] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_conservative_treatment;
+=> nrel_definition:
+	[консервативное лечение без применения лекарственных средств - физиотерапия, диетотерапия, лечебная физкультура, аппаратная поддержка жизненных функций] (* <- lang_ru;; *);
+=> nrel_note:
+	[немедикаментозные методы широко применяются в реабилитации] (* <- lang_ru;; *);;

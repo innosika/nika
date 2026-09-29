@@ -1,0 +1,15 @@
+concept_diabetes_mellitus
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[сахарный диабет] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[diabetes mellitus] (* <- lang_en;; *);
+=> nrel_idtf:
+	[диабет] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_endocrine_disease;
+=> nrel_definition:
+	[эндокринное заболевание, характеризующееся хронической гипергликемией вследствие абсолютной или относительной недостаточности инсулина] (* <- lang_ru;; *);
+=> nrel_note:
+	[диагноз устанавливается при уровне глюкозы плазмы натощак 7,0 ммоль/л и выше или при уровне гликированного гемоглобина HbA1c 6,5 % и выше] (* <- lang_ru;; *);;

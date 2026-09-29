@@ -1,0 +1,45 @@
+nrel_target_pathogen
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[возбудитель-мишень*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[target pathogen*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_antimicrobial_drug;
+=> nrel_second_domain:
+	concept_pathogen;
+=> nrel_definitional_domain:
+	...
+	(*
+		<= nrel_combination:
+		{
+			concept_antimicrobial_drug;
+			concept_pathogen
+		};;
+	*);
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее противомикробное средство с возбудителем, на который оно действует] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (возбудитель-мишень*)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Возбудитель-мишень* - бинарное ориентированное отношение, связывающее противомикробное средство с возбудителем, на который оно действует.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_antimicrobial_drug;
+			concept_pathogen
+		};;
+	*);;

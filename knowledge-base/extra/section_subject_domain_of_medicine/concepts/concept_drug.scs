@@ -1,0 +1,34 @@
+concept_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[лекарственное средство] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[drug] (* <- lang_en;; *);
+=> nrel_idtf:
+	[лекарство] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[лекарственный препарат] (* <- lang_ru;; *);
+=> nrel_inclusion:
+	concept_antimicrobial_drug;
+=> nrel_inclusion:
+	concept_analgesic;
+=> nrel_inclusion:
+	concept_hormonal_drug;
+=> nrel_inclusion:
+	concept_immunobiological_drug;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение лекарственных средств по фармакотерапевтической группе] (* <- lang_ru;; *);;
+		-> concept_antimicrobial_drug;;
+		-> concept_analgesic;;
+		-> concept_hormonal_drug;;
+		-> concept_immunobiological_drug;;
+	*);
+=> nrel_definition:
+	[вещество или комбинация веществ, применяемые для профилактики, диагностики и лечения заболеваний] (* <- lang_ru;; *);
+=> nrel_note:
+	[в Республике Беларусь обращение лекарственных средств регулируется Законом «О лекарственных средствах»] (* <- lang_ru;; *);;

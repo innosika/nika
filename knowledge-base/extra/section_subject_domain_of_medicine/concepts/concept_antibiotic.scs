@@ -1,0 +1,15 @@
+concept_antibiotic
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[антибиотик] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antibiotic] (* <- lang_en;; *);
+=> nrel_idtf:
+	[антибактериальное средство] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_antimicrobial_drug;
+=> nrel_definition:
+	[противомикробное средство природного, полусинтетического или синтетического происхождения, подавляющее рост бактерий или вызывающее их гибель] (* <- lang_ru;; *);
+=> nrel_note:
+	[первый антибиотик - пенициллин - открыт Александром Флемингом в 1928 году] (* <- lang_ru;; *);;

@@ -1,0 +1,33 @@
+/* Правило ответа на сообщение о лечении заболевания: вопрос о группе.
+   Если: сообщение о лечении заболевания, выделенная сущность — класс, у экземпляра которого есть связь «метод лечения*».
+   Автор: Рублевская Е. */
+
+@if_lr_answer_disease_treatment_for_group = [*
+	concept_message _-> _message;;
+	concept_message_about_disease_treatment _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _-> _instance;;
+	_instance _=> nrel_treatment_method:: _treatment;;
+*];;
+@then_lr_answer_disease_treatment_for_group = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_disease_treatment _-> _reply_message;;
+*];;
+@if_lr_answer_disease_treatment_for_group <- atomic_logical_formula;;
+@then_lr_answer_disease_treatment_for_group <- atomic_logical_formula;;
+@impl_lr_answer_disease_treatment_for_group = (@if_lr_answer_disease_treatment_for_group => @then_lr_answer_disease_treatment_for_group);;
+@impl_lr_answer_disease_treatment_for_group <- nrel_implication;;
+answer_pattern_lr_answer_disease_treatment_for_group
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_disease_treatment_for_group;;
+lr_answer_disease_treatment_for_group
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о лечении заболевания: вопрос о группе] (* <- lang_ru;; *);
+	[rule of reply to a message about treatment of a disease: question about a group] (* <- lang_en;; *);
+=> nrel_note:
+	[если сообщение о лечении заболевания, выделенная сущность — класс, у экземпляра которого есть связь «метод лечения*»; фразы ответа — из класса concept_phrase_about_disease_treatment_for_group] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_disease_treatment_for_group;
+-> rrel_main_key_sc_element: @impl_lr_answer_disease_treatment_for_group;;

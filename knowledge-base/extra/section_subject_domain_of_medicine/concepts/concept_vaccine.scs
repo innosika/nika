@@ -1,0 +1,32 @@
+concept_vaccine
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[вакцина] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[vaccine] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_immunobiological_drug;
+=> nrel_inclusion:
+	concept_live_vaccine;
+=> nrel_inclusion:
+	concept_inactivated_vaccine;
+=> nrel_inclusion:
+	concept_mrna_vaccine;
+=> nrel_inclusion:
+	concept_recombinant_vaccine;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение вакцин по типу антигена] (* <- lang_ru;; *);;
+		-> concept_live_vaccine;;
+		-> concept_inactivated_vaccine;;
+		-> concept_mrna_vaccine;;
+		-> concept_recombinant_vaccine;;
+	*);
+=> nrel_definition:
+	[иммунобиологический препарат, содержащий антигены возбудителя и предназначенный для создания активного иммунитета против инфекционного заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[первая вакцина создана Эдвардом Дженнером в 1796 году против натуральной оспы] (* <- lang_ru;; *);;

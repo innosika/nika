@@ -1,0 +1,26 @@
+/* Раздел базы знаний ЛР2 (вариант «Медицина»): классы сообщений на медицинскую тему
+   и правила их классификации. */
+
+section_medical_messages
+=> nrel_main_idtf:
+	[Раздел. Классы сообщений на медицинскую тему] (* <- lang_ru;; *);
+	[Section. Classes of messages on a medical topic] (* <- lang_en;; *);
+<- atomic_section;
+-> rrel_key_sc_element:
+	concept_medical_message;
+	concept_message_about_disease_manifestation;
+	concept_message_about_medical_care;
+	concept_message_about_drug;
+	concept_message_about_disease_symptoms;
+	concept_message_about_disease_pathogen;
+	concept_message_about_disease_transmission;
+	concept_message_about_disease_diagnostics;
+	concept_message_about_disease_treatment;
+	concept_message_about_disease_specialist;
+	concept_message_about_drug_indications;
+	concept_message_about_drug_side_effects;
+	concept_message_about_drug_for_disease;
+	lr_classify_medical_greeting_message;
+	lr_classify_known_diseases_message;
+	lr_classify_known_drugs_message;
+	lr_classify_known_doctors_message;;

@@ -1,0 +1,13 @@
+concept_live_vaccine
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[живая вакцина] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[live attenuated vaccine] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_vaccine;
+=> nrel_definition:
+	[вакцина, содержащая ослабленные (аттенуированные) живые микроорганизмы, утратившие вирулентность, но сохранившие иммуногенность] (* <- lang_ru;; *);
+=> nrel_note:
+	[живые вакцины противопоказаны при выраженном иммунодефиците] (* <- lang_ru;; *);;

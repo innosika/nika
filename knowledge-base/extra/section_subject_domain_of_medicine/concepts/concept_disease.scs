@@ -1,0 +1,26 @@
+concept_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[disease] (* <- lang_en;; *);
+=> nrel_idtf:
+	[болезнь] (* <- lang_ru;; *);
+=> nrel_inclusion:
+	concept_infectious_disease;
+=> nrel_inclusion:
+	concept_non_infectious_disease;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение заболеваний по этиологии] (* <- lang_ru;; *);;
+		-> concept_infectious_disease;;
+		-> concept_non_infectious_disease;;
+	*);
+=> nrel_definition:
+	[нарушение нормальной жизнедеятельности организма, обусловленное функциональными или морфологическими изменениями и проявляющееся определёнными симптомами] (* <- lang_ru;; *);
+=> nrel_note:
+	[в Международной классификации болезней 10-го пересмотра (МКБ-10) каждому заболеванию присвоен буквенно-цифровой код] (* <- lang_ru;; *);;

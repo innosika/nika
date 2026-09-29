@@ -1,0 +1,13 @@
+concept_gram_negative_bacterium
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[грамотрицательная бактерия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[gram-negative bacterium] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_bacterium;
+=> nrel_definition:
+	[бактерия с тонкой клеточной стенкой и дополнительной наружной мембраной, окрашивающаяся по методу Грама в красный цвет] (* <- lang_ru;; *);
+=> nrel_note:
+	[наружная мембрана грамотрицательных бактерий содержит липополисахарид (эндотоксин) и затрудняет проникновение многих антибиотиков] (* <- lang_ru;; *);;

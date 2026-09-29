@@ -1,0 +1,26 @@
+concept_instrumental_diagnostic_method
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[инструментальный метод диагностики] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[instrumental diagnostic method] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_diagnostic_method;
+=> nrel_inclusion:
+	concept_imaging_method;
+=> nrel_inclusion:
+	concept_functional_diagnostic_method;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение инструментальных методов по виду получаемых данных] (* <- lang_ru;; *);;
+		-> concept_imaging_method;;
+		-> concept_functional_diagnostic_method;;
+	*);
+=> nrel_definition:
+	[метод диагностики, при котором для получения информации о состоянии организма используются технические устройства и аппараты] (* <- lang_ru;; *);
+=> nrel_note:
+	[инструментальные методы позволяют получить изображение органов либо зарегистрировать показатели их работы] (* <- lang_ru;; *);;

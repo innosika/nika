@@ -1,0 +1,59 @@
+/* Правило ответа на сообщение о применимости лекарственного средства при заболевании: извинение перед ответом на грубое сообщение.
+   Если: то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями.
+   Автор: Банкевич Я. */
+
+@if_lr_answer_drug_for_disease_apology_1 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_drug _=> nrel_indication:: _disease;;
+	concept_message _-> _message;;
+	concept_message_about_drug_for_disease _-> _message;;
+	concept_message_with_negative_emotion_coloring _-> _message;;
+*];;
+@if_lr_answer_drug_for_disease_apology_2 = [*
+	_message _-> rrel_entity:: _drug;;
+	_message _-> rrel_entity:: _disease;;
+	_disease _=> nrel_treatment_method:: _treatment;;
+	_treatment _=> nrel_used_drug:: _drug;;
+	concept_message _-> _message;;
+	concept_message_about_drug_for_disease _-> _message;;
+	concept_message_with_negative_emotion_coloring _-> _message;;
+*];;
+@or_lr_answer_drug_for_disease_apology = { @if_lr_answer_drug_for_disease_apology_1; @if_lr_answer_drug_for_disease_apology_2 };;
+@or_lr_answer_drug_for_disease_apology <- nrel_disjunction;;
+@then_lr_answer_drug_for_disease_apology = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_non_atomic_message _-> _reply_message;;
+	concept_message_about_drug_for_disease _-> _reply_message;;
+	_reply_decomposition _=> nrel_message_decomposition:: _reply_message;;
+	@reply_part_arc_1_lr_answer_drug_for_disease_apology = (_reply_decomposition _-> _reply_part_1);;
+	rrel_1 _-> @reply_part_arc_1_lr_answer_drug_for_disease_apology;;
+	@reply_part_arc_2_lr_answer_drug_for_disease_apology = (_reply_decomposition _-> _reply_part_2);;
+	@reply_parts_order_lr_answer_drug_for_disease_apology = (@reply_part_arc_1_lr_answer_drug_for_disease_apology _=> @reply_part_arc_2_lr_answer_drug_for_disease_apology);;
+	nrel_message_sequence _-> @reply_parts_order_lr_answer_drug_for_disease_apology;;
+	concept_atomic_message _-> _reply_part_1;;
+	concept_atomic_message _-> _reply_part_2;;
+*];;
+@if_lr_answer_drug_for_disease_apology_1 <- atomic_logical_formula;;
+@if_lr_answer_drug_for_disease_apology_2 <- atomic_logical_formula;;
+@then_lr_answer_drug_for_disease_apology <- atomic_logical_formula;;
+_reply_decomposition <- sc_node_tuple;;
+@impl_lr_answer_drug_for_disease_apology = (@or_lr_answer_drug_for_disease_apology => @then_lr_answer_drug_for_disease_apology);;
+@impl_lr_answer_drug_for_disease_apology <- nrel_implication;;
+answer_pattern_lr_answer_drug_for_disease_apology
+<- sc_node_tuple;;
+@pattern_arc_1_lr_answer_drug_for_disease_apology = (answer_pattern_lr_answer_drug_for_disease_apology -> concept_phrase_about_drug_for_disease_apology);;
+rrel_1 -> @pattern_arc_1_lr_answer_drug_for_disease_apology;;
+@pattern_arc_2_lr_answer_drug_for_disease_apology = (answer_pattern_lr_answer_drug_for_disease_apology -> concept_phrase_about_drug_for_disease_found);;
+@pattern_order_lr_answer_drug_for_disease_apology = (@pattern_arc_1_lr_answer_drug_for_disease_apology => @pattern_arc_2_lr_answer_drug_for_disease_apology);;
+nrel_basic_sequence -> @pattern_order_lr_answer_drug_for_disease_apology;;
+lr_answer_drug_for_disease_apology
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_1;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о применимости лекарственного средства при заболевании: извинение перед ответом на грубое сообщение] (* <- lang_ru;; *);
+	[rule of reply to a message about applicability of a drug for a disease: apology before a reply to a rude message] (* <- lang_en;; *);
+=> nrel_note:
+	[если то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями; фразы ответа — из классов concept_phrase_about_drug_for_disease_apology, concept_phrase_about_drug_for_disease_found] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_drug_for_disease_apology;
+-> rrel_main_key_sc_element: @impl_lr_answer_drug_for_disease_apology;;

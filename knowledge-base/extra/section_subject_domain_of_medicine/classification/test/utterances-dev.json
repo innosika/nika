@@ -1,0 +1,1472 @@
+{
+  "utterances": [
+    {
+      "text": "А как понять что это именно ковид?",
+      "intent": "about_disease_symptoms",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 33,
+          "body": "ковид",
+          "value": "COVID-19",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что болит при стенокардии?",
+      "intent": "about_disease_symptoms",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 25,
+          "body": "стенокардии",
+          "value": "стенокардия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "перечисли симптомы туберкулеза",
+      "intent": "about_disease_symptoms",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 30,
+          "body": "туберкулеза",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие признаки у свиного гриппа?",
+      "intent": "about_disease_symptoms",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 31,
+          "body": "свиного гриппа",
+          "value": "грипп A(H1N1)",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как выглядит приступ бронхиальной астмы?",
+      "intent": "about_disease_symptoms",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 39,
+          "body": "бронхиальной астмы",
+          "value": "бронхиальная астма",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, пожалуйста, как проявляется сахарный диабет 2-го типа?",
+      "intent": "about_disease_symptoms",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 40,
+          "end": 65,
+          "body": "сахарный диабет 2-го типа",
+          "value": "сахарный диабет 2-го типа",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие симптомы при пневмококковой пневмонии",
+      "intent": "about_disease_symptoms",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 19,
+          "end": 43,
+          "body": "пневмококковой пневмонии",
+          "value": "пневмококковая пневмония",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какой вирус вызывает COVID-19?",
+      "intent": "about_disease_pathogen",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 29,
+          "body": "COVID-19",
+          "value": "COVID-19",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто виноват в туберкулёзе?",
+      "intent": "about_disease_pathogen",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 25,
+          "body": "туберкулёзе",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Чем вызвана пневмококковая пневмония?",
+      "intent": "about_disease_pathogen",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 12,
+          "end": 36,
+          "body": "пневмококковая пневмония",
+          "value": "пневмококковая пневмония",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "что за возбудитель у гепатита B",
+      "intent": "about_disease_pathogen",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 31,
+          "body": "гепатита B",
+          "value": "вирусный гепатит B",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая бактерия вызывает туберкулез",
+      "intent": "about_disease_pathogen",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 24,
+          "end": 34,
+          "body": "туберкулез",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Ну и какой микроб вызывает грипп A(H1N1)?",
+      "intent": "about_disease_pathogen",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 40,
+          "body": "грипп A(H1N1)",
+          "value": "грипп A(H1N1)",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Как заражаются туберкулёзом?",
+      "intent": "about_disease_transmission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 27,
+          "body": "туберкулёзом",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Можно ли подхватить ковид через рукопожатие?",
+      "intent": "about_disease_transmission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 25,
+          "body": "ковид",
+          "value": "COVID-19",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько дней инкубационный период у гриппа A(H1N1)?",
+      "intent": "about_disease_transmission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 36,
+          "end": 50,
+          "body": "гриппа A(H1N1)",
+          "value": "грипп A(H1N1)",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Каким образом передаётся гепатит B?",
+      "intent": "about_disease_transmission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 25,
+          "end": 34,
+          "body": "гепатит B",
+          "value": "вирусный гепатит B",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "как распространяется пневмококковая пневмония",
+      "intent": "about_disease_transmission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 45,
+          "body": "пневмококковая пневмония",
+          "value": "пневмококковая пневмония",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Скажите, пожалуйста, заразен ли туберкулёз?",
+      "intent": "about_disease_transmission",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 32,
+          "end": 42,
+          "body": "туберкулёз",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какое обследование нужно, чтобы найти туберкулёз?",
+      "intent": "about_disease_diagnostics",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 38,
+          "end": 48,
+          "body": "туберкулёз",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие анализы сдают на ковид?",
+      "intent": "about_disease_diagnostics",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 23,
+          "end": 28,
+          "body": "ковид",
+          "value": "COVID-19",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как выявляют сахарный диабет 1-го типа?",
+      "intent": "about_disease_diagnostics",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 38,
+          "body": "сахарный диабет 1-го типа",
+          "value": "сахарный диабет 1-го типа",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "как узнать есть ли у меня стенокардия",
+      "intent": "about_disease_diagnostics",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 37,
+          "body": "стенокардия",
+          "value": "стенокардия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие исследования делают при подозрении на инфаркт миокарда?",
+      "intent": "about_disease_diagnostics",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 44,
+          "end": 60,
+          "body": "инфаркт миокарда",
+          "value": "инфаркт миокарда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как обнаружить бронхиальную астму?",
+      "intent": "about_disease_diagnostics",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 33,
+          "body": "бронхиальную астму",
+          "value": "бронхиальная астма",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Чем вылечить ковид?",
+      "intent": "about_disease_treatment",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 18,
+          "body": "ковид",
+          "value": "COVID-19",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какая терапия помогает при бронхиальной астме?",
+      "intent": "about_disease_treatment",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 45,
+          "body": "бронхиальной астме",
+          "value": "бронхиальная астма",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Как лечится туберкулёз?",
+      "intent": "about_disease_treatment",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 12,
+          "end": 22,
+          "body": "туберкулёз",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что делают при инфаркте миокарда, чтобы спасти человека?",
+      "intent": "about_disease_treatment",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 32,
+          "body": "инфаркте миокарда",
+          "value": "инфаркт миокарда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "как лечат сахарный диабет 1-го типа",
+      "intent": "about_disease_treatment",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 35,
+          "body": "сахарный диабет 1-го типа",
+          "value": "сахарный диабет 1-го типа",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Отвечай уже, как лечить пневмококковую пневмонию?",
+      "intent": "about_disease_treatment",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 24,
+          "end": 48,
+          "body": "пневмококковую пневмонию",
+          "value": "пневмококковая пневмония",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "negative"
+        }
+      ]
+    },
+    {
+      "text": "Кто из докторов лечит астму?",
+      "intent": "about_disease_specialist",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 27,
+          "body": "астму",
+          "value": "бронхиальная астма",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "К кому записаться, если подозреваю туберкулёз?",
+      "intent": "about_disease_specialist",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 45,
+          "body": "туберкулёз",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "какой врач занимается сахарным диабетом 2-го типа",
+      "intent": "about_disease_specialist",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 49,
+          "body": "сахарным диабетом 2-го типа",
+          "value": "сахарный диабет 2-го типа",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто лечит инфаркт?",
+      "intent": "about_disease_specialist",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 17,
+          "body": "инфаркт",
+          "value": "инфаркт миокарда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "К какому специалисту идти при гепатите B?",
+      "intent": "about_disease_specialist",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 30,
+          "end": 40,
+          "body": "гепатите B",
+          "value": "вирусный гепатит B",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Будьте добры, подскажите врача при стенокардии",
+      "intent": "about_disease_specialist",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 46,
+          "body": "стенокардии",
+          "value": "стенокардия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "От чего пьют парацетамол?",
+      "intent": "about_drug_indications",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 24,
+          "body": "парацетамол",
+          "value": "парацетамол",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Зачем нужен инсулин?",
+      "intent": "about_drug_indications",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 12,
+          "end": 19,
+          "body": "инсулин",
+          "value": "инсулин",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Когда применяется азитромицин?",
+      "intent": "about_drug_indications",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 29,
+          "body": "азитромицин",
+          "value": "азитромицин",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "для чего используют Тамифлю",
+      "intent": "about_drug_indications",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 27,
+          "body": "Тамифлю",
+          "value": "осельтамивир",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "От каких болезней защищает вакцина БЦЖ?",
+      "intent": "about_drug_indications",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 38,
+          "body": "вакцина БЦЖ",
+          "value": "БЦЖ",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Против каких заболеваний применяют будесонид?",
+      "intent": "about_drug_indications",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 35,
+          "end": 44,
+          "body": "будесонид",
+          "value": "будесонид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие побочные действия бывают у ибупрофена?",
+      "intent": "about_drug_side_effects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 43,
+          "body": "ибупрофена",
+          "value": "ибупрофен",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Чем может навредить амоксициллин?",
+      "intent": "about_drug_side_effects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 32,
+          "body": "амоксициллин",
+          "value": "амоксициллин",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "какие побочки у ремдесивира",
+      "intent": "about_drug_side_effects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 27,
+          "body": "ремдесивира",
+          "value": "ремдесивир",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Опасен ли морфин?",
+      "intent": "about_drug_side_effects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 16,
+          "body": "морфин",
+          "value": "морфин",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что будет, если долго пить Нурофен?",
+      "intent": "about_drug_side_effects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 34,
+          "body": "Нурофен",
+          "value": "ибупрофен",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, пожалуйста, побочные эффекты осельтамивира",
+      "intent": "about_drug_side_effects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 41,
+          "end": 54,
+          "body": "осельтамивира",
+          "value": "осельтамивир",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Поможет ли амоксициллин при пневмококковой пневмонии?",
+      "intent": "about_drug_for_disease",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 23,
+          "body": "амоксициллин",
+          "value": "амоксициллин",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 52,
+          "body": "пневмококковой пневмонии",
+          "value": "пневмококковая пневмония",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Можно ли пить ибупрофен при гриппе A(H1N1)?",
+      "intent": "about_drug_for_disease",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 23,
+          "body": "ибупрофен",
+          "value": "ибупрофен",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 42,
+          "body": "гриппе A(H1N1)",
+          "value": "грипп A(H1N1)",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Лечат ли туберкулёз азитромицином?",
+      "intent": "about_drug_for_disease",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 9,
+          "end": 19,
+          "body": "туберкулёз",
+          "value": "туберкулёз",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 33,
+          "body": "азитромицином",
+          "value": "азитромицин",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "ремдесивир помогает при ковиде?",
+      "intent": "about_drug_for_disease",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 0,
+          "end": 10,
+          "body": "ремдесивир",
+          "value": "ремдесивир",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 24,
+          "end": 30,
+          "body": "ковиде",
+          "value": "COVID-19",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужен ли инсулин при сахарном диабете 2-го типа?",
+      "intent": "about_drug_for_disease",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 9,
+          "end": 16,
+          "body": "инсулин",
+          "value": "инсулин",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 47,
+          "body": "сахарном диабете 2-го типа",
+          "value": "сахарный диабет 2-го типа",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подойдёт ли будесонид от бронхиальной астмы?",
+      "intent": "about_drug_for_disease",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 12,
+          "end": 21,
+          "body": "будесонид",
+          "value": "будесонид",
+          "entities": []
+        },
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 25,
+          "end": 43,
+          "body": "бронхиальной астмы",
+          "value": "бронхиальная астма",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что такое гипергликемия?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 23,
+          "body": "гипергликемия",
+          "value": "гипергликемия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Кто такой фтизиатр?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 18,
+          "body": "фтизиатр",
+          "value": "фтизиатр",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что значит лейкоцитоз?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 21,
+          "body": "лейкоцитоз",
+          "value": "лейкоцитоз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Расскажи про поджелудочную железу",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 33,
+          "body": "поджелудочную железу",
+          "value": "поджелудочная железа",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "что такое ЭКГ",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 13,
+          "body": "ЭКГ",
+          "value": "электрокардиография",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что ты знаешь о палочке Коха?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 28,
+          "body": "палочке Коха",
+          "value": "микобактерия туберкулёза",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Объясни, что означает этиотропная терапия",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 41,
+          "body": "этиотропная терапия",
+          "value": "этиотропная терапия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что такое отношение симптом?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 27,
+          "body": "отношение симптом",
+          "value": "симптом*",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что такое туберкулоз?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 20,
+          "body": "туберкулоз",
+          "value": "туберкулёз",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что такое РНПЦ «Кардиология»?",
+      "intent": "about_entity",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 28,
+          "body": "РНПЦ «Кардиология»",
+          "value": "РНПЦ «Кардиология»",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие бывают вирусы?",
+      "intent": "subdividing",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 19,
+          "body": "вирусы",
+          "value": "вирус",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "На какие группы делятся заболевания?",
+      "intent": "subdividing",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 24,
+          "end": 35,
+          "body": "заболевания",
+          "value": "заболевание",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какими бывают вакцины?",
+      "intent": "subdividing",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 14,
+          "end": 21,
+          "body": "вакцины",
+          "value": "вакцина",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "какие виды симптомов существуют",
+      "intent": "subdividing",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 20,
+          "body": "симптомов",
+          "value": "симптом",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "На какие типы подразделяются методы лечения?",
+      "intent": "subdividing",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 43,
+          "body": "методы лечения",
+          "value": "метод лечения",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Сколько стоит приём у стоматолога?",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Мне грустно сегодня",
+      "entities": [],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    }
+  ]
+}

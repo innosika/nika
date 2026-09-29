@@ -1,0 +1,31 @@
+concept_pharmacotherapy
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[медикаментозная терапия] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[pharmacotherapy] (* <- lang_en;; *);
+=> nrel_idtf:
+	[фармакотерапия] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_conservative_treatment;
+=> nrel_inclusion:
+	concept_etiotropic_therapy;
+=> nrel_inclusion:
+	concept_pathogenetic_therapy;
+=> nrel_inclusion:
+	concept_symptomatic_therapy;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение медикаментозной терапии по направленности действия] (* <- lang_ru;; *);;
+		-> concept_etiotropic_therapy;;
+		-> concept_pathogenetic_therapy;;
+		-> concept_symptomatic_therapy;;
+	*);
+=> nrel_definition:
+	[консервативное лечение с помощью лекарственных средств] (* <- lang_ru;; *);
+=> nrel_note:
+	[по направленности действия медикаментозную терапию делят на этиотропную, патогенетическую и симптоматическую] (* <- lang_ru;; *);;

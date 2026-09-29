@@ -1,0 +1,32 @@
+concept_message_about_disease_pathogen
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о возбудителе заболевания] (* <- lang_ru;; *);
+	[message about disease pathogen] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_disease_pathogen];
+<= nrel_inclusion:
+	concept_message_about_disease_manifestation;
+=> nrel_definition:
+	[сообщение о проявлениях и распространении заболевания, в котором запрашивается возбудитель (причина) указанного заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Что вызывает туберкулёз?»; выделяемые сущности (роль rrel_entity): заболевание] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о возбудителе заболевания)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о возбудителе заболевания - сообщение о проявлениях и распространении заболевания, в котором запрашивается возбудитель (причина) указанного заболевания.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_disease_manifestation;
+			nrel_pathogen;
+			rrel_entity
+		};;
+	*);;

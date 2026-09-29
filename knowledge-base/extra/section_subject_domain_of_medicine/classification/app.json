@@ -1,0 +1,6 @@
+{
+  "name": "nika_medicine",
+  "lang": "ru",
+  "private": true,
+  "description": "Экспорт обучающих данных локального Wit.ai-совместимого классификатора"
+}

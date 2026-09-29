@@ -1,0 +1,13 @@
+concept_hollow_organ
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[полый орган] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[hollow organ] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_organ;
+=> nrel_definition:
+	[орган, имеющий внутри полость, стенка которого состоит из слизистой, мышечной и наружной оболочек] (* <- lang_ru;; *);
+=> nrel_note:
+	[к полым органам относятся сердце, желудок, кишечник, мочевой пузырь] (* <- lang_ru;; *);;

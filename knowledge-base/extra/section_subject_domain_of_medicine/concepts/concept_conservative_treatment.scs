@@ -1,0 +1,26 @@
+concept_conservative_treatment
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[консервативное лечение] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[conservative treatment] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_treatment_method;
+=> nrel_inclusion:
+	concept_pharmacotherapy;
+=> nrel_inclusion:
+	concept_non_drug_therapy;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение консервативного лечения по применению лекарственных средств] (* <- lang_ru;; *);;
+		-> concept_pharmacotherapy;;
+		-> concept_non_drug_therapy;;
+	*);
+=> nrel_definition:
+	[метод лечения без хирургического вмешательства, с применением лекарственных средств и немедикаментозных воздействий] (* <- lang_ru;; *);
+=> nrel_note:
+	[консервативное лечение применяется при большинстве заболеваний и часто дополняет хирургическое] (* <- lang_ru;; *);;

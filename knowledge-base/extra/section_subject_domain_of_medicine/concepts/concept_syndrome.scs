@@ -1,0 +1,13 @@
+concept_syndrome
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[синдром] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[syndrome] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_clinical_manifestation;
+=> nrel_definition:
+	[устойчивая совокупность симптомов, объединённых единым патогенезом и характерная для определённых заболеваний] (* <- lang_ru;; *);
+=> nrel_note:
+	[один и тот же синдром может наблюдаться при разных заболеваниях] (* <- lang_ru;; *);;

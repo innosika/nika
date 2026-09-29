@@ -15,11 +15,17 @@ git submodule update --init --recursive
 docker compose pull
 ```
 
+The `problem-solver` image is not published on Docker Hub, so `docker compose pull`
+skips it (the service is marked `pull_policy: build`) and it must be built locally.
+
 ## Build
 
   ```sh
-  docker compose build
+  docker compose build problem-solver
   ```
+
+  Building only `problem-solver` is enough — the other images are pulled from Docker Hub.
+  Use `docker compose build` to rebuild all of them from source instead.
 
 ## 🚀 Run
 
@@ -38,6 +44,22 @@ docker compose pull
 You can use `docker compose run --rm problem-solver build` to rebuild KB manually.
 
 ## Troubleshooting
+
+Common issues:
+
+- `docker compose pull` fails with `failed to resolve reference "docker.io/ostis/nika:0.2.2": not found`
+
+  **Solution**: this image is built from this repository rather than pulled. Run `docker compose build problem-solver` once, then launch as usual.
+
+- The `problem-solver` build fails with `ERROR: Package 'sc-machine/0.10.4' not resolved: ... [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired`
+
+  The `sc-machine` and `scl-machine` Conan packages are only hosted on `conan.ostis.net` (they are not on conancenter), and the TLS certificate of that server expired on 2026-08-08. The server itself is up and answers normally over an unverified connection.
+
+  **Solution**: either wait until the certificate is renewed, or build with certificate verification disabled for that single remote:
+  ```sh
+  CONAN_INSECURE_REMOTE=1 docker compose build problem-solver
+  ```
+  Note the trade-off: with `CONAN_INSECURE_REMOTE=1` the dependencies are downloaded over a TLS connection that is not verified, so a man-in-the-middle could substitute the packages your image is built from. Use it only if you accept that risk, and drop it once the certificate is valid again.
 
 Windows-specific problems:
 

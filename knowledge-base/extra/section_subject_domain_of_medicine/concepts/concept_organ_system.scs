@@ -1,0 +1,13 @@
+concept_organ_system
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[система органов] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[organ system] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_anatomical_structure;
+=> nrel_definition:
+	[совокупность органов, объединённых общей функцией и анатомически связанных между собой] (* <- lang_ru;; *);
+=> nrel_note:
+	[в организме человека выделяют дыхательную, сердечно-сосудистую, пищеварительную, эндокринную, нервную, мочевыделительную, иммунную и другие системы] (* <- lang_ru;; *);;

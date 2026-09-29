@@ -1,0 +1,13 @@
+concept_bacterial_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[бактериальное заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[bacterial disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_infectious_disease;
+=> nrel_definition:
+	[инфекционное заболевание, возбудителем которого является бактерия] (* <- lang_ru;; *);
+=> nrel_note:
+	[основой этиотропного лечения бактериальных заболеваний является антибиотикотерапия с учётом чувствительности возбудителя] (* <- lang_ru;; *);;

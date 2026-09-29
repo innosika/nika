@@ -1,0 +1,13 @@
+concept_therapeutic_equipment
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[лечебное оборудование] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[therapeutic equipment] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_medical_equipment;
+=> nrel_definition:
+	[медицинское оборудование, предназначенное для лечения заболеваний и поддержания жизненно важных функций организма] (* <- lang_ru;; *);
+=> nrel_note:
+	[к лечебному оборудованию относятся аппараты искусственной вентиляции лёгких, дефибрилляторы, инфузионные насосы, физиотерапевтические аппараты] (* <- lang_ru;; *);;

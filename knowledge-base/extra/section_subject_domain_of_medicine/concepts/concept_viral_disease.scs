@@ -1,0 +1,15 @@
+concept_viral_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[вирусное заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[viral disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_infectious_disease;
+=> nrel_inclusion:
+	concept_acute_respiratory_viral_infection;
+=> nrel_definition:
+	[инфекционное заболевание, возбудителем которого является вирус] (* <- lang_ru;; *);
+=> nrel_note:
+	[антибиотики на вирусы не действуют, поэтому для этиотропного лечения вирусных заболеваний применяют противовирусные средства, а для профилактики - вакцины] (* <- lang_ru;; *);;

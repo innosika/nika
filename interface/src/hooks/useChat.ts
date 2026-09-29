@@ -75,8 +75,9 @@ export const useChat = (user: ScAddr | null) => {
     }, [subscribeToMessage]);
 
     const onFetching = useCallback(async () => {
+        // An empty chat (fresh KB) has nothing older to load; reading messages[0] would throw.
+        if (shouldEnd || !chatNode || !messages.length) return;
         const lastMessageScAddr = messages[0].addr;
-        if (shouldEnd || !chatNode) return;
 
         const { messages: newMessages, shouldEnd: localShouldEnd } = await searchChatMessages(
             chatNode,

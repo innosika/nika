@@ -1,0 +1,26 @@
+concept_virus
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[вирус] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[virus] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_pathogen;
+=> nrel_inclusion:
+	concept_rna_virus;
+=> nrel_inclusion:
+	concept_dna_virus;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение вирусов по типу нуклеиновой кислоты генома] (* <- lang_ru;; *);;
+		-> concept_rna_virus;;
+		-> concept_dna_virus;;
+	*);
+=> nrel_definition:
+	[неклеточный инфекционный агент, состоящий из нуклеиновой кислоты и белковой оболочки и способный размножаться только внутри живых клеток] (* <- lang_ru;; *);
+=> nrel_note:
+	[размеры вирусов составляют от 20 до 300 нанометров; первый вирус (табачной мозаики) открыт Д. И. Ивановским в 1892 году] (* <- lang_ru;; *);;

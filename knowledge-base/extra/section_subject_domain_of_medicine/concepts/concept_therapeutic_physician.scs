@@ -1,0 +1,13 @@
+concept_therapeutic_physician
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[врач терапевтического профиля] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[physician of therapeutic profile] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_physician;
+=> nrel_definition:
+	[врач, лечащий заболевания преимущественно консервативными методами] (* <- lang_ru;; *);
+=> nrel_note:
+	[к терапевтическому профилю относятся терапевт, кардиолог, эндокринолог, инфекционист, пульмонолог, фтизиатр] (* <- lang_ru;; *);;

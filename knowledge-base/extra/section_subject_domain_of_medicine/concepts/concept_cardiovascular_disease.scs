@@ -1,0 +1,15 @@
+concept_cardiovascular_disease
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[сердечно-сосудистое заболевание] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[cardiovascular disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_non_infectious_disease;
+=> nrel_inclusion:
+	concept_ischemic_heart_disease;
+=> nrel_definition:
+	[неинфекционное заболевание, поражающее сердце и кровеносные сосуды] (* <- lang_ru;; *);
+=> nrel_note:
+	[сердечно-сосудистые заболевания остаются ведущей причиной смертности в мире и в Республике Беларусь] (* <- lang_ru;; *);;

@@ -1,0 +1,51 @@
+/* Приветствие врача: сообщение относится к классу приветственных, ответ даёт стандартное правило NIKA.
+   Точные формулировки: «Здравствуйте, доктор»; «Здравствуйте, доктор!»; «Добрый день, доктор»; «Добрый день, доктор!». */
+
+@if_lr_classify_medical_greeting_message_1 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_medical_greeting_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_medical_greeting_message _-> _text_lr_classify_medical_greeting_message_1;;
+	_text_lr_classify_medical_greeting_message_1 = _[Здравствуйте, доктор];;
+*];;
+
+@if_lr_classify_medical_greeting_message_2 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_medical_greeting_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_medical_greeting_message _-> _text_lr_classify_medical_greeting_message_2;;
+	_text_lr_classify_medical_greeting_message_2 = _[Здравствуйте, доктор!];;
+*];;
+
+@if_lr_classify_medical_greeting_message_3 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_medical_greeting_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_medical_greeting_message _-> _text_lr_classify_medical_greeting_message_3;;
+	_text_lr_classify_medical_greeting_message_3 = _[Добрый день, доктор];;
+*];;
+
+@if_lr_classify_medical_greeting_message_4 = [*
+	_message <-_ concept_message;;
+	_translation_lr_classify_medical_greeting_message _=> nrel_sc_text_translation:: _message;;
+	_translation_lr_classify_medical_greeting_message _-> _text_lr_classify_medical_greeting_message_4;;
+	_text_lr_classify_medical_greeting_message_4 = _[Добрый день, доктор!];;
+*];;
+
+@then_lr_classify_medical_greeting_message = [*
+	concept_greeting_message _-> _message;;
+*];;
+
+@if_lr_classify_medical_greeting_message_1 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_medical_greeting_message_2 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_medical_greeting_message_3 <- atomic_logical_formula; <- concept_template_with_links;;
+@if_lr_classify_medical_greeting_message_4 <- atomic_logical_formula; <- concept_template_with_links;;
+@then_lr_classify_medical_greeting_message <- atomic_logical_formula;;
+
+@or_lr_classify_medical_greeting_message = { @if_lr_classify_medical_greeting_message_1; @if_lr_classify_medical_greeting_message_2; @if_lr_classify_medical_greeting_message_3; @if_lr_classify_medical_greeting_message_4 };;
+@or_lr_classify_medical_greeting_message <- nrel_disjunction;;
+@impl_lr_classify_medical_greeting_message = (@or_lr_classify_medical_greeting_message => @then_lr_classify_medical_greeting_message);;
+@impl_lr_classify_medical_greeting_message <- nrel_implication;;
+
+lr_classify_medical_greeting_message
+<- concept_classify_message_rule_priority_1;
+=> nrel_main_idtf:
+	[правило классификации: Приветствие врача] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_classify_medical_greeting_message;;

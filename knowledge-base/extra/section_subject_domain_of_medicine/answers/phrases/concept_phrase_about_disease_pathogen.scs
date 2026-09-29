@@ -1,0 +1,205 @@
+/* Класс ответных фраз «фраза о возбудителе заболевания» (автор — Сергиевич Д.) и его подклассы по состоянию базы знаний.
+   Шаблон фразы (nrel_phrase_template) — sc-контур; переменная ${_x} заменяется содержимым ссылки,
+   $list{_x} — всеми различными значениями _x через запятую. */
+
+concept_phrase_about_disease_pathogen
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о возбудителе заболевания] (* <- lang_ru;; *);
+	[phrase about a pathogen of a disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_manifestation;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение о возбудителе заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_disease_pathogen; автор — Сергиевич Д.] (* <- lang_ru;; *);;
+
+concept_phrase_about_disease_pathogen_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о возбудителе заболевания: извинение] (* <- lang_ru;; *);
+	[phrase about a pathogen of a disease: apology] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_pathogen;
+=> nrel_definition:
+	[первая часть составного ответа на сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);;
+
+@phrase_disease_pathogen_apology_1 = [Простите за ожидание! Отвечаю о возбудителе.];;
+@phrase_disease_pathogen_apology_1
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_apology;;
+
+@phrase_disease_pathogen_apology_2 = [Извините, что пришлось подождать. Вот что известно о возбудителе.];;
+@phrase_disease_pathogen_apology_2
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_apology;;
+
+concept_phrase_about_disease_pathogen_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о возбудителе заболевания: сведения есть] (* <- lang_ru;; *);
+	[phrase about a pathogen of a disease: the data is known] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_pathogen;
+=> nrel_definition:
+	[фраза с шаблоном, в которую подставляются сведения базы знаний] (* <- lang_ru;; *);;
+
+@template_disease_pathogen_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_pathogen:: _pathogen;;
+*];;
+@phrase_disease_pathogen_found_1 = [Возбудитель заболевания «${_entity_name}» — $list{_pathogen}.];;
+@phrase_disease_pathogen_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_found;
+=> nrel_phrase_template: @template_disease_pathogen_found_1;;
+
+@template_disease_pathogen_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_pathogen:: _pathogen;;
+*];;
+@phrase_disease_pathogen_found_2 = [Причина заболевания «${_entity_name}» — инфекция, возбудитель: $list{_pathogen}.];;
+@phrase_disease_pathogen_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_found;
+=> nrel_phrase_template: @template_disease_pathogen_found_2;;
+
+@template_disease_pathogen_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_pathogen:: _pathogen;;
+	_pathogen _=> nrel_discoverer:: _discovery;;
+*];;
+@phrase_disease_pathogen_found_3 = [Возбудитель заболевания «${_entity_name}» — $list{_pathogen}. Из истории открытия: ${_discovery}.];;
+@phrase_disease_pathogen_found_3
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_found;
+=> nrel_phrase_template: @template_disease_pathogen_found_3;;
+
+@template_disease_pathogen_found_4 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_pathogen:: _pathogen;;
+	_target_drug _=> nrel_target_pathogen:: _pathogen;;
+*];;
+@phrase_disease_pathogen_found_4 = [Возбудитель заболевания «${_entity_name}» — $list{_pathogen}; на него действуют препараты: $list{_target_drug}.];;
+@phrase_disease_pathogen_found_4
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_found;
+=> nrel_phrase_template: @template_disease_pathogen_found_4;;
+
+concept_phrase_about_disease_pathogen_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о возбудителе заболевания: ответ о группе] (* <- lang_ru;; *);
+	[phrase about a pathogen of a disease: reply about a group] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_pathogen;
+=> nrel_definition:
+	[фраза с шаблоном для вопроса о классе: сведения собираются по его экземплярам] (* <- lang_ru;; *);;
+
+@template_disease_pathogen_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_pathogen:: _pathogen;;
+*];;
+@phrase_disease_pathogen_for_group_1 = [Возбудители заболеваний группы «${_entity_name}»: $list{_pathogen}. Уточните заболевание ($list{_instance}), и я назову возбудителя точно.];;
+@phrase_disease_pathogen_for_group_1
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_for_group;
+=> nrel_phrase_template: @template_disease_pathogen_for_group_1;;
+
+@template_disease_pathogen_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_pathogen:: _pathogen;;
+*];;
+@phrase_disease_pathogen_for_group_2 = [В группу «${_entity_name}» входят: $list{_instance}. Их вызывают возбудители: $list{_pathogen}.];;
+@phrase_disease_pathogen_for_group_2
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_for_group;
+=> nrel_phrase_template: @template_disease_pathogen_for_group_2;;
+
+concept_phrase_about_disease_pathogen_non_infectious
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о возбудителе заболевания: неинфекционное заболевание] (* <- lang_ru;; *);
+	[phrase about a pathogen of a disease: non-infectious disease] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_pathogen;
+=> nrel_definition:
+	[фраза для неинфекционного заболевания, у которого нет возбудителя и пути передачи] (* <- lang_ru;; *);;
+
+@template_disease_pathogen_non_infectious_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_pathogen_non_infectious_1 = [У заболевания «${_entity_name}» нет возбудителя: это неинфекционное заболевание, оно не вызывается микроорганизмами.];;
+@phrase_disease_pathogen_non_infectious_1
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_non_infectious;
+=> nrel_phrase_template: @template_disease_pathogen_non_infectious_1;;
+
+@template_disease_pathogen_non_infectious_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_pathogen_non_infectious_2 = [Заболевание «${_entity_name}» относится к неинфекционным — его причина не вирусы и не бактерии, а наследственность, образ жизни и факторы окружающей среды.];;
+@phrase_disease_pathogen_non_infectious_2
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_non_infectious;
+=> nrel_phrase_template: @template_disease_pathogen_non_infectious_2;;
+
+concept_phrase_about_disease_pathogen_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о возбудителе заболевания: сведений нет] (* <- lang_ru;; *);
+	[phrase about a pathogen of a disease: no data] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_disease_pathogen;
+=> nrel_definition:
+	[фраза на случай, когда сведений в базе знаний нет] (* <- lang_ru;; *);;
+
+@template_disease_pathogen_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_pathogen_not_found_1 = [Сведений о возбудителе для «${_entity_name}» в моей базе знаний нет.];;
+@phrase_disease_pathogen_not_found_1
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_not_found;
+=> nrel_phrase_template: @template_disease_pathogen_not_found_1;;
+
+@template_disease_pathogen_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_disease_pathogen_not_found_2 = [Не могу назвать возбудителя для «${_entity_name}» — в базе знаний он не указан.];;
+@phrase_disease_pathogen_not_found_2
+<- lang_ru;
+<- concept_phrase_about_disease_pathogen_not_found;
+=> nrel_phrase_template: @template_disease_pathogen_not_found_2;;

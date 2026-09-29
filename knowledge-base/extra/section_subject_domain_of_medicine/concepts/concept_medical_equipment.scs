@@ -1,0 +1,26 @@
+concept_medical_equipment
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[медицинское оборудование] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[medical equipment] (* <- lang_en;; *);
+=> nrel_idtf:
+	[медицинская техника] (* <- lang_ru;; *);
+=> nrel_inclusion:
+	concept_diagnostic_equipment;
+=> nrel_inclusion:
+	concept_therapeutic_equipment;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение медицинского оборудования по назначению] (* <- lang_ru;; *);;
+		-> concept_diagnostic_equipment;;
+		-> concept_therapeutic_equipment;;
+	*);
+=> nrel_definition:
+	[технические устройства и аппараты, применяемые для диагностики, лечения, профилактики заболеваний и ухода за пациентами] (* <- lang_ru;; *);
+=> nrel_note:
+	[медицинское оборудование подлежит государственной регистрации и периодическому техническому обслуживанию] (* <- lang_ru;; *);;

@@ -1,0 +1,26 @@
+concept_antimicrobial_drug
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[противомикробное средство] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[antimicrobial drug] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_drug;
+=> nrel_inclusion:
+	concept_antibiotic;
+=> nrel_inclusion:
+	concept_antiviral_drug;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение противомикробных средств по типу возбудителя-мишени] (* <- lang_ru;; *);;
+		-> concept_antibiotic;;
+		-> concept_antiviral_drug;;
+	*);
+=> nrel_definition:
+	[лекарственное средство, подавляющее рост или уничтожающее патогенные микроорганизмы] (* <- lang_ru;; *);
+=> nrel_note:
+	[по типу возбудителя-мишени противомикробные средства делят на антибактериальные, противовирусные, противогрибковые и противопротозойные] (* <- lang_ru;; *);;

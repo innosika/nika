@@ -1,0 +1,15 @@
+concept_analgesic
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[анальгетик] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[analgesic] (* <- lang_en;; *);
+=> nrel_idtf:
+	[обезболивающее средство] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_drug;
+=> nrel_definition:
+	[лекарственное средство, ослабляющее или устраняющее чувство боли] (* <- lang_ru;; *);
+=> nrel_note:
+	[анальгетики делят на опиоидные (наркотические) и неопиоидные] (* <- lang_ru;; *);;

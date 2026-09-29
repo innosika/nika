@@ -1,0 +1,33 @@
+concept_message_about_disease_specialist
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о профильном враче] (* <- lang_ru;; *);
+	[message about a medical specialist] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_disease_specialist];
+<= nrel_inclusion:
+	concept_message_about_medical_care;
+=> nrel_definition:
+	[сообщение о диагностике и лечении заболевания, в котором запрашивается врач-специалист, занимающийся лечением указанного заболевания] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «К какому врачу обратиться при стенокардии?»; выделяемые сущности (роль rrel_entity): заболевание] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о профильном враче)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о профильном враче - сообщение о диагностике и лечении заболевания, в котором запрашивается врач-специалист, занимающийся лечением указанного заболевания.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_medical_care;
+			nrel_specialist;
+			nrel_workplace;
+			rrel_entity
+		};;
+	*);;

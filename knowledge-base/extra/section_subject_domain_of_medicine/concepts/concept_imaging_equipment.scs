@@ -1,0 +1,15 @@
+concept_imaging_equipment
+<- sc_node_class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[оборудование для медицинской визуализации] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[medical imaging equipment] (* <- lang_en;; *);
+=> nrel_idtf:
+	[визуализирующее оборудование] (* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_diagnostic_equipment;
+=> nrel_definition:
+	[диагностическое оборудование, формирующее изображения внутренних органов и структур тела] (* <- lang_ru;; *);
+=> nrel_note:
+	[к оборудованию для медицинской визуализации относятся рентгеновские аппараты, компьютерные и магнитно-резонансные томографы, ультразвуковые сканеры] (* <- lang_ru;; *);;
