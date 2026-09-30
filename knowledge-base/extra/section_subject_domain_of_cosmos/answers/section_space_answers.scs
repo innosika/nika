@@ -1,0 +1,49 @@
+/* Раздел базы знаний ЛР3 (вариант «Космос»): классы ответных фраз и логические правила ответа
+   на сообщения о космосе. */
+
+section_space_answers
+=> nrel_main_idtf:
+	[Раздел. Ответы на сообщения о космосе] (* <- lang_ru;; *);
+	[Section. Replies to messages about space] (* <- lang_en;; *);
+<- atomic_section;
+-> rrel_key_sc_element:
+	concept_space_phrase;
+	concept_phrase_about_celestial_body_properties;
+	concept_phrase_about_space_exploration;
+	concept_phrase_about_orbit;
+	concept_phrase_about_satellites;
+	concept_phrase_about_physical_parameters;
+	concept_phrase_about_discovery;
+	concept_phrase_about_constellation;
+	concept_phrase_about_space_mission;
+	lr_answer_orbit_apology;
+	lr_answer_orbit_found;
+	lr_answer_orbit_probe;
+	lr_answer_orbit_for_group;
+	lr_answer_orbit_not_found;
+	lr_answer_satellites_apology;
+	lr_answer_satellites_found;
+	lr_answer_satellites_star;
+	lr_answer_satellites_for_group;
+	lr_answer_satellites_not_found;
+	lr_answer_physical_parameters_apology;
+	lr_answer_physical_parameters_found;
+	lr_answer_physical_parameters_for_group;
+	lr_answer_physical_parameters_not_found;
+	lr_answer_discovery_apology;
+	lr_answer_discovery_found;
+	lr_answer_discovery_artificial;
+	lr_answer_discovery_for_group;
+	lr_answer_discovery_not_found;
+	lr_answer_constellation_apology;
+	lr_answer_constellation_found;
+	lr_answer_constellation_is_constellation;
+	lr_answer_constellation_solar_system_body;
+	lr_answer_constellation_for_group;
+	lr_answer_constellation_not_found;
+	lr_answer_space_mission_apology;
+	lr_answer_space_mission_found;
+	lr_answer_space_mission_launch_vehicle;
+	lr_answer_space_mission_cosmonaut;
+	lr_answer_space_mission_for_group;
+	lr_answer_space_mission_not_found;;

@@ -1,0 +1,32 @@
+concept_message_about_constellation
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о созвездии космического объекта] (* <- lang_ru;; *);
+	[message about the constellation of a space object] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_constellation];
+<= nrel_inclusion:
+	concept_message_about_space_exploration;
+=> nrel_definition:
+	[сообщение об изучении и освоении космоса, в котором запрашивается созвездие, в котором наблюдается указанный космический объект, или объекты, расположенные в указанном созвездии] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «В каком созвездии находится Сириус?»; выделяемая сущность: космический объект или созвездие] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о созвездии космического объекта)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о созвездии космического объекта - сообщение об изучении и освоении космоса, в котором запрашивается созвездие, в котором наблюдается указанный космический объект, или объекты, расположенные в указанном созвездии.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_space_exploration;
+			nrel_located_in_constellation;
+			rrel_entity
+		};;
+	*);;

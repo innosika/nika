@@ -1,0 +1,32 @@
+/* Правило ответа на сообщение о космической миссии: ракета-носитель.
+   Если: выделенная сущность — ракета-носитель, использованная в миссиях.
+   Автор: Переверзев М. */
+
+@if_lr_answer_space_mission_launch_vehicle = [*
+	concept_message _-> _message;;
+	concept_message_about_space_mission _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_space_mission _=> nrel_used_launch_vehicle:: _entity;;
+*];;
+@then_lr_answer_space_mission_launch_vehicle = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_space_mission _-> _reply_message;;
+*];;
+@if_lr_answer_space_mission_launch_vehicle <- atomic_logical_formula;;
+@then_lr_answer_space_mission_launch_vehicle <- atomic_logical_formula;;
+@impl_lr_answer_space_mission_launch_vehicle = (@if_lr_answer_space_mission_launch_vehicle => @then_lr_answer_space_mission_launch_vehicle);;
+@impl_lr_answer_space_mission_launch_vehicle <- nrel_implication;;
+answer_pattern_lr_answer_space_mission_launch_vehicle
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_space_mission_launch_vehicle;;
+lr_answer_space_mission_launch_vehicle
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о космической миссии: ракета-носитель] (* <- lang_ru;; *);
+	[rule of reply to a message about a space mission: launch vehicle] (* <- lang_en;; *);
+=> nrel_note:
+	[если выделенная сущность — ракета-носитель, использованная в миссиях; фразы ответа — из класса concept_phrase_about_space_mission_launch_vehicle] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_space_mission_launch_vehicle;
+-> rrel_main_key_sc_element: @impl_lr_answer_space_mission_launch_vehicle;;

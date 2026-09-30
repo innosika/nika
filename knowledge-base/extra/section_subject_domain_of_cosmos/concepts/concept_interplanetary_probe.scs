@@ -1,0 +1,16 @@
+concept_interplanetary_probe
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [межпланетная станция]
+    (* <- lang_ru;; *);
+    [interplanetary probe]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [автоматический космический аппарат, предназначенный для полёта
+    к другим телам Солнечной системы и их исследования с пролётной траектории, с орбиты
+    или непосредственно с поверхности]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_spacecraft;;

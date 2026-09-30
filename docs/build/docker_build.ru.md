@@ -15,11 +15,17 @@ git submodule update --init --recursive
 docker compose pull
 ```
 
+Образ `problem-solver` не опубликован на Docker Hub, поэтому `docker compose pull`
+пропускает его (сервис помечен `pull_policy: build`), и его нужно собрать локально.
+
 ## Сборка
 
   ```sh
-  docker compose build
+  docker compose build problem-solver
   ```
+
+  Достаточно собрать только `problem-solver` — остальные образы скачиваются с Docker Hub.
+  Команда `docker compose build` пересоберёт из исходников все образы.
 
 ## 🚀 Запуск
 
@@ -38,6 +44,22 @@ docker compose pull
 Вы можете использовать `docker compose run --rm problem-solver build`, чтобы пересобрать БЗ вручную.
 
 ## Устранение неполадок
+
+Общие проблемы:
+
+- `docker compose pull` завершается ошибкой `failed to resolve reference "docker.io/ostis/nika:0.2.2": not found`
+
+  **Решение**: этот образ собирается из исходников репозитория, а не скачивается. Выполните один раз `docker compose build problem-solver`, затем запускайте систему как обычно.
+
+- Сборка `problem-solver` падает с `ERROR: Package 'sc-machine/0.10.4' not resolved: ... [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired`
+
+  Conan-пакеты `sc-machine` и `scl-machine` есть только на `conan.ostis.net` (на conancenter их нет), а TLS-сертификат этого сервера истёк 2026-08-08. Сам сервер работает и нормально отвечает по непроверенному соединению.
+
+  **Решение**: либо дождаться обновления сертификата, либо собрать образ с отключённой проверкой сертификата для этого одного remote:
+  ```sh
+  CONAN_INSECURE_REMOTE=1 docker compose build problem-solver
+  ```
+  Учитывайте компромисс: с `CONAN_INSECURE_REMOTE=1` зависимости скачиваются по непроверенному TLS-соединению, то есть атакующий типа man-in-the-middle может подменить пакеты, из которых собирается образ. Используйте только если принимаете этот риск, и уберите переменную, когда сертификат снова станет валидным.
 
 Проблемы, характерные для Windows:
 

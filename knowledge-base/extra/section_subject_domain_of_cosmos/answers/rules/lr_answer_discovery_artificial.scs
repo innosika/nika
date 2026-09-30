@@ -1,0 +1,48 @@
+/* Правило ответа на сообщение об открытии космического объекта: искусственный объект.
+   Если: объект — космический аппарат ИЛИ ракета-носитель ИЛИ космическая миссия (дизъюнкция): его не открыли, а создали люди.
+   Автор: Переверзев М. */
+
+@if_lr_answer_discovery_artificial_1 = [*
+	concept_message _-> _message;;
+	concept_message_about_discovery _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	concept_spacecraft _-> _entity;;
+*];;
+@if_lr_answer_discovery_artificial_2 = [*
+	concept_message _-> _message;;
+	concept_message_about_discovery _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	concept_launch_vehicle _-> _entity;;
+*];;
+@if_lr_answer_discovery_artificial_3 = [*
+	concept_message _-> _message;;
+	concept_message_about_discovery _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	concept_space_mission _-> _entity;;
+*];;
+@or_lr_answer_discovery_artificial = { @if_lr_answer_discovery_artificial_1; @if_lr_answer_discovery_artificial_2; @if_lr_answer_discovery_artificial_3 };;
+@or_lr_answer_discovery_artificial <- nrel_disjunction;;
+@then_lr_answer_discovery_artificial = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_discovery _-> _reply_message;;
+*];;
+@if_lr_answer_discovery_artificial_1 <- atomic_logical_formula;;
+@if_lr_answer_discovery_artificial_2 <- atomic_logical_formula;;
+@if_lr_answer_discovery_artificial_3 <- atomic_logical_formula;;
+@then_lr_answer_discovery_artificial <- atomic_logical_formula;;
+@impl_lr_answer_discovery_artificial = (@or_lr_answer_discovery_artificial => @then_lr_answer_discovery_artificial);;
+@impl_lr_answer_discovery_artificial <- nrel_implication;;
+answer_pattern_lr_answer_discovery_artificial
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_discovery_artificial;;
+lr_answer_discovery_artificial
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение об открытии космического объекта: искусственный объект] (* <- lang_ru;; *);
+	[rule of reply to a message about a discovery of a space object: artificial object] (* <- lang_en;; *);
+=> nrel_note:
+	[если объект — космический аппарат ИЛИ ракета-носитель ИЛИ космическая миссия (дизъюнкция): его не открыли, а создали люди; фразы ответа — из класса concept_phrase_about_discovery_artificial] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_discovery_artificial;
+-> rrel_main_key_sc_element: @impl_lr_answer_discovery_artificial;;

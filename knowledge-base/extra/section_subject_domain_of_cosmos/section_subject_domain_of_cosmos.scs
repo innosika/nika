@@ -1,0 +1,128 @@
+/* Раздел базы знаний, соответствующий предметной области "Космос".
+   Раздел - это "полочка" в иерархии базы знаний, к которой привязываются
+   исходные тексты. Атомарный раздел не делится на сегменты. */
+section_subject_domain_of_cosmos
+=> nrel_main_idtf:
+    [Раздел. Предметная область космоса]
+    (* <- lang_ru;; *);
+    [Section. Subject domain of cosmos]
+    (* <- lang_en;; *);
+<- atomic_section;;
+
+/* Содержимое раздела (конструкция "= [* ... *]" помещает описанный
+   sc-текст внутрь структуры раздела).
+   Здесь задаётся СХЕМА предметной области:
+     rrel_maximum_studied_object_class     - максимальный класс объектов исследования
+                                             (у него нет надкласса внутри этой ПрО);
+     rrel_not_maximum_studied_object_class - остальные (немаксимальные) классы;
+     rrel_explored_relation                - исследуемые отношения. */
+section_subject_domain_of_cosmos = [*
+    subject_domain_of_cosmos
+    <- sc_node_structure;
+    => nrel_main_idtf:
+        [Предметная область космоса]
+        (* <- lang_ru;; *);
+        [Subject domain of cosmos]
+        (* <- lang_en;; *);
+    <- subject_domain;
+
+    -> rrel_maximum_studied_object_class:
+        concept_space_object;
+
+    -> rrel_not_maximum_studied_object_class:
+        concept_natural_space_object;
+        concept_artificial_space_object;
+        concept_star;
+        concept_planet;
+        concept_terrestrial_planet;
+        concept_gas_giant;
+        concept_dwarf_planet;
+        concept_natural_satellite;
+        concept_small_solar_system_body;
+        concept_asteroid;
+        concept_comet;
+        concept_galaxy;
+        concept_nebula;
+        concept_black_hole;
+        concept_spacecraft;
+        concept_artificial_satellite;
+        concept_space_station;
+        concept_interplanetary_probe;
+        concept_launch_vehicle;
+        concept_planetary_system;
+        concept_constellation;
+        concept_space_mission;
+        concept_cosmonaut;
+        concept_space_agency;
+        concept_cosmodrome;
+
+    -> rrel_explored_relation:
+        nrel_orbit;
+        nrel_natural_satellite;
+        nrel_mass;
+        nrel_equatorial_radius;
+        nrel_orbital_period;
+        nrel_distance_from_sun;
+        nrel_spectral_class;
+        nrel_discoverer;
+        nrel_discovery_date;
+        nrel_located_in_constellation;
+        nrel_launch_date;
+        nrel_start_date;
+        nrel_used_launch_vehicle;
+        nrel_operator;
+        nrel_mission_crew;
+        nrel_mission_target;
+        nrel_launch_site;
+        rrel_crew_commander;;
+*];;
+
+/* Ключевые sc-элементы раздела - то, "с чего начинать смотреть" раздел.
+   Именно они попадают в навигацию по базе знаний. */
+section_subject_domain_of_cosmos
+-> rrel_key_sc_element:
+    subject_domain_of_cosmos;
+    concept_space_object;
+    concept_natural_space_object;
+    concept_artificial_space_object;
+    concept_star;
+    concept_planet;
+    concept_terrestrial_planet;
+    concept_gas_giant;
+    concept_dwarf_planet;
+    concept_natural_satellite;
+    concept_small_solar_system_body;
+    concept_asteroid;
+    concept_comet;
+    concept_galaxy;
+    concept_nebula;
+    concept_black_hole;
+    concept_spacecraft;
+    concept_artificial_satellite;
+    concept_space_station;
+    concept_interplanetary_probe;
+    concept_launch_vehicle;
+    concept_planetary_system;
+    concept_constellation;
+    concept_space_mission;
+    concept_cosmonaut;
+    concept_space_agency;
+    concept_cosmodrome;
+    nrel_orbit;
+    nrel_natural_satellite;
+    nrel_mass;
+    nrel_equatorial_radius;
+    nrel_orbital_period;
+    nrel_distance_from_sun;
+    nrel_spectral_class;
+    nrel_discoverer;
+    nrel_discovery_date;
+    nrel_located_in_constellation;
+    nrel_launch_date;
+    nrel_start_date;
+    nrel_used_launch_vehicle;
+    nrel_operator;
+    nrel_mission_crew;
+    nrel_mission_target;
+    nrel_launch_site;
+    rrel_crew_commander;;

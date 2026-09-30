@@ -1,0 +1,21 @@
+/* Правило: спутник тела планетной системы.
+   Если тело обращается вокруг тела, входящего в планетную систему, то и оно входит в эту систему. */
+
+@if_lr_space_planetary_system_chain = [*
+	_wd_obj _=> nrel_orbit:: _wd_center;;
+	_wd_center _=> nrel_planetary_system:: _wd_system;;
+*];;
+@if_lr_space_planetary_system_chain <- atomic_logical_formula;;
+@then_lr_space_planetary_system_chain = [*
+	_wd_obj _=> nrel_planetary_system:: _wd_system;;
+*];;
+@then_lr_space_planetary_system_chain <- atomic_logical_formula;;
+@impl_lr_space_planetary_system_chain = (@if_lr_space_planetary_system_chain => @then_lr_space_planetary_system_chain);;
+@impl_lr_space_planetary_system_chain <- nrel_implication;;
+lr_space_planetary_system_chain
+<- concept_space_knowledge_rule_priority_2;
+=> nrel_main_idtf:
+	[правило: спутник тела планетной системы] (* <- lang_ru;; *);
+=> nrel_note:
+	[если тело обращается вокруг тела, входящего в планетную систему, то и оно входит в эту систему] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_space_planetary_system_chain;;

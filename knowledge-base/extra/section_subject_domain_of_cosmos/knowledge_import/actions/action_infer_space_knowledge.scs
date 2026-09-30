@@ -1,0 +1,45 @@
+/* Класс действий агента SpaceKnowledgeInferenceAgent. */
+action_infer_space_knowledge
+<- sc_node_class;
+<- actions_class;
+<- atomic_action_class;
+=> nrel_main_idtf:
+	[действие. вывести новые знания о космических объектах] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. infer space knowledge] (* <- lang_en;; *);
+<= nrel_inclusion:
+	information_action;
+=> nrel_definition:
+	[действие, в ходе которого агент применяет логические правила набора concept_space_knowledge_rule к базе знаний и порождает новые факты] (* <- lang_ru;; *);;
+
+/* Спецификация абстрактного sc-агента SpaceKnowledgeInferenceAgent (C++, scl-machine; автор — бригада). */
+@agent_infer_space_knowledge_condition = [*
+		action_infer_space_knowledge _-> _action;;
+		action_initiated _-> _action;;
+		_action _-> rrel_1:: _wd_objects;;
+*];;
+@agent_infer_space_knowledge_result = [*
+		_action _=> nrel_result:: _wd_result;;
+		_wd_result _-> _wd_output;;
+		_wd_result _-> _wd_count;;
+*];;
+@agent_infer_space_knowledge_condition_and_result = (@agent_infer_space_knowledge_condition => @agent_infer_space_knowledge_result);;
+agent_infer_space_knowledge
+<- abstract_sc_agent;
+=> nrel_main_idtf:
+	[агент вывода новых знаний о космических объектах] (* <- lang_ru;; *);
+	[SpaceKnowledgeInferenceAgent] (* <- lang_en;; *);
+=> nrel_primary_initiation_condition:
+	(sc_event_after_generate_outgoing_arc => action_initiated);
+=> nrel_sc_agent_action_class:
+	action_infer_space_knowledge;
+=> nrel_initiation_condition_and_result:
+	@agent_infer_space_knowledge_condition_and_result;
+=> nrel_note:
+	[реализация: problem-solver/cxx/space-knowledge-module/] (* <- lang_ru;; *);
+=> nrel_note:
+	[входы: rrel_1 — множество объектов, сведения о которых только что погружены (для журнала); правила применяются ко всей базе знаний] (* <- lang_ru;; *);
+=> nrel_note:
+	[выходы: выведенные факты: класс объекта, естественный спутник*, входит в планетную систему*; результат — структуры с фактами и ссылка с их числом] (* <- lang_ru;; *);
+=> nrel_note:
+	[процедуры: прямой логический вывод scl-machine (DirectInferenceManagerAll: GENERATE_UNIQUE_FORMULAS, REPLACEMENTS_ALL, SEARCH_IN_ALL_KB) по упорядоченному набору правил; повтор, пока появляются новые факты (цепочка орбит: планета → спутник); подсчёт выведенных фактов] (* <- lang_ru;; *);;

@@ -1,0 +1,25 @@
+/* Правило ответа на сообщение о наполнении базы знаний космическими объектами: отчёт агента. Автор: Переверзев М. А.. */
+
+@if_lr_answer_space_filling_report = [*
+	concept_message _-> _message;;
+	_message _=> nrel_space_import_report:: _space_report;;
+	concept_message_about_kb_filling_with_space_objects _-> _message;;
+*];;
+@then_lr_answer_space_filling_report = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+*];;
+@if_lr_answer_space_filling_report <- atomic_logical_formula;;
+@then_lr_answer_space_filling_report <- atomic_logical_formula;;
+@impl_lr_answer_space_filling_report = (@if_lr_answer_space_filling_report => @then_lr_answer_space_filling_report);;
+@impl_lr_answer_space_filling_report <- nrel_implication;;
+answer_pattern_lr_answer_space_filling_report
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_space_filling_report;;
+lr_answer_space_filling_report
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о наполнении базы знаний космическими объектами: отчёт агента] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_space_filling_report;
+-> rrel_main_key_sc_element: @impl_lr_answer_space_filling_report;;

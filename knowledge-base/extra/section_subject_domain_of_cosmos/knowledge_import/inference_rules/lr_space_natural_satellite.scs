@@ -1,0 +1,21 @@
+/* Правило: естественный спутник тела.
+   Если естественный спутник обращается вокруг тела, то он — естественный спутник этого тела. */
+
+@if_lr_space_natural_satellite = [*
+	_wd_obj _=> nrel_orbit:: _wd_center;;
+	concept_natural_satellite _-> _wd_obj;;
+*];;
+@if_lr_space_natural_satellite <- atomic_logical_formula;;
+@then_lr_space_natural_satellite = [*
+	_wd_center _=> nrel_natural_satellite:: _wd_obj;;
+*];;
+@then_lr_space_natural_satellite <- atomic_logical_formula;;
+@impl_lr_space_natural_satellite = (@if_lr_space_natural_satellite => @then_lr_space_natural_satellite);;
+@impl_lr_space_natural_satellite <- nrel_implication;;
+lr_space_natural_satellite
+<- concept_space_knowledge_rule_priority_2;
+=> nrel_main_idtf:
+	[правило: естественный спутник тела] (* <- lang_ru;; *);
+=> nrel_note:
+	[если естественный спутник обращается вокруг тела, то он — естественный спутник этого тела] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_space_natural_satellite;;

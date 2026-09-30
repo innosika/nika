@@ -1,0 +1,16 @@
+concept_galaxy
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [галактика]
+    (* <- lang_ru;; *);
+    [galaxy]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [гравитационно связанная система из звёзд, звёздных скоплений, межзвёздного
+    газа, пыли и тёмной материи. По морфологии галактики делят на спиральные, эллиптические
+    и неправильные]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_natural_space_object;;

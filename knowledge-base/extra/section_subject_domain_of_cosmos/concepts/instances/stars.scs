@@ -1,0 +1,46 @@
+/* Экземпляры класса "звезда".
+   Принадлежность к concept_wit_entity нужна, чтобы система NIKA могла
+   распознать сущность в сообщении пользователя (см. docs/guide/training_guide.ru.md). */
+sun
+<- concept_star;
+<- concept_natural_space_object;   /* экземпляр надкласса - явно, для наглядности */
+<- concept_space_object;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Солнце]
+    (* <- lang_ru;; *);
+    [Sun]
+    (* <- lang_en;; *);
+=> nrel_idtf:
+    [Солнца]
+    (* <- lang_ru;; *);
+=> nrel_definition:
+    [единственная звезда Солнечной системы, вокруг которой обращаются все её планеты
+    и другие тела. Представляет собой горячий шар плазмы, источник энергии для жизни на Земле]
+    (* <- lang_ru;; *);
+=> nrel_spectral_class:
+    [G2V]
+    (* <- lang_ru;; *);
+=> nrel_mass:
+    [1,989·10^30 кг (332 946 масс Земли)]
+    (* <- lang_ru;; *);
+=> nrel_equatorial_radius:
+    [695 700 км]
+    (* <- lang_ru;; *);;
+
+sirius
+<- concept_star;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Сириус]
+    (* <- lang_ru;; *);
+    [Sirius]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [самая яркая звезда ночного неба, кратная звёздная система, расположенная
+    на расстоянии около 8,6 светового года от Солнца]
+    (* <- lang_ru;; *);
+=> nrel_spectral_class:
+    [A1V]
+    (* <- lang_ru;; *);
+=> nrel_located_in_constellation: canis_major_constellation;;

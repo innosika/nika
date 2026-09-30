@@ -1,0 +1,25 @@
+concept_artificial_space_object
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [искусственный космический объект]
+    (* <- lang_ru;; *);
+    [artificial space object]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [космический объект, созданный человеком и выведенный
+    в космическое пространство: космический аппарат, ракета-носитель, а также их отделяемые части]
+    (* <- lang_ru;; *);
+=> nrel_inclusion:
+    concept_spacecraft;
+    concept_launch_vehicle;
+<= nrel_inclusion:
+    concept_space_object;
+<= nrel_subdividing:
+    ...
+    (*
+        <- sc_node_tuple;;
+        -> concept_spacecraft;;
+        -> concept_launch_vehicle;;
+    *);;

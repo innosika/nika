@@ -1,0 +1,206 @@
+/* Класс ответных фраз «фраза об открытии космического объекта» (автор — Переверзев М.) и его подклассы по состоянию базы знаний.
+   ${_x} — содержимое ссылки _x, $list{_x} — все различные значения _x через запятую. */
+
+concept_phrase_about_discovery
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об открытии космического объекта] (* <- lang_ru;; *);
+	[phrase about a discovery of a space object] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_exploration;
+=> nrel_definition:
+	[фраза, используемая при ответе на сообщение об открытии космического объекта] (* <- lang_ru;; *);
+=> nrel_note:
+	[используется в ответах на сообщения класса concept_message_about_discovery; автор — Переверзев М.] (* <- lang_ru;; *);;
+
+concept_phrase_about_discovery_apology
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об открытии космического объекта: извинение перед ответом на грубое сообщение] (* <- lang_ru;; *);
+	[phrase about a discovery of a space object: apology before a reply to a rude message] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_discovery;
+=> nrel_definition:
+	[фраза для ответа, когда то же, что для правила «сведения есть», и сообщение имеет негативную эмоциональную окраску; ответ — составное сообщение: извинение, затем фраза со сведениями] (* <- lang_ru;; *);;
+
+@phrase_discovery_apology_1 = [Простите за ожидание! Отвечаю, кто открыл этот объект.];;
+@phrase_discovery_apology_1
+<- lang_ru;
+<- concept_phrase_about_discovery_apology;;
+
+@phrase_discovery_apology_2 = [Извините за задержку — вот сведения об открытии.];;
+@phrase_discovery_apology_2
+<- lang_ru;
+<- concept_phrase_about_discovery_apology;;
+
+concept_phrase_about_discovery_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об открытии космического объекта: сведения есть в базе знаний] (* <- lang_ru;; *);
+	[phrase about a discovery of a space object: the data is in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_discovery;
+=> nrel_definition:
+	[фраза для ответа, когда у объекта есть связь «первооткрыватель*»] (* <- lang_ru;; *);;
+
+@template_discovery_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_discoverer:: _space_discoverer;;
+*];;
+@phrase_discovery_found_1 = [Объект «${_entity_name}» открыл ${_space_discoverer}.];;
+@phrase_discovery_found_1
+<- lang_ru;
+<- concept_phrase_about_discovery_found;
+=> nrel_phrase_template: @template_discovery_found_1;;
+
+@template_discovery_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_discoverer:: _space_discoverer;;
+	_entity _=> nrel_discovery_date:: _space_discovery_date;;
+*];;
+@phrase_discovery_found_2 = [Первооткрыватель объекта «${_entity_name}» — ${_space_discoverer}, дата открытия — ${_space_discovery_date}.];;
+@phrase_discovery_found_2
+<- lang_ru;
+<- concept_phrase_about_discovery_found;
+=> nrel_phrase_template: @template_discovery_found_2;;
+
+@template_discovery_found_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_discoverer:: _space_discoverer;;
+	_entity _=> nrel_discovery_date:: _space_discovery_date;;
+*];;
+@phrase_discovery_found_3 = [Объект «${_entity_name}» открыт ${_space_discovery_date}; первооткрыватель — ${_space_discoverer}.];;
+@phrase_discovery_found_3
+<- lang_ru;
+<- concept_phrase_about_discovery_found;
+=> nrel_phrase_template: @template_discovery_found_3;;
+
+concept_phrase_about_discovery_artificial
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об открытии космического объекта: искусственный объект] (* <- lang_ru;; *);
+	[phrase about a discovery of a space object: artificial object] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_discovery;
+=> nrel_definition:
+	[фраза для ответа, когда объект — космический аппарат ИЛИ ракета-носитель ИЛИ космическая миссия (дизъюнкция): его не открыли, а создали люди] (* <- lang_ru;; *);;
+
+@template_discovery_artificial_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_launch_date:: _space_launch_date;;
+*];;
+@phrase_discovery_artificial_1 = [Объект «${_entity_name}» не открывали, а создали люди: он запущен ${_space_launch_date}.];;
+@phrase_discovery_artificial_1
+<- lang_ru;
+<- concept_phrase_about_discovery_artificial;
+=> nrel_phrase_template: @template_discovery_artificial_1;;
+
+@template_discovery_artificial_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_operator:: _space_operator;;
+*];;
+@phrase_discovery_artificial_2 = [«${_entity_name}» — искусственный объект, созданный людьми, поэтому первооткрывателя у него нет; оператор — $list{_space_operator}.];;
+@phrase_discovery_artificial_2
+<- lang_ru;
+<- concept_phrase_about_discovery_artificial;
+=> nrel_phrase_template: @template_discovery_artificial_2;;
+
+@template_discovery_artificial_3 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _=> nrel_start_date:: _space_start_date;;
+*];;
+@phrase_discovery_artificial_3 = [«${_entity_name}» — космическая миссия: её не открывали, а провели; старт — ${_space_start_date}.];;
+@phrase_discovery_artificial_3
+<- lang_ru;
+<- concept_phrase_about_discovery_artificial;
+=> nrel_phrase_template: @template_discovery_artificial_3;;
+
+concept_phrase_about_discovery_for_group
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об открытии космического объекта: вопрос о классе объектов] (* <- lang_ru;; *);
+	[phrase about a discovery of a space object: question about a class of objects] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_discovery;
+=> nrel_definition:
+	[фраза для ответа, когда выделенная сущность — класс, у экземпляра которого указан первооткрыватель] (* <- lang_ru;; *);;
+
+@template_discovery_for_group_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_discoverer:: _space_discoverer;;
+*];;
+@phrase_discovery_for_group_1 = [Среди объектов класса «${_entity_name}» первооткрыватели указаны для: $list{_instance}; первооткрыватели — $list{_space_discoverer}.];;
+@phrase_discovery_for_group_1
+<- lang_ru;
+<- concept_phrase_about_discovery_for_group;
+=> nrel_phrase_template: @template_discovery_for_group_1;;
+
+@template_discovery_for_group_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _instance;;
+	_instance _=> nrel_discoverer:: _space_discoverer;;
+*];;
+@phrase_discovery_for_group_2 = [Первооткрыватели объектов класса «${_entity_name}» в базе знаний: $list{_space_discoverer}. Уточните объект: $list{_instance}.];;
+@phrase_discovery_for_group_2
+<- lang_ru;
+<- concept_phrase_about_discovery_for_group;
+=> nrel_phrase_template: @template_discovery_for_group_2;;
+
+concept_phrase_about_discovery_not_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об открытии космического объекта: сведений нет в базе знаний] (* <- lang_ru;; *);
+	[phrase about a discovery of a space object: no data in the knowledge base] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_discovery;
+=> nrel_definition:
+	[фраза для ответа, когда сообщение об открытии с выделенной сущностью, для которой не сработали правила с более высоким приоритетом] (* <- lang_ru;; *);;
+
+@template_discovery_not_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_discovery_not_found_1 = [Сведений о первооткрывателе объекта «${_entity_name}» в базе знаний нет — возможно, объект известен с древности.];;
+@phrase_discovery_not_found_1
+<- lang_ru;
+<- concept_phrase_about_discovery_not_found;
+=> nrel_phrase_template: @template_discovery_not_found_1;;
+
+@template_discovery_not_found_2 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+*];;
+@phrase_discovery_not_found_2 = [Первооткрыватель объекта «${_entity_name}» в базе знаний не указан.];;
+@phrase_discovery_not_found_2
+<- lang_ru;
+<- concept_phrase_about_discovery_not_found;
+=> nrel_phrase_template: @template_discovery_not_found_2;;

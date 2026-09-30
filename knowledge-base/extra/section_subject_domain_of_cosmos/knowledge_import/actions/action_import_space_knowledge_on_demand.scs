@@ -1,0 +1,50 @@
+/* Класс действий агента SpaceOnDemandImportAgent. */
+action_import_space_knowledge_on_demand
+<- sc_node_class;
+<- actions_class;
+<- atomic_action_class;
+=> nrel_main_idtf:
+	[действие. дозагрузить сведения о космическом объекте по запросу пользователя] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. import space object knowledge on demand] (* <- lang_en;; *);
+<= nrel_inclusion:
+	information_action;
+=> nrel_definition:
+	[действие, в ходе которого агент загружает из Wikidata недостающие сведения об объекте, упомянутом в сообщении пользователя, и погружает их в базу знаний] (* <- lang_ru;; *);;
+
+/* Спецификация абстрактного sc-агента SpaceOnDemandImportAgent (Python; автор — Пикта И. Д.). */
+@agent_import_space_knowledge_on_demand_condition = [*
+		action_import_space_knowledge_on_demand _-> _action;;
+		action_initiated _-> _action;;
+		_action _-> rrel_1:: _message;;
+		concept_message_about_satellites _-> _message;;
+		_message _-> rrel_entity:: _wd_obj;;
+		concept_space_object _-> _wd_obj;;
+*];;
+@agent_import_space_knowledge_on_demand_result = [*
+		_wd_obj _=> nrel_wikidata_id:: _wd_id;;
+		_wd_obj _=> nrel_mass:: _wd_mass;;
+		_wd_obj _=> nrel_space_data_source:: information_source_wikidata;;
+		_message _=> nrel_imported_space_object:: _wd_obj;;
+		_message _=> nrel_space_import_report:: _wd_report;;
+*];;
+@agent_import_space_knowledge_on_demand_condition_and_result = (@agent_import_space_knowledge_on_demand_condition => @agent_import_space_knowledge_on_demand_result);;
+agent_import_space_knowledge_on_demand
+<- abstract_sc_agent;
+=> nrel_main_idtf:
+	[агент дозагрузки сведений о космическом объекте по запросу пользователя] (* <- lang_ru;; *);
+	[SpaceOnDemandImportAgent] (* <- lang_en;; *);
+=> nrel_primary_initiation_condition:
+	(sc_event_after_generate_outgoing_arc => action_initiated);
+=> nrel_sc_agent_action_class:
+	action_import_space_knowledge_on_demand;
+=> nrel_initiation_condition_and_result:
+	@agent_import_space_knowledge_on_demand_condition_and_result;
+=> nrel_note:
+	[реализация: problem-solver/py/modules/spaceImportModule/SpaceOnDemandImportAgent.py] (* <- lang_ru;; *);
+=> nrel_note:
+	[входы: rrel_1 — сообщение ЛР2 о физических характеристиках, орбите, спутниках, открытии, созвездии или космической миссии с сущностью — объектом базы знаний, у которого нет запрошенных сведений] (* <- lang_ru;; *);
+=> nrel_note:
+	[выходы: в базе знаний — масса, радиус, период обращения, орбита, первооткрыватель, дата открытия, созвездие, даты и экипаж миссии, класс Wikidata, для вопроса о спутниках — сами спутники; в сообщении — загруженный объект* и отчёт*; инициированное действие вывода новых знаний] (* <- lang_ru;; *);
+=> nrel_note:
+	[процедуры: проверка класса сообщения и сущностей; идентификатор Wikidata объекта (из базы знаний или поиск по названию); SPARQL-запросы пачкой (названия, связи, величины в единицах СИ, даты, классы); перевод величин и дат в формат базы знаний; погружение без замены сведений ЛР1; вызов агента вывода; отчёт] (* <- lang_ru;; *);;

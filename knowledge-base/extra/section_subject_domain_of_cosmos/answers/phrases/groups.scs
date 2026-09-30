@@ -1,0 +1,35 @@
+/* Корневой класс ответных фраз о космосе и две группы — по участникам бригады. */
+
+concept_space_phrase
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза ответа на тему космоса] (* <- lang_ru;; *);
+	[phrase of reply on a space topic] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase;
+=> nrel_definition:
+	[фраза, которую система использует для ответа на сообщение о космосе; классы таких фраз соответствуют классам сообщений о космосе] (* <- lang_ru;; *);;
+
+concept_phrase_about_celestial_body_properties
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о свойствах небесного тела] (* <- lang_ru;; *);
+	[phrase about properties of a celestial body] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_space_phrase;
+=> nrel_definition:
+	[фраза ответа на сообщение класса concept_message_about_celestial_body_properties] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы фраз этой группы и правила ответа спроектировал Пикта И.] (* <- lang_ru;; *);;
+
+concept_phrase_about_space_exploration
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об изучении и освоении космоса] (* <- lang_ru;; *);
+	[phrase about space exploration] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_space_phrase;
+=> nrel_definition:
+	[фраза ответа на сообщение класса concept_message_about_space_exploration] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы фраз этой группы и правила ответа спроектировал Переверзев М.] (* <- lang_ru;; *);;

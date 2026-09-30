@@ -1,0 +1,111 @@
+/* Экземпляры классов "планета земной группы" и "газовый гигант". */
+earth
+<- concept_terrestrial_planet;
+<- concept_planet;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Земля]
+    (* <- lang_ru;; *);
+    [Earth]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [третья по удалённости от Солнца планета Солнечной системы и единственное
+    известное на данный момент небесное тело, населённое живыми организмами]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_natural_satellite: moon;
+=> nrel_mass:
+    [5,97·10^24 кг]
+    (* <- lang_ru;; *);
+=> nrel_equatorial_radius:
+    [6378,1 км]
+    (* <- lang_ru;; *);
+=> nrel_orbital_period:
+    [365,26 суток]
+    (* <- lang_ru;; *);
+=> nrel_distance_from_sun:
+    [1 а.е. (около 149,6 млн км)]
+    (* <- lang_ru;; *);;
+
+mars
+<- concept_terrestrial_planet;
+<- concept_planet;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Марс]
+    (* <- lang_ru;; *);
+    [Mars]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [четвёртая по удалённости от Солнца планета Солнечной системы, названная в честь
+    древнеримского бога войны. Красноватый оттенок поверхности обусловлен оксидом железа]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_natural_satellite: phobos;
+=> nrel_mass:
+    [6,42·10^23 кг]
+    (* <- lang_ru;; *);
+=> nrel_equatorial_radius:
+    [3396,2 км]
+    (* <- lang_ru;; *);
+=> nrel_orbital_period:
+    [687 суток]
+    (* <- lang_ru;; *);
+=> nrel_distance_from_sun:
+    [1,52 а.е.]
+    (* <- lang_ru;; *);;
+
+jupiter
+<- concept_gas_giant;
+<- concept_planet;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Юпитер]
+    (* <- lang_ru;; *);
+    [Jupiter]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [пятая по удалённости от Солнца и самая крупная планета Солнечной системы,
+    газовый гигант, масса которого в 2,5 раза превышает суммарную массу всех остальных планет]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_natural_satellite: europa;
+=> nrel_mass:
+    [1,90·10^27 кг]
+    (* <- lang_ru;; *);
+=> nrel_equatorial_radius:
+    [71 492 км]
+    (* <- lang_ru;; *);
+=> nrel_orbital_period:
+    [11,86 года]
+    (* <- lang_ru;; *);
+=> nrel_distance_from_sun:
+    [5,20 а.е.]
+    (* <- lang_ru;; *);;
+
+saturn
+<- concept_gas_giant;
+<- concept_planet;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Сатурн]
+    (* <- lang_ru;; *);
+    [Saturn]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [шестая планета Солнечной системы, газовый гигант, наиболее известный своей
+    яркой системой колец, состоящих преимущественно из частиц льда и пыли]
+    (* <- lang_ru;; *);
+=> nrel_orbit: sun;
+=> nrel_mass:
+    [5,68·10^26 кг]
+    (* <- lang_ru;; *);
+=> nrel_equatorial_radius:
+    [60 268 км]
+    (* <- lang_ru;; *);
+=> nrel_orbital_period:
+    [29,46 года]
+    (* <- lang_ru;; *);
+=> nrel_distance_from_sun:
+    [9,58 а.е.]
+    (* <- lang_ru;; *);;

@@ -1,0 +1,13 @@
+concept_cosmodrome
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [космодром]
+    (* <- lang_ru;; *);
+    [cosmodrome]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [территория с комплексом сооружений и техники, предназначенная для сборки,
+    подготовки и запуска ракет-носителей с космическими аппаратами]
+    (* <- lang_ru;; *);;

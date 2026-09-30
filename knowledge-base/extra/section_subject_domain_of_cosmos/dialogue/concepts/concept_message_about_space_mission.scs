@@ -1,0 +1,39 @@
+concept_message_about_space_mission
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о космической миссии] (* <- lang_ru;; *);
+	[message about a space mission] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_space_mission];
+<= nrel_inclusion:
+	concept_message_about_space_exploration;
+=> nrel_definition:
+	[сообщение об изучении и освоении космоса, в котором запрашиваются сведения о космической миссии или запуске космического аппарата: экипаж, командир, цель, дата, ракета-носитель, космодром или оператор] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Кто был в экипаже миссии Аполлон-11?»; выделяемая сущность: космическая миссия или космический аппарат] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о космической миссии)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о космической миссии - сообщение об изучении и освоении космоса, в котором запрашиваются сведения о космической миссии или запуске космического аппарата: экипаж, командир, цель, дата, ракета-носитель, космодром или оператор.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_message_about_space_exploration;
+			nrel_mission_crew;
+			rrel_crew_commander;
+			nrel_mission_target;
+			nrel_start_date;
+			nrel_used_launch_vehicle;
+			nrel_launch_site;
+			nrel_launch_date;
+			nrel_operator;
+			rrel_entity
+		};;
+	*);;

@@ -1,0 +1,32 @@
+/* Правило ответа на сообщение о космической миссии: космонавт.
+   Если: выделенная сущность — космонавт, входивший в экипаж миссии.
+   Автор: Переверзев М. */
+
+@if_lr_answer_space_mission_cosmonaut = [*
+	concept_message _-> _message;;
+	concept_message_about_space_mission _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_space_mission _=> nrel_mission_crew:: _entity;;
+*];;
+@then_lr_answer_space_mission_cosmonaut = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_space_mission _-> _reply_message;;
+*];;
+@if_lr_answer_space_mission_cosmonaut <- atomic_logical_formula;;
+@then_lr_answer_space_mission_cosmonaut <- atomic_logical_formula;;
+@impl_lr_answer_space_mission_cosmonaut = (@if_lr_answer_space_mission_cosmonaut => @then_lr_answer_space_mission_cosmonaut);;
+@impl_lr_answer_space_mission_cosmonaut <- nrel_implication;;
+answer_pattern_lr_answer_space_mission_cosmonaut
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_space_mission_cosmonaut;;
+lr_answer_space_mission_cosmonaut
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о космической миссии: космонавт] (* <- lang_ru;; *);
+	[rule of reply to a message about a space mission: cosmonaut] (* <- lang_en;; *);
+=> nrel_note:
+	[если выделенная сущность — космонавт, входивший в экипаж миссии; фразы ответа — из класса concept_phrase_about_space_mission_cosmonaut] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_space_mission_cosmonaut;
+-> rrel_main_key_sc_element: @impl_lr_answer_space_mission_cosmonaut;;

@@ -1,0 +1,93 @@
+/* Признак (trait) сообщения — эмоциональная окраска. Формализация повторяет пример из
+   документации агента классификации NIKA (docs/agents/messageTopicClassificationAgent):
+   множество-признак с идентификатором Wit.ai wit$sentiment включает классы-значения
+   positive, neutral, negative; классы-значения входят в concept_trait_possible_class.
+   Значение признака возвращает сервис wit-local (общий для всех предметных областей). */
+
+concept_message_with_emotional_coloring
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение с эмоциональной окраской] (* <- lang_ru;; *);
+	[message with emotional coloring] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[wit$sentiment];
+<= nrel_inclusion:
+	concept_atomic_message;
+=> nrel_inclusion:
+	concept_message_with_positive_emotion_coloring;
+	concept_message_with_neutral_emotion_coloring;
+	concept_message_with_negative_emotion_coloring;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение сообщений по эмоциональной окраске] (* <- lang_ru;; *);;
+		-> concept_message_with_positive_emotion_coloring;;
+		-> concept_message_with_neutral_emotion_coloring;;
+		-> concept_message_with_negative_emotion_coloring;;
+	*);
+=> nrel_definition:
+	[атомарное сообщение, для которого определена эмоциональная окраска - вежливая (позитивная), нейтральная или грубая (негативная)] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение с эмоциональной окраской)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение с эмоциональной окраской - атомарное сообщение, для которого определена эмоциональная окраска: вежливая (позитивная), нейтральная или грубая (негативная).] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_atomic_message
+		};;
+	*);;
+
+concept_message_with_positive_emotion_coloring
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение с позитивной эмоциональной окраской] (* <- lang_ru;; *);
+	[message with positive emotion coloring] (* <- lang_en;; *);
+=> nrel_idtf:
+	[вежливое сообщение] (* <- lang_ru;; *);
+=> nrel_wit_ai_idtf:
+	[positive];
+=> nrel_definition:
+	[сообщение с эмоциональной окраской, содержащее вежливые обороты или благодарность] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример: «Подскажите, пожалуйста, чем лечат бронхиальную астму?»] (* <- lang_ru;; *);;
+
+concept_message_with_neutral_emotion_coloring
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение с нейтральной эмоциональной окраской] (* <- lang_ru;; *);
+	[message with neutral emotion coloring] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[neutral];
+=> nrel_definition:
+	[сообщение с эмоциональной окраской, не содержащее ни вежливых, ни грубых оборотов] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример: «Чем лечат бронхиальную астму?»] (* <- lang_ru;; *);;
+
+concept_message_with_negative_emotion_coloring
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение с негативной эмоциональной окраской] (* <- lang_ru;; *);
+	[message with negative emotion coloring] (* <- lang_en;; *);
+=> nrel_idtf:
+	[грубое сообщение] (* <- lang_ru;; *);
+=> nrel_wit_ai_idtf:
+	[negative];
+=> nrel_definition:
+	[сообщение с эмоциональной окраской, содержащее грубые обороты, торопление собеседника или недовольство] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример: «Ну и чем лечат бронхиальную астму, долго ещё ждать?»] (* <- lang_ru;; *);;
+
+concept_trait_possible_class
+-> concept_message_with_positive_emotion_coloring;
+-> concept_message_with_neutral_emotion_coloring;
+-> concept_message_with_negative_emotion_coloring;;

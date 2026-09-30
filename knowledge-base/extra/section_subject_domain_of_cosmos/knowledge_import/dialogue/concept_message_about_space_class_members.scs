@@ -1,0 +1,14 @@
+concept_message_about_space_class_members
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение об объектах класса космических объектов] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about members of a space objects class] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_space_class_members];
+<= nrel_inclusion:
+	concept_message_about_space_knowledge;
+=> nrel_definition:
+	[сообщение, в котором запрашиваются объекты базы знаний указанного класса] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Какие космические миссии есть в базе знаний?»] (* <- lang_ru;; *);;

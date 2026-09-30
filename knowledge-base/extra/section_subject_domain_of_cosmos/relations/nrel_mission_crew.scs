@@ -1,0 +1,44 @@
+nrel_mission_crew
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+    [экипаж*]
+    (* <- lang_ru;; *);
+    [crew*]
+    (* <- lang_en;; *);
+=> nrel_first_domain: concept_space_mission;
+=> nrel_second_domain: concept_cosmonaut;
+=> nrel_definitional_domain:
+    ...
+    (*
+        <= nrel_combination:
+            {
+            concept_space_mission;
+            concept_cosmonaut
+            };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (экипаж*)]
+        (* <- lang_ru;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Экипаж* - бинарное ориентированное отношение, связывающее космическую миссию с космонавтом, входившим в состав её экипажа.]
+            (* <- lang_ru;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_space_mission;
+        concept_cosmonaut
+        };;
+    *);;

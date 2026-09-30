@@ -1,0 +1,23 @@
+concept_small_solar_system_body
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [малое тело Солнечной системы]
+    (* <- lang_ru;; *);
+    [small Solar System body]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [объект, обращающийся вокруг Солнца, который не является
+    ни планетой, ни карликовой планетой, ни спутником. К малым телам относят астероиды,
+    кометы и метеороиды]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_natural_space_object;
+<= nrel_subdividing:
+    ...
+    (*
+        <- sc_node_tuple;;
+        -> concept_asteroid;;
+        -> concept_comet;;
+    *);;

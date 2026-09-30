@@ -1,0 +1,69 @@
+/* Экземпляры класса "созвездие". */
+orion_constellation
+<- concept_constellation;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Орион]
+    (* <- lang_ru;; *);
+    [Orion]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [экваториальное созвездие, одно из самых заметных на небе; включает яркие
+    звёзды Бетельгейзе и Ригель, а также характерный "Пояс Ориона" из трёх звёзд]
+    (* <- lang_ru;; *);;
+
+
+lyra_constellation
+<- concept_constellation;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Лира]
+    (* <- lang_ru;; *);
+    [Lyra]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [небольшое созвездие северного полушария неба, главной звездой которого является
+    Вега - одна из самых ярких звёзд ночного неба]
+    (* <- lang_ru;; *);;
+
+
+canis_major_constellation
+<- concept_constellation;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Большой Пёс]
+    (* <- lang_ru;; *);
+    [Canis Major]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [созвездие южного полушария неба, в котором находится Сириус -
+    самая яркая звезда ночного неба]
+    (* <- lang_ru;; *);;
+
+
+andromeda_constellation
+<- concept_constellation;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Андромеда]
+    (* <- lang_ru;; *);
+    [Andromeda]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [созвездие северного полушария неба, названное в честь героини древнегреческой
+    мифологии; в его границах наблюдается галактика Андромеды]
+    (* <- lang_ru;; *);;
+
+
+sagittarius_constellation
+<- concept_constellation;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Стрелец]
+    (* <- lang_ru;; *);
+    [Sagittarius]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [зодиакальное созвездие южного полушария неба, в направлении которого
+    находится центр галактики Млечный Путь]
+    (* <- lang_ru;; *);;

@@ -1,0 +1,32 @@
+/* Правило ответа на сообщение о созвездии космического объекта: объект — созвездие.
+   Если: в выделенном созвездии находятся другие объекты (сущность сама является созвездием).
+   Автор: Переверзев М. */
+
+@if_lr_answer_constellation_is_constellation = [*
+	concept_message _-> _message;;
+	concept_message_about_constellation _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_space_object _=> nrel_located_in_constellation:: _entity;;
+*];;
+@then_lr_answer_constellation_is_constellation = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_constellation _-> _reply_message;;
+*];;
+@if_lr_answer_constellation_is_constellation <- atomic_logical_formula;;
+@then_lr_answer_constellation_is_constellation <- atomic_logical_formula;;
+@impl_lr_answer_constellation_is_constellation = (@if_lr_answer_constellation_is_constellation => @then_lr_answer_constellation_is_constellation);;
+@impl_lr_answer_constellation_is_constellation <- nrel_implication;;
+answer_pattern_lr_answer_constellation_is_constellation
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_constellation_is_constellation;;
+lr_answer_constellation_is_constellation
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о созвездии космического объекта: объект — созвездие] (* <- lang_ru;; *);
+	[rule of reply to a message about a constellation of a space object: the object is a constellation] (* <- lang_en;; *);
+=> nrel_note:
+	[если в выделенном созвездии находятся другие объекты (сущность сама является созвездием); фразы ответа — из класса concept_phrase_about_constellation_is_constellation] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_constellation_is_constellation;
+-> rrel_main_key_sc_element: @impl_lr_answer_constellation_is_constellation;;

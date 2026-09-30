@@ -1,0 +1,41 @@
+/* Экземпляры класса "космонавт". */
+yuri_gagarin
+<- concept_cosmonaut;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Юрий Гагарин]
+    (* <- lang_ru;; *);
+    [Yuri Gagarin]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [советский лётчик-космонавт, первый человек, совершивший
+    полёт в космическое пространство 12 апреля 1961 года на корабле "Восток-1"]
+    (* <- lang_ru;; *);;
+
+
+valentina_tereshkova
+<- concept_cosmonaut;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Валентина Терешкова]
+    (* <- lang_ru;; *);
+    [Valentina Tereshkova]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [советский космонавт, первая в мире женщина-космонавт,
+    совершившая полёт в космос 16 июня 1963 года на корабле "Восток-6"]
+    (* <- lang_ru;; *);;
+
+
+neil_armstrong
+<- concept_cosmonaut;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Нил Армстронг]
+    (* <- lang_ru;; *);
+    [Neil Armstrong]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [американский астронавт, командир миссии "Аполлон-11" и первый
+    человек, ступивший на поверхность Луны 20 июля 1969 года]
+    (* <- lang_ru;; *);;

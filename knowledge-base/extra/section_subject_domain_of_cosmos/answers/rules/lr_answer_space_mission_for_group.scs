@@ -1,0 +1,43 @@
+/* Правило ответа на сообщение о космической миссии: вопрос о классе объектов.
+   Если: выделенная сущность — класс, экземпляр которого имеет дату старта ИЛИ дату запуска.
+   Автор: Переверзев М. */
+
+@if_lr_answer_space_mission_for_group_1 = [*
+	concept_message _-> _message;;
+	concept_message_about_space_mission _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _-> _instance;;
+	_instance _=> nrel_start_date:: _space_start_date;;
+*];;
+@if_lr_answer_space_mission_for_group_2 = [*
+	concept_message _-> _message;;
+	concept_message_about_space_mission _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _-> _instance;;
+	_instance _=> nrel_launch_date:: _space_launch_date;;
+*];;
+@or_lr_answer_space_mission_for_group = { @if_lr_answer_space_mission_for_group_1; @if_lr_answer_space_mission_for_group_2 };;
+@or_lr_answer_space_mission_for_group <- nrel_disjunction;;
+@then_lr_answer_space_mission_for_group = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_atomic_message _-> _reply_message;;
+	concept_message_about_space_mission _-> _reply_message;;
+*];;
+@if_lr_answer_space_mission_for_group_1 <- atomic_logical_formula;;
+@if_lr_answer_space_mission_for_group_2 <- atomic_logical_formula;;
+@then_lr_answer_space_mission_for_group <- atomic_logical_formula;;
+@impl_lr_answer_space_mission_for_group = (@or_lr_answer_space_mission_for_group => @then_lr_answer_space_mission_for_group);;
+@impl_lr_answer_space_mission_for_group <- nrel_implication;;
+answer_pattern_lr_answer_space_mission_for_group
+<- sc_node_tuple;
+-> rrel_1: concept_phrase_about_space_mission_for_group;;
+lr_answer_space_mission_for_group
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_2;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о космической миссии: вопрос о классе объектов] (* <- lang_ru;; *);
+	[rule of reply to a message about a space mission: question about a class of objects] (* <- lang_en;; *);
+=> nrel_note:
+	[если выделенная сущность — класс, экземпляр которого имеет дату старта ИЛИ дату запуска; фразы ответа — из класса concept_phrase_about_space_mission_for_group] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_space_mission_for_group;
+-> rrel_main_key_sc_element: @impl_lr_answer_space_mission_for_group;;

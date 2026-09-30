@@ -1,0 +1,38 @@
+concept_message_about_celestial_body_properties
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о свойствах небесного тела] (* <- lang_ru;; *);
+	[message about properties of a celestial body] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_space_message;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение класса «сообщение о свойствах небесного тела» по запрашиваемому свойству] (* <- lang_ru;; *);;
+		-> concept_message_about_orbit;;
+		-> concept_message_about_satellites;;
+		-> concept_message_about_physical_parameters;;
+	*);
+=> nrel_definition:
+	[сообщение о космосе, в котором спрашивается о движении, спутниках или физических характеристиках космического объекта] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы сообщений этой группы спроектировал Пикта И.] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение о свойствах небесного тела)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение о свойствах небесного тела - сообщение о космосе, в котором спрашивается о движении, спутниках или физических характеристиках космического объекта.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_space_message
+		};;
+	*);;

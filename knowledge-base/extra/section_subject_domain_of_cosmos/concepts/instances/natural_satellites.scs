@@ -1,0 +1,63 @@
+/* Экземпляры класса "естественный спутник". */
+moon
+<- concept_natural_satellite;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Луна]
+    (* <- lang_ru;; *);
+    [Moon]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [единственный естественный спутник Земли, второй по яркости объект земного неба
+    после Солнца и единственное небесное тело, которое посещал человек]
+    (* <- lang_ru;; *);
+=> nrel_orbit: earth;
+=> nrel_mass:
+    [7,35·10^22 кг]
+    (* <- lang_ru;; *);
+=> nrel_equatorial_radius:
+    [1738,1 км]
+    (* <- lang_ru;; *);
+=> nrel_orbital_period:
+    [27,32 суток]
+    (* <- lang_ru;; *);;
+
+phobos
+<- concept_natural_satellite;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Фобос]
+    (* <- lang_ru;; *);
+    [Phobos]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [больший из двух естественных спутников Марса, имеющий неправильную форму
+    и обращающийся вокруг планеты быстрее, чем она вращается вокруг своей оси]
+    (* <- lang_ru;; *);
+=> nrel_orbit: mars;
+=> nrel_discoverer:
+    [Асаф Холл]
+    (* <- lang_ru;; *);
+=> nrel_discovery_date:
+    [18 августа 1877 года]
+    (* <- lang_ru;; *);;
+
+europa
+<- concept_natural_satellite;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [Европа]
+    (* <- lang_ru;; *);
+    [Europa]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [шестой спутник Юпитера, один из четырёх галилеевых спутников. Под её ледяной
+    корой предполагается наличие подповерхностного океана жидкой воды]
+    (* <- lang_ru;; *);
+=> nrel_orbit: jupiter;
+=> nrel_discoverer:
+    [Галилео Галилей]
+    (* <- lang_ru;; *);
+=> nrel_discovery_date:
+    [8 января 1610 года]
+    (* <- lang_ru;; *);;

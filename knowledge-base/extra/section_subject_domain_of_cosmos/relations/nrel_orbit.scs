@@ -1,0 +1,47 @@
+/* Бинарное ориентированное отношение: что вокруг чего обращается. */
+nrel_orbit
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;   /* ничто не обращается вокруг самого себя */
+<- asymmetric_relation;      /* если A вокруг B, то B не вокруг A */
+<- antitransitive_relation;  /* Луна вокруг Земли, Земля вокруг Солнца,
+                                но связка "Луна вокруг Солнца" этому отношению не принадлежит */
+=> nrel_main_idtf:
+    [обращается вокруг*]
+    (* <- lang_ru;; *);
+    [orbits*]
+    (* <- lang_en;; *);
+=> nrel_first_domain: concept_space_object;
+=> nrel_second_domain: concept_space_object;
+=> nrel_definitional_domain:
+    ...
+    (*
+        <= nrel_combination:
+            {
+            concept_space_object;
+            concept_space_object
+            };;
+    *);
+<- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+        [Опр. (обращается вокруг*)]
+        (* <- lang_ru;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+        ...
+        (*
+        -> rrel_example:
+            [Обращается вокруг* - бинарное ориентированное отношение, связывающее космический
+            объект с тем космическим объектом, вокруг центра масс которого он движется по орбите
+            под действием силы тяготения.]
+            (* <- lang_ru;; *);;
+        *);;
+    <= nrel_using_constants:
+        {
+        concept_space_object
+        };;
+    *);;

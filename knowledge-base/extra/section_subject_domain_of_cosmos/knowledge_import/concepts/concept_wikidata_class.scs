@@ -1,0 +1,8 @@
+concept_wikidata_class
+<- sc_node_class;
+=> nrel_main_idtf:
+	[класс Wikidata] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Wikidata class] (* <- lang_en;; *);
+=> nrel_definition:
+	[класс объектов базы знаний Wikidata; каждому такому классу соответствует класс базы знаний «Космос»] (* <- lang_ru;; *);;

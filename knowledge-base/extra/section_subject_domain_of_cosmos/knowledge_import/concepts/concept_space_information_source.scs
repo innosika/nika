@@ -1,0 +1,8 @@
+concept_space_information_source
+<- sc_node_class;
+=> nrel_main_idtf:
+	[внешний источник сведений о космических объектах] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[external source of space objects data] (* <- lang_en;; *);
+=> nrel_definition:
+	[внешний сервис, из которого агенты адаптации знаний получают сведения о космических объектах] (* <- lang_ru;; *);;

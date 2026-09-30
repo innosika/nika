@@ -1,0 +1,364 @@
+{
+  "utterances": [
+    {
+      "text": "Хочу, чтобы в базе знаний были небесные тела",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 44,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были космические объекты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 50,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были космические миссии",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 49,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были естественные спутники",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 52,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 38,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу, чтобы в базе знаний были звёзды",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 37,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний спутники Юпитер",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 35,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний спутники Сатурн",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 35,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний спутники Марс",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 33,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний спутники Земля",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 34,
+          "body": "Земля",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Залей в базу знаний спутники Плутон",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 35,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь небесные тела?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 29,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь космические объекты?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 35,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь космические миссии?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 34,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь естественные спутники?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 37,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь планеты?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 23,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ты знаешь звёзды?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 22,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие небесные тела относятся к Солнечная система?",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 32,
+          "end": 49,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    }
+  ]
+}

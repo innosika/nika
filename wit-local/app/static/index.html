@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wit-local — классификатор сообщений NIKA</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --ink: #1d2433; --muted: #667085; --line: #e4e7ec;
+    --accent: #2f6fde; --accent-soft: #e8f0fd; --ok: #1b8a5a; --warn: #b54708; --bad: #c0362c;
+    --ent1: #fde7c7; --ent2: #d8f0e3; --ent3: #e3e0fb; --ent4: #fbe0ea;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.45 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--ink); }
+  header { background: var(--panel); border-bottom: 1px solid var(--line); padding: 14px 24px; display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+  header h1 { font-size: 18px; margin: 0; font-weight: 600; }
+  header h1 small { color: var(--muted); font-weight: 400; margin-left: 8px; }
+  .status { display: flex; gap: 16px; color: var(--muted); font-size: 13px; flex-wrap: wrap; }
+  .status b { color: var(--ink); font-weight: 600; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); margin-right: 6px; vertical-align: middle; }
+  .dot.off { background: var(--bad); }
+  nav { display: flex; gap: 4px; padding: 0 24px; background: var(--panel); border-bottom: 1px solid var(--line); }
+  nav button { border: 0; background: none; padding: 12px 14px; font: inherit; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; }
+  nav button.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+  main { max-width: 1180px; margin: 20px auto; padding: 0 24px; }
+  section { display: none; } section.active { display: block; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; margin-bottom: 16px; }
+  .card h2 { font-size: 15px; margin: 0 0 12px; font-weight: 600; }
+  .row { display: flex; gap: 10px; }
+  input[type=text] { flex: 1; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; outline: none; }
+  input[type=text]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .btn { font: inherit; border: 0; border-radius: 8px; padding: 10px 16px; background: var(--accent); color: #fff; cursor: pointer; }
+  .btn.ghost { background: var(--accent-soft); color: var(--accent); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .chip { font-size: 13px; padding: 4px 10px; border-radius: 99px; background: var(--bg); border: 1px solid var(--line); cursor: pointer; }
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
+  .utterance { font-size: 20px; line-height: 2.1; margin: 4px 0 14px; }
+  .ent { padding: 3px 6px; border-radius: 6px; position: relative; }
+  .ent sub { font-size: 11px; color: var(--muted); margin-left: 4px; font-family: ui-monospace, Consolas, monospace; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .03em; }
+  code, .mono { font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
+  .intent-name { font-size: 18px; font-weight: 600; font-family: ui-monospace, Consolas, monospace; }
+  .bar { height: 8px; background: var(--bg); border-radius: 99px; overflow: hidden; margin-top: 4px; }
+  .bar > i { display: block; height: 100%; background: var(--accent); }
+  .muted { color: var(--muted); }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
+  .tag.pos { background: #dcf5e8; color: var(--ok); } .tag.neg { background: #fde4e1; color: var(--bad); } .tag.neu { background: #eef0f3; color: var(--muted); }
+  pre { background: #0f172a; color: #e2e8f0; padding: 14px; border-radius: 8px; overflow: auto; font-size: 12.5px; max-height: 420px; }
+  details summary { cursor: pointer; color: var(--accent); }
+  .kpis { display: flex; gap: 12px; flex-wrap: wrap; }
+  .kpi { flex: 1; min-width: 150px; background: var(--bg); border-radius: 8px; padding: 12px 14px; }
+  .kpi b { display: block; font-size: 22px; } .kpi span { color: var(--muted); font-size: 13px; }
+  .ok { color: var(--ok); } .bad { color: var(--bad); }
+</style>
+</head>
+<body>
+<header>
+  <h1>wit-local <small>локальный Wit.ai-совместимый классификатор сообщений NIKA</small></h1>
+  <div class="status" id="status">загрузка…</div>
+</header>
+<nav>
+  <button data-tab="understand" class="active">Понимание</button>
+  <button data-tab="intents">Намерения</button>
+  <button data-tab="entities">Сущности</button>
+  <button data-tab="quality">Качество</button>
+  <button data-tab="history">Журнал запросов</button>
+</nav>
+<main>
+  <section id="understand" class="active">
+    <div class="card">
+      <h2>Фраза для разбора</h2>
+      <div class="row">
+        <input type="text" id="q" placeholder="Например: Какие симптомы у гриппа A(H1N1)?" autofocus>
+        <button class="btn" id="go">Разобрать</button>
+      </div>
+      <div class="chips" id="examples"></div>
+    </div>
+    <div id="result"></div>
+  </section>
+
+  <section id="intents">
+    <div class="card"><h2>Намерения (intents) и обучающие фразы</h2><div id="intents-table" class="muted">загрузка…</div></div>
+    <div class="card"><h2>Признаки (traits)</h2><div id="traits-table"></div></div>
+    <div class="card"><h2>Подключённые предметные области</h2><div id="apps-table"></div></div>
+  </section>
+
+  <section id="entities">
+    <div class="card">
+      <h2>Словарь сущностей — элементы <code>concept_wit_entity</code> из базы знаний</h2>
+      <div class="row"><input type="text" id="eq" placeholder="поиск по идентификатору или синониму"></div>
+      <p class="muted" id="ent-count"></p>
+      <div id="entities-table"></div>
+    </div>
+  </section>
+
+  <section id="quality">
+    <div id="quality-body" class="card muted">загрузка…</div>
+  </section>
+
+  <section id="history">
+    <div class="card">
+      <h2>Последние запросы к <code>/message</code> <span class="muted" style="font-weight:400">(обновляется каждые 3 с)</span></h2>
+      <div id="history-table" class="muted">запросов пока не было</div>
+    </div>
+  </section>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pct = x => (x == null ? "—" : (100 * x).toFixed(1) + "%");
+const ENT_COLORS = ["var(--ent1)", "var(--ent2)", "var(--ent3)", "var(--ent4)"];
+const EXAMPLES = ["Здравствуйте, Ника!", "Что такое грипп?", "Какие симптомы у гриппа A(H1N1)?", "Что вызывает туберкулёз?",
+  "Как передаётся вирусный гепатит B?", "Как диагностируют инфаркт миокарда?", "Чем лечат бронхиальную астму?",
+  "К какому врачу обратиться при стенокардии?", "От чего помогает Нурофен?", "Какие побочные эффекты у морфина?",
+  "Помогает ли осельтамивир при гриппе A(H1N1)?", "Каким бывает вирус?", "Подскажите, пожалуйста, чем лечат ковид?",
+  "Ну и что такое туберкулоз?", "Поехали!", "Вокруг чего обращается Луна?", "Какие спутники есть у Юпитера?",
+  "Какая масса у Юпитера?", "Кто открыл Плутон?", "В каком созвездии находится Сириус?",
+  "Кто был командиром Аполлона-11?", "Что такое отношение обращается вокруг?", "Расскажи анекдот"];
+
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("active", x === b));
+  document.querySelectorAll("section").forEach(s => s.classList.toggle("active", s.id === b.dataset.tab));
+  if (b.dataset.tab === "entities") loadEntities();
+  if (b.dataset.tab === "quality" || b.dataset.tab === "intents") loadInfo();
+  if (b.dataset.tab === "history") loadHistory();
+});
+$("#examples").innerHTML = EXAMPLES.map(e => `<span class="chip">${esc(e)}</span>`).join("");
+document.querySelectorAll(".chip").forEach(c => c.onclick = () => { $("#q").value = c.textContent; parse(); });
+$("#go").onclick = parse;
+$("#q").addEventListener("keydown", e => { if (e.key === "Enter") parse(); });
+
+function sentimentTag(v) {
+  const cls = v === "positive" ? "pos" : v === "negative" ? "neg" : "neu";
+  const ru = {positive: "позитивная", negative: "негативная", neutral: "нейтральная"}[v] || v;
+  return `<span class="tag ${cls}">${esc(v)} · ${ru}</span>`;
+}
+
+async function parse() {
+  const q = $("#q").value.trim();
+  if (!q) return;
+  const r = await (await fetch(`/message?explain=1&q=${encodeURIComponent(q)}`)).json();
+  const ents = (r.entities["rrel_entity:rrel_entity"] || []);
+  let html = "", pos = 0;
+  ents.forEach((e, i) => {
+    html += esc(q.slice(pos, e.start));
+    html += `<span class="ent" style="background:${ENT_COLORS[i % 4]}" title="${esc(e.kb.sys_idtf)}">${esc(q.slice(e.start, e.end))}<sub>${esc(e.kb.sys_idtf)}</sub></span>`;
+    pos = e.end;
+  });
+  html += esc(q.slice(pos));
+  const intent = r.intents[0];
+  const alts = (r._alternatives || []).map(a => `<tr><td class="mono">${esc(a.name)}</td><td style="width:45%"><div class="bar"><i style="width:${100*a.confidence}%"></i></div></td><td>${pct(a.confidence)}</td></tr>`).join("");
+  const traits = Object.entries(r.traits).map(([k, v]) => `<tr><td class="mono">${esc(k)}</td><td>${sentimentTag(v[0].value)}</td><td>${pct(v[0].confidence)}</td></tr>`).join("");
+  const entRows = ents.map((e, i) => `<tr><td><span class="ent" style="background:${ENT_COLORS[i % 4]}">${esc(e.body)}</span></td>
+      <td><b>${esc(e.value)}</b></td><td class="mono">${esc(e.kb.sys_idtf)}</td>
+      <td>${esc(e.kb.kind === "class" ? "класс" : e.kb.kind === "relation" ? "отношение" : "экземпляр")}${e.kb.classes.length ? ` <span class="muted mono">∈ ${esc(e.kb.classes.join(", "))}</span>` : ""}</td>
+      <td>${esc(e.kb.top_name || e.kb.top)}</td><td>${pct(e.confidence)}</td></tr>`).join("");
+  $("#result").innerHTML = `
+    <div class="card"><div class="utterance">${html}</div>
+      <div class="grid">
+        <div><h2>Намерение (intent)</h2>
+          ${intent ? `<div class="intent-name">${esc(intent.name)}</div><div class="bar"><i style="width:${100*intent.confidence}%"></i></div><div class="muted">уверенность ${pct(intent.confidence)}</div>`
+                   : `<div class="intent-name bad">не определено</div><div class="muted">уверенность ниже порога или фраза вне тем → NIKA отнесёт сообщение к <code>concept_not_classified_by_intent_message</code></div>`}
+          <h2 style="margin-top:16px">Варианты</h2><table>${alts}</table>
+        </div>
+        <div><h2>Признак (trait)</h2><table>${traits}</table>
+          <h2 style="margin-top:16px">Текст для модели</h2><div class="mono">${esc(r._delexicalized)}</div>
+          <p class="muted">Упоминания сущностей заменены типом — максимальным классом ветки иерархии базы знаний.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card"><h2>Сущности (роль <code>rrel_entity</code>)</h2>
+      ${ents.length ? `<table><tr><th>Фрагмент</th><th>Значение (value)</th><th>Системный идтф.</th><th>Вид</th><th>Ветка иерархии</th><th>Увер.</th></tr>${entRows}</table>` : `<p class="muted">сущности не найдены</p>`}
+    </div>
+    <div class="card"><details><summary>Ответ в формате Wit.ai (то, что получает агент NIKA)</summary><pre>${esc(JSON.stringify(stripExplain(r), null, 2))}</pre></details></div>`;
+}
+function stripExplain(r) {
+  const c = JSON.parse(JSON.stringify(r));
+  delete c._alternatives; delete c._delexicalized;
+  (c.entities["rrel_entity:rrel_entity"] || []).forEach(e => delete e.kb);
+  return c;
+}
+
+let info = null;
+async function loadInfo() {
+  info = await (await fetch("/api/info")).json();
+  $("#intents-table").innerHTML = `<table><tr><th>Намерение</th><th>Обучающих</th><th>Валидац.</th><th>Тестовых</th><th>Источники фраз</th></tr>${
+    info.intents.map(i => `<tr><td class="mono">${esc(i.name)}</td><td>${i.train}</td><td>${i.dev}</td><td>${i.test}</td><td class="muted">${esc(Object.entries(i.domains).map(([d, n]) => `${d}: ${n}`).join("; "))}</td></tr>`).join("")}</table>
+    <p class="muted">Всего: ${info.train_size} обучающих, ${info.dev_size} валидационных, ${info.test_size} тестовых фраз. Порог уверенности намерения: ${info.threshold}.</p>`;
+  $("#traits-table").innerHTML = Object.entries(info.traits).map(([k, v]) => `<p><code>${esc(k)}</code>: ${v.map(sentimentTag).join(" ")}</p>`).join("");
+  $("#apps-table").innerHTML = `<table><tr><th>Каталог</th><th>Приложение</th></tr>${info.apps.map(a => `<tr><td class="mono">extra/${esc(a.domain)}/classification</td><td>${esc(a.name || "")}</td></tr>`).join("")}</table>`;
+  renderQuality();
+}
+
+function metricBlock(title, m, note) {
+  if (!m) return "";
+  const rows = Object.entries(m.per_intent).filter(([, v]) => v.support).map(([k, v]) =>
+    `<tr><td class="mono">${esc(k)}</td><td>${v.precision.toFixed(2)}</td><td>${v.recall.toFixed(2)}</td><td>${v.f1.toFixed(2)}</td><td>${v.support}</td></tr>`).join("");
+  const dom = m.by_domain ? `<table><tr><th>Область</th><th>Фраз</th><th>Намерение</th><th>Сущности</th><th>Признак</th></tr>${Object.entries(m.by_domain).map(([d, x]) =>
+    `<tr><td class="mono">${esc(d)}</td><td>${x.n}</td><td>${pct(x.intent_accuracy)}</td><td>${pct(x.entity_accuracy)}</td><td>${pct(x.trait_accuracy)}</td></tr>`).join("")}</table>` : "";
+  const errs = (m.errors || []).map(r => `<tr><td>${esc(r.text)}</td><td class="mono">${esc(r.gold)}</td><td class="mono ${r.intent_ok ? "ok" : "bad"}">${esc(r.pred)}</td><td class="${r.entities_ok ? "" : "bad"}">${esc(r.pred_entities.join(", "))}</td></tr>`).join("");
+  return `<div class="card"><h2>${title}</h2><p class="muted">${note}</p>
+    <div class="kpis"><div class="kpi"><b>${pct(m.intent_accuracy)}</b><span>точность намерения</span></div>
+      <div class="kpi"><b>${m.intent_macro_f1.toFixed(3)}</b><span>macro-F1</span></div>
+      <div class="kpi"><b>${pct(m.entity_accuracy)}</b><span>сущности (точный набор)</span></div>
+      <div class="kpi"><b>${pct(m.trait_accuracy)}</b><span>признак wit$sentiment</span></div>
+      <div class="kpi"><b>${m.n}</b><span>фраз</span></div></div>
+    ${dom ? `<h2 style="margin-top:16px">По предметным областям</h2>${dom}` : ""}
+    <details style="margin-top:12px"><summary>По намерениям</summary><table><tr><th>Намерение</th><th>P</th><th>R</th><th>F1</th><th>n</th></tr>${rows}</table></details>
+    ${errs ? `<details style="margin-top:8px"><summary>Ошибки (${m.errors.length})</summary><table><tr><th>Фраза</th><th>Верно</th><th>Распознано</th><th>Сущности</th></tr>${errs}</table></details>` : ""}
+  </div>`;
+}
+function renderQuality() {
+  const m = info.metrics || {};
+  if (!m.cv) { $("#quality-body").innerHTML = `Метрики: ${esc(info.metrics_status)}`; return; }
+  $("#quality-body").className = "";
+  $("#quality-body").innerHTML =
+    metricBlock("Итоговая тестовая выборка", m.test, "Фразы написаны вручную до доработки классификатора и при настройке не использовались.") +
+    metricBlock("Валидационная выборка", m.dev, "По ошибкам на этой выборке дорабатывались шаблоны обучающих фраз.") +
+    metricBlock(`Перекрёстная проверка на обучающих фразах (${m.cv.folds} блоков)`, m.cv, "Фразы сгенерированы по шаблонам, поэтому оценка оптимистична.");
+}
+
+async function loadEntities() {
+  const r = await (await fetch(`/api/entities?q=${encodeURIComponent($("#eq").value)}`)).json();
+  $("#ent-count").textContent = `показано ${r.items.length} из ${r.total}`;
+  $("#entities-table").innerHTML = `<table><tr><th>Основной идентификатор</th><th>Системный</th><th>Вид</th><th>Ветка</th><th>Все идентификаторы</th></tr>${
+    r.items.map(e => `<tr><td><b>${esc(e.value)}</b></td><td class="mono">${esc(e.sys_idtf)}</td><td>${esc(e.kind)}</td><td>${esc(e.top_name || e.top)}</td><td class="muted">${esc(e.names.join(" · "))}</td></tr>`).join("")}</table>`;
+}
+$("#eq").addEventListener("input", () => { clearTimeout(window._et); window._et = setTimeout(loadEntities, 200); });
+
+async function loadHistory() {
+  const h = await (await fetch("/api/history")).json();
+  if (!h.length) return;
+  $("#history-table").className = "";
+  $("#history-table").innerHTML = `<table><tr><th>Время</th><th>Клиент</th><th>Текст</th><th>Намерение</th><th>Сущности</th><th>Признак</th><th>мс</th></tr>${
+    h.map(x => `<tr><td class="mono">${esc(x.time)}</td><td class="mono muted">${esc(x.client)}</td><td>${esc(x.text)}</td><td class="mono">${esc(x.intent || "—")}${x.confidence ? ` <span class="muted">${pct(x.confidence)}</span>` : ""}</td><td>${esc(x.entities.join(", "))}</td><td>${esc(Object.values(x.traits).join(", "))}</td><td>${x.ms}</td></tr>`).join("")}</table>`;
+}
+setInterval(() => { if ($("#history").classList.contains("active")) loadHistory(); }, 3000);
+
+async function loadStatus() {
+  try {
+    const h = await (await fetch("/health")).json();
+    const i = await (await fetch("/api/info")).json();
+    const on = h.sc_server.startsWith("загружено");
+    $("#status").innerHTML = `<span><span class="dot ${on ? "" : "off"}"></span>sc-server: <b>${esc(h.sc_server)}</b></span>
+      <span>намерений: <b>${i.intents.filter(x => x.name !== "none").length}</b></span><span>обучающих фраз: <b>${i.train_size}</b></span>
+      <span>сущностей в словаре: <b>${h.entities}</b></span>`;
+  } catch (e) { $("#status").textContent = "сервис недоступен"; }
+}
+loadStatus(); setInterval(loadStatus, 10000);
+</script>
+</body>
+</html>

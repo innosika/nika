@@ -1,0 +1,17 @@
+nrel_imported_space_object
+<- sc_node_non_role_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+=> nrel_main_idtf:
+	[загруженный космический объект*] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[imported space object*] (* <- lang_en;; *);
+=> nrel_first_domain:
+	concept_message;
+=> nrel_second_domain:
+	concept_space_object;
+=> nrel_definition:
+	[бинарное ориентированное отношение, связывающее сообщение пользователя с объектами, сведения о которых агент загрузил при обработке этого сообщения] (* <- lang_ru;; *);;

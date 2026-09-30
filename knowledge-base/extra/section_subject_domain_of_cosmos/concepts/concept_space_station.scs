@@ -1,0 +1,15 @@
+concept_space_station
+<- sc_node_class;
+<- class;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+    [орбитальная станция]
+    (* <- lang_ru;; *);
+    [space station]
+    (* <- lang_en;; *);
+=> nrel_definition:
+    [долговременный пилотируемый космический аппарат, предназначенный
+    для длительного пребывания экипажа на орбите и проведения научных исследований]
+    (* <- lang_ru;; *);
+<= nrel_inclusion:
+    concept_spacecraft;;

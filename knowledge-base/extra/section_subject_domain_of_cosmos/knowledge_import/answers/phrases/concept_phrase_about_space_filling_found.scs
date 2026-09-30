@@ -1,0 +1,28 @@
+concept_phrase_about_space_filling_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о наполнении базы знаний космическими объектами: объекты загружены] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about space KB filling: objects imported] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_knowledge;;
+
+@template_phrase_about_space_filling_found_1 = [*
+	concept_message _-> _message;;
+	_message _=> nrel_imported_space_object:: _space_object;;
+*];;
+@phrase_about_space_filling_found_1 = [В базе знаний появились объекты: $list{_space_object}.];;
+@phrase_about_space_filling_found_1
+<- lang_ru;
+<- concept_phrase_about_space_filling_found;
+=> nrel_phrase_template: @template_phrase_about_space_filling_found_1;;
+
+@template_phrase_about_space_filling_found_2 = [*
+	concept_message _-> _message;;
+	_message _=> nrel_imported_space_object:: _space_object;;
+*];;
+@phrase_about_space_filling_found_2 = [Загружены объекты: $list{_space_object}.];;
+@phrase_about_space_filling_found_2
+<- lang_ru;
+<- concept_phrase_about_space_filling_found;
+=> nrel_phrase_template: @template_phrase_about_space_filling_found_2;;

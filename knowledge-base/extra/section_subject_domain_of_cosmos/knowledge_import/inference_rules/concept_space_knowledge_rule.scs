@@ -1,0 +1,24 @@
+/* Набор правил вывода новых знаний о космических объектах (агент SpaceKnowledgeInferenceAgent).
+   Упорядоченное множество классов правил по приоритету, как у правил классификации сообщений:
+   сначала выводится класс объекта — он нужен правилу о естественных спутниках. */
+
+concept_space_knowledge_rule
+<- sc_node_class;
+=> nrel_main_idtf:
+	[множество правил вывода знаний о космических объектах] (* <- lang_ru;; *);
+	[set of rules for inferring knowledge about space objects] (* <- lang_en;; *);;
+
+concept_space_knowledge_rule_priority_1
+<- sc_node_class;
+=> nrel_main_idtf:
+	[правила вывода знаний о космических объектах первого приоритета] (* <- lang_ru;; *);;
+
+concept_space_knowledge_rule_priority_2
+<- sc_node_class;
+=> nrel_main_idtf:
+	[правила вывода знаний о космических объектах второго приоритета] (* <- lang_ru;; *);;
+
+@space_rule_access_arc_1 = (concept_space_knowledge_rule -> rrel_1: concept_space_knowledge_rule_priority_1);;
+@space_rule_access_arc_2 = (concept_space_knowledge_rule -> concept_space_knowledge_rule_priority_2);;
+@space_rule_sequence_arc = (@space_rule_access_arc_1 => @space_rule_access_arc_2);;
+nrel_basic_sequence -> @space_rule_sequence_arc;;

@@ -1,0 +1,18 @@
+concept_phrase_about_space_import_notice_discovery
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза-уведомление о загрузке сведений из Wikidata (открытие)] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase notifying about Wikidata import (discovery)] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_import_notice;;
+
+@phrase_about_space_import_notice_discovery_1 = [Раньше в базе знаний не было этих сведений — я только что загрузила их из Wikidata.];;
+@phrase_about_space_import_notice_discovery_1
+<- lang_ru;
+<- concept_phrase_about_space_import_notice_discovery;;
+
+@phrase_about_space_import_notice_discovery_2 = [Этого я не знала, поэтому нашла сведения в Wikidata и добавила их в базу знаний.];;
+@phrase_about_space_import_notice_discovery_2
+<- lang_ru;
+<- concept_phrase_about_space_import_notice_discovery;;

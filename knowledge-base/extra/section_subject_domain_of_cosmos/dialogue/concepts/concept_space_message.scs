@@ -1,0 +1,37 @@
+concept_space_message
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение на космическую тему] (* <- lang_ru;; *);
+	[message on a space topic] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_atomic_message;
+<= nrel_subdividing:
+	...
+	(*
+		<- sc_node_tuple;;
+		=> nrel_main_idtf:
+			[разбиение сообщений на космическую тему по предмету вопроса] (* <- lang_ru;; *);;
+		-> concept_message_about_celestial_body_properties;;
+		-> concept_message_about_space_exploration;;
+	*);
+=> nrel_definition:
+	[атомарное сообщение, в котором пользователь спрашивает о космических объектах, их движении и характеристиках, об их открытии или о космических миссиях] (* <- lang_ru;; *);
+=> nrel_note:
+	[классы сообщений распределены между участниками бригады: сообщение о свойствах небесного тела - Пикта И.; сообщение об изучении и освоении космоса - Переверзев М.] (* <- lang_ru;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+		=> nrel_main_idtf:
+			[Опр. (сообщение на космическую тему)] (* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			...
+			(*
+				-> rrel_example:
+					[Сообщение на космическую тему - атомарное сообщение, в котором пользователь спрашивает о космических объектах, их движении и характеристиках, об их открытии или о космических миссиях.] (* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants:
+		{
+			concept_atomic_message
+		};;
+	*);;

@@ -1,0 +1,12 @@
+concept_message_about_kb_filling_with_space_objects_by_type
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о наполнении базы знаний космическими объектами заданного типа] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about filling the knowledge base with space objects of a given type] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_message_about_kb_filling_with_space_objects;
+=> nrel_definition:
+	[сообщение о наполнении, в котором указан класс или объект; класс присваивает агент режима 2] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Наполни базу знаний спутниками Юпитера»] (* <- lang_ru;; *);;
