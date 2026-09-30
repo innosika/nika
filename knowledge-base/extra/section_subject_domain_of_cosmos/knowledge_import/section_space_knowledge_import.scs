@@ -1,0 +1,63 @@
+/* Раздел базы знаний ЛР4 (вариант «Космос»): модуль адаптации знаний — загрузка сведений
+   о космических объектах из Wikidata, вывод новых знаний, диалог. */
+
+section_space_knowledge_import
+=> nrel_main_idtf:
+	[Раздел. Адаптация знаний о космических объектах из Wikidata] (* <- lang_ru;; *);
+	[Section. Adaptation of knowledge about space objects from Wikidata] (* <- lang_en;; *);
+<- atomic_section;
+-> rrel_key_sc_element:
+	concept_wikidata_class;
+	concept_space_information_source;
+	nrel_wikidata_id;
+	nrel_wikidata_type;
+	nrel_corresponding_space_class;
+	nrel_known_wikidata_member;
+	nrel_space_data_source;
+	nrel_space_import_note;
+	nrel_planetary_system;
+	nrel_central_body;
+	nrel_imported_space_object;
+	nrel_space_import_report;
+	lr_space_class_by_wikidata_type;
+	lr_space_natural_satellite;
+	lr_space_planetary_system;
+	lr_space_planetary_system_chain;
+	action_import_space_knowledge_on_demand;
+	action_fill_kb_with_space_objects;
+	action_infer_space_knowledge;
+	agent_import_space_knowledge_on_demand;
+	agent_fill_kb_with_space_objects;
+	agent_infer_space_knowledge;
+	concept_message_about_space_knowledge;
+	concept_message_about_kb_filling_with_space_objects;
+	concept_message_about_kb_filling_with_space_objects_by_type;
+	concept_message_about_planetary_system_bodies;
+	concept_message_about_space_class_members;
+	concept_phrase_about_space_knowledge;
+	concept_phrase_about_space_import_notice;
+	concept_phrase_about_space_import_notice_physical_parameters;
+	concept_phrase_about_space_import_notice_orbit;
+	concept_phrase_about_space_import_notice_satellites;
+	concept_phrase_about_space_import_notice_discovery;
+	concept_phrase_about_space_import_notice_constellation;
+	concept_phrase_about_space_import_notice_space_mission;
+	concept_phrase_about_space_filling_summary;
+	concept_phrase_about_space_filling_found;
+	concept_phrase_about_space_filling_report;
+	concept_phrase_about_planetary_system_bodies_found;
+	concept_phrase_about_planetary_system_bodies_not_found;
+	concept_phrase_about_space_class_members_found;
+	concept_phrase_about_space_class_members_not_found;
+	lr_answer_space_filling_found;
+	lr_answer_space_filling_report;
+	lr_answer_physical_parameters_imported;
+	lr_answer_orbit_imported;
+	lr_answer_satellites_imported;
+	lr_answer_discovery_imported;
+	lr_answer_constellation_imported;
+	lr_answer_space_mission_imported;
+	lr_answer_planetary_system_bodies_found;
+	lr_answer_planetary_system_bodies_not_found;
+	lr_answer_space_class_members_found;
+	lr_answer_space_class_members_not_found;;

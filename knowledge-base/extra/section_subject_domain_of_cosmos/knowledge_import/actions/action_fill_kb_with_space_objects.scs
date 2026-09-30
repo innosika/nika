@@ -1,0 +1,47 @@
+/* Класс действий агента SpaceKbFillAgent. */
+action_fill_kb_with_space_objects
+<- sc_node_class;
+<- actions_class;
+<- atomic_action_class;
+=> nrel_main_idtf:
+	[действие. наполнить базу знаний космическими объектами из Wikidata] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[action. fill knowledge base with space objects] (* <- lang_en;; *);
+<= nrel_inclusion:
+	information_action;
+=> nrel_definition:
+	[действие, в ходе которого агент загружает из Wikidata самые известные объекты для классов базы знаний (в первую очередь — без экземпляров), заданного класса или спутники объекта] (* <- lang_ru;; *);;
+
+/* Спецификация абстрактного sc-агента SpaceKbFillAgent (Python; автор — Переверзев М. А.). */
+@agent_fill_kb_with_space_objects_condition = [*
+		action_fill_kb_with_space_objects _-> _action;;
+		action_initiated _-> _action;;
+		_action _-> rrel_1:: _message;;
+		concept_message_about_kb_filling_with_space_objects _-> _message;;
+*];;
+@agent_fill_kb_with_space_objects_result = [*
+		_wd_obj _=> nrel_wikidata_type:: _wd_obj_class;;
+		_wd_kb_class _-> _wd_obj;;
+		_message _=> nrel_imported_space_object:: _wd_obj;;
+		_message _=> nrel_space_import_report:: _wd_report;;
+*];;
+@agent_fill_kb_with_space_objects_condition_and_result = (@agent_fill_kb_with_space_objects_condition => @agent_fill_kb_with_space_objects_result);;
+agent_fill_kb_with_space_objects
+<- abstract_sc_agent;
+=> nrel_main_idtf:
+	[агент наполнения базы знаний космическими объектами] (* <- lang_ru;; *);
+	[SpaceKbFillAgent] (* <- lang_en;; *);
+=> nrel_primary_initiation_condition:
+	(sc_event_after_generate_outgoing_arc => action_initiated);
+=> nrel_sc_agent_action_class:
+	action_fill_kb_with_space_objects;
+=> nrel_initiation_condition_and_result:
+	@agent_fill_kb_with_space_objects_condition_and_result;
+=> nrel_note:
+	[реализация: problem-solver/py/modules/spaceImportModule/SpaceKbFillAgent.py] (* <- lang_ru;; *);
+=> nrel_note:
+	[входы: rrel_1 — сообщение «о наполнении базы знаний космическими объектами»: без типа, с классом базы знаний («небесными телами», «космическими миссиями») или с объектом («спутниками Юпитера»)] (* <- lang_ru;; *);
+=> nrel_note:
+	[выходы: новые космические объекты со сведениями; загруженные объекты* и отчёт в сообщении] (* <- lang_ru;; *);
+=> nrel_note:
+	[процедуры: чтение из базы знаний соответствия классов Wikidata и классов базы знаний; упорядочение классов по числу экземпляров; самые известные объекты класса (по числу статей в Википедиях) или спутники объекта; загрузка, погружение и вывод, как у агента режима 1] (* <- lang_ru;; *);;

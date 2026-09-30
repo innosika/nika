@@ -1,0 +1,14 @@
+concept_message_about_kb_filling_with_space_objects
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о наполнении базы знаний космическими объектами] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about filling the knowledge base with space objects] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[fill_kb_with_space_objects];
+<= nrel_inclusion:
+	concept_message_about_space_knowledge;
+=> nrel_definition:
+	[сообщение, в котором пользователь просит загрузить космические объекты из внешнего источника] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Наполни базу знаний небесными телами из Wikidata»] (* <- lang_ru;; *);;

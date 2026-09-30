@@ -1,0 +1,8 @@
+concept_phrase_about_space_knowledge
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о знаниях о космосе из внешних источников] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about space knowledge from external sources] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_space_phrase;;

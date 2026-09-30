@@ -1,0 +1,22 @@
+concept_phrase_about_space_class_members_found
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза об объектах класса: сведения есть] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about space class members: found] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_knowledge;;
+
+@template_phrase_about_space_class_members_found_1 = [*
+	concept_message _-> _message;;
+	_message _-> rrel_entity:: _entity;;
+	_entity _=> nrel_main_idtf:: _entity_name;;
+	lang_ru _-> _entity_name;;
+	_entity _-> _space_member;;
+	concept_wit_entity _-> _space_member;;
+*];;
+@phrase_about_space_class_members_found_1 = [В базе знаний к классу «${_entity_name}» относятся: $list{_space_member}.];;
+@phrase_about_space_class_members_found_1
+<- lang_ru;
+<- concept_phrase_about_space_class_members_found;
+=> nrel_phrase_template: @template_phrase_about_space_class_members_found_1;;

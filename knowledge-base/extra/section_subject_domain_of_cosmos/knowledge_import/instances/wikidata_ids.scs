@@ -1,0 +1,178 @@
+/* Идентификаторы Wikidata объектов ЛР1: по ним агент режима 1 запрашивает сведения, а новые объекты
+   сопоставляются с уже описанными (прежние факты ЛР1 не изменяются). */
+
+orion_constellation
+=> nrel_wikidata_id:
+	[Q8860];;
+
+lyra_constellation
+=> nrel_wikidata_id:
+	[Q10484];;
+
+canis_major_constellation
+=> nrel_wikidata_id:
+	[Q10538];;
+
+andromeda_constellation
+=> nrel_wikidata_id:
+	[Q9256];;
+
+sagittarius_constellation
+=> nrel_wikidata_id:
+	[Q8866];;
+
+baikonur
+=> nrel_wikidata_id:
+	[Q177477];;
+
+cape_canaveral
+=> nrel_wikidata_id:
+	[Q334465];;
+
+vostochny
+=> nrel_wikidata_id:
+	[Q1166191];;
+
+yuri_gagarin
+=> nrel_wikidata_id:
+	[Q7327];;
+
+valentina_tereshkova
+=> nrel_wikidata_id:
+	[Q44371];;
+
+neil_armstrong
+=> nrel_wikidata_id:
+	[Q1615];;
+
+milky_way
+=> nrel_wikidata_id:
+	[Q321];;
+
+andromeda_galaxy
+=> nrel_wikidata_id:
+	[Q2469];;
+
+orion_nebula
+=> nrel_wikidata_id:
+	[Q13903];;
+
+ring_nebula
+=> nrel_wikidata_id:
+	[Q13969];;
+
+sagittarius_a_star
+=> nrel_wikidata_id:
+	[Q237284];;
+
+vostok_1
+=> nrel_wikidata_id:
+	[Q182524];;
+
+vostok_6
+=> nrel_wikidata_id:
+	[Q269668];;
+
+apollo_11
+=> nrel_wikidata_id:
+	[Q43653];;
+
+moon
+=> nrel_wikidata_id:
+	[Q405];;
+
+phobos
+=> nrel_wikidata_id:
+	[Q7547];;
+
+europa
+=> nrel_wikidata_id:
+	[Q3143];;
+
+earth
+=> nrel_wikidata_id:
+	[Q2];;
+
+mars
+=> nrel_wikidata_id:
+	[Q111];;
+
+jupiter
+=> nrel_wikidata_id:
+	[Q319];;
+
+saturn
+=> nrel_wikidata_id:
+	[Q193];;
+
+pluto
+=> nrel_wikidata_id:
+	[Q339];;
+
+ceres
+=> nrel_wikidata_id:
+	[Q596];;
+
+vesta
+=> nrel_wikidata_id:
+	[Q3030];;
+
+halley_comet
+=> nrel_wikidata_id:
+	[Q23054];;
+
+solar_system
+=> nrel_wikidata_id:
+	[Q544];;
+
+roscosmos
+=> nrel_wikidata_id:
+	[Q190795];;
+
+nasa
+=> nrel_wikidata_id:
+	[Q23548];;
+
+esa
+=> nrel_wikidata_id:
+	[Q42262];;
+
+sputnik_1
+=> nrel_wikidata_id:
+	[Q80811];;
+
+hubble_telescope
+=> nrel_wikidata_id:
+	[Q2513];;
+
+iss
+=> nrel_wikidata_id:
+	[Q25271];;
+
+mir_station
+=> nrel_wikidata_id:
+	[Q48604];;
+
+voyager_1
+=> nrel_wikidata_id:
+	[Q48469];;
+
+new_horizons
+=> nrel_wikidata_id:
+	[Q48461];;
+
+vostok_launch_vehicle
+=> nrel_wikidata_id:
+	[Q3303767];;
+
+saturn_5
+=> nrel_wikidata_id:
+	[Q54363];;
+
+sun
+=> nrel_wikidata_id:
+	[Q525];;
+
+sirius
+=> nrel_wikidata_id:
+	[Q3409];;

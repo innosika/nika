@@ -1,0 +1,12 @@
+/* Внешний источник сведений о космических объектах. */
+
+information_source_wikidata
+<- concept_space_information_source;
+=> nrel_main_idtf:
+	[Wikidata] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Wikidata] (* <- lang_en;; *);
+=> nrel_definition:
+	[открытая база знаний фонда Викимедиа в модели RDF; запросы — SPARQL (https://query.wikidata.org/sparql), ответы — SPARQL JSON] (* <- lang_ru;; *);
+=> nrel_note:
+	[адрес: https://www.wikidata.org] (* <- lang_ru;; *);;

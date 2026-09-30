@@ -1,0 +1,21 @@
+/* Правило: класс объекта по классу Wikidata.
+   Если объект — экземпляр класса Wikidata, которому соответствует класс базы знаний, то объект — экземпляр этого класса. */
+
+@if_lr_space_class_by_wikidata_type = [*
+	_wd_obj _=> nrel_wikidata_type:: _wd_obj_class;;
+	_wd_obj_class _=> nrel_corresponding_space_class:: _wd_kb_class;;
+*];;
+@if_lr_space_class_by_wikidata_type <- atomic_logical_formula;;
+@then_lr_space_class_by_wikidata_type = [*
+	_wd_kb_class _-> _wd_obj;;
+*];;
+@then_lr_space_class_by_wikidata_type <- atomic_logical_formula;;
+@impl_lr_space_class_by_wikidata_type = (@if_lr_space_class_by_wikidata_type => @then_lr_space_class_by_wikidata_type);;
+@impl_lr_space_class_by_wikidata_type <- nrel_implication;;
+lr_space_class_by_wikidata_type
+<- concept_space_knowledge_rule_priority_1;
+=> nrel_main_idtf:
+	[правило: класс объекта по классу Wikidata] (* <- lang_ru;; *);
+=> nrel_note:
+	[если объект — экземпляр класса Wikidata, которому соответствует класс базы знаний, то объект — экземпляр этого класса] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_space_class_by_wikidata_type;;

@@ -1,0 +1,18 @@
+concept_phrase_about_space_filling_summary
+<- sc_node_class;
+=> nrel_main_idtf:
+	[фраза о наполнении базы знаний космическими объектами: отчёт агента] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[phrase about space KB filling: summary] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_phrase_about_space_knowledge;;
+
+@template_phrase_about_space_filling_summary_1 = [*
+	concept_message _-> _message;;
+	_message _=> nrel_space_import_report:: _space_report;;
+*];;
+@phrase_about_space_filling_summary_1 = [${_space_report}];;
+@phrase_about_space_filling_summary_1
+<- lang_ru;
+<- concept_phrase_about_space_filling_summary;
+=> nrel_phrase_template: @template_phrase_about_space_filling_summary_1;;

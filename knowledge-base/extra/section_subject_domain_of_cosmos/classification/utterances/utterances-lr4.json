@@ -1,0 +1,6524 @@
+{
+  "utterances": [
+    {
+      "text": "Пожалуйста, загрузи в базу знаний небесные тела",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 47,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи небесные тела из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 21,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй небесные тела из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 24,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний небесными телами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 36,
+          "body": "небесными телами",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний небесные тела",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 34,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ небесными телами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 27,
+          "body": "небесными телами",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли небесные тела из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 23,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие небесные тела есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 31,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу небесного тела?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 47,
+          "body": "небесного тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие небесные тела есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 19,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе небесные тела",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 35,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие небесные тела ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 19,
+          "body": "небесные тела",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний естественными космическими объектами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 56,
+          "body": "естественными космическими объектами",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний естественными космическими объектами из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 56,
+          "body": "естественными космическими объектами",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй естественные космические объекты из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 43,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут естественные космические объекты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 58,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить естественные космические объекты из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 48,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний естественные космические объекты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 60,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли естественные космические объекты из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 42,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе естественные космические объекты",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 54,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие естественные космические объекты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 38,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу естественного космического объекта?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 67,
+          "body": "естественного космического объекта",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие естественные космические объекты ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 38,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие естественные космические объекты ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 38,
+          "body": "естественные космические объекты",
+          "value": "естественный космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить космические объекты из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 35,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний космические объекты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 47,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний космическими объектами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "космическими объектами",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй космические объекты из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 30,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут космические объекты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 45,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний космическими объектами из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "космическими объектами",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические объекты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 25,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови космические объекты",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 26,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические объекты ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 25,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические объекты тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 25,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли космические объекты из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 29,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические объекты ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 25,
+          "body": "космические объекты",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний объекты космоса",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 43,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ объектами космоса",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 28,
+          "body": "объектами космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут объекты космоса",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 41,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи объекты космоса из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 23,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний объектами космоса",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 37,
+          "body": "объектами космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить объекты космоса из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 31,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты космоса тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие объекты космоса есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 33,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты космоса есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу объекта космоса?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 48,
+          "body": "объекта космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе объекты космоса",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 37,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты космоса ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "объекты космоса",
+          "value": "космический объект",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний космические миссии",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 46,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний космические миссии",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 39,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний космические миссии",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 39,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй космические миссии из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 29,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут космические миссии",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 44,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи космические миссии из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 26,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические миссии ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические миссии ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови космические миссии",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 25,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе космические миссии",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 40,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли космические миссии из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 28,
+          "body": "космические миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу космической миссии?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 51,
+          "body": "космической миссии",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний космические полёты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 39,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний космическими полётами из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 41,
+          "body": "космическими полётами",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ космическими полётами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 32,
+          "body": "космическими полётами",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний космические полёты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 39,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи космические полёты из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 26,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний космические полёты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 52,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические полёты ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу космического полёта?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 52,
+          "body": "космического полёта",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические полёты ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические полёты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие космические полёты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 36,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические полёты тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "космические полёты",
+          "value": "космическая миссия",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи естественные спутники из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 29,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний естественные спутники",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 55,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить естественные спутники из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 37,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний естественные спутники",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 42,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний естественные спутники",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 42,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний естественными спутниками",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 44,
+          "body": "естественными спутниками",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли естественные спутники из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 31,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие естественные спутники есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 39,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Назови естественные спутники",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 28,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие естественные спутники ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 27,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе естественные спутники",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 43,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие естественные спутники тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 27,
+          "body": "естественные спутники",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний спутники планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 44,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний спутники планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 37,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний спутниками планеты из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 38,
+          "body": "спутниками планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут спутники планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 42,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи спутники планеты из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 24,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний спутники планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 37,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли спутники планеты из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 26,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие спутники планеты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 22,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие спутники планеты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 34,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе спутники планеты",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 38,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови спутники планеты",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 23,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие спутники планеты тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 22,
+          "body": "спутники планеты",
+          "value": "естественный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ планетами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 20,
+          "body": "планетами",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй планеты из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 18,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 41,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний планетами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 29,
+          "body": "планетами",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 28,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи планеты из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 15,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови планеты",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 14,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли планеты из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 17,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие планеты тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 13,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие планеты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 13,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие планеты ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 13,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие планеты ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 13,
+          "body": "планеты",
+          "value": "планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи звёзды из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 14,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний звёзды",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 27,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй звёзды из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 17,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут звёзды",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 32,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний звёзды",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 27,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний звёзды",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 34,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли звёзды из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 16,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови звёзды",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 13,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие звёзды тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе звёзды",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 28,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу звезды?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 39,
+          "body": "звезды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие звёзды ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "звёзды",
+          "value": "звезда",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи созвездия из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 17,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй созвездия из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 20,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут созвездия",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 35,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ созвездиями",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 22,
+          "body": "созвездиями",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний созвездия",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 43,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний созвездия",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 30,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие созвездия есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 27,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе созвездия",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 31,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли созвездия из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 19,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие созвездия ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие созвездия есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие созвездия ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "созвездия",
+          "value": "созвездие",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи галактики из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 17,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний галактики",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 30,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний галактики",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 37,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний галактиками",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 31,
+          "body": "галактиками",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут галактики",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 35,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ галактиками",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 22,
+          "body": "галактиками",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови галактики",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 16,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу галактики?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 42,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие галактики ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие галактики есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли галактики из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 19,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие галактики тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "галактики",
+          "value": "галактика",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут туманности",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 36,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний туманности",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 44,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний туманности",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 38,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи туманности из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 18,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить туманности из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 26,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ туманностями",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 23,
+          "body": "туманностями",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие туманности есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие туманности ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе туманности",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 32,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие туманности есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 28,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу туманности?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 43,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие туманности тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "туманности",
+          "value": "туманность",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй кометы из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 17,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить кометы из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 22,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний кометы",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 34,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний кометами из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 28,
+          "body": "кометами",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний кометы",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 27,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний кометы",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 40,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе кометы",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 28,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие кометы есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли кометы из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 16,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие кометы ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие кометы ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие кометы тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 12,
+          "body": "кометы",
+          "value": "комета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи астероиды из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 17,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний астероидами из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 31,
+          "body": "астероидами",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний астероиды",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 43,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний астероидами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 31,
+          "body": "астероидами",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний астероиды",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 30,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй астероиды из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 20,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови астероиды",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 16,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли астероиды из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 19,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие астероиды ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу астероида?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 42,
+          "body": "астероида",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие астероиды есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 15,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие астероиды есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 27,
+          "body": "астероиды",
+          "value": "астероид",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний карликовые планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 39,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний карликовые планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 46,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй карликовые планеты из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 29,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи карликовые планеты из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 26,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний карликовые планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 52,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний карликовые планеты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 39,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие карликовые планеты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 36,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие карликовые планеты ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие карликовые планеты тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие карликовые планеты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие карликовые планеты ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 24,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе карликовые планеты",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 40,
+          "body": "карликовые планеты",
+          "value": "карликовая планета",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний газовые гиганты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 36,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить газовые гиганты из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 31,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний газовые гиганты",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 43,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ газовыми гигантами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 29,
+          "body": "газовыми гигантами",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний газовыми гигантами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 38,
+          "body": "газовыми гигантами",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний газовыми гигантами из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 38,
+          "body": "газовыми гигантами",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли газовые гиганты из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 25,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие газовые гиганты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 33,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие газовые гиганты ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови газовые гиганты",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 22,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие газовые гиганты тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие газовые гиганты ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "газовые гиганты",
+          "value": "газовый гигант",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут межпланетные станции",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 46,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний межпланетными станциями",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 43,
+          "body": "межпланетными станциями",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний межпланетные станции",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 41,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний межпланетные станции",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 54,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний межпланетными станциями из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 43,
+          "body": "межпланетными станциями",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний межпланетные станции",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 41,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие межпланетные станции ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 26,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие межпланетные станции есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 26,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе межпланетные станции",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 42,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу межпланетной станции?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 53,
+          "body": "межпланетной станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови межпланетные станции",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 27,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие межпланетные станции ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 26,
+          "body": "межпланетные станции",
+          "value": "межпланетная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ орбитальными станциями",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 33,
+          "body": "орбитальными станциями",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут орбитальные станции",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 45,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний орбитальные станции",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 53,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи орбитальные станции из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 27,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний орбитальные станции",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 40,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний орбитальными станциями из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 42,
+          "body": "орбитальными станциями",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие орбитальные станции ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 25,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие орбитальные станции есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 37,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие орбитальные станции ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 25,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли орбитальные станции из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 29,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу орбитальной станции?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 52,
+          "body": "орбитальной станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе орбитальные станции",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 41,
+          "body": "орбитальные станции",
+          "value": "орбитальная станция",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний искусственные спутники",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 43,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй искусственные спутники из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 33,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить искусственные спутники из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 38,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут искусственные спутники",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 48,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ искусственными спутниками",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 36,
+          "body": "искусственными спутниками",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний искусственные спутники",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 43,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие искусственные спутники есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 40,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие искусственные спутники есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 28,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие искусственные спутники ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 28,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови искусственные спутники",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 29,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие искусственные спутники тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 28,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие искусственные спутники ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 28,
+          "body": "искусственные спутники",
+          "value": "искусственный спутник",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний ракеты-носители",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 36,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний ракеты-носители",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 43,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний ракеты-носители",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 49,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний ракеты-носители",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 36,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй ракеты-носители из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 26,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут ракеты-носители",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 41,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие ракеты-носители есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 33,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Какие ракеты-носители ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ракеты-носители есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли ракеты-носители из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 25,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе ракеты-носители",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 37,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие ракеты-носители ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 21,
+          "body": "ракеты-носители",
+          "value": "ракета-носитель",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний космодромы",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 31,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний космодромы",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 31,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний космодромы",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 44,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний космодромы",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 38,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить космодромы из внешнего источника",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 16,
+          "end": 26,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ космодромами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 23,
+          "body": "космодромами",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космодромы есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космодромы ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие космодромы есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 28,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Назови космодромы",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 17,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космодромы ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "космодромы",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу космодрома?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 43,
+          "body": "космодрома",
+          "value": "космодром",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй космонавтов из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 22,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний космонавтов",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 32,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Запиши в базу знаний космонавтов",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 32,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи космонавтов из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 19,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний космонавтов",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 39,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи в базу знаний космонавтов",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 34,
+          "end": 45,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие космонавты есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 28,
+          "body": "космонавты",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли космонавтов из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 21,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе космонавтов",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 33,
+          "body": "космонавтов",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космонавты ты можешь назвать?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "космонавты",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космонавты тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 16,
+          "body": "космонавты",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты относятся к классу космонавта?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 33,
+          "end": 43,
+          "body": "космонавта",
+          "value": "космонавт",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Импортируй космические агентства из Викиданных",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 11,
+          "end": 32,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний космическими агентствами из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 44,
+          "body": "космическими агентствами",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи космические агентства из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 8,
+          "end": 29,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пусть в базе знаний будут космические агентства",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 26,
+          "end": 47,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Хочу добавить в базу знаний космические агентства",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 28,
+          "end": 49,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний космическими агентствами",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 44,
+          "body": "космическими агентствами",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови космические агентства",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 7,
+          "end": 28,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические агентства ты знаешь?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 27,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Назови известные тебе космические агентства",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 43,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, какие космические агентства есть в базе знаний?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 18,
+          "end": 39,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли космические агентства из базы знаний",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 10,
+          "end": 31,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие космические агентства тебе известны?",
+      "intent": "about_space_class_members",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 6,
+          "end": 27,
+          "body": "космические агентства",
+          "value": "космическое агентство",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний спутниками Юпитер",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 37,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи спутники Юпитер из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 23,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний спутники Юпитер",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 30,
+          "end": 36,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ спутниками Юпитер",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 28,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи спутники Юпитер",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 35,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить луны Юпитер",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 27,
+          "body": "Юпитер",
+          "value": "Юпитер",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний спутниками Сатурн",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 37,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи спутники Сатурн из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 23,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний спутники Сатурн",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 30,
+          "end": 36,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ спутниками Сатурн",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 28,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи спутники Сатурн",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 35,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить луны Сатурн",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 27,
+          "body": "Сатурн",
+          "value": "Сатурн",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний спутниками Марс",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 35,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи спутники Марс из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 21,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний спутники Марс",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 30,
+          "end": 34,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ спутниками Марс",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 26,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи спутники Марс",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 33,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить луны Марс",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 25,
+          "body": "Марс",
+          "value": "Марс",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний спутниками Земля",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 36,
+          "body": "Земля",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи спутники Земля из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 22,
+          "body": "Земля",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний спутники Земля",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 30,
+          "end": 35,
+          "body": "Земля",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ спутниками Земля",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 27,
+          "body": "Земля",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи спутники Земля",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 34,
+          "body": "Земля",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить луны Земля",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 26,
+          "body": "Земля",
+          "value": "Земля",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Наполни базу знаний спутниками Плутон",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 31,
+          "end": 37,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Загрузи спутники Плутон из Wikidata",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 17,
+          "end": 23,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Добавь в базу знаний спутники Плутон",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 30,
+          "end": 36,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пополни БЗ спутниками Плутон",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 22,
+          "end": 28,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Пожалуйста, загрузи спутники Плутон",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 29,
+          "end": 35,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Нужно загрузить луны Плутон",
+      "intent": "fill_kb_with_space_objects",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 27,
+          "body": "Плутон",
+          "value": "Плутон",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие тела входят в Солнечная система?",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 20,
+          "end": 37,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Что входит в Солнечная система?",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 13,
+          "end": 30,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Из каких тел состоит Солнечная система?",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 21,
+          "end": 38,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие объекты входят в Солнечная система?",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 23,
+          "end": 40,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Перечисли тела Солнечная система",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 32,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Какие небесные тела есть в Солнечная система?",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 27,
+          "end": 44,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Подскажите, что входит в Солнечная система?",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 25,
+          "end": 42,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "positive"
+        }
+      ]
+    },
+    {
+      "text": "Назови объекты Солнечная система",
+      "intent": "about_planetary_system_bodies",
+      "entities": [
+        {
+          "entity": "rrel_entity:rrel_entity",
+          "start": 15,
+          "end": 32,
+          "body": "Солнечная система",
+          "value": "Солнечная система",
+          "entities": []
+        }
+      ],
+      "traits": [
+        {
+          "trait": "wit$sentiment",
+          "value": "neutral"
+        }
+      ]
+    }
+  ]
+}

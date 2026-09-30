@@ -1,0 +1,10 @@
+concept_message_about_space_knowledge
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о знаниях о космосе из внешних источников] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about space knowledge from external sources] (* <- lang_en;; *);
+<= nrel_inclusion:
+	concept_space_message;
+=> nrel_definition:
+	[сообщение на тему космоса, связанное с загрузкой сведений из Wikidata или со знаниями, выведенными из них (ЛР4)] (* <- lang_ru;; *);;

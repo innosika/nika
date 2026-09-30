@@ -1,0 +1,38 @@
+/* Правило ответа на сообщение о наполнении базы знаний космическими объектами: объекты загружены. Автор: Переверзев М. А.. */
+
+@if_lr_answer_space_filling_found = [*
+	concept_message _-> _message;;
+	_message _=> nrel_imported_space_object:: _space_object;;
+	concept_message_about_kb_filling_with_space_objects _-> _message;;
+*];;
+@then_lr_answer_space_filling_found = [*
+	_message _=> nrel_reply:: _reply_message;;
+	concept_non_atomic_message _-> _reply_message;;
+	_reply_decomposition _=> nrel_message_decomposition:: _reply_message;;
+	@reply_part_arc_1_lr_answer_space_filling_found = (_reply_decomposition _-> _reply_part_1);;
+	rrel_1 _-> @reply_part_arc_1_lr_answer_space_filling_found;;
+	@reply_part_arc_2_lr_answer_space_filling_found = (_reply_decomposition _-> _reply_part_2);;
+	@reply_parts_order_lr_answer_space_filling_found = (@reply_part_arc_1_lr_answer_space_filling_found _=> @reply_part_arc_2_lr_answer_space_filling_found);;
+	nrel_message_sequence _-> @reply_parts_order_lr_answer_space_filling_found;;
+	concept_atomic_message _-> _reply_part_1;;
+	concept_atomic_message _-> _reply_part_2;;
+*];;
+@if_lr_answer_space_filling_found <- atomic_logical_formula;;
+@then_lr_answer_space_filling_found <- atomic_logical_formula;;
+_reply_decomposition <- sc_node_tuple;;
+@impl_lr_answer_space_filling_found = (@if_lr_answer_space_filling_found => @then_lr_answer_space_filling_found);;
+@impl_lr_answer_space_filling_found <- nrel_implication;;
+answer_pattern_lr_answer_space_filling_found
+<- sc_node_tuple;;
+@pattern_arc_1_lr_answer_space_filling_found = (answer_pattern_lr_answer_space_filling_found -> concept_phrase_about_space_filling_summary);;
+rrel_1 -> @pattern_arc_1_lr_answer_space_filling_found;;
+@pattern_arc_2_lr_answer_space_filling_found = (answer_pattern_lr_answer_space_filling_found -> concept_phrase_about_space_filling_found);;
+@pattern_order_lr_answer_space_filling_found = (@pattern_arc_1_lr_answer_space_filling_found => @pattern_arc_2_lr_answer_space_filling_found);;
+nrel_basic_sequence -> @pattern_order_lr_answer_space_filling_found;;
+lr_answer_space_filling_found
+<- concept_answer_on_standard_message_rule;
+<- concept_answer_on_standard_message_rule_priority_1;
+=> nrel_main_idtf:
+	[правило ответа на сообщение о наполнении базы знаний космическими объектами: объекты загружены] (* <- lang_ru;; *);
+=> nrel_answer_pattern: answer_pattern_lr_answer_space_filling_found;
+-> rrel_main_key_sc_element: @impl_lr_answer_space_filling_found;;

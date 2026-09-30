@@ -1,0 +1,21 @@
+/* Синонимы классов ЛР1: по ним распознаются команды «Наполни базу знаний небесными телами / миссиями». */
+
+concept_natural_space_object
+=> nrel_idtf:
+	[небесное тело] (* <- lang_ru;; *);;
+
+concept_space_mission
+=> nrel_idtf:
+	[миссия] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[космический полёт] (* <- lang_ru;; *);;
+
+concept_space_object
+=> nrel_idtf:
+	[объект космоса] (* <- lang_ru;; *);;
+
+concept_natural_satellite
+=> nrel_idtf:
+	[спутник планеты] (* <- lang_ru;; *);
+=> nrel_idtf:
+	[луна] (* <- lang_ru;; *);;

@@ -110,12 +110,21 @@ services:
         condition: service_healthy
     command:
       - "--host=problem-solver"
+    volumes:
+      # ЛР4: кэш ответов Wikidata (повторные запросы идут без сети)
+      - space-import-cache:/data
+    environment:
+      - "WIT_ENTITIES_URL=http://wit-local:8095/api/entities"
+      # ЛР4 «Космос»: кэш ответов Wikidata и переключатель режима 1
+      - "SPACE_IMPORT_CACHE_DIR=/data/space-import-cache"
+      - "SPACE_IMPORT_ON_DEMAND=${SPACE_IMPORT_ON_DEMAND:-1}"
     networks:
       - nika
 
 volumes:
   kb-binary: {}
   wit-local-data: {}
+  space-import-cache: {}
 
 networks:
   nika: {}

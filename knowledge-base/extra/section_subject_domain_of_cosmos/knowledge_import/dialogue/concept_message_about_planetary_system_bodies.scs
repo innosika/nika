@@ -1,0 +1,14 @@
+concept_message_about_planetary_system_bodies
+<- sc_node_class;
+=> nrel_main_idtf:
+	[сообщение о телах планетной системы] (* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[message about bodies of a planetary system] (* <- lang_en;; *);
+=> nrel_wit_ai_idtf:
+	[about_planetary_system_bodies];
+<= nrel_inclusion:
+	concept_message_about_space_knowledge;
+=> nrel_definition:
+	[сообщение, в котором запрашиваются небесные тела, входящие в планетную систему] (* <- lang_ru;; *);
+=> nrel_note:
+	[пример сообщения: «Какие тела входят в Солнечную систему?»] (* <- lang_ru;; *);;

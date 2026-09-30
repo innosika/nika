@@ -1,0 +1,21 @@
+/* Правило: тело планетной системы.
+   Если тело обращается вокруг центральной звезды планетной системы, то оно входит в эту систему. */
+
+@if_lr_space_planetary_system = [*
+	_wd_obj _=> nrel_orbit:: _wd_center;;
+	_wd_system _=> nrel_central_body:: _wd_center;;
+*];;
+@if_lr_space_planetary_system <- atomic_logical_formula;;
+@then_lr_space_planetary_system = [*
+	_wd_obj _=> nrel_planetary_system:: _wd_system;;
+*];;
+@then_lr_space_planetary_system <- atomic_logical_formula;;
+@impl_lr_space_planetary_system = (@if_lr_space_planetary_system => @then_lr_space_planetary_system);;
+@impl_lr_space_planetary_system <- nrel_implication;;
+lr_space_planetary_system
+<- concept_space_knowledge_rule_priority_2;
+=> nrel_main_idtf:
+	[правило: тело планетной системы] (* <- lang_ru;; *);
+=> nrel_note:
+	[если тело обращается вокруг центральной звезды планетной системы, то оно входит в эту систему] (* <- lang_ru;; *);
+-> rrel_main_key_sc_element: @impl_lr_space_planetary_system;;

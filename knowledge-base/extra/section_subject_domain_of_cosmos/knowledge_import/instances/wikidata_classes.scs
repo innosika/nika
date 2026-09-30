@@ -1,0 +1,219 @@
+/* Классы Wikidata и соответствующие им классы базы знаний «Космос». По этим знаниям агент режима 2
+   выбирает, что загружать, а правило вывода относит новый объект к классу. */
+
+wd_class_q1319599
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[ледяной гигант (Wikidata Q1319599)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q1319599];
+=> nrel_corresponding_space_class:
+	concept_gas_giant;;
+
+wd_class_q121750
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[газовая планета (Wikidata Q121750)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q121750];
+=> nrel_corresponding_space_class:
+	concept_gas_giant;;
+
+wd_class_q3504248
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[внутренняя планета (Wikidata Q3504248)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q3504248];
+=> nrel_corresponding_space_class:
+	concept_terrestrial_planet;;
+
+wd_class_q2199
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[карликовая планета (Wikidata Q2199)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q2199];
+=> nrel_corresponding_space_class:
+	concept_dwarf_planet;;
+
+wd_class_q2537
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[естественный спутник (Wikidata Q2537)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q2537];
+=> nrel_corresponding_space_class:
+	concept_natural_satellite;;
+
+wd_class_q3559
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[комета (Wikidata Q3559)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q3559];
+=> nrel_corresponding_space_class:
+	concept_comet;;
+
+wd_class_q3863
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[астероид (Wikidata Q3863)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q3863];
+=> nrel_corresponding_space_class:
+	concept_asteroid;;
+
+wd_class_q589
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[чёрная дыра (Wikidata Q589)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q589];
+=> nrel_corresponding_space_class:
+	concept_black_hole;;
+
+wd_class_q42372
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[туманность (Wikidata Q42372)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q42372];
+=> nrel_corresponding_space_class:
+	concept_nebula;;
+
+wd_class_q318
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[галактика (Wikidata Q318)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q318];
+=> nrel_corresponding_space_class:
+	concept_galaxy;;
+
+wd_class_q523
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[звезда (Wikidata Q523)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q523];
+=> nrel_corresponding_space_class:
+	concept_star;
+=> nrel_known_wikidata_member:
+	[Q3409];
+=> nrel_known_wikidata_member:
+	[Q12176];
+=> nrel_known_wikidata_member:
+	[Q12124];
+=> nrel_known_wikidata_member:
+	[Q3427];
+=> nrel_known_wikidata_member:
+	[Q12189];
+=> nrel_known_wikidata_member:
+	[Q12126];
+=> nrel_known_wikidata_member:
+	[Q12985];
+=> nrel_known_wikidata_member:
+	[Q12166];
+=> nrel_known_wikidata_member:
+	[Q12975];
+=> nrel_known_wikidata_member:
+	[Q12970];
+=> nrel_known_wikidata_member:
+	[Q13034];
+=> nrel_known_wikidata_member:
+	[Q12179];
+=> nrel_known_wikidata_member:
+	[Q13008];
+=> nrel_known_wikidata_member:
+	[Q12183];;
+
+wd_class_q8928
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[созвездие (Wikidata Q8928)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q8928];
+=> nrel_corresponding_space_class:
+	concept_constellation;;
+
+wd_class_q25956
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[орбитальная станция (Wikidata Q25956)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q25956];
+=> nrel_corresponding_space_class:
+	concept_space_station;;
+
+wd_class_q26529
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[космический зонд (Wikidata Q26529)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q26529];
+=> nrel_corresponding_space_class:
+	concept_interplanetary_probe;;
+
+wd_class_q26540
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[искусственный спутник (Wikidata Q26540)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q26540];
+=> nrel_corresponding_space_class:
+	concept_artificial_satellite;;
+
+wd_class_q697175
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[ракета-носитель (Wikidata Q697175)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q697175];
+=> nrel_corresponding_space_class:
+	concept_launch_vehicle;;
+
+wd_class_q752783
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[пилотируемый космический полёт (Wikidata Q752783)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q752783];
+=> nrel_corresponding_space_class:
+	concept_space_mission;;
+
+wd_class_q2133344
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[космическая миссия (Wikidata Q2133344)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q2133344];
+=> nrel_corresponding_space_class:
+	concept_space_mission;;
+
+wd_class_q194188
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[космодром (Wikidata Q194188)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q194188];
+=> nrel_corresponding_space_class:
+	concept_cosmodrome;;
+
+wd_class_q17505024
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[космическое агентство (Wikidata Q17505024)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q17505024];
+=> nrel_corresponding_space_class:
+	concept_space_agency;;
+
+wd_class_q634
+<- concept_wikidata_class;
+=> nrel_main_idtf:
+	[планета (Wikidata Q634)] (* <- lang_ru;; *);
+=> nrel_wikidata_id:
+	[Q634];
+=> nrel_corresponding_space_class:
+	concept_planet;;
