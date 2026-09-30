@@ -56,6 +56,9 @@ class State:
         # сущности, переданные агентами через /api/entities: добавляются в любой словарь, построенный позже
         # (фоновое переобучение на словаре, прочитанном раньше, не должно их терять)
         self.pushed: dict = {}
+        # момент начала обучения текущей модели: модель, начавшая обучаться раньше, не заменяет более свежую
+        # (иначе фоновое обучение на старом кэше словаря после перезапуска затирает свежий словарь)
+        self.model_started = 0.0
 
 
 state = State()
@@ -73,14 +76,19 @@ def with_pushed(g: Gazetteer) -> Gazetteer:
 
 
 def retrain(gazetteer: Gazetteer, reason: str) -> None:
+    started = time.time()
     gazetteer = with_pushed(gazetteer)
     ds = dataset_mod.load(KB_DIR)
     nlu = NLU(THRESHOLD)
     t = time.time()
     nlu.fit(ds, gazetteer)
     with state.lock:
+        if started < state.model_started:
+            log.info("обучение (%s) устарело — модель, начавшая обучаться позже, уже готова", reason)
+            return
         nlu.gazetteer = with_pushed(nlu.gazetteer)      # за время обучения агенты могли передать ещё сущности
         state.nlu = nlu
+        state.model_started = started
     log.info("обучено (%s): %d фраз, %d намерений, %d сущностей словаря, %.2f с",
              reason, len(ds.train), len(ds.intents), len(gazetteer.entities), time.time() - t)
     threading.Thread(target=compute_metrics, args=(nlu,), daemon=True).start()
